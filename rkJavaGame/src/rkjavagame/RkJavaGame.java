@@ -11,6 +11,7 @@ import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Items;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
+import byui.cit260.returnedKing.model.Scene;
 
 /**
  *
@@ -70,6 +71,28 @@ public class RkJavaGame {
         
         String mapInfo = mapOne.toString();
         System.out.println(mapInfo);
+        
+        Scene sceneOne = new Scene();
+        
+        sceneOne.setDescription("castle");
+        sceneOne.setBlockedLocation("westRoad");
+        sceneOne.setPublicInfo("publicInfo");
+        sceneOne.setPrivateInfo("privateInfo");
+        sceneOne.setActivityType("activityType");
+        sceneOne.setActivityScore(100);
+        sceneOne.setEnemyType("enemyType");
+        sceneOne.setEnemySpecialSkill("enemySpecialSkill");
+        sceneOne.setFinalCombat("finalCombat");
+        sceneOne.setFinalRevelation("finalRevelation");
+        sceneOne.setCharacterType("characterType");
+        sceneOne.setCharacterSpecialSkill("characterSpecialSkill");
+        
+        String sceneInfo = sceneOne.toString();
+        System.out.println(sceneInfo);
+        
+        
+        
+        
         
     }
     
