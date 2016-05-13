@@ -12,6 +12,7 @@ import byui.cit260.returnedKing.model.Items;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
 import byui.cit260.returnedKing.model.Scene;
+import byui.cit260.returnedKing.model.Wood;
 
 /**
  *
@@ -90,10 +91,20 @@ public class RkJavaGame {
         String sceneInfo = sceneOne.toString();
         System.out.println(sceneInfo);
         
+        Wood woodOne = new Wood();
         
+        woodOne.setCharStamina(50);
+        woodOne.setCharStrength(40);
+        woodOne.setReward(5);
+        woodOne.setPlayerInput(12);
+        woodOne.setActualStamina(48);
+        woodOne.setMaxStamina(100);
+        woodOne.setAxeBonus(8);
         
+        String woodInfo = woodOne.toString();
+        System.out.println(woodInfo); 
         
-        
+           
     }
     
 } 
