@@ -13,6 +13,7 @@ import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
 import byui.cit260.returnedKing.model.Scene;
 import byui.cit260.returnedKing.model.Wood;
+import byui.cit260.returnedKing.model.Combat;
 
 /**
  *
@@ -102,7 +103,21 @@ public class RkJavaGame {
         woodOne.setAxeBonus(8);
         
         String woodInfo = woodOne.toString();
-        System.out.println(woodInfo); 
+        System.out.println(woodInfo);
+        
+        Combat combatOne = new Combat();
+        
+        combatOne.setDamageGiven(20);
+        combatOne.setDamageReceived(20);
+        combatOne.setPlayerStrength(100);
+        combatOne.setPlayerInteligence(100);
+        combatOne.setAttackItems(5);
+        combatOne.setDefenceItems(5);
+        combatOne.setPlayerInput(10);
+        
+        String combatInfo = combatOne.toString();
+        System.out.println(combatInfo);
+        
         
            
     }
