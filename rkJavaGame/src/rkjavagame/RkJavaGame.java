@@ -14,6 +14,7 @@ import byui.cit260.returnedKing.model.Map;
 import byui.cit260.returnedKing.model.Scene;
 import byui.cit260.returnedKing.model.Wood;
 import byui.cit260.returnedKing.model.Combat;
+import byui.cit260.returnedKing.model.Competition;
 
 /**
  *
@@ -118,7 +119,15 @@ public class RkJavaGame {
         String combatInfo = combatOne.toString();
         System.out.println(combatInfo);
         
+        Competition competitionOne = new Competition();
         
+        competitionOne.setPlayerInput(99);
+        competitionOne.setCharStrength(77);
+        competitionOne.setActualStamina(55);
+        competitionOne.setMaxStamina(33);
+        
+        String competitionInfo = competitionOne.toString();
+        System.out.println(competitionInfo);
            
     }
     
