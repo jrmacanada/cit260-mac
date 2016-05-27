@@ -17,6 +17,7 @@ public class Items implements Serializable{
     // class instance variables
     private String inventoryType;
     private double quantityInStock;
+    private double calcUsableVolumeOfWagon;
 
     public Items() {
     }
@@ -37,19 +38,28 @@ public class Items implements Serializable{
         this.quantityInStock = quantityInStock;
     }
 
+    public double getCalcUsableVolumeOfWagon() {
+        return calcUsableVolumeOfWagon;
+    }
+
+    public void setCalcUsableVolumeOfWagon(double calcUsableVolumeOfWagon) {
+        this.calcUsableVolumeOfWagon = calcUsableVolumeOfWagon;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 97 * hash + Objects.hashCode(this.inventoryType);
-        hash = 97 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
+        int hash = 3;
+        hash = 37 * hash + Objects.hashCode(this.inventoryType);
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
+        hash = 37 * hash + (int) (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) ^ (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) >>> 32));
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Items{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + '}';
+        return "Items{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", calcUsableVolumeOfWagon=" + calcUsableVolumeOfWagon + '}';
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -65,8 +75,14 @@ public class Items implements Serializable{
         if (Double.doubleToLongBits(this.quantityInStock) != Double.doubleToLongBits(other.quantityInStock)) {
             return false;
         }
+        if (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) != Double.doubleToLongBits(other.calcUsableVolumeOfWagon)) {
+            return false;
+        }
         return true;
     }
+    
+    
+    
     
     
     
