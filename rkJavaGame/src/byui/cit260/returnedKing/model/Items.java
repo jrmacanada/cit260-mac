@@ -9,7 +9,7 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- *
+ * 05-26-2016 Recommit with proper message
  * @author michaelcavey
  */
 public class Items implements Serializable{

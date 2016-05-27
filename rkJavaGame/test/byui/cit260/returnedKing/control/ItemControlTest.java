@@ -9,7 +9,7 @@ import org.junit.Test;
 import static org.junit.Assert.*;
 
 /**
- *
+ * 05-26-2016 Recommit with proper message
  * @author michaelcavey
  */
 public class ItemControlTest {

@@ -6,7 +6,7 @@
 package byui.cit260.returnedKing.control;
 
 /**
- *
+ * 05-26-2016 Recommit with proper message
  * @author michaelcavey
  */
 public class ItemControl {
