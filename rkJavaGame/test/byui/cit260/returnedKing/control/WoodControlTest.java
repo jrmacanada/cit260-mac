@@ -47,7 +47,7 @@ public class WoodControlTest {
         System.out.println("\tTest case #2");
         
         //input values for test case 2
-         staminaGiven = -1; // Invalid (less than +1)
+         staminaGiven = 0; // Invalid (less than +1)
          strength = 50;
          axe = 25;
          actualStamina = 80;
@@ -65,7 +65,7 @@ public class WoodControlTest {
         
         //input values for test case 3
          staminaGiven = 50;
-         strength = -1;     // Invalid (less than +1)
+         strength = 0;     // Invalid (less than +1)
          axe = 25;
          actualStamina = 80;
          p_coin = 10;
@@ -83,7 +83,7 @@ public class WoodControlTest {
         //input values for test case 4
          staminaGiven = 50;
          strength = 50;
-         axe = 1111;        // Invalid (NOT 25, 50, or 75)
+         axe = 0;        // Invalid (NOT 25, 50, or 75)
          actualStamina = 80;
          p_coin = 10;
         
@@ -200,13 +200,13 @@ public class WoodControlTest {
         System.out.println("\tTest case #11");
         
         //input values for test case 11
-         staminaGiven = 1; // Low Boundry (minimum coin)
+         staminaGiven = 1; // Low Boundry - Invalid (e_coin less than +1)
          strength = 1;
          axe = 25;
          actualStamina = 1;
-         p_coin = 0;
+         p_coin = 100;
         
-         expResult = .003;
+         expResult = -1;
          result = instance.calcWoodCutCoin(staminaGiven, strength, axe, actualStamina, p_coin);
         assertEquals(expResult, result, 0.001);
         
@@ -217,7 +217,7 @@ public class WoodControlTest {
         System.out.println("\tTest case #12");
         
         //input values for test case 12
-         staminaGiven = 100; // High Boundry (maximum coin)
+         staminaGiven = 100; // High Boundry (maximum coin earned)
          strength = 100;
          axe = 75;
          actualStamina = 100;
@@ -234,13 +234,13 @@ public class WoodControlTest {
         System.out.println("\tTest case #13");
         
         //input values for test case 13
-         staminaGiven = 1; // Low Boundry (minimum coin)
-         strength = 1;
+         staminaGiven = 4; // Low Boundry (minimum of one coin earned with maximum actualStamina available)
+         strength = 4;
          axe = 25;
-         actualStamina = 1;
+         actualStamina = 100;
          p_coin = 0;
         
-         expResult = .003;
+         expResult = 1.16;
          result = instance.calcWoodCutCoin(staminaGiven, strength, axe, actualStamina, p_coin);
         assertEquals(expResult, result, 0.001);
         
@@ -248,10 +248,20 @@ public class WoodControlTest {
         /*****************
          * Test case #14
          *****************/
-//        System.out.println("\tTest case #14");
+        System.out.println("\tTest case #14");
         
         //input values for test case 14
-         
+         staminaGiven = 20; // Low Boundry (minimum of one coin earned when actualStamina eqauls givenStamina)
+         strength = 1;
+         axe = 25;
+         actualStamina = 20;
+         p_coin = 0;
+        
+         expResult = 1.04;
+         result = instance.calcWoodCutCoin(staminaGiven, strength, axe, actualStamina, p_coin);
+        assertEquals(expResult, result, 0.001);
+        
+        
         /*****************
          * Test case #15
          *****************/

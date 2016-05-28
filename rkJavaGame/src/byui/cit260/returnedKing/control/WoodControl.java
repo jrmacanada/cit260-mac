@@ -30,13 +30,17 @@ public class WoodControl {
         // calculate the coin earned based on the Stamina sacrificed
         double e_coin = (staminaGiven * (strength + axe) * (actualStamina/100)) / 100;
         
+        if (e_coin < 1) {
+                return -1;
+        }
+        
         // add earned coin to players existing coin
         // p_coin = p_coin + e_coin;
         
         // subtract the Stamina used from the started Stamina 
         // actualStamina = actualStamina - staminaGiven;
                 
-        // return new p_coin value;
+        // return actualStamina;
         // return p_coin;
         
         return e_coin;
