@@ -187,6 +187,75 @@ public class CompetitionControlTest {
         
         //compare expected return value with actual value returned
         assertEquals(expResult, result, 0.1);
+        
+         /****************************
+         * Test case #8
+         ****************************/
+        System.out.println("\tTest case #8");
+        
+        //input values for test case 8
+        minYard = 55.0;
+        maxYard = 60.0;
+        power = 25.0;
+        strength = 60.0;
+        windResistance = 12.0;
+        actualStamina = 1.0;
+        maximumStamina = 100.0;
+     
+        //expected output returned value
+        expResult = -1.0;
+        
+        //call function to run test
+        result = instance.competition(minYard, maxYard, power, strength, windResistance, actualStamina, maximumStamina);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+         /****************************
+         * Test case #9
+         ****************************/
+        System.out.println("\tTest case #9");
+        
+        //input values for test case 9
+        minYard = 70.0;
+        maxYard = 80.0;
+        power = 25.0;
+        strength = 60.0;
+        windResistance = 12.0;
+        actualStamina = 100.0;
+        maximumStamina = 100.0;
+     
+        //expected output returned value
+        expResult = 1.0;
+        
+        //call function to run test
+        result = instance.competition(minYard, maxYard, power, strength, windResistance, actualStamina, maximumStamina);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
+        
+         /****************************
+         * Test case #10
+         ****************************/
+        System.out.println("\tTest case #10");
+        
+        //input values for test case 10
+        minYard = 55.0;
+        maxYard = 60.0;
+        power = 25.0;
+        strength = 60.0;
+        windResistance = 20.0;
+        actualStamina = 80.0;
+        maximumStamina = 100.0;
+     
+        //expected output returned value
+        expResult = -1.0;
+        
+        //call function to run test
+        result = instance.competition(minYard, maxYard, power, strength, windResistance, actualStamina, maximumStamina);
+        
+        //compare expected return value with actual value returned
+        assertEquals(expResult, result, 0.1);
        
     }
     
