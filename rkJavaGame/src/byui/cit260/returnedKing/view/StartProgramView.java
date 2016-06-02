@@ -5,7 +5,8 @@
  */
 package byui.cit260.returnedKing.view;
 
-import java.io.InputStream;
+import java.util.Scanner;
+
 
 /**
  *
@@ -51,10 +52,8 @@ public final class StartProgramView {
     }
 
    private String getPlayersName() {
-       System.out.println("\n*** getPlayersName() called ***");
-        return "Joe";
 
-/*       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
        String value = ""; // value to be returned
         boolean valid = false; // intialize to not valid
         
@@ -74,18 +73,11 @@ public final class StartProgramView {
         
         return value; // return the value entered */
     }
-
        
     private boolean doAction(String playersName) {
         System.out.println("\n*** doAction() called ***");
         return true;
     }
-
-    private static class Scanner {
-
-        public Scanner(InputStream in) {
-        }
-    }
-        
+      
 }
 
