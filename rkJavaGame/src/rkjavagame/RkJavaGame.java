@@ -15,6 +15,7 @@ import byui.cit260.returnedKing.model.Scene;
 import byui.cit260.returnedKing.model.Wood;
 import byui.cit260.returnedKing.model.Combat;
 import byui.cit260.returnedKing.model.Competition;
+import byui.cit260.returnedKing.view.StartProgramView;
 
 /**
  *
@@ -26,6 +27,10 @@ public class RkJavaGame {
      * @param args the command line arguments
      */
     public static void main(String[] args) {
+        
+        StartProgramView startProgramView = new StartProgramView();
+        startProgramView.displayStartProgramView();
+        
         Player playerOne = new Player();
         
         playerOne.setName("Fred Flintstone");
