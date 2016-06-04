@@ -65,7 +65,7 @@ public class MainMenuView {
     }
 
     private boolean doAction(String menuOption) {
-        System.out.println("\njbdjdbvodjvbvjbsdovjbsdvjb");
+        System.out.println("\nCalls doAction() function");
         return true;
     }
     
