@@ -5,14 +5,68 @@
  */
 package byui.cit260.returnedKing.view;
 
+import java.util.Scanner;
+
 /**
  *
  * @author Craig
  */
 public class MainMenuView {
+    private String menu;
+    
+    public MainMenuView() {
+            this.menu = "\n"
+                      + "\n------------------------------------------"
+                      + "\n| Main Menu                              |"
+                      + "\n------------------------------------------"
+                      + "\nN - Start new game"
+                      + "\nG - Get and start saved game"
+                      + "\nH - Get help on how to play the game"
+                      + "\nS - Save Game"
+                      + "\nQ - Quit"
+                      + "\n------------------------------------------";
+                    }
+    public void displayMainMenuView() {
+        
+        boolean done = false; // set flag to not done
+        do{
+            // prompt for and get player name
+            String menuOption = this.getMenuOption();
+            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
+                return; // exit the game
+            
+            // do the requested action and display the next view
+            done = this.doAction(menuOption);
+            
+        }while (!done);
+    }
 
-    void displayMainMenuView() {
-        System.out.println("\n*** displayMenu() function called ***");
+    private String getMenuOption() {
+       
+       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+       String value = ""; // value to be returned
+        boolean valid = false; // intialize to not valid
+        
+        while (!valid) { // loop while an invalid value is enter
+            System.out.println("\n" + this.menu);
+            
+            value = keyboard.nextLine(); // get next line typed on keboard
+            value = value.trim(); // trim off leading and trailing blanks
+            
+            if (value.length() < 1) { // value is blank
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+            
+            break; // end the loop
+        }
+        
+        return value; // return the value entered */
+    }
+
+    private boolean doAction(String menuOption) {
+        System.out.println("\njbdjdbvodjvbvjbsdovjbsdvjb");
+        return true;
     }
     
 }
