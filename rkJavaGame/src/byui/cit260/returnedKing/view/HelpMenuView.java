@@ -93,15 +93,51 @@ public class HelpMenuView {
     }
     
     private void whatIsGoal() {
-         System.out.println("*Calls the whatIsGoal function*");
+         System.out.println("\n************************************************"
+                          + "\n*             Goal of the Game                 *"
+                          + "\n************************************************"
+                          + "\n*                                              *"
+                          + "\n*  In the Returned King the player's goal is   *"
+                          + "\n* too explore the map collecting items to help *"
+                          + "\n* the player become powerful enough to confront*"
+                          + "\n* his uncle and reclaim the throne.            *"
+                          + "\n*                                              *"
+                          + "\n************************************************"
+                          );
+                          
     }
     
     private void howToMove() {
-         System.out.println("*Calls the howToMove function*");
+         System.out.println("\n************************************************"
+                          + "\n*          How to Move Your Character          *"
+                          + "\n************************************************"
+                          + "\n*                                              *"
+                          + "\n* To Move your character within the game       *"
+                          + "\n* use the keys:                                *"
+                          + "\n* N - Go North                                 *"
+                          + "\n* S - Go South                                 *"
+                          + "\n* E - Go East                                  *"
+                          + "\n* W - Go West                                  *"
+                          + "\n*                                              *"
+                          + "\n************************************************"
+                          );
     }
     
     private void howToBattle() {
-         System.out.println("*Calls the howToBattle function*");
+         System.out.println("\n************************************************"
+                          + "\n*           How Battle Works                   *"
+                          + "\n************************************************"
+                          + "\n*                                              *"
+                          + "\n*     The player may choice to confront any    *"
+                          + "\n*  opponent in battle at any time. He must     *"
+                          + "\n*  select one of three attack strategies and   *"
+                          + "\n*  based on his stamina, strength, offense     *"
+                          + "\n*  weapons, and defenses the outcome of the    *"
+                          + "\n*  battle will be calculated with each attack  *"
+                          + "\n*  until he wins. loses, or retreats.          *"
+                          + "\n*                                              *"
+                          + "\n************************************************"
+                          );
     }
     
     private void whatToCollect() {
