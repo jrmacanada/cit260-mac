@@ -5,7 +5,9 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import java.util.Scanner;
+import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -64,9 +66,46 @@ public class MainMenuView {
         return value; // return the value entered */
     }
 
-    private boolean doAction(String menuOption) {
-        System.out.println("\nCalls doAction() function");
-        return true;
+    public boolean doAction(String choice) {
+        
+        choice = choice.toUpperCase(); //convert choice to uppercase
+        
+        switch (choice) {
+            case "N": //Starts a new Game
+                this.startNewGame();
+                break;
+            case "G": //Starts an existing game
+                this.startExistingGame();
+                break;
+            case "H": //Displays help Menu
+                this.displayHelpMenu();
+                break;
+            case "S": // Save Current Game
+                this.saveGame();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection*** Try again");
+                break;
+        }
+        return false;
     }
-    
+        
+    private void startNewGame() {
+        // Create a New Game
+        GameControl.createNewGame(RkJavaGame.getPlayer());
+        
+        // display the menu game
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.displayMenu();
+    }  
+            
+    private void startExistingGame() {
+        System.out.println("*Start Existing Game function Call*");
+    }
+    private void saveGame() {
+        System.out.println("*Save actual Game*");
+    }
+    private void displayHelpMenu() {
+        System.out.println("*Display HelpMenu Function called*");
+    }
 }
