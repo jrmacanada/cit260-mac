@@ -24,7 +24,6 @@ public class HelpMenuView {
                       + "\nG - What is the Goal of the Game"
                       + "\nM - How to move"
                       + "\nB - How to Battle"
-                      + "\nP - Where Should I go?"
                       + "\nC - What Should I collect?"
                       + "\nQ - Quit to Main Menu"
                       + "\n------------------------------------------";
@@ -46,15 +45,69 @@ public class HelpMenuView {
 
     private String getHelpOption() {
         
-        System.out.println("\n***getHelpOption()***");
-        return "N";
+       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+       String value = ""; // value to be returned
+        boolean valid = false; // intialize to not valid
+        
+        while (!valid) { // loop while an invalid value is enter
+            System.out.println("\n" + this.menu);
+            
+            value = keyboard.nextLine(); // get next line typed on keboard
+            value = value.trim(); // trim off leading and trailing blanks
+            
+            if (value.length() < 1) { // value is blank
+                System.out.println("\nInvalid value: value cannot be blank");
+                continue;
+            }
+            
+            break; // end the loop
+        }
+        
+        return value; // return the value entered */
         }
    
 
-    private boolean doAction(String helpOption) {
-        System.out.println("\ndoAction()***");
-        return true;
+    private boolean doAction(String choice) {
+        
+        choice = choice.toUpperCase(); //convert choice to uppercase
+        
+        switch (choice) {
+            case "G": //opens the goal of the game
+                this.whatIsGoal();
+                break;
+            case "M": //opens the how to move
+                this.howToMove();
+                break;
+            case "B": // explains how battle works
+                this.howToBattle();
+                break;
+            case "C": // explains what you can collect within the game
+                this.whatToCollect();
+                break;
+            default:
+                System.out.println("\n*** Invalid Selection*** Try again");
+                break;
+        }
+        return false;
+        
+    }
+    
+    private void whatIsGoal() {
+         System.out.println("*Calls the whatIsGoal function*");
+    }
+    
+    private void howToMove() {
+         System.out.println("*Calls the howToMove function*");
+    }
+    
+    private void howToBattle() {
+         System.out.println("*Calls the howToBattle function*");
+    }
+    
+    private void whatToCollect() {
+         System.out.println("*Calls the whatToCollect function*");
     }
 
+  
         
 }
