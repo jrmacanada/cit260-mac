@@ -100,10 +100,10 @@ public class MainMenuView {
     }  
             
     private void startExistingGame() {
-        System.out.println("*Start Existing Game function Call*");
+        System.out.println("*Calls the startExistingGame() function*");
     }
     private void saveGame() {
-        System.out.println("*Save actual Game*");
+        System.out.println("*Calls the saveGame() function*");
     }
     public void displayHelpMenu() {
         

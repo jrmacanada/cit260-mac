@@ -141,7 +141,22 @@ public class HelpMenuView {
     }
     
     private void whatToCollect() {
-         System.out.println("*Calls the whatToCollect function*");
+         System.out.println("\n************************************************"
+                          + "\n*        What You Will Be Collecting           *"
+                          + "\n************************************************"
+                          + "\n*                                              *"
+                          + "\n*    Personal inventory items are things a     *"
+                          + "\n*  player may collect, be given, or purchase   *"
+                          + "\n*  throughout the game. Some are required for  *"
+                          + "\n*  sustenance (food, coins), while others are  *"
+                          + "\n*  preferred for battle or working. To find    *"
+                          + "\n*  out what is available visit the inventory   *"
+                          + "\n*  items available in different map locations. *"
+                          + "\n*  Don’t miss an opportunity to strengthen your *"
+                          + "\n*  arsenal or restock your supplies.           *"
+                          + "\n*                                              *"
+                          + "\n************************************************"
+                          );
     }
 
   

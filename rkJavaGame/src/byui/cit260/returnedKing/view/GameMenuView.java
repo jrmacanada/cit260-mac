@@ -12,7 +12,7 @@ package byui.cit260.returnedKing.view;
 public class GameMenuView {
     
     void displayMenu() {
-            System.out.println("\n*DisplayMenu stub function*");
+            System.out.println("\n*Calls the displayMenu function*");
         }
     
 }
