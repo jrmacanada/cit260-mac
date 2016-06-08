@@ -24,7 +24,7 @@ public class HelpMenuView {
                       + "\nG - What is the Goal of the Game"
                       + "\nM - How to move"
                       + "\nB - How to Battle"
-                      + "\nC - What Should I collect?"
+                      + "\nC - What should I collect?"
                       + "\nQ - Quit to Main Menu"
                       + "\n------------------------------------------";
                     }
@@ -93,16 +93,16 @@ public class HelpMenuView {
     }
     
     private void whatIsGoal() {
-         System.out.println("\n************************************************"
-                          + "\n*             Goal of the Game                 *"
-                          + "\n************************************************"
-                          + "\n*                                              *"
-                          + "\n*  In the Returned King the player's goal is   *"
-                          + "\n* too explore the map collecting items to help *"
-                          + "\n* the player become powerful enough to confront*"
-                          + "\n* his uncle and reclaim the throne.            *"
-                          + "\n*                                              *"
-                          + "\n************************************************"
+         System.out.println("\n**************************************************"
+                          + "\n*             Goal of the Game                   *"
+                          + "\n**************************************************"
+                          + "\n*                                                *"
+                          + "\n*   In Returned King the player's goal is too    *"
+                          + "\n* explore the map collecting items to help the   *"
+                          + "\n* player become powerful enough to confront his  *"
+                          + "\n* uncle and reclaim the throne.                  *"
+                          + "\n*                                                *"
+                          + "\n**************************************************"
                           );
                           
     }
@@ -114,10 +114,10 @@ public class HelpMenuView {
                           + "\n*                                              *"
                           + "\n* To Move your character within the game       *"
                           + "\n* use the keys:                                *"
-                          + "\n* N - Go North                                 *"
-                          + "\n* S - Go South                                 *"
-                          + "\n* E - Go East                                  *"
-                          + "\n* W - Go West                                  *"
+                          + "\n*   N - Go North                               *"
+                          + "\n*   S - Go South                               *"
+                          + "\n*   E - Go East                                *"
+                          + "\n*   W - Go West                                *"
                           + "\n*                                              *"
                           + "\n************************************************"
                           );
@@ -128,34 +128,34 @@ public class HelpMenuView {
                           + "\n*           How Battle Works                   *"
                           + "\n************************************************"
                           + "\n*                                              *"
-                          + "\n*     The player may choice to confront any    *"
+                          + "\n*    The player may choose to confront any    *"
                           + "\n*  opponent in battle at any time. He must     *"
                           + "\n*  select one of three attack strategies and   *"
                           + "\n*  based on his stamina, strength, offense     *"
                           + "\n*  weapons, and defenses the outcome of the    *"
                           + "\n*  battle will be calculated with each attack  *"
-                          + "\n*  until he wins. loses, or retreats.          *"
+                          + "\n*  until he wins, loses, or retreats.          *"
                           + "\n*                                              *"
                           + "\n************************************************"
                           );
     }
     
     private void whatToCollect() {
-         System.out.println("\n************************************************"
-                          + "\n*        What You Will Be Collecting           *"
-                          + "\n************************************************"
-                          + "\n*                                              *"
-                          + "\n*    Personal inventory items are things a     *"
-                          + "\n*  player may collect, be given, or purchase   *"
-                          + "\n*  throughout the game. Some are required for  *"
-                          + "\n*  sustenance (food, coins), while others are  *"
-                          + "\n*  preferred for battle or working. To find    *"
-                          + "\n*  out what is available visit the inventory   *"
-                          + "\n*  items available in different map locations. *"
-                          + "\n*  Don’t miss an opportunity to strengthen your *"
-                          + "\n*  arsenal or restock your supplies.           *"
-                          + "\n*                                              *"
-                          + "\n************************************************"
+         System.out.println("\n**************************************************"
+                          + "\n*        What You Will Be Collecting             *"
+                          + "\n**************************************************"
+                          + "\n*                                                *"
+                          + "\n*    Personal inventory items are things a       *"
+                          + "\n*  player may collect, be given, or purchase     *"
+                          + "\n*  throughout the game. Some are required for    *"
+                          + "\n*  sustenance (food, coins), while others are    *"
+                          + "\n*  preferred for battle or working. To find      *"
+                          + "\n*  out what is available visit the inventory     *"
+                          + "\n*  items available in different map locations.   *"
+                          + "\n*  Don’t miss an opportunity to strengthen your  *"
+                          + "\n*  arsenal or restock your supplies.             *"
+                          + "\n*                                                *"
+                          + "\n**************************************************"
                           );
     }
 
