@@ -56,7 +56,7 @@ public class HelpMenuView {
             value = value.trim(); // trim off leading and trailing blanks
             
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
+                System.out.println("\nInvalid entry: value cannot be blank");
                 continue;
             }
             
@@ -85,7 +85,7 @@ public class HelpMenuView {
                 this.whatToCollect();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection*** Try again");
+                System.out.println("\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
@@ -97,7 +97,7 @@ public class HelpMenuView {
                           + "\n*             Goal of the Game                   *"
                           + "\n**************************************************"
                           + "\n*                                                *"
-                          + "\n*   In Returned King the player's goal is too    *"
+                          + "\n*   In Returned King the player's goal is to    *"
                           + "\n* explore the map collecting items to help the   *"
                           + "\n* player become powerful enough to confront his  *"
                           + "\n* uncle and reclaim the throne.                  *"
@@ -128,7 +128,7 @@ public class HelpMenuView {
                           + "\n*           How Battle Works                   *"
                           + "\n************************************************"
                           + "\n*                                              *"
-                          + "\n*    The player may choose to confront any    *"
+                          + "\n*    The player may choose to confront any     *"
                           + "\n*  opponent in battle at any time. He must     *"
                           + "\n*  select one of three attack strategies and   *"
                           + "\n*  based on his stamina, strength, offense     *"

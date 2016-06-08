@@ -56,7 +56,7 @@ public class MainMenuView {
             value = value.trim(); // trim off leading and trailing blanks
             
             if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid value: value cannot be blank");
+                System.out.println("\nInvalid entry: value cannot be blank");
                 continue;
             }
             
@@ -84,7 +84,7 @@ public class MainMenuView {
                 this.saveGame();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection*** Try again");
+                System.out.println("\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;

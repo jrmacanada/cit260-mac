@@ -40,7 +40,7 @@ public final class StartProgramView {
             + "\n*  to hide: a monastery, a warrior village with a group      *"
             + "\n*  of mercenaries, or in a hamlet of wizards. Your decision  *"
             + "\n*  determines what kind of abilities and strengths you       *"
-            + "\n*  developed.              	                              *" 
+            + "\n*  developed.                                                *" 
             + "\n*    In order to regain your kingship, you should travel     *"
             + "\n*  around the kingdom to understand why and how your         *"
             + "\n*  uncle killed your parents and took the kingdom.           *"
