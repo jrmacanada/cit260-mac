@@ -90,17 +90,17 @@ public class ForestMenuView {
         // opens the forageFood scene
 
         // display the forageFood menu 
-//        ForestMenuView forestMenuView = new ForestMenuView();
-//        forestMenuView.displayForestMenuView();
-        System.out.println("*Calls the forageFood() function*");
+        ForageFoodMenuView forageFoodMenuView = new ForageFoodMenuView();
+        forageFoodMenuView.displayForageFoodMenuView();
+//        System.out.println("*Calls the forageFood() function*");
     }
     
     private void cutWood() {
         // opens the cutWood scene
 
         // display the cutWood menu 
-//        ForestMenuView forestMenuView = new ForestMenuView();
-//        forestMenuView.displayForestMenuView();
+//        CutWoodMenuView cutWoodMenuView = new CutWoodMenuView();
+//        cutWoodMenuView.displayCutWoodMenuView();
         System.out.println("*Calls the cutWood() function*");
     }
     
@@ -108,8 +108,8 @@ public class ForestMenuView {
         // opens the shelterRest scene
 
         // display the shelterRest menu 
-//        ForestMenuView forestMenuView = new ForestMenuView();
-//        forestMenuView.displayForestMenuView();
+//        ShelterRestMenuView shelterRestMenuView = new ShelterRestMenuView();
+//        shelterRestMenuView.displayShelterRestMenuView();
         System.out.println("*Calls the shelterRest() function*");
     }
     
