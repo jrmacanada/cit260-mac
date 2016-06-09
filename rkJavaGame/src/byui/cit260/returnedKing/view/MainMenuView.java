@@ -26,7 +26,8 @@ public class MainMenuView {
                       + "\nH - Get help on how to play the game"
                       + "\nS - Save Game"
                       + "\nQ - Quit"
-                      + "\n------------------------------------------";
+                      + "\n------------------------------------------"
+                      + "\nT - TEMP link to GameMenu"; // remove after L07 assignment
                     }
     public void displayMainMenuView() {
         
@@ -83,6 +84,10 @@ public class MainMenuView {
             case "S": // Save Current Game
                 this.saveGame();
                 break;
+            case "T": // TEMP link to GameMenu
+                this.tempGameMenu();
+                break;  
+                // remove "case-T" after L07 assignment
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -110,5 +115,19 @@ public class MainMenuView {
        HelpMenuView helpMenuView = new HelpMenuView();
        helpMenuView.displayHelpMenuView();
        
+    }
+    // remove 6-lines below after L07 assignment
+    public void displayGameMenu() {
+        
+       HelpMenuView helpMenuView = new HelpMenuView();
+       helpMenuView.displayHelpMenuView();
+       
+    }
+    // remove two comments after L07 assignment
+
+    private void tempGameMenu() {
+        
+       GameMenuView gameMenuView = new GameMenuView();
+       gameMenuView.displayGameMenuView();
     }
 }
