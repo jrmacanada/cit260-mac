@@ -9,10 +9,10 @@ package byui.cit260.returnedKing.view;
  *
  * @author michaelcavey
  */
-class ForestMenuView {
+class HuntResMenuView {
 
-    void displayForestMenuView() {
-        System.out.println("\n*Calls the forestMenu function*");
+    void displayHuntResMenuView() {
+        System.out.println("\n*Calls the huntResMenu function*");
     }
     
 }

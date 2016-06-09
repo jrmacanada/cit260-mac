@@ -9,7 +9,7 @@ import java.util.Scanner;
 
 /**
  *
- * @author thiag (original)
+ * @author thiag (original to line 16)
  * @author cavey (as temp menu for access to scene views)
  */
 public class GameMenuView {
@@ -93,9 +93,9 @@ public class GameMenuView {
 //mac??        GameControl.createNewGame(RkJavaGame.getPlayer());
         
         // display the Forest menu 
-//       ForestMenuView forestMenuView = new ForestMenuView();
-//        forestMenuView.displayForestMenuView();
-        System.out.println("*Calls the goToForest() function*");
+        ForestMenuView forestMenuView = new ForestMenuView();
+        forestMenuView.displayForestMenuView();
+//        System.out.println("*Calls the goToForest() function*");
     }
     
     private void goToKhouse() {
@@ -103,9 +103,9 @@ public class GameMenuView {
 //mac??        GameControl.createNewGame(RkJavaGame.getPlayer());
         
         // display the King's House menu 
-//        KhouseMenuView khouseMenuView = new KhouseMenuView();
-//        khouseMenuView.displayKhouseMenuView();
-        System.out.println("*Calls the goToKhouse() function*");
+        KhouseMenuView khouseMenuView = new KhouseMenuView();
+        khouseMenuView.displayKhouseMenuView();
+//        System.out.println("*Calls the goToKhouse() function*");
     }
     
     private void goToHuntReserve() {
@@ -113,9 +113,9 @@ public class GameMenuView {
 //mac??        GameControl.createNewGame(RkJavaGame.getPlayer());
         
         // display the Hunt Reserve menu 
-//        HuntResMenuView huntResMenuView = new HuntResMenuView();
-//        huntResMenuView.displayHuntResMenuView();
-        System.out.println("*Calls the goToHuntReserve() function*");
+        HuntResMenuView huntResMenuView = new HuntResMenuView();
+        huntResMenuView.displayHuntResMenuView();
+//        System.out.println("*Calls the goToHuntReserve() function*");
     }
     
     void displayMenu() {
