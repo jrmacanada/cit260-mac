@@ -113,9 +113,9 @@ public class GameMenuView {
 //mac??        GameControl.createNewGame(RkJavaGame.getPlayer());
         
         // display the Hunt Reserve menu 
-        HuntResMenuView huntResMenuView = new HuntResMenuView();
-        huntResMenuView.displayHuntResMenuView();
-//        System.out.println("*Calls the goToHuntReserve() function*");
+//        HuntResMenuView huntResMenuView = new HuntResMenuView();
+//        huntResMenuView.displayHuntResMenuView();
+        System.out.println("*Calls the goToHuntReserve() function*");
     }
     
     void displayMenu() {
