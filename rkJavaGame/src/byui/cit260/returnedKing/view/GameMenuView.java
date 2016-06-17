@@ -104,14 +104,14 @@ public class GameMenuView {
         
         // display the King's House menu 
         KhouseMenuView khouseMenuView = new KhouseMenuView();
-        khouseMenuView.displayKhouseMenuView();
+        khouseMenuView.display();
 //        System.out.println("*Calls the goToKhouse() function*");
     }
     
     private void goToHuntReserve() {
         
         HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.displayHuntReserveView();
+        huntReserveView.display();
     }
     
     void displayMenu() {

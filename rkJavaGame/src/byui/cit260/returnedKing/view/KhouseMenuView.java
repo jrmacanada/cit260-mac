@@ -14,12 +14,11 @@
   *
   * @author thiag
   */ 
- public class KhouseMenuView {
+ public class KhouseMenuView extends View {
      
-     private String menu;
      
      public KhouseMenuView() {
-             this.menu = "\n"
+                  super( "\n"
                        + "\n------------------------------------------"
                        + "\n| KIng's Country House Menu                              |"
                        + "\n------------------------------------------"
@@ -28,56 +27,16 @@
                        + "\nH - Try a hidden Attack"
                        + "\nT - Talk to the Guard"
                        + "\nL - Look for a hidden door"
-                       + "\nM - Back to the Map"
-                       + "\n------------------------------------------";
-            
-     
+                       + "\nQ - Back to the Map"
+                       + "\n------------------------------------------");
      
      }
-     public void displayKhouseMenuView() {
+     @Override
+     public boolean doAction(String value) {
          
-         boolean done = false; // set flag to not done
-         do{
-             // prompt for and get player name
-             String kingsCountryHouseOption = this.getKingsCountryHouseOption();
-             if (kingsCountryHouseOption.toUpperCase().equals("M")) // user wants to back to the map
-                 return; // exit the game
-             
-             // do the requested action and display the next view
-             done = this.doAction(kingsCountryHouseOption);
-             
-         }while (!done);
-     }
-     
-     private String getKingsCountryHouseOption() {
+         value = value.toUpperCase(); //convert choice to uppercase
          
-      
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-        String value = ""; // value to be returned
-         boolean valid = false; // intialize to not valid
-         
-         while (!valid) { // loop while an invalid value is enter
-             System.out.println("\n" + this.menu);
-             
-             value = keyboard.nextLine(); // get next line typed on keboard
-             value = value.trim(); // trim off leading and trailing blanks
-             
-             if (value.length() < 1) { // value is blank
-                 System.out.println("\nInvalid entry: value cannot be blank");
-                 continue;
-             }
-             
-             break; // end the loop
-     }
-         
-     return value;
-             }        
-     
-     private boolean doAction(String choice) {
-         
-         choice = choice.toUpperCase(); //convert choice to uppercase
-         
-         switch (choice) {
+         switch (value) {
              case "F": //opens the fight
                  this.fight();
                  break;

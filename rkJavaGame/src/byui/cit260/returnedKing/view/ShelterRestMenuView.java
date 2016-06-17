@@ -11,7 +11,7 @@ import java.util.Scanner;
  *
  * @author michaelcavey
  */
-public class ShelterRestMenuView {
+public class ShelterRestMenuView  {
 
     void displayShelterRestMenuView() {
         System.out.println("*Calls the shelterRest() function*");

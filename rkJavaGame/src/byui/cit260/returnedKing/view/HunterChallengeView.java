@@ -11,11 +11,11 @@ import java.util.Scanner;
  *
  * @author Craig
  */
-public class HunterChallengeView {
-    private String menu;
+public class HunterChallengeView extends View {
+    
     
     public HunterChallengeView() {
-            this.menu = "\n"
+                 super( "\n"
                       + "\n------------------------------------------"
                       + "\n|  One of the hunters challenged you to   |"   
                       + "\n|        a throwing competition          |"
@@ -23,53 +23,16 @@ public class HunterChallengeView {
                       + "\nA - Accept the challenge  "
                       + "\nR - Ask for him to explain the rules"
                       + "\nQ - Return to the Hunting Reserve "
-                      + "\n------------------------------------------";
+                      + "\n------------------------------------------");
                     }
-    public void displayHunterChallengeView() {
-        
-        boolean done = false; // set flag to not done
-        do{
-            
-            String challengeOption = this.getChallengeOption();
-            if (challengeOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(challengeOption);
-            
-        }while (!done);
-    }
-
-    private String getChallengeOption() {
-        
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; // value to be returned
-        boolean valid = false; // intialize to not valid
-        
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine(); // get next line typed on keboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid entry: value cannot be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered */
-        }
    
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String value) {
         
         
-        choice = choice.toUpperCase(); //convert choice to uppercase
+        value = value.toUpperCase(); //convert choice to uppercase
         
-        switch (choice) {
+        switch (value) {
             case "A": //Begins the Challenge
                 this.acceptChallenge();
                 break;
