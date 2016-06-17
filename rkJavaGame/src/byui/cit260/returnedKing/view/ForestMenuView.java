@@ -11,11 +11,10 @@ import java.util.Scanner;
  *
  * @author michaelcavey
  */
-public class ForestMenuView {
-    private String menu;
+public class ForestMenuView extends View {
     
     public ForestMenuView() {
-            this.menu = "\n"
+                 super( "\n"
                       + "\n------------------------------------------"
                       + "\n| Forest Menu                              |"
                       + "\n------------------------------------------"
@@ -23,52 +22,15 @@ public class ForestMenuView {
                       + "\nC - Cut wood for coin"
                       + "\nS - Shelter and rest"
                       + "\nQ - Quit"
-                      + "\n------------------------------------------";
+                      + "\n------------------------------------------");
                     }
     
-    public void displayForestMenuView() {
+    @Override
+    public boolean doAction(String value) {
         
-        boolean done = false; // set flag to not done
-        do{
-            // prompt for and get player name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-        }while (!done);
-    }
-
-    private String getMenuOption() {
-       
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; // value to be returned
-        boolean valid = false; // intialize to not valid
+        value = value.toUpperCase(); //convert value to uppercase
         
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine(); // get next line typed on keboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid entry: value cannot be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered */
-    }
-
-    public boolean doAction(String choice) {
-        
-        choice = choice.toUpperCase(); //convert choice to uppercase
-        
-        switch (choice) {
+        switch (value) {
             case "F": //Starts a new Game
                 this.forageFood();
                 break;

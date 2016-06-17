@@ -12,11 +12,10 @@ import java.util.Scanner;
  * @author thiag (original to line 16)
  * @author cavey (as temp menu for access to scene views)
  */
-public class GameMenuView {
-    private String menu;
+public class GameMenuView extends View {
     
     public GameMenuView() {
-            this.menu = "\n"
+                 super( "\n"
                       + "\n------------------------------------------"
                       + "\n| Game Menu (temporary access to views)  |"
                       + "\n------------------------------------------"
@@ -24,52 +23,15 @@ public class GameMenuView {
                       + "\nK - Go to the King's House scene"
                       + "\nH - Go to the Hunting Reserve Scene"
                       + "\nQ - Quit to Main Menu"
-                      + "\n------------------------------------------";
+                      + "\n------------------------------------------");
                     }
     
-    public void displayGameMenuView() {
+    @Override
+    public boolean doAction(String value) {
         
-        boolean done = false; // set flag to not done
-        do{
-            // prompt for and get player name
-            String gameOption = this.getGameOption();
-            if (gameOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game menu
-            
-            // do the requested action and display the next view
-            done = this.doAction(gameOption);
-            
-        }while (!done);
-    }
-    
-    private String getGameOption() {
+        value = value.toUpperCase(); //convert value to uppercase
         
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; // value to be returned
-        boolean valid = false; // intialize to not valid
-        
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine(); // get next line typed on keboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid entry: value cannot be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered */
-        }
-    
-    private boolean doAction(String choice) {
-        
-        choice = choice.toUpperCase(); //convert choice to uppercase
-        
-        switch (choice) {
+        switch (value) {
             case "F": //opens the Forest scene
                 this.goToForest();
                 break;
@@ -94,7 +56,7 @@ public class GameMenuView {
         
         // display the Forest menu 
         ForestMenuView forestMenuView = new ForestMenuView();
-        forestMenuView.displayForestMenuView();
+        forestMenuView.display();
 //        System.out.println("*Calls the goToForest() function*");
     }
     

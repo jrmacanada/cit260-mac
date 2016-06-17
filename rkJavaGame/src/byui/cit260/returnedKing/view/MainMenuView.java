@@ -6,7 +6,7 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
-import java.util.Scanner;
+//import java.util.Scanner;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -28,15 +28,12 @@ public class MainMenuView extends View {
                       + "\nQ - Quit"
                       + "\n------------------------------------------"
                       + "\nT - TEMP link to GameMenu"); // remove after L07 assignment
-                   
-                    
+                   }
     
-
-    }
     @Override
     public boolean doAction(String value) {
         
-        value = value.toUpperCase(); //convert choice to uppercase
+        value = value.toUpperCase(); //convert value to uppercase
         
         switch (value) {
             case "N": //Starts a new Game
@@ -80,14 +77,14 @@ public class MainMenuView extends View {
     public void displayHelpMenu() {
         
        HelpMenuView helpMenuView = new HelpMenuView();
-       helpMenuView.displayHelpMenuView();
+       helpMenuView.display();
        
     }
     // remove 6-lines below after L07 assignment
     public void displayGameMenu() {
         
        HelpMenuView helpMenuView = new HelpMenuView();
-       helpMenuView.displayHelpMenuView();
+       helpMenuView.display();
        
     }
     // remove two comments after L07 assignment
@@ -95,6 +92,6 @@ public class MainMenuView extends View {
     private void tempGameMenu() {
         
        GameMenuView gameMenuView = new GameMenuView();
-       gameMenuView.displayGameMenuView();
+       gameMenuView.display();
     }
 }

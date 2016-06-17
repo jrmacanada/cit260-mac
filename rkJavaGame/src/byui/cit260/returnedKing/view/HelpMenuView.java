@@ -13,11 +13,10 @@ import rkjavagame.RkJavaGame;
  *
  * @author thiag
  */
-public class HelpMenuView {
-    private String menu;
+public class HelpMenuView extends View {
     
     public HelpMenuView() {
-            this.menu = "\n"
+                 super( "\n"
                       + "\n------------------------------------------"
                       + "\n| Help Menu                              |"
                       + "\n------------------------------------------"
@@ -26,52 +25,15 @@ public class HelpMenuView {
                       + "\nB - How to Battle"
                       + "\nC - What should I collect?"
                       + "\nQ - Quit to Main Menu"
-                      + "\n------------------------------------------";
+                      + "\n------------------------------------------");
                     }
-    public void displayHelpMenuView() {
-        
-        boolean done = false; // set flag to not done
-        do{
-            // prompt for and get player name
-            String helpOption = this.getHelpOption();
-            if (helpOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(helpOption);
-            
-        }while (!done);
-    }
-
-    private String getHelpOption() {
-        
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; // value to be returned
-        boolean valid = false; // intialize to not valid
-        
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine(); // get next line typed on keboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid entry: value cannot be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered */
-        }
    
-
-    private boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String value) {
         
-        choice = choice.toUpperCase(); //convert choice to uppercase
+        value = value.toUpperCase(); //convert value to uppercase
         
-        switch (choice) {
+        switch (value) {
             case "G": //opens the goal of the game
                 this.whatIsGoal();
                 break;

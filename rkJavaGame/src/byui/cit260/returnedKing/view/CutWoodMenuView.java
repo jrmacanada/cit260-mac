@@ -5,7 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
-import java.util.Scanner;
+//import java.util.Scanner;
 
 /**
  *
