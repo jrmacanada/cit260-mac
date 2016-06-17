@@ -13,11 +13,11 @@ import rkjavagame.RkJavaGame;
  *
  * @author Craig
  */
-public class MainMenuView {
-    private String menu;
-    
+public class MainMenuView extends View {
+
     public MainMenuView() {
-            this.menu = "\n"
+   
+                 super( "\n"
                       + "\n------------------------------------------"
                       + "\n| Main Menu                              |"
                       + "\n------------------------------------------"
@@ -27,51 +27,18 @@ public class MainMenuView {
                       + "\nS - Save Game"
                       + "\nQ - Quit"
                       + "\n------------------------------------------"
-                      + "\nT - TEMP link to GameMenu"; // remove after L07 assignment
-                    }
-    public void displayMainMenuView() {
-        
-        boolean done = false; // set flag to not done
-        do{
-            // prompt for and get player name
-            String menuOption = this.getMenuOption();
-            if (menuOption.toUpperCase().equals("Q")) // user wants to quit
-                return; // exit the game
-            
-            // do the requested action and display the next view
-            done = this.doAction(menuOption);
-            
-        }while (!done);
-    }
+                      + "\nT - TEMP link to GameMenu"); // remove after L07 assignment
+                   
+                    
+    
 
-    private String getMenuOption() {
-       
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
-       String value = ""; // value to be returned
-        boolean valid = false; // intialize to not valid
-        
-        while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.menu);
-            
-            value = keyboard.nextLine(); // get next line typed on keboard
-            value = value.trim(); // trim off leading and trailing blanks
-            
-            if (value.length() < 1) { // value is blank
-                System.out.println("\nInvalid entry: value cannot be blank");
-                continue;
-            }
-            
-            break; // end the loop
-        }
-        
-        return value; // return the value entered */
     }
-
-    public boolean doAction(String choice) {
+    @Override
+    public boolean doAction(String value) {
         
-        choice = choice.toUpperCase(); //convert choice to uppercase
+        value = value.toUpperCase(); //convert choice to uppercase
         
-        switch (choice) {
+        switch (value) {
             case "N": //Starts a new Game
                 this.startNewGame();
                 break;
