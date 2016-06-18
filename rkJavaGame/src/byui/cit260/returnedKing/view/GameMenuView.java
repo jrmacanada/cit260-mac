@@ -23,6 +23,10 @@ public class GameMenuView extends View {
                       + "\nK - Go to the King's House scene"
                       + "\nH - Go to the Hunting Reserve Scene"
                       + "\nT - Go to the Tavern"  
+                      + "\nW - Go to the West Road"   
+                      + "\nE - Go to the East Road" 
+                      + "\nN - Go to the North Road"   
+                      + "\nS - Go to the South Road"  
                       + "\nQ - Quit to Main Menu"
                       + "\n------------------------------------------");
                     }
@@ -44,6 +48,18 @@ public class GameMenuView extends View {
                 break;
             case "T": // opens the Tavernscene
                 this.goToTavern();
+                break;
+            case "W": // opens the West Road scene
+                this.goToWestRoad();
+                break;
+            case "E": // opens the East Road scene
+                this.goToEastRoad();
+                break;
+            case "N": // opens the North Road scene
+                this.goToNorthRoad();
+                break;
+            case "S": // opens the South Road scene
+                this.goToSouthRoad();
                 break;
             
             default:
@@ -86,10 +102,32 @@ public class GameMenuView extends View {
         tavernView.display();
     }
     
+    private void goToWestRoad() {
+        
+        RoadWestMenuView roadWestMenuView = new RoadWestMenuView();
+        roadWestMenuView.display();
+    }
+    
+    private void goToEastRoad() {
+        
+        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
+        roadEastMenuView.display();
+    }
+    
+    private void goToNorthRoad() {
+        
+        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
+        roadNorthMenuView.display();
+    }
+
+    private void goToSouthRoad() {
+        
+        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
+        roadSouthMenuView.display();
+    }
+
     void displayMenu() {
             System.out.println("\n*Calls the displayMenu function*");
         }
 
-    
-    
 }
