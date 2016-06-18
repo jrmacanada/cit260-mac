@@ -22,6 +22,7 @@ public class GameMenuView extends View {
                       + "\nF - Go to the Forest scene"
                       + "\nK - Go to the King's House scene"
                       + "\nH - Go to the Hunting Reserve Scene"
+                      + "\nT - Go to the Tavern"  
                       + "\nQ - Quit to Main Menu"
                       + "\n------------------------------------------");
                     }
@@ -40,6 +41,9 @@ public class GameMenuView extends View {
                 break;
             case "H": // opens the Hunting Reserve scene
                 this.goToHuntReserve();
+                break;
+            case "T": // opens the Tavernscene
+                this.goToTavern();
                 break;
             
             default:
@@ -74,6 +78,12 @@ public class GameMenuView extends View {
         
         HuntReserveView huntReserveView = new HuntReserveView();
         huntReserveView.display();
+    }
+    
+    private void goToTavern() {
+        
+        TavernView tavernView = new TavernView();
+        tavernView.display();
     }
     
     void displayMenu() {
