@@ -27,6 +27,7 @@ public class GameMenuView extends View {
                       + "\nE - Go to the East Road" 
                       + "\nN - Go to the North Road"   
                       + "\nS - Go to the South Road"  
+                      + "\nC - Go to the Church"   
                       + "\nQ - Quit to Main Menu"
                       + "\n------------------------------------------");
                     }
@@ -61,7 +62,10 @@ public class GameMenuView extends View {
             case "S": // opens the South Road scene
                 this.goToSouthRoad();
                 break;
-            
+            case "C": // opens the Church scene    
+                this.goToChurch();
+                break;
+                
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -124,6 +128,12 @@ public class GameMenuView extends View {
         
         RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
         roadSouthMenuView.display();
+    }
+    
+    private void goToChurch() {
+    
+        ChurchMenuView churchMenuView = new ChurchMenuView();
+        churchMenuView.display();
     }
 
     void displayMenu() {
