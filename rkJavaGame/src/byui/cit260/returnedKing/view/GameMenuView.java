@@ -136,8 +136,4 @@ public class GameMenuView extends View {
         churchMenuView.display();
     }
 
-    void displayMenu() {
-            System.out.println("\n*Calls the displayMenu function*");
-        }
-
 }

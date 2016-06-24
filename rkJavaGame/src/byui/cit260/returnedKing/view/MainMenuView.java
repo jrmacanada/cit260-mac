@@ -65,7 +65,7 @@ public class MainMenuView extends View {
         
         // display the menu game
         GameMenuView gameMenu = new GameMenuView();
-        gameMenu.displayMenu();
+        gameMenu.display();
     }  
             
     private void startExistingGame() {
@@ -80,14 +80,6 @@ public class MainMenuView extends View {
        helpMenuView.display();
        
     }
-    // remove 6-lines below after L07 assignment
-    public void displayGameMenu() {
-        
-       HelpMenuView helpMenuView = new HelpMenuView();
-       helpMenuView.display();
-       
-    }
-    // remove two comments after L07 assignment
 
     private void tempGameMenu() {
         
