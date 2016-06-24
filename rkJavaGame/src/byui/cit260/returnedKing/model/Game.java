@@ -17,6 +17,15 @@ public class Game implements Serializable{
     // class instance variables
     private String start;
     private double numCode;
+    
+    private Player player;
+    private Map map;
+    private Combat combat;
+    private Wood wood;
+    private Competition competition;
+    
+    private Items[] items;
+    
 
     public Game() {
     }
@@ -36,6 +45,58 @@ public class Game implements Serializable{
     public void setNumCode(double numCode) {
         this.numCode = numCode;
     }
+
+    public Player getPlayer() {
+        return player;
+    }
+
+    public void setPlayer(Player player) {
+        this.player = player;
+    }
+
+    public Map getMap() {
+        return map;
+    }
+
+    public void setMap(Map map) {
+        this.map = map;
+    }
+
+    public Combat getCombat() {
+        return combat;
+    }
+
+    public void setCombat(Combat combat) {
+        this.combat = combat;
+    }
+
+    public Wood getWood() {
+        return wood;
+    }
+
+    public void setWood(Wood wood) {
+        this.wood = wood;
+    }
+
+    public Competition getCompetition() {
+        return competition;
+    }
+
+    public void setCompetition(Competition competition) {
+        this.competition = competition;
+    }
+
+    public Items[] getItems() {
+        return items;
+    }
+
+    public void setItems(Items[] items) {
+        this.items = items;
+    }
+    
+    
+    
+    
 
     @Override
     public int hashCode() {

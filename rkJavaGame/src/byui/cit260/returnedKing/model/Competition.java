@@ -19,6 +19,8 @@ public class Competition implements Serializable{
     private int charStrength;
     private int actualStamina;
     private int maxStamina;
+    
+    private Game[] game;
 
     public Competition() {
     }
@@ -56,6 +58,16 @@ public class Competition implements Serializable{
     public void setMaxStamina(int maxStamina) {
         this.maxStamina = maxStamina;
     }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+    
+    
 
     @Override
     public int hashCode() {

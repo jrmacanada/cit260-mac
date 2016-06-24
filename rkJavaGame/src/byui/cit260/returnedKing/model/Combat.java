@@ -21,6 +21,8 @@ public class Combat implements Serializable {
     private int attackItems;
     private int defenceItems;
     private int playerInput;
+    
+    private Game[] game;
 
     public Combat() {
     }
@@ -83,6 +85,16 @@ public class Combat implements Serializable {
         this.playerInput = playerInput;
         
     }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+    
+    
 
     @Override
     public int hashCode() {

@@ -28,6 +28,10 @@ public class Scene implements Serializable {
     private String finalRevelation;
     private String characterType;
     private String characterSpecialSkill;
+    
+    private Location location;
+    
+    private Character[] character;
 
     public Scene() {
     }
@@ -129,6 +133,26 @@ public class Scene implements Serializable {
     public void setCharacterSpecialSkill(String characterSpecialSkill) {
         this.characterSpecialSkill = characterSpecialSkill;
     }
+
+    public Character[] getCharacter() {
+        return character;
+    }
+
+    public void setCharacter(Character[] character) {
+        this.character = character;
+    }
+
+    public Location getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location location) {
+        this.location = location;
+    }
+    
+    
+    
+    
 
     @Override
     public int hashCode() {

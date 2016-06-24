@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.model;
 
+import java.awt.Point;
 import java.io.Serializable;
 import java.util.Objects;
 
@@ -12,73 +13,45 @@ import java.util.Objects;
  *
  * @author michaelcavey
  */
-public class Character implements Serializable{
+public enum Character implements Serializable{
     
-    // class instance variables
-    private String name;
-    private String type;
-    private double coordinates;
+    Guard("Guards the gates"),
+    Bandit("Attacks on the road"),
+    RogueWarrior("Attacks on the road"),
+    DrunkenSailor("He's a drunk sailor"),
+    PrisonGuard("Guards the prison"),
+    TavernOwner("Owns the Tavern"),
+    DrunkFarmer("HE's a drunk farmer"),
+    ShadyMan("Shady guy in the corner"),
+    Nun("A Nun"),
+    Priest1("First Priest"),
+    Priest2("Second Priest"),
+    FalseKing("Your Uncle");
+    
+   private final String description;
+    private final Point coordinates;
+    
+    private Scene scene;
 
-    public Character() {
+    public Scene getScene() {
+        return scene;
     }
 
-    public String getName() {
-        return name;
+    public void setScene(Scene scene) {
+        this.scene = scene;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    Character(String description) {
+        this.description = description;
+        coordinates = new Point(1,1);
+    }
+    
+    public String getDescription() {
+        return description;
     }
 
-    public String getType() {
-        return type;
-    }
-
-    public void setType(String type) {
-        this.type = type;
-    }
-
-    public double getCoordinates() {
+    public Point getCoordinates() {
         return coordinates;
-    }
-
-    public void setCoordinates(double coordinates) {
-        this.coordinates = coordinates;
-    }
-
-    @Override
-    public int hashCode() {
-        int hash = 7;
-        hash = 89 * hash + Objects.hashCode(this.name);
-        hash = 89 * hash + Objects.hashCode(this.type);
-        hash = 89 * hash + (int) (Double.doubleToLongBits(this.coordinates) ^ (Double.doubleToLongBits(this.coordinates) >>> 32));
-        return hash;
-    }
-
-    @Override
-    public String toString() {
-        return "Character{" + "name=" + name + ", type=" + type + ", coordinates=" + coordinates + '}';
-    }
-
-    @Override
-    public boolean equals(Object obj) {
-        if (obj == null) {
-            return false;
-        }
-        if (getClass() != obj.getClass()) {
-            return false;
-        }
-        final Character other = (Character) obj;
-        if (!Objects.equals(this.name, other.name)) {
-            return false;
-        }
-        if (!Objects.equals(this.type, other.type)) {
-            return false;
-        }
-        if (Double.doubleToLongBits(this.coordinates) != Double.doubleToLongBits(other.coordinates)) {
-            return false;
-        }
-        return true;
     }
     
     

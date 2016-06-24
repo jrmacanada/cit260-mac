@@ -16,7 +16,10 @@ public class Location implements Serializable{
     // class instance variables
     private int row;
     private int column;
-
+    
+    private Items items;
+    private Scene scene;
+    
     public Location() {
     }
 
@@ -35,6 +38,26 @@ public class Location implements Serializable{
     public void setColumn(int column) {
         this.column = column;
     }
+
+    public Items getItems() {
+        return items;
+    }
+
+    public void setItems(Items items) {
+        this.items = items;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+    
+    
+    
+    
 
     @Override
     public int hashCode() {

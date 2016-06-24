@@ -22,6 +22,8 @@ public class Wood implements Serializable{
     private int actualStamina;
     private int maxStamina;
     private int axeBonus;
+    
+    private Game[] game;
      
     public Wood() {
     }
@@ -81,6 +83,16 @@ public class Wood implements Serializable{
     public void setAxeBonus(int axeBonus) {
         this.axeBonus = axeBonus;
     }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+    
+    
 
     @Override
     public int hashCode() {

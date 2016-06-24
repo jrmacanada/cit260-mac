@@ -18,6 +18,10 @@ public class Items implements Serializable{
     private String inventoryType;
     private double quantityInStock;
     private double calcUsableVolumeOfWagon;
+    
+    private Game game;
+    
+    private Location[] location;
 
     public Items() {
     }
@@ -45,6 +49,26 @@ public class Items implements Serializable{
     public void setCalcUsableVolumeOfWagon(double calcUsableVolumeOfWagon) {
         this.calcUsableVolumeOfWagon = calcUsableVolumeOfWagon;
     }
+
+    public Game getGame() {
+        return game;
+    }
+
+    public void setGame(Game game) {
+        this.game = game;
+    }
+
+    public Location[] getLocation() {
+        return location;
+    }
+
+    public void setLocation(Location[] location) {
+        this.location = location;
+    }
+    
+    
+    
+    
 
     @Override
     public int hashCode() {

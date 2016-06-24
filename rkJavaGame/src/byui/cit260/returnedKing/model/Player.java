@@ -17,6 +17,8 @@ public class Player implements Serializable{
     // class instance variables
     private String name;
     private double bestScore;
+    
+    private Game[] game;
 
     public Player() {
     }
@@ -36,6 +38,17 @@ public class Player implements Serializable{
     public void setBestScore(double bestScore) {
         this.bestScore = bestScore;
     }
+
+    public Game[] getGame() {
+        return game;
+    }
+
+    public void setGame(Game[] game) {
+        this.game = game;
+    }
+    
+    
+    
 
     @Override
     public int hashCode() {

@@ -42,14 +42,14 @@ public class RkJavaGame {
         String playerInfo = playerOne.toString();
         System.out.println(playerInfo);
         
-        Character characterOne = new Character();
+       /*Character characterOne = new Character();
         
         characterOne.setName("Barney Rubble");
         characterOne.setType("neighbor");
         characterOne.setCoordinates(15);
         
         String characterInfo = characterOne.toString();
-        System.out.println(characterInfo);
+        System.out.println(characterInfo);*/
         
         Game gameOne = new Game();
         
