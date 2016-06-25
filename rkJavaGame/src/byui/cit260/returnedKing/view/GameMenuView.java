@@ -5,7 +5,12 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Item;
+import byui.cit260.returnedKing.model.Location;
+import byui.cit260.returnedKing.model.Map;
 import java.util.Scanner;
+import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -16,20 +21,15 @@ public class GameMenuView extends View {
     
     public GameMenuView() {
                  super( "\n"
-                      + "\n------------------------------------------"
-                      + "\n| Game Menu (temporary access to views)  |"
-                      + "\n------------------------------------------"
-                      + "\nF - Go to the Forest scene"
-                      + "\nK - Go to the King's House scene"
-                      + "\nH - Go to the Hunting Reserve Scene"
-                      + "\nT - Go to the Tavern"  
-                      + "\nW - Go to the West Road"   
-                      + "\nE - Go to the East Road" 
-                      + "\nN - Go to the North Road"   
-                      + "\nS - Go to the South Road"  
-                      + "\nC - Go to the Church"   
+                      + "\n-------------------------------"
+                      + "\n|          Game Menu          |"
+                      + "\n-------------------------------"
+                      + "\nP - Player Type"
+                      + "\nI - Item List"
+                      + "\nM - Map Display"
+                      + "\nV - Move to new location"
                       + "\nQ - Quit to Main Menu"
-                      + "\n------------------------------------------");
+                      + "\n-------------------------------");
                     }
     
     @Override
@@ -38,102 +38,97 @@ public class GameMenuView extends View {
         value = value.toUpperCase(); //convert value to uppercase
         
         switch (value) {
-            case "F": //opens the Forest scene
-                this.goToForest();
+            case "P": 
+                this.playerType();
                 break;
-            case "K": //opens the King's House scene
-                this.goToKhouse();
+            case "I": 
+                this.itemList();
                 break;
-            case "H": // opens the Hunting Reserve scene
-                this.goToHuntReserve();
+            case "M": 
+                this.displayMap();
                 break;
-            case "T": // opens the Tavernscene
-                this.goToTavern();
+            case "V": 
+                this.movePlayer();
                 break;
-            case "W": // opens the West Road scene
-                this.goToWestRoad();
-                break;
-            case "E": // opens the East Road scene
-                this.goToEastRoad();
-                break;
-            case "N": // opens the North Road scene
-                this.goToNorthRoad();
-                break;
-            case "S": // opens the South Road scene
-                this.goToSouthRoad();
-                break;
-            case "C": // opens the Church scene    
-                this.goToChurch();
-                break;
-                
+                    
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
+    }
+    
+    private void playerType() {
+        
+        PlayerTypeMenuView playerTypeMenuView = new PlayerTypeMenuView();
+        playerTypeMenuView.display();
+    }
+    
+    private void itemList() {
+        StringBuilder line;
+        
+        Game game = RkJavaGame.getCurrentGame();
+        Item[] items = game.getItems();
+        
+        System.out.println("\n       LIST OF ITEMS");
+        line = new StringBuilder("                          ");
+        line.insert(0, "DESCRIPTION");
+        line.insert(15, "QUANTITY");
+        line.insert(20, "UNIT PRICE");
+        System.out.println(line.toString());
+        
+        for (Item item : items) {
+            line = new StringBuilder("                      ");
+            line.insert(0, item.getDescription());
+            line.insert(15, item.getQuantityInStock());
+            line.insert(20, item.getUnitPrice());
+            
+            System.out.println(line.toString());
+        }
         
     }
     
-    private void goToForest() {
-        // opens the Forest scene
-//mac??        GameControl.createNewGame(RkJavaGame.getPlayer());
-        
-        // display the Forest menu 
-        ForestMenuView forestMenuView = new ForestMenuView();
-        forestMenuView.display();
-//        System.out.println("*Calls the goToForest() function*");
-    }
-    
-    private void goToKhouse() {
-        // opens the King's House scene
-//mac??        GameControl.createNewGame(RkJavaGame.getPlayer());
-        
-        // display the King's House menu 
-        KhouseMenuView khouseMenuView = new KhouseMenuView();
-        khouseMenuView.display();
-//        System.out.println("*Calls the goToKhouse() function*");
-    }
-    
-    private void goToHuntReserve() {
-        
-        HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.display();
-    }
-    
-    private void goToTavern() {
-        
-        TavernView tavernView = new TavernView();
-        tavernView.display();
-    }
-    
-    private void goToWestRoad() {
-        
-        RoadWestMenuView roadWestMenuView = new RoadWestMenuView();
-        roadWestMenuView.display();
-    }
-    
-    private void goToEastRoad() {
-        
-        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
-        roadEastMenuView.display();
-    }
-    
-    private void goToNorthRoad() {
-        
-        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
-        roadNorthMenuView.display();
+    public void displayMap() {
+        String leftIndicator;
+        String rightIndicator;
+
+        Game game = RkJavaGame.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+        Location[][] locations = map.getLocations(); // retreive the locations from map
+        try {
+            System.out.print("  |");
+            for (int column = 0; column < locations[0].length; column++) {
+                System.out.print("  " + column + " |"); // print col numbers to side of map
+            }
+            System.out.println();
+            for (int row = 0; row < locations.length; row++) {
+                System.out.print(row + " "); // print row numbers to side of map
+                for (int column = 0; column < locations[row].length; column++) {
+                    leftIndicator = " ";
+                    rightIndicator = " ";
+                    if (locations[row][column] == map.getCurrentLocation()) {
+                        leftIndicator = "*"; // can be stars or whatever these are indicators showing visited
+                        rightIndicator = "*"; // same as above
+                    } else if (locations[row][column].isVisited()) {
+                        leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
+                        rightIndicator = "<"; // same as above
+                    }
+                    System.out.print("|"); // start map with a |
+                    if (locations[row][column].getScene() == null) {
+                        System.out.print(leftIndicator + "??" + rightIndicator);
+                    } else {
+                        System.out.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
+                    }
+                }
+                System.out.println("|");
+            }
+        } catch (Exception e) {
+            System.out.println("Error");
+        }
     }
 
-    private void goToSouthRoad() {
-        
-        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
-        roadSouthMenuView.display();
+    private void movePlayer() {
+        System.out.println("\n * call to movePlayer() function");
     }
     
-    private void goToChurch() {
-    
-        ChurchMenuView churchMenuView = new ChurchMenuView();
-        churchMenuView.display();
-    }
-
 }

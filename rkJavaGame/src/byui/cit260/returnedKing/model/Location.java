@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 
 /**
  *
@@ -16,10 +17,11 @@ public class Location implements Serializable{
     // class instance variables
     private int row;
     private int column;
-    
-    private Items items;
+    private boolean visited;
+    private Item items;
     private Scene scene;
-    
+    private ArrayList<Actor> actor; // might need to be "actors"
+                                    // What about the ENUM we made?     
     public Location() {
     }
 
@@ -39,11 +41,11 @@ public class Location implements Serializable{
         this.column = column;
     }
 
-    public Items getItems() {
+    public Item getItems() {
         return items;
     }
 
-    public void setItems(Items items) {
+    public void setItems(Item items) {
         this.items = items;
     }
 
@@ -88,6 +90,18 @@ public class Location implements Serializable{
             return false;
         }
         return true;
+    }
+
+    public void setVisited(boolean b) {
+        this.visited = b;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public ArrayList<Actor> getActor() {
+        return actor;
     }
     
     

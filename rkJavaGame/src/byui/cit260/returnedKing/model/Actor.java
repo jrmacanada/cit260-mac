@@ -13,7 +13,7 @@ import java.util.Objects;
  *
  * @author michaelcavey
  */
-public enum Character implements Serializable{
+public enum Actor implements Serializable{
     
     Guard("Guards the gates"),
     Bandit("Attacks on the road"),
@@ -28,7 +28,7 @@ public enum Character implements Serializable{
     Priest2("Second Priest"),
     FalseKing("Your Uncle");
     
-   private final String description;
+    private final String description;
     private final Point coordinates;
     
     private Scene scene;
@@ -41,7 +41,7 @@ public enum Character implements Serializable{
         this.scene = scene;
     }
 
-    Character(String description) {
+    Actor(String description) {
         this.description = description;
         coordinates = new Point(1,1);
     }

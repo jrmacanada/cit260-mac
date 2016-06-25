@@ -22,12 +22,12 @@ public class MainMenuView extends View {
                       + "\n| Main Menu                              |"
                       + "\n------------------------------------------"
                       + "\nN - Start new game"
-                      + "\nG - Get and start saved game"
+                      + "\nG - Start saved game"
                       + "\nH - Get help on how to play the game"
                       + "\nS - Save Game"
                       + "\nQ - Quit"
-                      + "\n------------------------------------------"
-                      + "\nT - TEMP link to GameMenu"); // remove after L07 assignment
+                      + "\n------------------------------------------");
+
                    }
     
     @Override
@@ -48,10 +48,10 @@ public class MainMenuView extends View {
             case "S": // Save Current Game
                 this.saveGame();
                 break;
-            case "T": // TEMP link to GameMenu
-                this.tempGameMenu();
-                break;  
-                // remove "case-T" after L07 assignment
+//            case "T": // TEMP link to GameMenu
+//                this.tempGameMenu();
+//                break;  
+//                // remove "case-T" after L07 assignment
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -71,19 +71,20 @@ public class MainMenuView extends View {
     private void startExistingGame() {
         System.out.println("*Calls the startExistingGame() function*");
     }
+    
     private void saveGame() {
         System.out.println("*Calls the saveGame() function*");
     }
+    
     public void displayHelpMenu() {
         
        HelpMenuView helpMenuView = new HelpMenuView();
        helpMenuView.display();
-       
     }
 
-    private void tempGameMenu() {
-        
-       GameMenuView gameMenuView = new GameMenuView();
-       gameMenuView.display();
-    }
+//    private void tempGameMenu() {
+//        
+//       GameMenuView gameMenuView = new GameMenuView();
+//       gameMenuView.display();
+//    }
 }

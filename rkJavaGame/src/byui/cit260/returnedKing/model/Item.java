@@ -12,18 +12,18 @@ import java.util.Objects;
  * 05-26-2016 Recommit with proper message
  * @author michaelcavey
  */
-public class Items implements Serializable{
+public class Item implements Serializable{
     
     // class instance variables
     private String inventoryType;
-    private double quantityInStock;
+    private String description;
+    private int quantityInStock;
+    private int unitPrice;
     private double calcUsableVolumeOfWagon;
-    
-    private Game game;
     
     private Location[] location;
 
-    public Items() {
+    public Item() {
     }
 
     public String getInventoryType() {
@@ -34,12 +34,24 @@ public class Items implements Serializable{
         this.inventoryType = inventoryType;
     }
 
-    public double getQuantityInStock() {
+    public int getQuantityInStock() {
         return quantityInStock;
     }
 
-    public void setQuantityInStock(double quantityInStock) {
+    public void setQuantityInStock(int quantityInStock) {
         this.quantityInStock = quantityInStock;
+    }
+    
+    public String getDescription() {
+        return this.description;
+    }
+    
+    public void setDescription(String description) {
+        this.description = description;
+    }
+
+    public void setUnitPrice(int i) {
+        
     }
 
     public double getCalcUsableVolumeOfWagon() {
@@ -50,20 +62,16 @@ public class Items implements Serializable{
         this.calcUsableVolumeOfWagon = calcUsableVolumeOfWagon;
     }
 
-    public Game getGame() {
-        return game;
-    }
-
-    public void setGame(Game game) {
-        this.game = game;
-    }
-
     public Location[] getLocation() {
         return location;
     }
 
     public void setLocation(Location[] location) {
         this.location = location;
+    }
+
+    public int getUnitPrice() {
+        return unitPrice;
     }
     
     
@@ -92,7 +100,7 @@ public class Items implements Serializable{
         if (getClass() != obj.getClass()) {
             return false;
         }
-        final Items other = (Items) obj;
+        final Item other = (Item) obj;
         if (!Objects.equals(this.inventoryType, other.inventoryType)) {
             return false;
         }
@@ -104,10 +112,7 @@ public class Items implements Serializable{
         }
         return true;
     }
-    
-    
-    
-    
-    
+
+ 
     
 }

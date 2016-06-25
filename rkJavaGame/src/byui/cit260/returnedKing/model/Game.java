@@ -24,7 +24,7 @@ public class Game implements Serializable{
     private Wood wood;
     private Competition competition;
     
-    private Items[] items;
+    private Item[] items;
     
 
     public Game() {
@@ -86,11 +86,11 @@ public class Game implements Serializable{
         this.competition = competition;
     }
 
-    public Items[] getItems() {
+    public Item[] getItems() {
         return items;
     }
 
-    public void setItems(Items[] items) {
+    public void setItems(Item[] items) {
         this.items = items;
     }
     

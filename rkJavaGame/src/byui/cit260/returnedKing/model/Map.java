@@ -18,9 +18,41 @@ public class Map implements Serializable{
     private int columnCount;
     
     private Game[] game;
+    private Location[][] locations;
+    private Location currentLocation;
+    private int currentRow = 0;
+    private int currentColumn = 0;
 
-    public Map() {
+//    public Map() {
+//    }
+    
+    public Map(int rowCount, int columnCount) {
+        
+        if (rowCount < 1 || columnCount < 1) {
+            System.out.println("The number of rows and columns must be > zero");
+            return;
+        }
+        
+        this.rowCount = rowCount;
+        this.columnCount = columnCount;
+        
+        // create 2-D array for Location objects
+        this.locations = new Location[rowCount] [columnCount];
+        
+        for (int row = 0; row < rowCount; row++) {
+            for (int column = 0; column < columnCount; column++) {
+                // create and initialize new location object instance
+                Location location = new Location();
+                location.setColumn(column);
+                location.setRow(row);
+                location.setVisited(false);
+                
+                // assign the location object to the current position in the array
+                locations[row][column] = location;            
+            }
+        }
     }
+    
 
     public int getRowCount() {
         return rowCount;
@@ -45,9 +77,41 @@ public class Map implements Serializable{
     public void setGame(Game[] game) {
         this.game = game;
     }
-    
-    
 
+    public Location[][] getLocations() {
+        return locations;
+    }
+
+    public void setLocations(Location[][] locations) {
+        this.locations = locations;
+    }
+
+    public Location getCurrentLocation() {
+        return currentLocation;
+    }
+
+    public void setCurrentLocation(Location currentLocation) {
+        this.currentLocation = currentLocation;
+    }
+
+    public int getCurrentRow() {
+        return currentRow;
+    }
+
+    public void setCurrentRow(int currentRow) {
+        this.currentRow = currentRow;
+    }
+
+    public int getCurrentColumn() {
+        return currentColumn;
+    }
+
+    public void setCurrentColumn(int currentColumn) {
+        this.currentColumn = currentColumn;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 5;

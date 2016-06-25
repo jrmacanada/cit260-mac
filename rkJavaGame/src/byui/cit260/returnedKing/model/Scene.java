@@ -26,12 +26,11 @@ public class Scene implements Serializable {
     private String enemySpecialSkill;
     private String finalCombat;
     private String finalRevelation;
-    private String characterType;
-    private String characterSpecialSkill;
+    private String actorType;
+    private String actorSpecialSkill;
+    private String mapSymbol;
     
-    private Location location;
-    
-    private Character[] character;
+    private Actor[] actor;
 
     public Scene() {
     }
@@ -118,39 +117,30 @@ public class Scene implements Serializable {
         this.finalRevelation = finalRevelation;
     }
 
-    public String getCharacterType() {
-        return characterType;
+    public String getActorType() {
+        return actorType;
     }
 
-    public void setCharacterType(String characterType) {
-        this.characterType = characterType;
+    public void setActorType(String actorType) {
+        this.actorType = actorType;
     }
 
-    public String getCharacterSpecialSkill() {
-        return characterSpecialSkill;
+    public String getActorSpecialSkill() {
+        return actorSpecialSkill;
     }
 
-    public void setCharacterSpecialSkill(String characterSpecialSkill) {
-        this.characterSpecialSkill = characterSpecialSkill;
+    public void setActorSpecialSkill(String actorSpecialSkill) {
+        this.actorSpecialSkill = actorSpecialSkill;
     }
 
-    public Character[] getCharacter() {
-        return character;
+    public Actor[] getActor() {
+        return actor;
     }
 
-    public void setCharacter(Character[] character) {
-        this.character = character;
+    public void setActor(Actor[] actor) {
+        this.actor = actor;
     }
 
-    public Location getLocation() {
-        return location;
-    }
-
-    public void setLocation(Location location) {
-        this.location = location;
-    }
-    
-    
     
     
 
@@ -167,14 +157,14 @@ public class Scene implements Serializable {
         hash = 53 * hash + Objects.hashCode(this.enemySpecialSkill);
         hash = 53 * hash + Objects.hashCode(this.finalCombat);
         hash = 53 * hash + Objects.hashCode(this.finalRevelation);
-        hash = 53 * hash + Objects.hashCode(this.characterType);
-        hash = 53 * hash + Objects.hashCode(this.characterSpecialSkill);
+        hash = 53 * hash + Objects.hashCode(this.actorType);
+        hash = 53 * hash + Objects.hashCode(this.actorSpecialSkill);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Scene{" + "description=" + description + ", blockedLocation=" + blockedLocation + ", publicInfo=" + publicInfo + ", privateInfo=" + privateInfo + ", activityType=" + activityType + ", activityScore=" + activityScore + ", enemyType=" + enemyType + ", enemySpecialSkill=" + enemySpecialSkill + ", finalCombat=" + finalCombat + ", finalRevelation=" + finalRevelation + ", characterType=" + characterType + ", characterSpecialSkill=" + characterSpecialSkill + '}';
+        return "Scene{" + "description=" + description + ", blockedLocation=" + blockedLocation + ", publicInfo=" + publicInfo + ", privateInfo=" + privateInfo + ", activityType=" + activityType + ", activityScore=" + activityScore + ", enemyType=" + enemyType + ", enemySpecialSkill=" + enemySpecialSkill + ", finalCombat=" + finalCombat + ", finalRevelation=" + finalRevelation + ", actorType=" + actorType + ", actorSpecialSkill=" + actorSpecialSkill + '}';
     }
     
     
@@ -221,13 +211,21 @@ public class Scene implements Serializable {
         if (!Objects.equals(this.finalRevelation, other.finalRevelation)) {
             return false;
         }
-        if (!Objects.equals(this.characterType, other.characterType)) {
+        if (!Objects.equals(this.actorType, other.actorType)) {
             return false;
         }
-        if (!Objects.equals(this.characterSpecialSkill, other.characterSpecialSkill)) {
+        if (!Objects.equals(this.actorSpecialSkill, other.actorSpecialSkill)) {
             return false;
         }
         return true;
+    }
+
+    public void setMapSymbol(String mm) {
+        this.mapSymbol = mm;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
     }
     
     
