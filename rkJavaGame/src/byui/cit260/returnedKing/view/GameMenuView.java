@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
 import byui.cit260.returnedKing.model.Location;
@@ -28,6 +29,7 @@ public class GameMenuView extends View {
                       + "\nI - Item List"
                       + "\nM - Map Display"
                       + "\nV - Move to new location"
+                      + "\nS - Character with the maximum strength"
                       + "\nQ - Quit to Main Menu"
                       + "\n-------------------------------");
                     }
@@ -49,6 +51,9 @@ public class GameMenuView extends View {
                 break;
             case "V": 
                 this.movePlayer();
+                break;
+            case "S": 
+                this.maxStrength();
                 break;
                     
             default:
@@ -131,4 +136,21 @@ public class GameMenuView extends View {
         System.out.println("\n * call to movePlayer() function");
     }
     
-}
+    
+    
+    private void maxStrength() {
+        
+        
+           int maxValue = 0;
+            for(Actor act: Actor.values()){
+                 maxValue = Math.max(act.playerStrength,maxValue);
+                System.out.println("\n The highest strength is " + maxValue);
+               }
+    
+    }
+    
+        }
+   
+            
+    
+

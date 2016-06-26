@@ -26,6 +26,8 @@ public class Game implements Serializable{
     
     private Item[] items;
     
+    private Actor actor;
+    
 
     public Game() {
     }
@@ -93,6 +95,16 @@ public class Game implements Serializable{
     public void setItems(Item[] items) {
         this.items = items;
     }
+
+    public Actor getActor() {
+        return actor;
+    }
+
+    public void setActor(Actor actor) {
+        this.actor = actor;
+    }
+    
+
     
     
     
