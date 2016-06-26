@@ -97,19 +97,13 @@ public class GameMenuView extends View {
             System.out.println(line.toString());
         }
         
-//        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
-
-    }
-    
-    public long buyOneEach(int[] items) {
-
         int totalPrice = 0;
-
-        for (int unitPrice : items) {
-            totalPrice += unitPrice;
+        
+        for (Item item : items) {
+            totalPrice += item.getUnitPrice();
         }
         
-        return totalPrice;
+        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
     }
     
     public void displayMap() {
@@ -156,16 +150,12 @@ public class GameMenuView extends View {
     }
     
     private void maxStrength() {
-        
-           int maxValue = 0;
-            for(Actor act: Actor.values()){
-                 maxValue = Math.max(act.playerStrength,maxValue);
-                System.out.println("\n The highest strength is " + maxValue);
-               }
+
+        int maxValue = 0;
+        for (Actor act : Actor.values()) {
+            maxValue = Math.max(act.playerStrength, maxValue);
+            System.out.println("\n The highest strength is " + maxValue);
+        }
     }
     
 }
-   
-            
-    
-
