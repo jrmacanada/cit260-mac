@@ -28,6 +28,7 @@ public class RkJavaGame {
      */
     private static Game currentGame = null;
     private static Player player = null;
+    private static Game totalPrice = null;
     
     public static void main(String[] args) {
         
@@ -52,6 +53,12 @@ public class RkJavaGame {
         RkJavaGame.player = player;
     }
     
-    
+    public static Game getTotalPrice() {
+        return totalPrice;
+    }
+
+    public static void setTotalPrice(Game totalPrice) {
+        RkJavaGame.totalPrice = totalPrice;
+    }
     
 } 
