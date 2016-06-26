@@ -159,7 +159,7 @@ public class GameMenuView extends View {
         GameControl gameC = new GameControl();
         gameC.mStrength();
         
-//        System.out.println("\n[View Layer] The highest character strength is " + maxValue);
+        System.out.println("\n[View Layer] The highest character strength is " );
 
         }
     }
