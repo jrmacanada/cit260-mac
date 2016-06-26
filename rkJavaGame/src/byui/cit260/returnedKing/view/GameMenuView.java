@@ -98,12 +98,16 @@ public class GameMenuView extends View {
             System.out.println(line.toString());
         }
         
+        GameControl calcPrice = new GameControl();
         int totalPrice = 0;
+        calcPrice.buyOneEach(totalPrice);
         
-        for (Item item : items) {
-            totalPrice += item.getUnitPrice();
-        }
-        
+//        int totalPrice = 0;
+//        
+//        for (Item item : items) {
+//            totalPrice += item.getUnitPrice();
+//        }
+//        
         System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
     }
     

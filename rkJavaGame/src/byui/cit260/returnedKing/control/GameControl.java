@@ -50,6 +50,20 @@ public class GameControl {
          MapControl.movePlayerToStartingLocation(map);
          
         }
+
+    public int buyOneEach(int totalPrice) {
+        
+        Game game = RkJavaGame.getCurrentGame();
+        Item[] items = game.getItems();
+        
+//        int totalPrice = 0;
+        
+        for (Item item : items) {
+            totalPrice += item.getUnitPrice();
+        }    
+        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
+        return totalPrice;
+    }
     
      public enum Index {
          food,
