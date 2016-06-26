@@ -97,6 +97,19 @@ public class GameMenuView extends View {
             System.out.println(line.toString());
         }
         
+//        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
+
+    }
+    
+    public long buyOneEach(int[] items) {
+
+        int totalPrice = 0;
+
+        for (int unitPrice : items) {
+            totalPrice += unitPrice;
+        }
+        
+        return totalPrice;
     }
     
     public void displayMap() {
