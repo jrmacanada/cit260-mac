@@ -61,7 +61,7 @@ public class GameControl {
         for (Item item : items) {
             totalPrice += item.getUnitPrice();
         }    
-        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
+        System.out.println("\n [Control Layer] The price to buy one of each item is " + totalPrice + " coins");
         return totalPrice;
     }
     
@@ -105,11 +105,12 @@ public class GameControl {
     }
     
     public int mStrength() {
-       int maxValue = 0;
-            for(Actor act: Actor.values()){
-                 maxValue = Math.max(act.playerStrength,maxValue);
-    }
-            return maxValue;
+        int maxValue = 0;
+        for (Actor act : Actor.values()) {
+            maxValue = Math.max(act.playerStrength, maxValue);
+        }
+        System.out.println("\n[Control Layer] The highest character strength is " + maxValue);
+        return maxValue;
 
     }
     

@@ -108,7 +108,7 @@ public class GameMenuView extends View {
 //            totalPrice += item.getUnitPrice();
 //        }
 //        
-        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
+        System.out.println("\n [View Layer] The price to buy one of each item is " + totalPrice + " coins");
     }
     
     public void displayMap() {
@@ -155,10 +155,12 @@ public class GameMenuView extends View {
     }
     
     private void maxStrength() {
+        
         GameControl gameC = new GameControl();
         gameC.mStrength();
         
-        System.out.println("\nThe highest character strength is ");
+//        System.out.println("\n[View Layer] The highest character strength is " + maxValue);
+
         }
     }
     
