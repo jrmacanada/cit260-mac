@@ -69,6 +69,12 @@ public class GameMenuView extends View {
         playerTypeMenuView.display();
     }
     
+//    private void itemList() {
+//        
+//        ItemListMenuView itemListMenuView = new ItemListMenuView();
+//        itemListMenuView.display();
+//    }
+    
     private void itemList() {
         StringBuilder line;
         
@@ -76,17 +82,17 @@ public class GameMenuView extends View {
         Item[] items = game.getItems();
         
         System.out.println("\n       LIST OF ITEMS");
-        line = new StringBuilder("                          ");
+        line = new StringBuilder("                                        ");
         line.insert(0, "DESCRIPTION");
         line.insert(15, "QUANTITY");
-        line.insert(20, "UNIT PRICE");
+        line.insert(25, "UNIT PRICE");
         System.out.println(line.toString());
         
         for (Item item : items) {
-            line = new StringBuilder("                      ");
+            line = new StringBuilder("                                        ");
             line.insert(0, item.getDescription());
-            line.insert(15, item.getQuantityInStock());
-            line.insert(20, item.getUnitPrice());
+            line.insert(18, item.getQuantityInStock());
+            line.insert(28, item.getUnitPrice());
             
             System.out.println(line.toString());
         }
@@ -136,20 +142,16 @@ public class GameMenuView extends View {
         System.out.println("\n * call to movePlayer() function");
     }
     
-    
-    
     private void maxStrength() {
-        
         
            int maxValue = 0;
             for(Actor act: Actor.values()){
                  maxValue = Math.max(act.playerStrength,maxValue);
                 System.out.println("\n The highest strength is " + maxValue);
                }
-    
     }
     
-        }
+}
    
             
     

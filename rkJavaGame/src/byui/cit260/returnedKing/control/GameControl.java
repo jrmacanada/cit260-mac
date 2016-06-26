@@ -64,26 +64,26 @@ public class GameControl {
         
         Item food = new Item();
         food.setDescription("Food");
-        food.setQuantityInStock(0);
-        food.setUnitPrice(0);
+        food.setQuantityInStock(100);
+        food.setUnitPrice(3);
         items[Index.food.ordinal()] = food;
         
         Item sword = new Item();
         sword.setDescription("Sword");
-        sword.setQuantityInStock(0);
-        sword.setUnitPrice(0);
+        sword.setQuantityInStock(1);
+        sword.setUnitPrice(15);
         items[Index.sword.ordinal()] = sword;
         
         Item shield = new Item();
         shield.setDescription("Shield");
-        shield.setQuantityInStock(0);
-        shield.setUnitPrice(0);
+        shield.setQuantityInStock(1);
+        shield.setUnitPrice(10);
         items[Index.shield.ordinal()] = shield;
         
         Item orb = new Item();
         orb.setDescription("Orb");
-        orb.setQuantityInStock(0);
-        orb.setUnitPrice(0);
+        orb.setQuantityInStock(1);
+        orb.setUnitPrice(20);
         items[Index.orb.ordinal()] = orb;
         
             return items;

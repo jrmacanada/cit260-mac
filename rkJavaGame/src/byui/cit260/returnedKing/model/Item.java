@@ -49,9 +49,13 @@ public class Item implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+    
+    public int getUnitPrice() {
+        return unitPrice;
+    }
 
     public void setUnitPrice(int i) {
-        
+        this.unitPrice = i;
     }
 
     public double getCalcUsableVolumeOfWagon() {
@@ -70,14 +74,7 @@ public class Item implements Serializable{
         this.location = location;
     }
 
-    public int getUnitPrice() {
-        return unitPrice;
-    }
     
-    
-    
-    
-
     @Override
     public int hashCode() {
         int hash = 3;
