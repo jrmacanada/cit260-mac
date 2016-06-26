@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
@@ -150,12 +151,11 @@ public class GameMenuView extends View {
     }
     
     private void maxStrength() {
-
-        int maxValue = 0;
-        for (Actor act : Actor.values()) {
-            maxValue = Math.max(act.playerStrength, maxValue);
-            System.out.println("\n The highest strength is " + maxValue);
+        GameControl gameC = new GameControl();
+        gameC.mStrength();
+        
+        System.out.println("\nThe highest character strength is ");
         }
     }
     
-}
+

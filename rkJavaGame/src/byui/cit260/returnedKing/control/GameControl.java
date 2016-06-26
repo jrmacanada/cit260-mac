@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.control;
 
+import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
 import byui.cit260.returnedKing.model.Map;
@@ -88,5 +89,15 @@ public class GameControl {
         
             return items;
     }
+    
+    public int mStrength() {
+       int maxValue = 0;
+            for(Actor act: Actor.values()){
+                 maxValue = Math.max(act.playerStrength,maxValue);
+    }
+            return maxValue;
+
+    }
+    
 
 }
