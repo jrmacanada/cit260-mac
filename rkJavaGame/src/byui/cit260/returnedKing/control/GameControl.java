@@ -51,17 +51,16 @@ public class GameControl {
          
         }
 
-    public int buyOneEach(int totalPrice) {
+    public int buyOneEach() {
         
         Game game = RkJavaGame.getCurrentGame();
         Item[] items = game.getItems();
         
-//        int totalPrice = 0;
+        int totalPrice = 0;
         
         for (Item item : items) {
             totalPrice += item.getUnitPrice();
         }    
-        System.out.println("\n [Control Layer] The price to buy one of each item is " + totalPrice + " coins");
         return totalPrice;
     }
     
