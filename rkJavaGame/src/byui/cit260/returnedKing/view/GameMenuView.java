@@ -98,13 +98,17 @@ public class GameMenuView extends View {
             System.out.println(line.toString());
         }
         
+        GameControl calcPrice = new GameControl();
         int totalPrice = 0;
+        calcPrice.buyOneEach(totalPrice);
         
-        for (Item item : items) {
-            totalPrice += item.getUnitPrice();
-        }
-        
-        System.out.println("\n The price to buy one of each item is " + totalPrice + " coins");
+//        int totalPrice = 0;
+//        
+//        for (Item item : items) {
+//            totalPrice += item.getUnitPrice();
+//        }
+//        
+        System.out.println("\n [View Layer] The price to buy one of each item is " + totalPrice + " coins");
     }
     
     public void displayMap() {
@@ -151,6 +155,7 @@ public class GameMenuView extends View {
     }
     
     private void maxStrength() {
+        
         GameControl gameC = new GameControl();
         gameC.mStrength();
         int strength = gameC.mStrength();

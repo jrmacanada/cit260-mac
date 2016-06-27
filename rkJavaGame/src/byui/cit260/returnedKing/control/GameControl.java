@@ -50,6 +50,20 @@ public class GameControl {
          MapControl.movePlayerToStartingLocation(map);
          
         }
+
+    public int buyOneEach(int totalPrice) {
+        
+        Game game = RkJavaGame.getCurrentGame();
+        Item[] items = game.getItems();
+        
+//        int totalPrice = 0;
+        
+        for (Item item : items) {
+            totalPrice += item.getUnitPrice();
+        }    
+        System.out.println("\n [Control Layer] The price to buy one of each item is " + totalPrice + " coins");
+        return totalPrice;
+    }
     
      public enum Index {
          food,
@@ -91,11 +105,11 @@ public class GameControl {
     }
     
     public int mStrength() {
-       int maxValue = 0;
-            for(Actor act: Actor.values()){
-                 maxValue = Math.max(act.playerStrength,maxValue);
-    }
-            return maxValue;
+        int maxValue = 0;
+        for (Actor act : Actor.values()) {
+            maxValue = Math.max(act.playerStrength, maxValue);
+        }
+       return maxValue;
 
     }
     

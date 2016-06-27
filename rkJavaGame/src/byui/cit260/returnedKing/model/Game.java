@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -27,6 +28,7 @@ public class Game implements Serializable{
     private Item[] items;
     
     private Actor actor;
+    private int totalPrice;
     
 
     public Game() {
@@ -104,25 +106,37 @@ public class Game implements Serializable{
         this.actor = actor;
     }
     
+    public int getTotalPrice() {
+        return totalPrice;
+    }
 
+    public void setTotalPrice(int totalPrice) {
+        this.totalPrice = totalPrice;
+    }
     
-    
-    
-    
+
 
     @Override
     public int hashCode() {
         int hash = 3;
-        hash = 19 * hash + Objects.hashCode(this.start);
-        hash = 19 * hash + (int) (Double.doubleToLongBits(this.numCode) ^ (Double.doubleToLongBits(this.numCode) >>> 32));
+        hash = 53 * hash + Objects.hashCode(this.start);
+        hash = 53 * hash + (int) (Double.doubleToLongBits(this.numCode) ^ (Double.doubleToLongBits(this.numCode) >>> 32));
+        hash = 53 * hash + Objects.hashCode(this.player);
+        hash = 53 * hash + Objects.hashCode(this.map);
+        hash = 53 * hash + Objects.hashCode(this.combat);
+        hash = 53 * hash + Objects.hashCode(this.wood);
+        hash = 53 * hash + Objects.hashCode(this.competition);
+        hash = 53 * hash + Arrays.deepHashCode(this.items);
+        hash = 53 * hash + Objects.hashCode(this.actor);
+        hash = 53 * hash + this.totalPrice;
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Game{" + "start=" + start + ", numCode=" + numCode + '}';
+        return "Game{" + "start=" + start + ", numCode=" + numCode + ", player=" + player + ", map=" + map + ", combat=" + combat + ", wood=" + wood + ", competition=" + competition + ", items=" + items + ", actor=" + actor + ", totalPrice=" + totalPrice + '}';
     }
-
+    
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -136,6 +150,30 @@ public class Game implements Serializable{
             return false;
         }
         if (Double.doubleToLongBits(this.numCode) != Double.doubleToLongBits(other.numCode)) {
+            return false;
+        }
+        if (!Objects.equals(this.player, other.player)) {
+            return false;
+        }
+        if (!Objects.equals(this.map, other.map)) {
+            return false;
+        }
+        if (!Objects.equals(this.combat, other.combat)) {
+            return false;
+        }
+        if (!Objects.equals(this.wood, other.wood)) {
+            return false;
+        }
+        if (!Objects.equals(this.competition, other.competition)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.items, other.items)) {
+            return false;
+        }
+        if (this.actor != other.actor) {
+            return false;
+        }
+        if (this.totalPrice != other.totalPrice) {
             return false;
         }
         return true;
