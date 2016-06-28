@@ -13,7 +13,7 @@ import byui.cit260.returnedKing.model.Player;
 import rkjavagame.RkJavaGame;
 
 /**
- * 05-26-2016 Recommit with proper message
+ * 
  * @author michaelcavey
  */
 public class GameControl {

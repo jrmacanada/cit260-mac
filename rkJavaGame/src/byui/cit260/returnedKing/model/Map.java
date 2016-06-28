@@ -18,10 +18,11 @@ public class Map implements Serializable{
     private int columnCount;
     
     private Game[] game;
-    private Location[][] locations;
+    public Location[][] locations;
     private Location currentLocation;
     private int currentRow = 0;
     private int currentColumn = 0;
+    private Scene[] scenes;
 
 //    public Map() {
 //    }
@@ -110,6 +111,14 @@ public class Map implements Serializable{
         this.currentColumn = currentColumn;
     }
 
+    public Scene[] getScenes() {
+        return scenes;
+    }
+
+    public void setScenes(Scene[] scenes) {
+        this.scenes = scenes;
+    }
+
     
     
     @Override
@@ -142,7 +151,7 @@ public class Map implements Serializable{
         }
         return true;
     }
-    
+
     
     
     

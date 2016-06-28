@@ -48,7 +48,7 @@ public class GameMenuView extends View {
                 this.itemList();
                 break;
             case "M": 
-                this.displayMap();
+                this.mapView();
                 break;
             case "V": 
                 this.movePlayer();
@@ -70,80 +70,17 @@ public class GameMenuView extends View {
         playerTypeMenuView.display();
     }
     
-//    private void itemList() {
-//        
-//        ItemListMenuView itemListMenuView = new ItemListMenuView();
-//        itemListMenuView.display();
-//    }
+    private void mapView() {
+        
+        MapMenuView mapMenuView = new MapMenuView();
+        mapMenuView.display();
+    }
     
     private void itemList() {
-        StringBuilder line;
         
-        Game game = RkJavaGame.getCurrentGame();
-        Item[] items = game.getItems();
-        
-        System.out.println("\n       LIST OF ITEMS");
-        line = new StringBuilder("                                        ");
-        line.insert(0, "DESCRIPTION");
-        line.insert(15, "QUANTITY");
-        line.insert(25, "UNIT PRICE");
-        System.out.println(line.toString());
-        
-        for (Item item : items) {
-            line = new StringBuilder("                                        ");
-            line.insert(0, item.getDescription());
-            line.insert(18, item.getQuantityInStock());
-            line.insert(28, item.getUnitPrice());
-            
-            System.out.println(line.toString());
-        }
-        
-        GameControl totalPrice = new GameControl();
-        totalPrice.buyOneEach();
-        
-        int sumAllItems = totalPrice.buyOneEach();
-        
-        System.out.println("\n [View Layer] The price to buy one of each item is " + sumAllItems + " coins");
-    }
-    
-    public void displayMap() {
-        String leftIndicator;
-        String rightIndicator;
-
-        Game game = RkJavaGame.getCurrentGame(); // retreive the game
-        Map map = game.getMap(); // retreive the map from game
-        Location[][] locations = map.getLocations(); // retreive the locations from map
-        try {
-            System.out.print("  |");
-            for (int column = 0; column < locations[0].length; column++) {
-                System.out.print("  " + column + " |"); // print col numbers to side of map
-            }
-            System.out.println();
-            for (int row = 0; row < locations.length; row++) {
-                System.out.print(row + " "); // print row numbers to side of map
-                for (int column = 0; column < locations[row].length; column++) {
-                    leftIndicator = " ";
-                    rightIndicator = " ";
-                    if (locations[row][column] == map.getCurrentLocation()) {
-                        leftIndicator = "*"; // can be stars or whatever these are indicators showing visited
-                        rightIndicator = "*"; // same as above
-                    } else if (locations[row][column].isVisited()) {
-                        leftIndicator = ">"; // can be stars or whatever these are indicators showing visited
-                        rightIndicator = "<"; // same as above
-                    }
-                    System.out.print("|"); // start map with a |
-                    if (locations[row][column].getScene() == null) {
-                        System.out.print(leftIndicator + "??" + rightIndicator);
-                    } else {
-                        System.out.print(leftIndicator + locations[row][column].getScene().getMapSymbol() + rightIndicator);
-                    }
-                }
-                System.out.println("|");
-            }
-        } catch (Exception e) {
-            System.out.println("Error");
-        }
-    }
+        ItemListMenuView itemListMenuView = new ItemListMenuView();
+        itemListMenuView.display();
+    }    
 
     private void movePlayer() {
         System.out.println("\n * call to movePlayer() function");

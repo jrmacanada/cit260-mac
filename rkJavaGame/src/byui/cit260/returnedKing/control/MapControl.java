@@ -66,7 +66,7 @@ public class MapControl {
         wizardsHamlet,
         secretCave,
         southRoad,
-        fishingTown,
+        harborTown,
         seaport;
     }
     
@@ -189,10 +189,10 @@ public class MapControl {
         southRoadScene.setMapSymbol("SR");
         scenes[SceneType.southRoad.ordinal()] = southRoadScene;
         
-        Scene fishingTownScene = new Scene();
-        fishingTownScene.setDescription("ADD DESCRIPTION OF fishingTown LATER");
-        fishingTownScene.setMapSymbol("FT");
-        scenes[SceneType.fishingTown.ordinal()] = fishingTownScene;
+        Scene harborTownScene = new Scene();
+        harborTownScene.setDescription("ADD DESCRIPTION OF harborTown LATER");
+        harborTownScene.setMapSymbol("HT");
+        scenes[SceneType.harborTown.ordinal()] = harborTownScene;
         
         Scene seaportScene = new Scene();
         seaportScene.setDescription("ADD DESCRIPTION OF seaport LATER");
@@ -229,7 +229,7 @@ public class MapControl {
         locations[4][0].setScene(scenes[SceneType.wizardsHamlet.ordinal()]);
         locations[4][1].setScene(scenes[SceneType.secretCave.ordinal()]);
         locations[4][2].setScene(scenes[SceneType.southRoad.ordinal()]);
-        locations[4][3].setScene(scenes[SceneType.fishingTown.ordinal()]);
+        locations[4][3].setScene(scenes[SceneType.harborTown.ordinal()]);
         locations[4][4].setScene(scenes[SceneType.seaport.ordinal()]);
     }   
         
