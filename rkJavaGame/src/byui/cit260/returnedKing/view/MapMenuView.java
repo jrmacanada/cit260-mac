@@ -17,8 +17,6 @@ import rkjavagame.RkJavaGame;
  */
 
 public class MapMenuView extends View {
-//    private int monasteryScene;
-//    private Object[] Scene;
     
     public MapMenuView() {
                  super( "\n"
@@ -40,7 +38,6 @@ public class MapMenuView extends View {
         
         Game game = RkJavaGame.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
-//        Scene scene = map.getScene();
         
         value = value.toUpperCase(); //convert value to uppercase
         
@@ -170,14 +167,6 @@ public class MapMenuView extends View {
         }
     }
 
-//    private void monastaryScene() {
-//        
-//        Game game = RkJavaGame.getCurrentGame(); // retreive the game
-//        Map map = game.getMap(); // retreive the map from game
-//
-//        System.out.print(map.getCurrentLocation().getScene().getDescription());
-//
-//    }
     
     
 }
