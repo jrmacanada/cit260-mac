@@ -91,25 +91,34 @@ public final class StartProgramView {
     }
        
     private boolean doAction(String playersName) {
-        if (playersName.length() <3) {
+        if (playersName.length() < 3) {
             System.out.println("\nInvalid player name: "
-                + "The name must be greater than two characters in length");
-            return false;
-            }
-        // call createPlayer() control function
-        Player player = GameControl.createPlayer(playersName);
-        
-        if (player == null){ //if unsuccessful
-            System.out.println("\nError creating the player.");
+                    + "The name must be greater than two characters in length");
             return false;
         }
-        
-        //display next view
-        this.displayNextView(player);
+// IS (after implementing exceptions)
+        try {
+            // call createPlayer() control function
+            Player player = GameControl.createPlayer(playersName);
+            this.displayNextView(player);
+        } catch (Exception e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+// WAS (before implementing exceptions)
+        // call createPlayer() control function
+//        Player player = GameControl.createPlayer(playersName);
+//        
+//        if (player == null){ //if unsuccessful
+//            System.out.println("\nError creating the player.");
+//            return false;
+//        }
+//        
+//        //display next view
+//        this.displayNextView(player);
         
         return true; // success !
-        
-        
+
     }
 
     private void displayNextView(Player player) {

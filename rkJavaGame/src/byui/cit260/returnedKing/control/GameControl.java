@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.control;
 
+import byui.cit260.returnedKing.exceptions.GameControlException;
 import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
@@ -16,21 +17,40 @@ import rkjavagame.RkJavaGame;
  * 
  * @author michaelcavey
  */
-public class GameControl {
 
-    public static Player createPlayer(String name) {
-        
+public class GameControl {
+// IS (after implementing exceptions)
+    public static Player createPlayer(String name)
+            throws GameControlException {
         if (name == null) {
-            return null;
+            throw new GameControlException("Invalid player name. Could not create player.");
         }
-        
-        Player player = new Player();
-        player.setName(name);
-        
-        RkJavaGame.setPlayer(player); //save the player
-        
-        return player;
+        try {
+            Player player = new Player();
+            player.setName(name);
+
+            RkJavaGame.setPlayer(player); //save the player
+
+            return player;
+        } catch (Exception e) {
+            throw new GameControlException("Error creating player. " + e.getMessage());
+        }
     }
+    
+// WAS (before implementing exceptions)
+//    public static Player createPlayer(String name) {
+//        
+//        if (name == null) {
+//            return null;
+//        }
+//        
+//        Player player = new Player();
+//        player.setName(name);
+//        
+//        RkJavaGame.setPlayer(player); //save the player
+//        
+//        return player;
+//    }
     
      public static void createNewGame(Player player) {
          
