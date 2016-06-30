@@ -31,10 +31,20 @@ public class RkJavaGame {
     private static Game totalPrice = null;
     
     public static void main(String[] args) {
-        
+// FROM Instructions: Did NOT work (after implementing exceptions)       
+//        StartProgramView startProgramView = new StartProgramView();
+//        try {
+//            // create StartProgramView and start the program
+//            startProgramView.display();
+//        } catch (Throwable te) {
+//            System.out.println(te.getMessage());
+//            te.printStackTrace();
+//            startProgramView.display();  
+//        }
+//WAS (before implementing exceptions)        
         StartProgramView startProgramView = new StartProgramView();
         startProgramView.displayStartProgramView();
-           
+        
     }
 
     public static Game getCurrentGame() {
