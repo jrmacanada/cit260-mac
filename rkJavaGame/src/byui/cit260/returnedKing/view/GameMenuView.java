@@ -12,6 +12,7 @@ import byui.cit260.returnedKing.model.Item;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
 import java.util.Scanner;
+import static javax.management.Query.value;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -20,6 +21,7 @@ import rkjavagame.RkJavaGame;
  * @author cavey (as temp menu for access to scene views)
  */
 public class GameMenuView extends View {
+    private int getInput;
     
     public GameMenuView() {
                  super( "\n"
@@ -30,7 +32,7 @@ public class GameMenuView extends View {
                       + "\nI - Item List"
                       + "\nM - Map Display"
                       + "\nV - Move to new location"
-                      + "\nS - Character with the maximum strength"
+                      + "\n2 - Character with the maximum strength"
                       + "\nQ - Quit to Main Menu"
                       + "\n-------------------------------");
                     }
@@ -53,7 +55,8 @@ public class GameMenuView extends View {
             case "V": 
                 this.movePlayer();
                 break;
-            case "S": 
+            case "2":
+//  CALL        this.parseInt(Double number); ??
                 this.maxStrength();
                 break;
                     
@@ -88,12 +91,37 @@ public class GameMenuView extends View {
     
     private void maxStrength() {
         
+//        CALL parseInt(Double number) ??
+        
         GameControl gameC = new GameControl();
         gameC.mStrength();
         int strength = gameC.mStrength();
         
         System.out.println("\nThe highest character strength is " + strength);
         }
-    }
-    
 
+    public Double parseInt(Double number) {
+
+        while (number == null) {
+
+            int value = this.getInput; 
+            
+            if (number.equals("Q")) {
+                break;
+            }
+            
+        try {
+            
+            number = parseInt(number);
+            
+        } catch (NumberFormatException nf) {
+            
+            System.out.println("\n You must enter a valid number."
+                    + " Try again or enter Q to quit");
+                }
+        
+                break;
+        }
+        return number;
+    }    
+}
