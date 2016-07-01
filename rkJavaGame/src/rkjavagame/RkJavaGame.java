@@ -16,6 +16,7 @@ import byui.cit260.returnedKing.model.Wood;
 import byui.cit260.returnedKing.model.Combat;
 import byui.cit260.returnedKing.model.Competition;
 import byui.cit260.returnedKing.view.StartProgramView;
+import byui.cit260.returnedKing.view.View;
 
 /**
  *
@@ -31,19 +32,19 @@ public class RkJavaGame {
     private static Game totalPrice = null;
     
     public static void main(String[] args) {
-// FROM Instructions: Did NOT work (after implementing exceptions)       
-//        StartProgramView startProgramView = new StartProgramView();
-//        try {
-//            // create StartProgramView and start the program
-//            startProgramView.display();
-//        } catch (Throwable te) {
-//            System.out.println(te.getMessage());
-//            te.printStackTrace();
-//            startProgramView.display();  
-//        }
-//WAS (before implementing exceptions)        
+ //FROM Instructions: Did NOT work (after implementing exceptions)       
         StartProgramView startProgramView = new StartProgramView();
-        startProgramView.displayStartProgramView();
+        try {
+            // create StartProgramView and start the program
+            startProgramView.displayStartProgramView();
+        } catch (Throwable te) {
+            System.out.println(te.getMessage());
+            te.printStackTrace();
+            startProgramView.displayStartProgramView();  
+        }
+//WAS (before implementing exceptions)        
+//        StartProgramView startProgramView = new StartProgramView();
+//        startProgramView.displayStartProgramView();
         
     }
 
