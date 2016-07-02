@@ -17,9 +17,10 @@ import rkjavagame.RkJavaGame;
 
 /**
  *
- * @author thiag (original to line 16)
- * @author cavey (as temp menu for access to scene views)
+ * @author thiag 
+ * 
  */
+
 public class GameMenuView extends View {
     private int getInput;
     
@@ -71,32 +72,29 @@ public class GameMenuView extends View {
         return false;
     }
     
-    private void playerType() {
-        
+    private void playerType() {       
         PlayerTypeMenuView playerTypeMenuView = new PlayerTypeMenuView();
         playerTypeMenuView.display();
     }
     
-    private void mapView() {
-        
+    private void mapView() {        
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
     }
     
-    private void itemList() {
-        
+    private void itemList() {        
         ItemListMenuView itemListMenuView = new ItemListMenuView();
         itemListMenuView.display();
     }    
 
     private void movePlayer() {
-        System.out.println("\n * call to movePlayer() function");
+        PlayerMoveMenuView playerMoveMenuView = new PlayerMoveMenuView();
+        playerMoveMenuView.display();
     }
     
     private void maxStrength() {
         
-//        CALL parseInt(Double number) ??
-        
+//        CALL parseInt(Double number) ??        
         GameControl gameC = new GameControl();
         gameC.mStrength();
         int strength = gameC.mStrength();
@@ -127,7 +125,8 @@ public class GameMenuView extends View {
                 break;
         }
         return number;
-    } 
+    }
+    
     private void huntRes() {
         HuntReserveView huntReserveView = new HuntReserveView();
         huntReserveView.display();

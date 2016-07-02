@@ -13,6 +13,7 @@ import rkjavagame.RkJavaGame;
  *
  * @author Craig
  */
+
 public class MainMenuView extends View {
 
     public MainMenuView() {
@@ -25,7 +26,7 @@ public class MainMenuView extends View {
                       + "\nG - Start saved game"
                       + "\nH - Get help on how to play the game"
                       + "\nS - Save Game"
-                      + "\nQ - Quit"
+                      + "\nQ - Quit without saving - End the game."
                       + "\n------------------------------------------");
 
                    }
@@ -48,10 +49,7 @@ public class MainMenuView extends View {
             case "S": // Save Current Game
                 this.saveGame();
                 break;
-//            case "T": // TEMP link to GameMenu
-//                this.tempGameMenu();
-//                break;  
-//                // remove "case-T" after L07 assignment
+
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;

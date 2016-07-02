@@ -9,9 +9,10 @@ package byui.cit260.returnedKing.view;
  *
  * @author Craig
  */
-public class TavernView extends View {
+
+public class TavernMenuView extends View {
     
-    public TavernView(){
+    public TavernMenuView(){
                  super( "\n"
                       + "\n------------------------------------------"
                       + "\n|              Tavern                    |"
@@ -24,8 +25,7 @@ public class TavernView extends View {
                       + "\n------------------------------------------");
 }
     @Override
-    public boolean doAction(String value) {
-        
+    public boolean doAction(String value) {        
         
         value = value.toUpperCase(); //convert choice to uppercase
         
