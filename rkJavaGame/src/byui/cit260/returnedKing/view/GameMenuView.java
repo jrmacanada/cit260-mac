@@ -35,6 +35,7 @@ public class GameMenuView extends View {
                       + "\nV - Move to new location"
                       + "\nH - Move player to Hunter Reserve for CompetionControl test"   
                       + "\n2 - Character with the maximum strength"
+                      + "\nC - Goes to King's House for CombatControl test"   
                       + "\nQ - Quit to Main Menu"
                       + "\n-------------------------------");
                     }
@@ -64,6 +65,9 @@ public class GameMenuView extends View {
 //  CALL        this.parseInt(Double number); ??
                 this.maxStrength();
                 break;
+           /* case "C":
+                this.combatFight();
+                break;*/
                     
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");

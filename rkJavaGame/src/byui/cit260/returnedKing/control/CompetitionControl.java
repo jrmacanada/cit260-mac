@@ -18,6 +18,7 @@ public class CompetitionControl {
         double minYard = 100;
         double maxYard = 115;
         double strength = 100;
+                
         double windResistance = 8;
         double actualStamina = 78;
         double maximumStamina = 100;
