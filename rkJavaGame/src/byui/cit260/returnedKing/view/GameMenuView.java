@@ -32,6 +32,7 @@ public class GameMenuView extends View {
                       + "\nI - Item List"
                       + "\nM - Map Display"
                       + "\nV - Move to new location"
+                      + "\nH - Move player to Hunter Reserve for CompetionControl test"   
                       + "\n2 - Character with the maximum strength"
                       + "\nQ - Quit to Main Menu"
                       + "\n-------------------------------");
@@ -54,6 +55,9 @@ public class GameMenuView extends View {
                 break;
             case "V": 
                 this.movePlayer();
+                break;
+            case "H": 
+                this.huntRes();
                 break;
             case "2":
 //  CALL        this.parseInt(Double number); ??
@@ -123,5 +127,9 @@ public class GameMenuView extends View {
                 break;
         }
         return number;
-    }    
+    } 
+    private void huntRes() {
+        HuntReserveView huntReserveView = new HuntReserveView();
+        huntReserveView.display();
+    }
 }

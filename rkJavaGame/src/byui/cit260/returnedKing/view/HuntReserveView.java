@@ -23,7 +23,7 @@ public class HuntReserveView extends View {
                       + "\n|     What would you like to do?         |"
                       + "\n------------------------------------------"
                       + "\nH - Hunt for wild game "
-                      + "\nT - Talk to the hunters"
+                      + "\nT - Talk to the hunters <-----**THIS GOES TO THE CompetionControl"
                       + "\nQ - Quit to Main Menu"
                       + "\n------------------------------------------");
                     }

@@ -5,6 +5,8 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.CompetitionControl;
+import byui.cit260.returnedKing.exceptions.CompetitionControlException;
 import java.util.Scanner;
 
 /**
@@ -46,10 +48,19 @@ public class HunterChallengeView extends View {
         return false;
         
     }
-
+    
     private void acceptChallenge() {
-        System.out.println("\n*** Calls acceptChallenge() and will evetually"
-                         + "\nuse competition.jave");
+        try {
+            CompetitionControl compC = new CompetitionControl();
+            compC.competition();
+            double chall = compC.competition();
+            
+            
+            System.out.println("test" + chall);
+        } catch (CompetitionControlException cce) {
+            System.out.println(cce.getMessage());
+            
+        }
     }
 
     private void askForRules() {
