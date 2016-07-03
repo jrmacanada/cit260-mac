@@ -18,14 +18,14 @@ public class HunterChallengeView extends View {
     
     public HunterChallengeView() {
                  super( "\n"
-                      + "\n------------------------------------------"
+                      + "\n-------------------------------------------"
                       + "\n|  One of the hunters challenged you to   |"   
-                      + "\n|        a throwing competition          |"
-                      + "\n------------------------------------------"
-                      + "\nA - Accept the challenge  "
+                      + "\n|        a throwing competition           |"
+                      + "\n-------------------------------------------"
+                      + "\nA - Accept the challenge"
                       + "\nR - Ask for him to explain the rules"
                       + "\nQ - Return to the Hunting Reserve "
-                      + "\n------------------------------------------");
+                      + "\n-------------------------------------------");
                     }
    
     @Override
@@ -56,7 +56,7 @@ public class HunterChallengeView extends View {
             double chall = compC.competition();
             
             
-            System.out.println("test" + chall);
+          
         } catch (CompetitionControlException cce) {
             System.out.println(cce.getMessage());
             

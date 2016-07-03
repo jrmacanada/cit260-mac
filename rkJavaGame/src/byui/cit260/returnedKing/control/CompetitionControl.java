@@ -14,7 +14,8 @@ public class CompetitionControl {
     public double competition() 
             throws CompetitionControlException {
         
-        int myInt;
+        String pInput;
+        int myPower = 0;
         double minYard = 100;
         double maxYard = 115;
         double strength = 100;
@@ -24,11 +25,13 @@ public class CompetitionControl {
         double maximumStamina = 100;
         
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("How much Strength do you want to use?");
-        myInt = keyboard.nextInt();
+        System.out.println("\nLets see if you can throw this stone between the 100 foot marker and the 115 foot one."
+                         + "\nHow much Strength do you want to use?");
+        pInput = keyboard.nextLine();
         
-        int power = myInt;
-                
+        try {
+        myPower = Integer.parseInt(pInput);
+        int power = myPower;
         
         if (power <= 0 || power > strength) {
             throw new CompetitionControlException("You need to enter a value between 1 and 100");
@@ -48,6 +51,19 @@ public class CompetitionControl {
             //return 1;
         }
         return distanceInYards;
-        
+        }
+        catch (NumberFormatException nf){
+            int power = myPower;
+            System.out.println("\nYou must enter a valid number.");
+        }
+        return myPower;
     }
 }
+        
+        
+  
+        
+        
+                
+        
+        
