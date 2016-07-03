@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.WoodControlException;
+import java.util.Scanner;
 
 /**
  *
@@ -14,20 +15,32 @@ import byui.cit260.returnedKing.exceptions.WoodControlException;
 
 public class WoodControl {
     
-    public double calcWoodCutCoin(int staminaGiven, int strength, int axe, double actualStamina, int p_coin) 
+    public double calcWoodCutCoin() 
 // IS (after implementing exceptions)
                     throws WoodControlException {
+        
+        int playerInput;
+        double actualStamina = 100;
+        double axe = 25;
+        double strength = 50;
+        
+        Scanner keyboard = new Scanner(System.in);
+        System.out.println("How much Stamina do you want to give up toward this woodcutting job?");
+        playerInput = keyboard.nextInt();
+        
+        int staminaGiven = playerInput;
+        
         if (staminaGiven < 1 || staminaGiven > actualStamina || actualStamina > 100) {
-                throw new WoodControlException("The stamina you gave is outside acceptable boundries.");
+                throw new WoodControlException(" The stamina you gave is outside acceptable boundries."
+                                           + "\n Enter a value between 1 & 99 and less than your available Stamina.");
         }
         if (strength < 1 || strength > 100) {
-                throw new WoodControlException("The strength is outside acceptable boundries.");
+                throw new WoodControlException(" The strength is outside acceptable boundries."
+                                           + "\n Check the file system or database values");
         }
         if (axe != 25 && axe != 50 && axe != 75) {
-                throw new WoodControlException("Ax type values must be 25, 50, or 75.");
-        }
-        if (p_coin < 0) {
-                throw new WoodControlException("Coin value cannot be a negative number.");
+                throw new WoodControlException(" Ax type values must be 25, 50, or 75."
+                                           + "\n Check the file system or database values");
         }
         
         // calculate the coin earned based on the Stamina sacrificed
@@ -36,6 +49,8 @@ public class WoodControl {
         if (e_coin < 1) {
                 throw new WoodControlException("You cannot cut wood; the varibles involved produce less than one coin.");
         }
+        
+        System.out.println("You earned " + (Math.round(e_coin)) + " coins.");
         
 // WAS (before implementing exceptions)
 //        if (staminaGiven < 1 || staminaGiven > actualStamina || actualStamina > 100) {
@@ -71,6 +86,6 @@ public class WoodControl {
         return e_coin;
         
     }
-    
+
 }
 

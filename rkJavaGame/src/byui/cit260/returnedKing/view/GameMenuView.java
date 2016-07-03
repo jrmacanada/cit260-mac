@@ -35,7 +35,8 @@ public class GameMenuView extends View {
                       + "\nV - Move to new location"
                       + "\nH - Move player to Hunter Reserve for CompetionControl test"   
                       + "\n2 - Character with the maximum strength"
-                      + "\nC - Goes to King's House for CombatControl test"   
+                      + "\nC - Goes to King's House for CombatControl test"
+                      + "\nF - Shortcut to Forest Scene"   
                       + "\nQ - Quit to Main Menu"
                       + "\n-------------------------------");
                     }
@@ -68,6 +69,9 @@ public class GameMenuView extends View {
            /* case "C":
                 this.combatFight();
                 break;*/
+            case "F": 
+                this.enterForest();
+                break;
                     
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
@@ -134,5 +138,10 @@ public class GameMenuView extends View {
     private void huntRes() {
         HuntReserveView huntReserveView = new HuntReserveView();
         huntReserveView.display();
+    }
+
+    private void enterForest() {
+        ForestMenuView forestMenuView = new ForestMenuView();
+        forestMenuView.display();
     }
 }

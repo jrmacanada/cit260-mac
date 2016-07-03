@@ -75,7 +75,7 @@ public class WizardStartView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" This scene is the starting point for the Monk."
+        System.out.println(" This scene is the starting point for the Wizard."
                        + "\n You'll be lucky if you ever return.");
     }
 

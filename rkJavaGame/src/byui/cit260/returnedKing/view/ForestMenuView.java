@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.WoodControl;
 import java.util.Scanner;
 
 /**
@@ -19,7 +20,7 @@ public class ForestMenuView extends View {
                       + "\n| Forest Menu                              |"
                       + "\n------------------------------------------"
                       + "\nF - Forage for food"
-                      + "\nC - Cut wood for coin"
+                      + "\nC - Chat with a forest dweller"
                       + "\nS - Shelter and rest"
                       + "\nQ - Quit"
                       + "\n------------------------------------------");
@@ -31,13 +32,13 @@ public class ForestMenuView extends View {
         value = value.toUpperCase(); //convert value to uppercase
         
         switch (value) {
-            case "F": //Starts a new Game
+            case "F": 
                 this.forageFood();
                 break;
-            case "C": //Starts an existing game
+            case "C": 
                 this.cutWood();
                 break;
-            case "S": //Displays help Menu
+            case "S": 
                 this.shelterRest();
                 break;
             
@@ -61,9 +62,9 @@ public class ForestMenuView extends View {
         // opens the cutWood scene
 
         // display the cutWood menu 
-//        CutWoodMenuView cutWoodMenuView = new CutWoodMenuView();
-//        cutWoodMenuView.displayCutWoodMenuView();
-        System.out.println("*Calls the cutWood() function*");
+        CutWoodMenuView cutWoodMenuView = new CutWoodMenuView();
+        cutWoodMenuView.display();
+//        System.out.println("*Calls the cutWood() function*");
     }
     
     private void shelterRest() {
