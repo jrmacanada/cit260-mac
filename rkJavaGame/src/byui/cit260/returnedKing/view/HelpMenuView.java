@@ -18,7 +18,7 @@ public class HelpMenuView extends View {
     public HelpMenuView() {
                  super( "\n"
                       + "\n------------------------------------------"
-                      + "\n| Help Menu                              |"
+                      + "\n|               Help Menu                |"
                       + "\n------------------------------------------"
                       + "\nG - What is the Goal of the Game"
                       + "\nM - How to move"
@@ -30,9 +30,9 @@ public class HelpMenuView extends View {
    
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
             case "G": //opens the goal of the game
                 this.whatIsGoal();
@@ -51,18 +51,18 @@ public class HelpMenuView extends View {
                 break;
         }
         return false;
-        
+
     }
     
     private void whatIsGoal() {
          System.out.println("\n**************************************************"
-                          + "\n*             Goal of the Game                   *"
+                          + "\n*               Goal of the Game                 *"
                           + "\n**************************************************"
                           + "\n*                                                *"
-                          + "\n*   In Returned King the player's goal is to    *"
-                          + "\n* explore the map collecting items to help the   *"
-                          + "\n* player become powerful enough to confront his  *"
-                          + "\n* uncle and reclaim the throne.                  *"
+                          + "\n*    In Returned King the player's goal is to    *"
+                          + "\n*  explore the map collecting items to help the  *"
+                          + "\n*  player become powerful enough to confront     *"
+                          + "\n*  his uncle and reclaim the throne.             *"
                           + "\n*                                                *"
                           + "\n**************************************************"
                           );
@@ -74,12 +74,13 @@ public class HelpMenuView extends View {
                           + "\n*          How to Move Your Character          *"
                           + "\n************************************************"
                           + "\n*                                              *"
-                          + "\n* To Move your character within the game       *"
-                          + "\n* use the keys:                                *"
-                          + "\n*   N - Go North                               *"
-                          + "\n*   S - Go South                               *"
-                          + "\n*   E - Go East                                *"
-                          + "\n*   W - Go West                                *"
+                          + "\n*  To Move your character within the game      *"
+                          + "\n*  use the letter keys shown below:            *"
+                          + "\n*                                              *"
+                          + "\n*    N - Go North                              *"
+                          + "\n*    S - Go South                              *"
+                          + "\n*    E - Go East                               *"
+                          + "\n*    W - Go West                               *"
                           + "\n*                                              *"
                           + "\n************************************************"
                           );
@@ -87,7 +88,7 @@ public class HelpMenuView extends View {
     
     private void howToBattle() {
          System.out.println("\n************************************************"
-                          + "\n*           How Battle Works                   *"
+                          + "\n*               How Battle Works               *"
                           + "\n************************************************"
                           + "\n*                                              *"
                           + "\n*    The player may choose to confront any     *"
@@ -120,7 +121,5 @@ public class HelpMenuView extends View {
                           + "\n**************************************************"
                           );
     }
-
-  
         
 }

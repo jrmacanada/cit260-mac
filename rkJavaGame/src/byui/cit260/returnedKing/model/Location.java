@@ -12,8 +12,8 @@ import java.util.ArrayList;
  *
  * @author michaelcavey
  */
-public class Location implements Serializable{
-    
+public class Location implements Serializable {
+
     // class instance variables
     private int row;
     private int column;
@@ -21,7 +21,8 @@ public class Location implements Serializable{
     private Item items;
     private Scene scene;
     private ArrayList<Actor> actor; // might need to be "actors"
-                                    // What about the ENUM we made?     
+    // What about the ENUM we made?     
+
     public Location() {
     }
 
@@ -56,10 +57,6 @@ public class Location implements Serializable{
     public void setScene(Scene scene) {
         this.scene = scene;
     }
-    
-    
-    
-    
 
     @Override
     public int hashCode() {
@@ -103,7 +100,5 @@ public class Location implements Serializable{
     public ArrayList<Actor> getActor() {
         return actor;
     }
-    
-    
-    
+
 }

@@ -13,29 +13,29 @@ import rkjavagame.RkJavaGame;
  *
  * @author Craig
  */
-
 public class MainMenuView extends View {
 
     public MainMenuView() {
-   
-                 super( "\n"
-                      + "\n------------------------------------------"
-                      + "\n| Main Menu                              |"
-                      + "\n------------------------------------------"
-                      + "\nN - Start new game"
-                      + "\nG - Start saved game"
-                      + "\nH - Get help on how to play the game"
-                      + "\nS - Save Game"
-                      + "\nQ - Quit without saving - End the game."
-                      + "\n------------------------------------------");
 
-                   }
-    
+        super("\n"
+                + "\n------------------------------------------"
+                + "\n|               Main Menu                |"
+                + "\n------------------------------------------"
+                + "\nN - Start new game"
+                + "\nG - Start saved game"
+                + "\nH - Get help on how to play the game"
+                + "\nS - Save Game"
+                + "\n------------------------------------------"
+                + "\nQ - Quit without saving - End the game."
+                + "\n------------------------------------------");
+
+    }
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
             case "N": //Starts a new Game
                 this.startNewGame();
@@ -56,28 +56,28 @@ public class MainMenuView extends View {
         }
         return false;
     }
-        
+
     private void startNewGame() {
         // Create a New Game
         GameControl.createNewGame(RkJavaGame.getPlayer());
-        
+
         // display the menu game
         GameMenuView gameMenu = new GameMenuView();
         gameMenu.display();
-    }  
-            
+    }
+
     private void startExistingGame() {
         System.out.println("*Calls the startExistingGame() function*");
     }
-    
+
     private void saveGame() {
         System.out.println("*Calls the saveGame() function*");
     }
-    
+
     public void displayHelpMenu() {
-        
-       HelpMenuView helpMenuView = new HelpMenuView();
-       helpMenuView.display();
+
+        HelpMenuView helpMenuView = new HelpMenuView();
+        helpMenuView.display();
     }
 
 }

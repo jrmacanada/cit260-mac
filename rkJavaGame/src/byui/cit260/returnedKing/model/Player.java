@@ -12,17 +12,17 @@ import java.util.Objects;
  *
  * @author michaelcavey
  */
-public class Player implements Serializable{
-    
+public class Player implements Serializable {
+
     // class instance variables
     private String name;
     private double bestScore;
-    
+
     private Game[] game;
 
     public Player() {
     }
-    
+
     public String getName() {
         return name;
     }
@@ -46,9 +46,6 @@ public class Player implements Serializable{
     public void setGame(Game[] game) {
         this.game = game;
     }
-    
-    
-    
 
     @Override
     public int hashCode() {
@@ -80,6 +77,5 @@ public class Player implements Serializable{
         }
         return true;
     }
-    
-    
+
 }

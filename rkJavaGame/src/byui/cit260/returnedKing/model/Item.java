@@ -9,18 +9,18 @@ import java.io.Serializable;
 import java.util.Objects;
 
 /**
- * 
+ *
  * @author michaelcavey
  */
-public class Item implements Serializable{
-    
+public class Item implements Serializable {
+
     // class instance variables
     private String inventoryType;
     private String description;
     private int quantityInStock;
     private int unitPrice;
     private double calcUsableVolumeOfWagon;
-    
+
     private Location[] location;
 
     public Item() {
@@ -41,15 +41,15 @@ public class Item implements Serializable{
     public void setQuantityInStock(int quantityInStock) {
         this.quantityInStock = quantityInStock;
     }
-    
+
     public String getDescription() {
         return this.description;
     }
-    
+
     public void setDescription(String description) {
         this.description = description;
     }
-    
+
     public int getUnitPrice() {
         return unitPrice;
     }
@@ -74,7 +74,6 @@ public class Item implements Serializable{
         this.location = location;
     }
 
-    
     @Override
     public int hashCode() {
         int hash = 3;
@@ -88,7 +87,7 @@ public class Item implements Serializable{
     public String toString() {
         return "Items{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", calcUsableVolumeOfWagon=" + calcUsableVolumeOfWagon + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -110,6 +109,4 @@ public class Item implements Serializable{
         return true;
     }
 
- 
-    
 }

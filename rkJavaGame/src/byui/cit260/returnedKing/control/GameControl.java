@@ -14,12 +14,12 @@ import byui.cit260.returnedKing.model.Player;
 import rkjavagame.RkJavaGame;
 
 /**
- * 
+ *
  * @author michaelcavey
  */
-
 public class GameControl {
 // IS (after implementing exceptions)
+
     public static Player createPlayer(String name)
             throws GameControlException {
         if (name == null) {
@@ -36,7 +36,7 @@ public class GameControl {
             throw new GameControlException("Error creating player. " + e.getMessage());
         }
     }
-    
+
 // WAS (before implementing exceptions)
 //    public static Player createPlayer(String name) {
 //        
@@ -51,86 +51,85 @@ public class GameControl {
 //        
 //        return player;
 //    }
-    
-     public static void createNewGame(Player player) {
-         
-         Game game = new Game(); // create new game
-         RkJavaGame.setCurrentGame(game); // save in RkJavaGame
-         
-         game.setPlayer(player); // save player game
-         
-         // create the Item list and save in the game
-         Item[] itemList = GameControl.createItemsList();
-         game.setItems(itemList);
-         
-         Map map = MapControl.createMap(); // create and intialize new map
-         game.setMap(map); // save map in game
-         
-         // move actors to starting position in the map
-         MapControl.movePlayerToStartingLocation(map);
-         
-        }
+    public static void createNewGame(Player player) {
+
+        Game game = new Game(); // create new game
+        RkJavaGame.setCurrentGame(game); // save in RkJavaGame
+
+        game.setPlayer(player); // save player game
+
+        // create the Item list and save in the game
+        Item[] itemList = GameControl.createItemsList();
+        game.setItems(itemList);
+
+        Map map = MapControl.createMap(); // create and intialize new map
+        game.setMap(map); // save map in game
+
+        // move actors to starting position in the map
+        MapControl.movePlayerToStartingLocation(map);
+
+    }
 
     public int buyOneEach() {
-        
+
         Game game = RkJavaGame.getCurrentGame();
         Item[] items = game.getItems();
-        
+
         int totalPrice = 0;
-        
+
         for (Item item : items) {
             totalPrice += item.getUnitPrice();
-        }    
+        }
         return totalPrice;
     }
-    
-     public enum Index {
-         food,
-         sword,
-         shield,
-         orb;
-     }
-     
+
+    public enum Index {
+
+        food,
+        sword,
+        shield,
+        orb;
+    }
+
     public static Item[] createItemsList() {
-        
+
         // create array(list) of available items
         Item[] items = new Item[4];
-        
+
         Item food = new Item();
         food.setDescription("Food");
         food.setQuantityInStock(100);
         food.setUnitPrice(3);
         items[Index.food.ordinal()] = food;
-        
+
         Item sword = new Item();
         sword.setDescription("Sword");
         sword.setQuantityInStock(1);
         sword.setUnitPrice(15);
         items[Index.sword.ordinal()] = sword;
-        
+
         Item shield = new Item();
         shield.setDescription("Shield");
         shield.setQuantityInStock(1);
         shield.setUnitPrice(10);
         items[Index.shield.ordinal()] = shield;
-        
+
         Item orb = new Item();
         orb.setDescription("Orb");
         orb.setQuantityInStock(1);
         orb.setUnitPrice(20);
         items[Index.orb.ordinal()] = orb;
-        
-            return items;
+
+        return items;
     }
-    
+
     public int mStrength() {
         int maxValue = 0;
         for (Actor act : Actor.values()) {
             maxValue = Math.max(act.playerStrength, maxValue);
         }
-       return maxValue;
+        return maxValue;
 
     }
-    
 
 }

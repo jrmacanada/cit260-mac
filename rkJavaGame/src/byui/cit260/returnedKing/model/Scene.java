@@ -8,13 +8,12 @@ package byui.cit260.returnedKing.model;
 import java.io.Serializable;
 import java.util.Objects;
 
-
 /**
  *
  * @author Craig
  */
 public class Scene implements Serializable {
-    
+
     // class instance variables
     private String description;
     private String blockedLocation;
@@ -29,13 +28,11 @@ public class Scene implements Serializable {
     private String actorType;
     private String actorSpecialSkill;
     private String mapSymbol;
-    
+
     private Actor[] actor;
 
     public Scene() {
     }
-    
-    
 
     public String getDescription() {
         return description;
@@ -141,9 +138,6 @@ public class Scene implements Serializable {
         this.actor = actor;
     }
 
-    
-    
-
     @Override
     public int hashCode() {
         int hash = 3;
@@ -166,9 +160,7 @@ public class Scene implements Serializable {
     public String toString() {
         return "Scene{" + "description=" + description + ", blockedLocation=" + blockedLocation + ", publicInfo=" + publicInfo + ", privateInfo=" + privateInfo + ", activityType=" + activityType + ", activityScore=" + activityScore + ", enemyType=" + enemyType + ", enemySpecialSkill=" + enemySpecialSkill + ", finalCombat=" + finalCombat + ", finalRevelation=" + finalRevelation + ", actorType=" + actorType + ", actorSpecialSkill=" + actorSpecialSkill + '}';
     }
-    
-    
-    
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -227,8 +219,5 @@ public class Scene implements Serializable {
     public String getMapSymbol() {
         return mapSymbol;
     }
-    
-    
-    
-    
+
 }

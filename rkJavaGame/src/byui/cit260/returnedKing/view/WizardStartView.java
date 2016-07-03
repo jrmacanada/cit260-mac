@@ -5,6 +5,9 @@
  */
 package byui.cit260.returnedKing.view;
 
+import static byui.cit260.returnedKing.control.MapControl.movePlayer;
+import byui.cit260.returnedKing.model.Map;
+
 /**
  *
  * @author michaelcavey
@@ -111,6 +114,9 @@ public class WizardStartView extends View {
         System.out.println(" This function will display the player's"
                        + "\n Stamina, Strength, and Aura statistics.");
     }
+    
+    public static void movePlayerToStartingLocation(Map map) {
+        movePlayer(map, 4, 0); // starting journey from Wizard Hamlet
+    }
   
 }
-

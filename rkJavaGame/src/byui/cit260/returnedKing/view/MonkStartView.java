@@ -5,67 +5,70 @@
  */
 package byui.cit260.returnedKing.view;
 
+import static byui.cit260.returnedKing.control.MapControl.movePlayer;
+import byui.cit260.returnedKing.model.Map;
+
 /**
  *
  * @author michaelcavey
  */
 public class MonkStartView extends View {
-    
+
     public MonkStartView() {
-                 super( "\n"
-                      + "\n----------------------------------"
-                      + "\n|           Monastery            |"
-                      + "\n----------------------------------"
-                      + "\n  You are a Monk on a mission"
-                      + "\n  to retake your kingdom."
-                      + "\n  Pray for a successful journey."   
-                      + "\n----------------------------------"
-                      + "\nN - Move North (not available)"
-                      + "\nS - Move South"
-                      + "\nE - Move East"
-                      + "\nW - Move West  (not available)"
-                      + "\n----------------------------------"
-                      + "\n  At anytime you may..."
-                      + "\nD - Display the map"
-                      + "\nX - Explore this scene further"
-                      + "\nL - List your supplies"
-                      + "\nR - Report your stats"
-                      + "\n----------------------------------"                   
-                      + "\nQ - Quit to Game Menu"
-                      + "\n----------------------------------");
-                    }
-    
+        super("\n"
+                + "\n----------------------------------"
+                + "\n|           Monastery            |"
+                + "\n----------------------------------"
+                + "\n  You are a Monk on a mission"
+                + "\n  to retake your kingdom."
+                + "\n  Pray for a successful journey."
+                + "\n----------------------------------"
+                + "\nN - Move North (not available)"
+                + "\nS - Move South"
+                + "\nE - Move East"
+                + "\nW - Move West  (not available)"
+                + "\n----------------------------------"
+                + "\n  At anytime you may..."
+                + "\nD - Display the map"
+                + "\nX - Explore this scene further"
+                + "\nL - List your supplies"
+                + "\nR - Report your stats"
+                + "\n----------------------------------"
+                + "\nQ - Quit to Game Menu"
+                + "\n----------------------------------");
+    }
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
-            case "N": 
+            case "N":
                 this.notAvailable();
                 break;
-            case "S": 
+            case "S":
                 this.enterCornfield();
                 break;
-            case "E": 
+            case "E":
                 this.enterGraveyard();
                 break;
-            case "W": 
+            case "W":
                 this.notAvailable();
                 break;
-            case "D": 
+            case "D":
                 this.mapView();
                 break;
-            case "X": 
+            case "X":
                 this.tellMore();
                 break;
-            case "L": 
+            case "L":
                 this.mySupplies();
                 break;
-            case "R": 
+            case "R":
                 this.myStats();
                 break;
-                
+
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -73,10 +76,10 @@ public class MonkStartView extends View {
         return false;
 
     }
-    
+
     private void tellMore() {
         System.out.println(" This scene is the starting point for a Monk."
-                       + "\n You'll be lucky if you ever return.");
+                + "\n You'll be lucky if you ever return.");
     }
 
     private void enterCornfield() {
@@ -88,13 +91,13 @@ public class MonkStartView extends View {
         GraveyardMenuView graveyardMenuView = new GraveyardMenuView();
         graveyardMenuView.display();
     }
-    
+
     private void notAvailable() {
         System.out.println(" You may not leave the kingdom until"
-                       + "\n you kill your uncle or die trying.");
+                + "\n you kill your uncle or die trying.");
     }
 
-    private void mapView() { 
+    private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
     }
@@ -109,7 +112,11 @@ public class MonkStartView extends View {
 
     private void myStats() {
         System.out.println(" This function will display the player's"
-                       + "\n Stamina, Strength, and Aura statistics.");
+                + "\n Stamina, Strength, and Aura statistics.");
     }
-  
+
+    public static void movePlayerToStartingLocation(Map map) {
+        movePlayer(map, 0, 0); // starting journey from Monastery
+    }
+
 }

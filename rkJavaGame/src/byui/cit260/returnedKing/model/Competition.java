@@ -7,25 +7,22 @@ package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
 
-
 /**
  *
  * @author thiag
  */
-public class Competition implements Serializable{
-    
+public class Competition implements Serializable {
+
     // class instance variables
     private int playerInput;
     private int charStrength;
     private int actualStamina;
     private int maxStamina;
-    
+
     private Game[] game;
 
     public Competition() {
     }
-    
-    
 
     public int getPlayerInput() {
         return playerInput;
@@ -66,8 +63,6 @@ public class Competition implements Serializable{
     public void setGame(Game[] game) {
         this.game = game;
     }
-    
-    
 
     @Override
     public int hashCode() {
@@ -83,8 +78,6 @@ public class Competition implements Serializable{
     public String toString() {
         return "Competition{" + "playerInput=" + playerInput + ", charStrength=" + charStrength + ", actualStamina=" + actualStamina + ", maxStamina=" + maxStamina + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -112,8 +105,5 @@ public class Competition implements Serializable{
         }
         return true;
     }
-    
-
-
 
 }

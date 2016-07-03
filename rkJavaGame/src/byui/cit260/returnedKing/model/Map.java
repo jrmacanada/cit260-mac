@@ -11,12 +11,12 @@ import java.io.Serializable;
  *
  * @author michaelcavey
  */
-public class Map implements Serializable{
-    
+public class Map implements Serializable {
+
     // class instance variables
     private int rowCount;
     private int columnCount;
-    
+
     private Game[] game;
     public Location[][] locations;
     private Location currentLocation;
@@ -26,20 +26,19 @@ public class Map implements Serializable{
 
 //    public Map() {
 //    }
-    
     public Map(int rowCount, int columnCount) {
-        
+
         if (rowCount < 1 || columnCount < 1) {
             System.out.println("The number of rows and columns must be > zero");
             return;
         }
-        
+
         this.rowCount = rowCount;
         this.columnCount = columnCount;
-        
+
         // create 2-D array for Location objects
-        this.locations = new Location[rowCount] [columnCount];
-        
+        this.locations = new Location[rowCount][columnCount];
+
         for (int row = 0; row < rowCount; row++) {
             for (int column = 0; column < columnCount; column++) {
                 // create and initialize new location object instance
@@ -47,13 +46,12 @@ public class Map implements Serializable{
                 location.setColumn(column);
                 location.setRow(row);
                 location.setVisited(false);
-                
+
                 // assign the location object to the current position in the array
-                locations[row][column] = location;            
+                locations[row][column] = location;
             }
         }
     }
-    
 
     public int getRowCount() {
         return rowCount;
@@ -119,8 +117,6 @@ public class Map implements Serializable{
         this.scenes = scenes;
     }
 
-    
-    
     @Override
     public int hashCode() {
         int hash = 5;
@@ -152,7 +148,4 @@ public class Map implements Serializable{
         return true;
     }
 
-    
-    
-    
 }

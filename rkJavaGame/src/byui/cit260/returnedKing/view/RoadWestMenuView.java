@@ -17,25 +17,27 @@ public class RoadWestMenuView extends View {
                       + "\n|                West Road                 |"
                       + "\n|  Rogue warrior blocks forward movement   |"
                       + "\n--------------------------------------------"
-                      + "\nR - Retreat "
-                      + "\nC - Confront "
-                      + "\nM - Move to West Gate "   
+                      + "\n1 - Retreat "
+                      + "\n2 - Confront "
+                      + "\n3 - Move to West Gate "
+                      + "\n--------------------------------------------"                      
                       + "\nQ - Quit to Game Menu "
-                      + "\n------------------------------------------");
-}
+                      + "\n--------------------------------------------");
+    }
+    
     @Override
     public boolean doAction(String value) {
         
         value = value.toUpperCase(); //convert choice to uppercase
         
         switch (value) {
-            case "R": 
+            case "1": 
                 this.retreat();
                 break;
-            case "C": 
+            case "2": 
                 this.confront();
                 break;
-            case "M": 
+            case "3": 
                 this.moveToWestGate();
                 break;
             default:

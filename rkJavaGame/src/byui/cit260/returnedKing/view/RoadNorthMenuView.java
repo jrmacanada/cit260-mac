@@ -17,25 +17,27 @@ class RoadNorthMenuView extends View {
                       + "\n|                North Road                |"
                       + "\n|   Prison guard blocks forward movement   |"
                       + "\n--------------------------------------------"
-                      + "\nR - Retreat "
-                      + "\nC - Confront "
-                      + "\nM - Move to North Gate "   
+                      + "\n1 - Retreat "
+                      + "\n2 - Confront "
+                      + "\n3 - Move to North Gate "
+                      + "\n--------------------------------------------"   
                       + "\nQ - Quit to Game Menu "
-                      + "\n------------------------------------------");
-}
+                      + "\n--------------------------------------------");
+    }
+    
     @Override
     public boolean doAction(String value) {
         
         value = value.toUpperCase(); //convert choice to uppercase
         
         switch (value) {
-            case "R": 
+            case "1": 
                 this.retreat();
                 break;
-            case "C": 
+            case "2": 
                 this.confront();
                 break;
-            case "M": 
+            case "3": 
                 this.moveToNorthGate();
                 break;
             default:

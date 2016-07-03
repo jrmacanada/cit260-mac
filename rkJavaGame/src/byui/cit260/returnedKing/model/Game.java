@@ -13,23 +13,22 @@ import java.util.Objects;
  *
  * @author michaelcavey
  */
-public class Game implements Serializable{
-    
+public class Game implements Serializable {
+
     // class instance variables
     private String start;
     private double numCode;
-    
+
     private Player player;
     private Map map;
     private Combat combat;
     private Wood wood;
     private Competition competition;
-    
+
     private Item[] items;
-    
+
     private Actor actor;
     private int totalPrice;
-    
 
     public Game() {
     }
@@ -105,7 +104,7 @@ public class Game implements Serializable{
     public void setActor(Actor actor) {
         this.actor = actor;
     }
-    
+
     public int getTotalPrice() {
         return totalPrice;
     }
@@ -113,8 +112,6 @@ public class Game implements Serializable{
     public void setTotalPrice(int totalPrice) {
         this.totalPrice = totalPrice;
     }
-    
-
 
     @Override
     public int hashCode() {
@@ -136,7 +133,7 @@ public class Game implements Serializable{
     public String toString() {
         return "Game{" + "start=" + start + ", numCode=" + numCode + ", player=" + player + ", map=" + map + ", combat=" + combat + ", wood=" + wood + ", competition=" + competition + ", items=" + items + ", actor=" + actor + ", totalPrice=" + totalPrice + '}';
     }
-    
+
     @Override
     public boolean equals(Object obj) {
         if (obj == null) {
@@ -178,7 +175,5 @@ public class Game implements Serializable{
         }
         return true;
     }
-    
-    
-    
+
 }

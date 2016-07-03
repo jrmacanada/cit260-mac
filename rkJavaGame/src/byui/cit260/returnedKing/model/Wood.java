@@ -7,13 +7,12 @@ package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
 
-
 /**
  *
  * @author thiag
  */
-public class Wood implements Serializable{
-    
+public class Wood implements Serializable {
+
     // class instance variables
     private int charStamina;
     private int charStrength;
@@ -22,9 +21,9 @@ public class Wood implements Serializable{
     private int actualStamina;
     private int maxStamina;
     private int axeBonus;
-    
+
     private Game[] game;
-     
+
     public Wood() {
     }
 
@@ -91,8 +90,6 @@ public class Wood implements Serializable{
     public void setGame(Game[] game) {
         this.game = game;
     }
-    
-    
 
     @Override
     public int hashCode() {
@@ -111,7 +108,7 @@ public class Wood implements Serializable{
     public String toString() {
         return "Wood{" + "charStamina=" + charStamina + ", charStrength=" + charStrength + ", reward=" + reward + ", playerInput=" + playerInput + ", actualStamina=" + actualStamina + ", maxStamina=" + maxStamina + ", axeBonus=" + axeBonus + '}';
     }
-      
+
     @Override
     public boolean equals(Object obj) {
         if (this == obj) {
@@ -147,10 +144,5 @@ public class Wood implements Serializable{
         }
         return true;
     }
-    
-     
-    
-    
-    
-}
 
+}

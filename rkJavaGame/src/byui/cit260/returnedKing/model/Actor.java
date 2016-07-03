@@ -13,8 +13,8 @@ import java.util.Objects;
  *
  * @author michaelcavey
  */
-public enum Actor implements Serializable{
-    
+public enum Actor implements Serializable {
+
     Guard("Guards the gates", 90),
     Bandit("Attacks on the road", 60),
     RogueWarrior("Attacks on the road", 70),
@@ -27,11 +27,11 @@ public enum Actor implements Serializable{
     Priest1("First Priest", 20),
     Priest2("Second Priest", 20),
     FalseKing("Your Uncle", 100);
-    
+
     private final String description;
     public final int playerStrength;
     private final Point coordinates;
-    
+
     private Scene scene;
 
     public Scene getScene() {
@@ -45,13 +45,13 @@ public enum Actor implements Serializable{
     Actor(String description, int playerStrength) {
         this.description = description;
         this.playerStrength = playerStrength;
-        coordinates = new Point(1,1);
+        coordinates = new Point(1, 1);
     }
-    
+
     public String getDescription() {
         return description;
     }
-    
+
     public int getPlayerStrength() {
         return playerStrength;
     }
@@ -59,7 +59,5 @@ public enum Actor implements Serializable{
     public Point getCoordinates() {
         return coordinates;
     }
-    
-    
 
 }

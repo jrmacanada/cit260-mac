@@ -12,7 +12,7 @@ import java.io.Serializable;
  * @author Craig
  */
 public class Combat implements Serializable {
-    
+
     //class instance variables
     private int damageGiven;
     private int damageReceived;
@@ -21,13 +21,11 @@ public class Combat implements Serializable {
     private int attackItems;
     private int defenceItems;
     private int playerInput;
-    
+
     private Game[] game;
 
     public Combat() {
     }
-    
-    
 
     public int getDamageGiven() {
         return damageGiven;
@@ -83,7 +81,7 @@ public class Combat implements Serializable {
 
     public void setPlayerInput(int playerInput) {
         this.playerInput = playerInput;
-        
+
     }
 
     public Game[] getGame() {
@@ -93,8 +91,6 @@ public class Combat implements Serializable {
     public void setGame(Game[] game) {
         this.game = game;
     }
-    
-    
 
     @Override
     public int hashCode() {
@@ -113,8 +109,6 @@ public class Combat implements Serializable {
     public String toString() {
         return "Combat{" + "damageGiven=" + damageGiven + ", damageReceived=" + damageReceived + ", playerStrength=" + playerStrength + ", playerInteligence=" + playerInteligence + ", attackItems=" + attackItems + ", defenceItems=" + defenceItems + ", playerInput=" + playerInput + '}';
     }
-    
-    
 
     @Override
     public boolean equals(Object obj) {
@@ -151,10 +145,5 @@ public class Combat implements Serializable {
         }
         return true;
     }
-    
-    
-    
-    
-    
-    
+
 }

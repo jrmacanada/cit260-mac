@@ -13,35 +13,35 @@ import java.util.Scanner;
  * @author michaelcavey
  */
 public class ForestMenuView extends View {
-    
+
     public ForestMenuView() {
-                 super( "\n"
-                      + "\n------------------------------------------"
-                      + "\n| Forest Menu                              |"
-                      + "\n------------------------------------------"
-                      + "\nF - Forage for food"
-                      + "\nC - Chat with a forest dweller"
-                      + "\nS - Shelter and rest"
-                      + "\nQ - Quit"
-                      + "\n------------------------------------------");
-                    }
-    
+        super("\n"
+                + "\n------------------------------------"
+                + "\n|           Forest Menu            |"
+                + "\n------------------------------------"
+                + "\nF - Forage for food"
+                + "\nC - Chat with a forest dweller"
+                + "\nS - Shelter and rest"
+                + "\nQ - Quit"
+                + "\n------------------------------------");
+    }
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
-            case "F": 
+            case "F":
                 this.forageFood();
                 break;
-            case "C": 
+            case "C":
                 this.cutWood();
                 break;
-            case "S": 
+            case "S":
                 this.shelterRest();
                 break;
-            
+
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -57,7 +57,7 @@ public class ForestMenuView extends View {
         forageFoodMenuView.displayForageFoodMenuView();
 //        System.out.println("*Calls the forageFood() function*");
     }
-    
+
     private void cutWood() {
         // opens the cutWood scene
 
@@ -66,14 +66,14 @@ public class ForestMenuView extends View {
         cutWoodMenuView.display();
 //        System.out.println("*Calls the cutWood() function*");
     }
-    
+
     private void shelterRest() {
         // opens the shelterRest scene
 
         // display the shelterRest menu 
-//        ShelterRestMenuView shelterRestMenuView = new ShelterRestMenuView();
-//        shelterRestMenuView.displayShelterRestMenuView();
-        System.out.println("*Calls the shelterRest() function*");
+        ShelterRestMenuView shelterRestMenuView = new ShelterRestMenuView();
+        shelterRestMenuView.displayShelterRestMenuView();
+//        System.out.println("*Calls the shelterRest() function*");
     }
-    
+
 }
