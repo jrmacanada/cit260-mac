@@ -9,70 +9,69 @@ package byui.cit260.returnedKing.view;
  *
  * @author michaelcavey
  */
-
 public class GraveyardMenuView extends View {
 
     public GraveyardMenuView() {
-                 super( "\n"
-                      + "\n----------------------------------"
-                      + "\n|           Graveyard            |"
-                      + "\n----------------------------------"
-                      + "\n Your options for this scene are:"
-                      + "\n1 - Rest to rebuild Stamina"
-                      + "\n2 - Forage for items in graveyard"
-                      + "\n3 - Read the tombstones"   
-                      + "\n----------------------------------"
-                      + "\nN - Move North (not available)"
-                      + "\nS - Move South"
-                      + "\nE - Move East"
-                      + "\nW - Move West (not available)"
-                      + "\n----------------------------------"
-                      + "\n  At anytime you may use D-X-L-R"
-                      + "\n----------------------------------"                   
-                      + "\nQ - Quit to Game Menu"
-                      + "\n----------------------------------");
-                    }
-    
+        super("\n"
+                + "\n------------------------------------"
+                + "\n|            Graveyard             |"
+                + "\n------------------------------------"
+                + "\n Your options for this scene are:"
+                + "\n1 - Rest to rebuild Stamina"
+                + "\n2 - Forage for items in graveyard"
+                + "\n3 - Read the tombstones"
+                + "\n------------------------------------"
+                + "\nN - Move North (not available)"
+                + "\nS - Move South"
+                + "\nE - Move East"
+                + "\nW - Move West (not available)"
+                + "\n------------------------------------"
+                + "\n  At anytime you may use D-X-L-R"
+                + "\n------------------------------------"
+                + "\nQ - Quit to Game Menu"
+                + "\n------------------------------------");
+    }
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
-            case "1": 
+            case "1":
                 this.addStamina();
                 break;
-            case "2": 
+            case "2":
                 this.findItems();
                 break;
-            case "3": 
+            case "3":
                 this.readGraves();
                 break;
-            case "N": 
+            case "N":
                 this.notAvailable();
                 break;
-            case "S": 
+            case "S":
                 this.enterFarmVillage();
                 break;
-            case "E": 
+            case "E":
                 this.enterNorthRoad();
                 break;
-            case "W": 
+            case "W":
                 this.noEntry();
                 break;
-            case "D": 
+            case "D":
                 this.mapView();
                 break;
-            case "X": 
+            case "X":
                 this.tellMore();
                 break;
-            case "L": 
+            case "L":
                 this.mySupplies();
                 break;
-            case "R": 
+            case "R":
                 this.myStats();
                 break;
-                
+
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -80,11 +79,11 @@ public class GraveyardMenuView extends View {
         return false;
 
     }
-    
+
     private void tellMore() {
         System.out.println(" Rest one day to gain 15 Stamina points."
-                       + "\n See if you can find some useful items."
-                       + "\n Read the gravestones to learn more.");
+                + "\n See if you can find some useful items."
+                + "\n Read the gravestones to learn more.");
     }
 
     private void enterFarmVillage() {
@@ -96,18 +95,18 @@ public class GraveyardMenuView extends View {
         PrisonMenuView prisonMenuView = new PrisonMenuView();
         prisonMenuView.display();
     }
-    
+
     private void notAvailable() {
         System.out.println(" You may not leave the kingdom until"
-                       + "\n you kill your uncle or die trying.");
+                + "\n you kill your uncle or die trying.");
     }
-    
+
     private void noEntry() {
         System.out.println(" You may not return to the Monastery."
-                       + "\n Remember you walk with God and Christ.");
+                + "\n Remember you walk with God and Christ.");
     }
-    
-    private void mapView() { 
+
+    private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
     }
@@ -122,7 +121,7 @@ public class GraveyardMenuView extends View {
 
     private void myStats() {
         System.out.println(" This function will display the player's"
-                       + "\n Stamina, Strength, and Aura statistics.");
+                + "\n Stamina, Strength, and Aura statistics.");
     }
 
     private void addStamina() {
@@ -136,5 +135,5 @@ public class GraveyardMenuView extends View {
     private void readGraves() {
         System.out.println("*** stub to readsGraves() function ***");
     }
-  
+
 }

@@ -12,54 +12,55 @@ import java.util.Scanner;
  * @author thiag
  */
 public abstract class View implements ViewInterface {
-    
+
     protected String displayMessage;
-    
+
     public View() {
     }
-    
+
     public View(String message) {
-        this.displayMessage = message;     
+        this.displayMessage = message;
     }
-    
-      @Override
-      public void display() {
-        
+
+    @Override
+    public void display() {
+
         boolean done = false; // set flag to not done
-        do{
+        do {
             // prompt for and get player name
             String value = this.getInput();
             if (value.toUpperCase().equals("Q")) // user wants to quit
+            {
                 return; // exit the game
-            
+            }
             // do the requested action and display the next view
             done = this.doAction(value);
-            
-        }while (!done);
-}
-   
-      @Override 
-      public String getInput() {
-       
-       Scanner keyboard = new Scanner(System.in); // get infile for keyboard
+
+        } while (!done);
+    }
+
+    @Override
+    public String getInput() {
+
+        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         boolean valid = false; // intialize to not valid
         String value = null; // value to be returned
-        
+
         while (!valid) { // loop while an invalid value is enter
             System.out.println("\n" + this.displayMessage);
-            
+
             value = keyboard.nextLine(); // get next line typed on keboard
             value = value.trim(); // trim off leading and trailing blanks
-            
+
             if (value.length() < 1) { // value is blank
                 System.out.println("\nInvalid entry: value cannot be blank");
                 continue;
             }
-            
+
             break; // end the loop
         }
-        
+
         return value; // return the value entered */
     }
-      
+
 }

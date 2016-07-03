@@ -15,112 +15,111 @@ import rkjavagame.RkJavaGame;
  *
  * @author michaelcavey
  */
-
 public class MapMenuView extends View {
-    
+
     public MapMenuView() {
-                 super( "\n"
-                      + "\n--------------------------------"
-                      + "\n|           Map Menu           |"
-                      + "\n--------------------------------"
-                      + "\nD - Display Map"  
-                      + "\n"
-                      + "\n   To explore the different"
-                      + "\n   game scenes, enter the two"
-                      + "\n   digit code shown on map"
-                      + "\n"
-                      + "\nQ - Quit to Game Menu"
-                      + "\n--------------------------------");
-                    }
-    
+        super("\n"
+                + "\n--------------------------------"
+                + "\n|           Map Menu           |"
+                + "\n--------------------------------"
+                + "\nD - Display Map"
+                + "\n"
+                + "\n   To explore the different"
+                + "\n   game scenes, enter the two"
+                + "\n   digit code shown on map"
+                + "\n"
+                + "\nQ - Quit to Game Menu"
+                + "\n--------------------------------");
+    }
+
     @Override
     public boolean doAction(String value) {
-        
+
         Game game = RkJavaGame.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
             case "D":
                 this.displayMap();
                 break;
-            case "MM": 
+            case "MM":
                 System.out.print(map.locations[0][0].getScene().getDescription());
                 break;
-            case "GY": 
+            case "GY":
                 System.out.print(map.locations[0][1].getScene().getDescription());
                 break;
-            case "NR": 
+            case "NR":
                 System.out.print(map.locations[0][2].getScene().getDescription());
                 break;
-            case "PP": 
+            case "PP":
                 System.out.print(map.locations[0][3].getScene().getDescription());
                 break;
-            case "WV": 
+            case "WV":
                 System.out.print(map.locations[0][4].getScene().getDescription());
                 break;
-            case "CF": 
+            case "CF":
                 System.out.print(map.locations[1][0].getScene().getDescription());
                 break;
-            case "FV": 
+            case "FV":
                 System.out.print(map.locations[1][1].getScene().getDescription());
                 break;
-            case "NG": 
+            case "NG":
                 System.out.print(map.locations[1][2].getScene().getDescription());
                 break;
-            case "FF": 
+            case "FF":
                 System.out.print(map.locations[1][3].getScene().getDescription());
                 break;
-            case "TT": 
+            case "TT":
                 System.out.print(map.locations[1][4].getScene().getDescription());
                 break;
-            case "WR": 
+            case "WR":
                 System.out.print(map.locations[2][0].getScene().getDescription());
                 break;
-            case "WG": 
+            case "WG":
                 System.out.print(map.locations[2][1].getScene().getDescription());
                 break;
-            case "XX": 
+            case "XX":
                 System.out.print(map.locations[2][2].getScene().getDescription());
                 break;
-            case "EG": 
+            case "EG":
                 System.out.print(map.locations[2][3].getScene().getDescription());
                 break;
-            case "ER": 
+            case "ER":
                 System.out.print(map.locations[2][4].getScene().getDescription());
                 break;
-            case "KH": 
+            case "KH":
                 System.out.print(map.locations[3][0].getScene().getDescription());
                 break;
-            case "HR": 
+            case "HR":
                 System.out.print(map.locations[3][1].getScene().getDescription());
                 break;
-            case "SG": 
+            case "SG":
                 System.out.print(map.locations[3][2].getScene().getDescription());
                 break;
-            case "TS": 
+            case "TS":
                 System.out.print(map.locations[3][3].getScene().getDescription());
                 break;
-            case "CC": 
+            case "CC":
                 System.out.print(map.locations[3][4].getScene().getDescription());
                 break;
-            case "WH": 
+            case "WH":
                 System.out.print(map.locations[4][0].getScene().getDescription());
                 break;
-            case "SC": 
+            case "SC":
                 System.out.print(map.locations[4][1].getScene().getDescription());
                 break;
-            case "SR": 
+            case "SR":
                 System.out.print(map.locations[4][2].getScene().getDescription());
                 break;
-            case "HT": 
+            case "HT":
                 System.out.print(map.locations[4][3].getScene().getDescription());
                 break;
-            case "SP": 
+            case "SP":
                 System.out.print(map.locations[4][4].getScene().getDescription());
                 break;
-                    
+
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -167,6 +166,4 @@ public class MapMenuView extends View {
         }
     }
 
-    
-    
 }

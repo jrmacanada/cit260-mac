@@ -14,32 +14,29 @@ import rkjavagame.RkJavaGame;
  * @author Craig
  */
 public class HuntReserveView extends View {
-    
-    
+
     public HuntReserveView() {
-                 super( "\n"
-                      + "\n------------------------------------------"
-                      + "\n|           Hunting Reserve              |"
-                      + "\n|     What would you like to do?         |"
-                      + "\n------------------------------------------"
-                      + "\nH - Hunt for wild game "
-                      + "\nT - Talk to the hunters <-----**THIS GOES TO THE CompetionControl"
-                      + "\nQ - Quit to Main Menu"
-                      + "\n------------------------------------------");
-                    }
-   
-   
+        super("\n"
+                + "\n------------------------------------------"
+                + "\n|            Hunting Reserve             |"
+                + "\n|       What would you like to do?       |"
+                + "\n------------------------------------------"
+                + "\nH - Hunt for wild game "
+                + "\nT - Talk to the hunters <-----**THIS GOES TO THE CompetionControl"
+                + "\nQ - Quit to Main Menu"
+                + "\n------------------------------------------");
+    }
+
     @Override
     public boolean doAction(String value) {
-        
-        
+
         value = value.toUpperCase(); //convert choice to uppercase
-        
+
         switch (value) {
-            case "H": 
+            case "H":
                 this.huntForGame();
                 break;
-            case "T": 
+            case "T":
                 this.talkToHunters();
                 break;
             default:
@@ -47,9 +44,9 @@ public class HuntReserveView extends View {
                 break;
         }
         return false;
-        
+
     }
-    
+
     private void huntForGame() {
         System.out.println("\nCalls the huntForGame()");
     }
@@ -58,6 +55,5 @@ public class HuntReserveView extends View {
         HunterChallengeView hunterChallengeView = new HunterChallengeView();
         hunterChallengeView.display();
     }
-    
-}
 
+}

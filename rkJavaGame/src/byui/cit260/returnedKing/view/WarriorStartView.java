@@ -15,60 +15,60 @@ import byui.cit260.returnedKing.model.Map;
 public class WarriorStartView extends View {
 
     public WarriorStartView() {
-                 super( "\n"
-                      + "\n----------------------------------"
-                      + "\n|        Warrior Village         |"
-                      + "\n----------------------------------"
-                      + "\n  You are a Warrior in a battle"
-                      + "\n  to retake your kingdom."
-                      + "\n  Be strong on your journey."   
-                      + "\n----------------------------------"
-                      + "\nN - Move North (not available)"
-                      + "\nS - Move South"
-                      + "\nE - Move East  (not available)"
-                      + "\nW - Move West"
-                      + "\n----------------------------------"
-                      + "\n  At anytime you may..."
-                      + "\nD - Display the map"
-                      + "\nX - Explore this scene further"
-                      + "\nL - List your supplies"
-                      + "\nR - Report your stats"
-                      + "\n----------------------------------"                   
-                      + "\nQ - Quit to Game Menu"
-                      + "\n----------------------------------");
-                    }
-    
+        super("\n"
+                + "\n----------------------------------"
+                + "\n|        Warrior Village         |"
+                + "\n----------------------------------"
+                + "\n  You are a Warrior in a battle"
+                + "\n  to retake your kingdom."
+                + "\n  Be strong on your journey."
+                + "\n----------------------------------"
+                + "\nN - Move North (not available)"
+                + "\nS - Move South"
+                + "\nE - Move East  (not available)"
+                + "\nW - Move West"
+                + "\n----------------------------------"
+                + "\n  At anytime you may..."
+                + "\nD - Display the map"
+                + "\nX - Explore this scene further"
+                + "\nL - List your supplies"
+                + "\nR - Report your stats"
+                + "\n----------------------------------"
+                + "\nQ - Quit to Game Menu"
+                + "\n----------------------------------");
+    }
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
-            case "N": 
+            case "N":
                 this.notAvailable();
                 break;
-            case "S": 
+            case "S":
                 this.enterTavern();
                 break;
-            case "E": 
+            case "E":
                 this.notAvailable();
                 break;
-            case "W": 
+            case "W":
                 this.enterPrison();
                 break;
-            case "D": 
+            case "D":
                 this.mapView();
                 break;
-            case "X": 
+            case "X":
                 this.tellMore();
                 break;
-            case "L": 
+            case "L":
                 this.mySupplies();
                 break;
-            case "R": 
+            case "R":
                 this.myStats();
                 break;
-                
+
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -76,10 +76,10 @@ public class WarriorStartView extends View {
         return false;
 
     }
-    
+
     private void tellMore() {
         System.out.println(" This scene is the starting point for a Warrior."
-                       + "\n You'll be lucky if you ever return.");
+                + "\n You'll be lucky if you ever return.");
     }
 
     private void enterTavern() {
@@ -91,13 +91,13 @@ public class WarriorStartView extends View {
         PrisonMenuView prisonMenuView = new PrisonMenuView();
         prisonMenuView.display();
     }
-    
+
     private void notAvailable() {
         System.out.println(" You may not leave the kingdom until"
-                       + "\n you kill your uncle or die trying.");
+                + "\n you kill your uncle or die trying.");
     }
 
-    private void mapView() { 
+    private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
     }
@@ -112,11 +112,11 @@ public class WarriorStartView extends View {
 
     private void myStats() {
         System.out.println(" This function will display the player's"
-                       + "\n Stamina, Strength, and Aura statistics.");
+                + "\n Stamina, Strength, and Aura statistics.");
     }
-    
+
     public static void movePlayerToStartingLocation(Map map) {
         movePlayer(map, 0, 4); // starting journey from Warrior Village
     }
-  
+
 }

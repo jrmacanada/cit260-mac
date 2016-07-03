@@ -14,23 +14,23 @@ public class CornfieldMenuView extends View {
 
     public CornfieldMenuView() {
                  super( "\n"
-                      + "\n----------------------------------"
-                      + "\n|           Cornfield            |"
-                      + "\n----------------------------------"
+                      + "\n------------------------------------"
+                      + "\n|            Cornfield             |"
+                      + "\n------------------------------------"
                       + "\n Your options for this scene are:"
                       + "\n1 - Rest to rebuild Stamina"
                       + "\n2 - Forage for food"
                       + "\n3 - Work with farmer"   
-                      + "\n----------------------------------"
+                      + "\n------------------------------------"
                       + "\nN - Move North  (not available)"
                       + "\nS - Move South"
                       + "\nE - Move East"
                       + "\nW - Move West (not available)"
-                      + "\n----------------------------------"
+                      + "\n------------------------------------"
                       + "\n  At anytime you may use D-X-L-R"
-                      + "\n----------------------------------"                   
+                      + "\n------------------------------------"                   
                       + "\nQ - Quit to Game Menu"
-                      + "\n----------------------------------");
+                      + "\n------------------------------------");
                     }
     
     @Override

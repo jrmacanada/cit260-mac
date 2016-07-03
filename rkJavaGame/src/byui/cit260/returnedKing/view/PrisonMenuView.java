@@ -14,23 +14,23 @@ public class PrisonMenuView extends View {
 
     public PrisonMenuView() {
                  super( "\n"
-                      + "\n----------------------------------"
-                      + "\n|            Prison              |"
-                      + "\n----------------------------------"
+                      + "\n------------------------------------"
+                      + "\n|             Prison               |"
+                      + "\n------------------------------------"
                       + "\n Your options for this scene are:"
                       + "\n1 - Talk to guard"
                       + "\n2 - Talk to prisoner"
                       + "\n3 - Apply for a prison job"   
-                      + "\n----------------------------------"
+                      + "\n------------------------------------"
                       + "\nN - Move North (not available)"
                       + "\nS - Move South"
                       + "\nE - Move East (not available)"
                       + "\nW - Move West"
-                      + "\n----------------------------------"
+                      + "\n------------------------------------"
                       + "\n  At anytime you may use D-X-L-R"
-                      + "\n----------------------------------"                   
+                      + "\n------------------------------------"                   
                       + "\nQ - Quit to Game Menu"
-                      + "\n----------------------------------");
+                      + "\n------------------------------------");
                     }
     
     @Override
