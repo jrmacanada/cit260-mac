@@ -66,9 +66,9 @@ public class GameMenuView extends View {
 //  CALL        this.parseInt(Double number); ??
                 this.maxStrength();
                 break;
-            /* case "C":
-             this.combatFight();
-             break;*/
+            case "C":
+                this.combatFight();
+                break;
             case "F":
                 this.enterForest();
                 break;
@@ -110,6 +110,7 @@ public class GameMenuView extends View {
         System.out.println("\nThe highest character strength is " + strength);
     }
 
+// This block of code was MCavey's attempt at parseInt() in Lesson-10
     public Double parseInt(Double number) {
 
         while (number == null) {
@@ -145,4 +146,9 @@ public class GameMenuView extends View {
         forestMenuView.display();
     }
 
+    private void combatFight() {
+        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
+        roadNorthMenuView.display();
+    }
+    
 }

@@ -5,40 +5,51 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.CombatControl;
+import byui.cit260.returnedKing.exceptions.CombatControlException;
+
 /**
  *
  * @author michaelcavey
  */
-class RoadNorthMenuView extends View {
-    
-    public RoadNorthMenuView(){
-                 super( "\n"
-                      + "\n--------------------------------------------"
-                      + "\n|                North Road                |"
-                      + "\n|   Prison guard blocks forward movement   |"
-                      + "\n--------------------------------------------"
-                      + "\n1 - Retreat "
-                      + "\n2 - Confront "
-                      + "\n3 - Move to North Gate "
-                      + "\n--------------------------------------------"   
-                      + "\nQ - Quit to Game Menu "
-                      + "\n--------------------------------------------");
+public class RoadNorthMenuView extends View {
+
+    public RoadNorthMenuView() {
+        super("\n"
+                + "\n------------------------------------------"
+                + "\n|               North Road               |"
+                + "\n|  Prison guard blocks forward movement  |"
+                + "\n------------------------------------------"
+                + "\n Your options for this scene are:"
+                + "\n1 - Retreat"
+                + "\n2 - Confront"
+                + "\n3 - Move to North Gate"
+                + "\n------------------------------------------"
+                + "\nN - Move North (not available)"
+                + "\nS - Move South"
+                + "\nE - Move East"
+                + "\nW - Move West"
+                + "\n------------------------------------------"
+                + "\n  At anytime you may use D-X-L-R"
+                + "\n------------------------------------------"
+                + "\nQ - Quit to Game Menu"
+                + "\n------------------------------------------");
     }
-    
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert choice to uppercase
-        
+
         switch (value) {
-            case "1": 
+            case "1":
                 this.retreat();
                 break;
-            case "2": 
+            case "2":
                 this.confront();
                 break;
-            case "3": 
-                this.moveToNorthGate();
+            case "3":
+                this.enterNorthGate();
                 break;
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
@@ -46,17 +57,27 @@ class RoadNorthMenuView extends View {
         }
         return false;
     }
-    
-     private void retreat() {
-        System.out.println("\nCalls the retreat() function");
+
+    private void retreat() {
+        GraveyardMenuView graveyardMenuView = new GraveyardMenuView();
+        graveyardMenuView.display();
     }
-     
-     private void confront() {
-        System.out.println("\nCalls the confront() function");
+
+    private void confront() {
+        try {
+            CombatControl fight = new CombatControl();
+            fight.damageGiven();
+            double works = fight.damageGiven();
+
+            System.out.println("You fought bravely!");
+        } catch (CombatControlException cce) {
+            System.out.println(cce.getMessage());
+        }
     }
-     
-     private void moveToNorthGate() {
-        System.out.println("\nCalls the moveToNorthGate function()");
+
+    private void enterNorthGate() {
+        GateNorthMenuView gateNorthMenuView = new GateNorthMenuView();
+        gateNorthMenuView.displayGateNorthMenuView();
     }
-    
+
 }

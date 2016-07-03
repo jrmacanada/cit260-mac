@@ -87,13 +87,13 @@ public class GraveyardMenuView extends View {
     }
 
     private void enterFarmVillage() {
-        TavernMenuView tavernMenuView = new TavernMenuView();
-        tavernMenuView.display();
+        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
+        farmVillageMenuView.display();
     }
 
     private void enterNorthRoad() {
-        PrisonMenuView prisonMenuView = new PrisonMenuView();
-        prisonMenuView.display();
+        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
+        roadNorthMenuView.display();
     }
 
     private void notAvailable() {
