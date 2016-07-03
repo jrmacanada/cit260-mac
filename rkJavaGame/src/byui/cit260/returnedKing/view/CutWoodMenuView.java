@@ -54,9 +54,8 @@ public class CutWoodMenuView extends View{
             WoodControl job = new WoodControl();
             job.calcWoodCutCoin();
             double works = job.calcWoodCutCoin();
-            
-            
-            System.out.println("test" + works);
+                       
+//            System.out.println("test" + works);
         } catch (WoodControlException wce) {
             System.out.println(wce.getMessage());
             

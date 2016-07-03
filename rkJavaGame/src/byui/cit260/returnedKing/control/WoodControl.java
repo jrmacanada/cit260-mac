@@ -19,16 +19,19 @@ public class WoodControl {
 // IS (after implementing exceptions)
                     throws WoodControlException {
         
-        int playerInput;
+        String playerInput;
+        int pInput = 0;
         double actualStamina = 100;
         double axe = 25;
         double strength = 50;
         
         Scanner keyboard = new Scanner(System.in);
         System.out.println("How much Stamina do you want to give up toward this woodcutting job?");
-        playerInput = keyboard.nextInt();
+        playerInput = keyboard.nextLine();
         
-        int staminaGiven = playerInput;
+        try {
+        pInput = Integer.parseInt(playerInput);
+        int staminaGiven = pInput;
         
         if (staminaGiven < 1 || staminaGiven > actualStamina || actualStamina > 100) {
                 throw new WoodControlException(" The stamina you gave is outside acceptable boundries."
@@ -85,7 +88,13 @@ public class WoodControl {
         
         return e_coin;
         
-    }
-
+        } catch (NumberFormatException nf) {
+            
+        int staminaGiven = pInput;
+        
+        System.out.println("\n You must enter a valid number.");
+    } 
+        return pInput;
+}
 }
 
