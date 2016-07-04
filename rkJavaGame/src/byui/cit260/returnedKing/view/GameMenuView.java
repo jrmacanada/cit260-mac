@@ -60,14 +60,14 @@ public class GameMenuView extends View {
                 this.movePlayer();
                 break;
             case "H":
-                this.huntRes();
+                this.enterHuntRes();
                 break;
             case "2":
 //  CALL        this.parseInt(Double number); ??
                 this.maxStrength();
                 break;
             case "C":
-                this.combatFight();
+                this.enterKingsHouse();
                 break;
             case "F":
                 this.enterForest();
@@ -136,7 +136,7 @@ public class GameMenuView extends View {
         return number;
     }
 
-    private void huntRes() {
+    private void enterHuntRes() {
         HuntReserveView huntReserveView = new HuntReserveView();
         huntReserveView.display();
     }
@@ -146,9 +146,9 @@ public class GameMenuView extends View {
         forestMenuView.display();
     }
 
-    private void combatFight() {
-        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
-        roadNorthMenuView.display();
+    private void enterKingsHouse() {
+        KhouseMenuView khouseMenuView = new KhouseMenuView();
+        khouseMenuView.display();
     }
     
 }
