@@ -116,7 +116,7 @@ public class RoadWestMenuView extends View {
 
     private void enterWestGate() {
         GateWestMenuView gateWestMenuView = new GateWestMenuView();
-        gateWestMenuView.displayGateWestMenuView();
+        gateWestMenuView.display();
     }
     
     private void notAvailable() {
