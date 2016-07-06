@@ -93,7 +93,7 @@ class TownshipMenuView extends View {
     
     private void enterHabortown() {
         HarbortownMenuView harbortownMenuView = new HarbortownMenuView();
-        harbortownMenuView.displayHarbortownMenuView();
+        harbortownMenuView.display();
     }
     
     private void enterChurch() {

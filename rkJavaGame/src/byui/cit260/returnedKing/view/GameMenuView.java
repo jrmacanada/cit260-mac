@@ -111,30 +111,30 @@ public class GameMenuView extends View {
     }
 
 // This block of code was MCavey's attempt at parseInt() in Lesson-10
-    public Double parseInt(Double number) {
-
-        while (number == null) {
-
-            int value = this.getInput;
-
-            if (number.equals("Q")) {
-                break;
-            }
-
-            try {
-
-                number = parseInt(number);
-
-            } catch (NumberFormatException nf) {
-
-                System.out.println("\n You must enter a valid number."
-                        + " Try again or enter Q to quit");
-            }
-
-            break;
-        }
-        return number;
-    }
+//    public Double parseInt(Double number) {
+//
+//        while (number == null) {
+//
+//            int value = this.getInput;
+//
+//            if (number.equals("Q")) {
+//                break;
+//            }
+//
+//            try {
+//
+//                number = parseInt(number);
+//
+//            } catch (NumberFormatException nf) {
+//
+//                System.out.println("\n You must enter a valid number."
+//                        + " Try again or enter Q to quit");
+//            }
+//
+//            break;
+//        }
+//        return number;
+//    }
 
     private void enterHuntRes() {
         HuntReserveView huntReserveView = new HuntReserveView();

@@ -27,7 +27,8 @@ public class MainMenuView extends View {
                 + "\nS - Save Game"
                 + "\n------------------------------------------"
                 + "\nQ - Quit without saving - End the game."
-                + "\n------------------------------------------");
+                + "\n------------------------------------------"
+        );
 
     }
 
@@ -49,6 +50,9 @@ public class MainMenuView extends View {
             case "S": // Save Current Game
                 this.saveGame();
                 break;
+//            case "Q": // Save Current Game
+//                this.endGame();
+//                break;
 
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
@@ -80,4 +84,21 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
 
+//    @Override
+//    public void endGame() {
+//
+//        boolean done = false; // set flag to not done
+//        do {
+//            // prompt for and get player name
+//            String value = this.getInput();
+//            if (value.toUpperCase().equals("Q")) // user wants to quit
+//            {
+//                return;
+//            }
+//            // do the requested action and display the next view
+//            done = this.doAction(value);
+//
+//        } while (!done);
+//    }
+    
 }

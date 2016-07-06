@@ -12,34 +12,66 @@ package byui.cit260.returnedKing.view;
 public class ChurchMenuView extends View {
     
     public ChurchMenuView() {
-                    super( "\n"
-                            + "\n----------------------------"
-                            + "\n|          Church          |"
-                            + "\n   There is a nun and two   "
-                            + "\npriests in the room. Do you "
-                            + "\nwant to talk with:          "
-                            + "\nN - the Nun                 "
-                            + "\nP - the first priest        "
-                            + "\nR - the second priest       "
-                            + "\nQ - quit to Main Menu       "
-                            + "\n----------------------------");    
+        super("\n"
+                + "\n--------------------------------------------"
+                + "\n|                  Church                  |"
+                + "\n--------------------------------------------"
+                + "\n Your options for this scene are:"
+                + "\n1 - Talk to priest"
+                + "\n2 - Rest to increase stamina"
+                + "\n3 - Pray to increase aura"
+                + "\n--------------------------------------------"
+                + "\nN - Move North"
+                + "\nS - Move South"
+                + "\nE - Move East (not available)"
+                + "\nW - Move West"
+                + "\n--------------------------------------------"
+                + "\n  At anytime you may use D-X-L-R"
+                + "\n--------------------------------------------"
+                + "\nQ - Quit to Game Menu"
+                + "\n--------------------------------------------");
     }
-    
+
     @Override
     public boolean doAction(String value) {
-    
-        value = value.toUpperCase();//Convert Choice to Uppercase
-    
+
+        value = value.toUpperCase(); //convert choice to uppercase
+
         switch (value) {
-            case "N": 
-                this.nun();
+            case "1":
+                this.talkPriest();
                 break;
-            case "P": 
-                this.firstPriest();
+            case "2":
+                this.restStamina();
                 break;
-            case "R": 
-                this.secondPriest();
+            case "3":
+                this.prayAura();
                 break;
+            case "N":
+                this.enterEastRoad();
+                break;
+            case "S":
+                this.enterSeaport();
+                break;
+            case "E":
+                this.notAvailable();
+                break;
+            case "W":
+                this.enterTownship();
+                break;
+            case "D":
+                this.mapView();
+                break;
+            case "X":
+                this.tellMore();
+                break;
+            case "L":
+                this.mySupplies();
+                break;
+            case "R":
+                this.myStats();
+                break;
+                
             default:
                 System.out.println("\n*** Invalid Selection *** Try again");
                 break;
@@ -47,16 +79,60 @@ public class ChurchMenuView extends View {
         return false;
     }
     
-     private void nun() {
-        System.out.println("\nCalls the nun() function");
+    private void tellMore() {
+        System.out.println(" The church ??? ."
+                + "\n ??? ."
+                + "\n ??? ");
+    }
+
+    private void enterTownship() {
+        TownshipMenuView townshipMenuView = new TownshipMenuView();
+        townshipMenuView.display();
+    }
+    
+    private void enterSeaport() {
+        SeaportMenuView seaportMenuView = new SeaportMenuView();
+        seaportMenuView.display();
+    }
+    
+    private void enterEastRoad() {
+        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
+        roadEastMenuView.display();
+    }
+    
+    private void notAvailable() {
+        System.out.println(" You may not leave the kingdom until"
+                + "\n you kill your uncle or die trying.");
+    }
+
+    private void mapView() {
+        MapMenuView mapMenuView = new MapMenuView();
+        mapMenuView.display();
+    }
+
+    private void mySupplies() {
+        // This function should list the player's supplies 
+        // (food, coin, weapons, artifacts) stored in his wagon.
+        // For now it redirects to the Items List of all available items.
+        ItemListMenuView itemListMenuView = new ItemListMenuView();
+        itemListMenuView.display();
+    }
+
+    private void myStats() {
+        System.out.println(" This function will display the player's"
+                + "\n Stamina, Strength, and Aura statistics.");
+    }
+    
+    private void talkPriest() {
+        System.out.println("\nCalls the talkPriest() function");
     }
      
-     private void firstPriest() {
-        System.out.println("\nCalls the firstPriest() function");
+    private void restStamina() {
+        System.out.println("\nCalls the restStamina() function");
     }
      
-     private void secondPriest() {
-        System.out.println("\nCalls the secondPriest() function");
+    private void prayAura() {
+        System.out.println("\nCalls the prayAura() function");
      }
       
 }
