@@ -30,7 +30,7 @@ public class CompetitionControl {
         double actualStamina = 78;
         double maximumStamina = 100;
 
-        System.out.println("\nLets see if you can throw this stone between the 100 foot marker and the 115 foot one."
+        this.console.println("\nLets see if you can throw this stone between the 100 foot marker and the 115 foot one."
                 + "\nHow much Strength do you want to use?");
         try {
             pInput = keyboard.readLine();

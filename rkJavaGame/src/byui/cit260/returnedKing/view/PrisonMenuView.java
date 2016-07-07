@@ -82,7 +82,7 @@ public class PrisonMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" Learn what you can inside and outside the prison."
+        this.console.println(" Learn what you can inside and outside the prison."
                        + "\n Earn 20 coins for working a job as a guard.");
     }
 
@@ -97,12 +97,12 @@ public class PrisonMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                        + "\n you kill your uncle or die trying.");
     }
     
     private void noEntry() {
-        System.out.println(" You may not return to the Warrior Village."
+        this.console.println(" You may not return to the Warrior Village."
                        + "\n Trust in your fighting skills.");
     }
     
@@ -120,20 +120,20 @@ public class PrisonMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                        + "\n Stamina, Strength, and Aura statistics.");
     }
 
     private void guardTalk() {
-        System.out.println("*** stub to guardTalks() function ***");
+        this.console.println("*** stub to guardTalks() function ***");
     }
 
     private void prisonerTalk() {
-        System.out.println("*** stub to prisonerTalks() function ***");
+        this.console.println("*** stub to prisonerTalks() function ***");
     }
 
     private void getJob() {
-        System.out.println("*** stub to getsJob() function ***");
+        this.console.println("*** stub to getsJob() function ***");
     }
   
 }

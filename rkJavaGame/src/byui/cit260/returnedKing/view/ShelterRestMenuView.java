@@ -7,14 +7,21 @@ package byui.cit260.returnedKing.view;
 
 //import java.util.Scanner;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import rkjavagame.RkJavaGame;
+
 /**
  *
  * @author michaelcavey
  */
 public class ShelterRestMenuView  {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     void displayShelterRestMenuView() {
-        System.out.println("*Calls the shelterRest() function*");
+        this.console.println("*Calls the shelterRest() function*");
     }
     
 }

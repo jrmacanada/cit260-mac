@@ -80,7 +80,7 @@ public class GateEastMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The east gate is monatored by a corrupt guard."
+        this.console.println(" The east gate is monatored by a corrupt guard."
                 + "\n For 100 coins the guard will allow you to pass, no questions asked."
                 + "\n Postitutes from town and the tavern are allowed access.");
     }
@@ -119,20 +119,20 @@ public class GateEastMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkGatekeeper() {
-        System.out.println("*** stub to talkGatekeeper() function ***");
+        this.console.println("*** stub to talkGatekeeper() function ***");
     }
 
     private void offerBribe() {
-        System.out.println("*** stub to offerBribe() function ***");
+        this.console.println("*** stub to offerBribe() function ***");
     }
 
     private void getDisguise() {
-        System.out.println("*** stub to getDisguise() function ***");
+        this.console.println("*** stub to getDisguise() function ***");
     }
 
 }

@@ -18,8 +18,8 @@ import rkjavagame.RkJavaGame;
  */
 public class CombatControl {
     
-//    protected final BufferedReader keyboard = RkJavaGame.getInFile();
-//    protected final PrintWriter console = RkJavaGame.getOutFile();
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public double damageGiven()
             throws CombatControlException {
@@ -44,7 +44,7 @@ public class CombatControl {
         
 // Can't get rid of this "System.in" because the ".nextInt" cannot be replaced with ".readInt"
         Scanner keyboard = new Scanner(System.in);
-        System.out.println("How much Strength do you want to use?");
+        this.console.println("How much Strength do you want to use?");
         myInt = keyboard.nextInt(); 
 
         int playerAttackPlace = myInt;

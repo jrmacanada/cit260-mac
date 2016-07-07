@@ -8,7 +8,6 @@ package byui.cit260.returnedKing.view;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
-import byui.cit260.returnedKing.model.Scene;
 import rkjavagame.RkJavaGame;
 
 /**

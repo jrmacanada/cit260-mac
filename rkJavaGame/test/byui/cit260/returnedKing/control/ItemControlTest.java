@@ -5,14 +5,19 @@
  */
 package byui.cit260.returnedKing.control;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import rkjavagame.RkJavaGame;
 
 /**
  *
  * @author michaelcavey
  */
 public class ItemControlTest {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public ItemControlTest() {
     }
@@ -22,13 +27,13 @@ public class ItemControlTest {
      */
     @Test
     public void testCalcUsableVolumeOfWagon() {
-        System.out.println("calcUsableVolumeOfWagon");
+        this.console.println("calcUsableVolumeOfWagon");
 
         /**
          * ***************
          * Test case #1 ***************
          */
-        System.out.println("\tTest case #1");
+        this.console.println("\tTest case #1");
 
         //input values for test case 1
         double length = 5.0;
@@ -43,7 +48,7 @@ public class ItemControlTest {
          * ***************
          * Test case #2 ***************
          */
-        System.out.println("\tTest case #2");
+        this.console.println("\tTest case #2");
 
         //input values for test case 2
         length = -1.0;
@@ -58,7 +63,7 @@ public class ItemControlTest {
          * ***************
          * Test case #3 ***************
          */
-        System.out.println("\tTest case #3");
+        this.console.println("\tTest case #3");
 
         //input values for test case 3
         length = 5.0;
@@ -73,7 +78,7 @@ public class ItemControlTest {
          * ***************
          * Test case #4 ***************
          */
-        System.out.println("\tTest case #4");
+        this.console.println("\tTest case #4");
 
         //input values for test case 4
         length = 5.0;
@@ -88,7 +93,7 @@ public class ItemControlTest {
          * ***************
          * Test case #5 ***************
          */
-        System.out.println("\tTest case #5");
+        this.console.println("\tTest case #5");
 
         //input values for test case 5
         length = 11.0;
@@ -103,7 +108,7 @@ public class ItemControlTest {
          * ***************
          * Test case #6 ***************
          */
-        System.out.println("\tTest case #6");
+        this.console.println("\tTest case #6");
 
         //input values for test case 6
         length = 5.0;
@@ -118,7 +123,7 @@ public class ItemControlTest {
          * ***************
          * Test case #7 ***************
          */
-        System.out.println("\tTest case #7");
+        this.console.println("\tTest case #7");
 
         //input values for test case 7
         length = 5.0;
@@ -133,7 +138,7 @@ public class ItemControlTest {
          * ***************
          * Test case #8 ***************
          */
-        System.out.println("\tTest case #8");
+        this.console.println("\tTest case #8");
 
         //input values for test case 8
         length = 0.0;
@@ -148,7 +153,7 @@ public class ItemControlTest {
          * ***************
          * Test case #9 ***************
          */
-        System.out.println("\tTest case #9");
+        this.console.println("\tTest case #9");
 
         //input values for test case 9
         length = 5.0;
@@ -163,7 +168,7 @@ public class ItemControlTest {
          * ***************
          * Test case #10 ***************
          */
-        System.out.println("\tTest case #10");
+        this.console.println("\tTest case #10");
 
         //input values for test case 10
         length = 5.0;
@@ -178,7 +183,7 @@ public class ItemControlTest {
          * ***************
          * Test case #11 ***************
          */
-        System.out.println("\tTest case #11");
+        this.console.println("\tTest case #11");
 
         //input values for test case 11
         length = 10.0;

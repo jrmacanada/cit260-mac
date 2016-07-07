@@ -6,14 +6,6 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
-import byui.cit260.returnedKing.model.Actor;
-import byui.cit260.returnedKing.model.Game;
-import byui.cit260.returnedKing.model.Item;
-import byui.cit260.returnedKing.model.Location;
-import byui.cit260.returnedKing.model.Map;
-import java.util.Scanner;
-import static javax.management.Query.value;
-import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -63,7 +55,6 @@ public class GameMenuView extends View {
                 this.enterHuntRes();
                 break;
             case "2":
-//  CALL        this.parseInt(Double number); ??
                 this.maxStrength();
                 break;
             case "C":
@@ -101,40 +92,13 @@ public class GameMenuView extends View {
     }
 
     private void maxStrength() {
-
-//        CALL parseInt(Double number) ??        
+       
         GameControl gameC = new GameControl();
         gameC.mStrength();
         int strength = gameC.mStrength();
 
         System.out.println("\nThe highest character strength is " + strength);
     }
-
-// This block of code was MCavey's attempt at parseInt() in Lesson-10
-//    public Double parseInt(Double number) {
-//
-//        while (number == null) {
-//
-//            int value = this.getInput;
-//
-//            if (number.equals("Q")) {
-//                break;
-//            }
-//
-//            try {
-//
-//                number = parseInt(number);
-//
-//            } catch (NumberFormatException nf) {
-//
-//                System.out.println("\n You must enter a valid number."
-//                        + " Try again or enter Q to quit");
-//            }
-//
-//            break;
-//        }
-//        return number;
-//    }
 
     private void enterHuntRes() {
         HuntReserveView huntReserveView = new HuntReserveView();

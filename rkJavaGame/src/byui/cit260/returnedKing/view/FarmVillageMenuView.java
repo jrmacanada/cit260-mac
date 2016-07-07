@@ -82,7 +82,7 @@ class FarmVillageMenuView extends View {
     }
 
     private void tellMore() {
-        System.out.println(" The farm village is a great place to replenish your supplies."
+        this.console.println(" The farm village is a great place to replenish your supplies."
                 + "\n Ask around for a job to earn more coin."
                 + "\n The villagers are friendly, but skeptical of strangers.");
     }
@@ -121,20 +121,20 @@ class FarmVillageMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
 
     private void talkVillager() {
-        System.out.println("*** stub to talkVillager() function ***");
+        this.console.println("*** stub to talkVillager() function ***");
     }
 
     private void workDelivery() {
-        System.out.println("*** stub to workDelivery() function ***");
+        this.console.println("*** stub to workDelivery() function ***");
     }
 
     private void shopSupplies() {
-        System.out.println("*** stub to shopSupplies() function ***");
+        this.console.println("*** stub to shopSupplies() function ***");
     }
 
 }

@@ -18,7 +18,6 @@ import rkjavagame.RkJavaGame;
  * @author michaelcavey
  */
 public class GameControl {
-// IS (after implementing exceptions)
 
     public static Player createPlayer(String name)
             throws GameControlException {
@@ -37,20 +36,6 @@ public class GameControl {
         }
     }
 
-// WAS (before implementing exceptions)
-//    public static Player createPlayer(String name) {
-//        
-//        if (name == null) {
-//            return null;
-//        }
-//        
-//        Player player = new Player();
-//        player.setName(name);
-//        
-//        RkJavaGame.setPlayer(player); //save the player
-//        
-//        return player;
-//    }
     public static void createNewGame(Player player) {
 
         Game game = new Game(); // create new game

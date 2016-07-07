@@ -5,10 +5,6 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.GameControl;
-import java.util.Scanner;
-import rkjavagame.RkJavaGame;
-
 /**
  *
  * @author thiag
@@ -55,7 +51,7 @@ public class HelpMenuView extends View {
     }
 
     private void whatIsGoal() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n**************************************************"
                 + "\n*               Goal of the Game                 *"
                 + "\n**************************************************"
@@ -71,7 +67,7 @@ public class HelpMenuView extends View {
     }
 
     private void howToMove() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n************************************************"
                 + "\n*          How to Move Your Character          *"
                 + "\n************************************************"
@@ -89,7 +85,7 @@ public class HelpMenuView extends View {
     }
 
     private void howToBattle() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n************************************************"
                 + "\n*               How Battle Works               *"
                 + "\n************************************************"
@@ -107,7 +103,7 @@ public class HelpMenuView extends View {
     }
 
     private void whatToCollect() {
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n**************************************************"
                 + "\n*        What You Will Be Collecting             *"
                 + "\n**************************************************"

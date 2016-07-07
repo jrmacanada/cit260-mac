@@ -7,14 +7,21 @@ package byui.cit260.returnedKing.view;
 
 //import java.util.Scanner;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
+import rkjavagame.RkJavaGame;
+
 /**
  *
  * @author michaelcavey
  */
 public class CastleMenuView {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     void displayCastleMenuView() {
-        System.out.println("*Calls the enterCastle() function*");
+        this.console.println("*Calls the enterCastle() function*");
     }
     
 }

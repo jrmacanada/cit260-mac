@@ -5,10 +5,6 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.GameControl;
-import java.util.Scanner;
-import rkjavagame.RkJavaGame;
-
 /**
  *
  * @author Craig
@@ -48,7 +44,7 @@ public class HuntReserveView extends View {
     }
 
     private void huntForGame() {
-        System.out.println("\nCalls the huntForGame()");
+        this.console.println("\nCalls the huntForGame()");
     }
 
     private void talkToHunters() {

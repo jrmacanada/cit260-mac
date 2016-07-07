@@ -5,14 +5,19 @@
  */
 package byui.cit260.returnedKing.control;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import rkjavagame.RkJavaGame;
 
 /**
  *
  * @author michaelcavey
  */
 public class WoodControlTest {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public WoodControlTest() {
     }
@@ -22,13 +27,13 @@ public class WoodControlTest {
      */
     @Test
     public void testCalcWoodCutCoin() {
-        System.out.println("calcWoodCutCoin");
+        this.console.println("calcWoodCutCoin");
 
         /**
          * ***************
          * Test case #1 ***************
          */
-        System.out.println("\tTest case #1");
+        this.console.println("\tTest case #1");
 
         //input values for test case 1 = All VALID Inputs
         int staminaGiven = 50;
@@ -45,7 +50,7 @@ public class WoodControlTest {
          * ***************
          * Test case #2 ***************
          */
-        System.out.println("\tTest case #2");
+        this.console.println("\tTest case #2");
 
         //input values for test case 2
         staminaGiven = 0; // Invalid (less than +1)
@@ -62,7 +67,7 @@ public class WoodControlTest {
          * ***************
          * Test case #3 ***************
          */
-        System.out.println("\tTest case #3");
+        this.console.println("\tTest case #3");
 
         //input values for test case 3
         staminaGiven = 50;
@@ -79,7 +84,7 @@ public class WoodControlTest {
          * ***************
          * Test case #4 ***************
          */
-        System.out.println("\tTest case #4");
+        this.console.println("\tTest case #4");
 
         //input values for test case 4
         staminaGiven = 50;
@@ -96,7 +101,7 @@ public class WoodControlTest {
          * ***************
          * Test case #5 ***************
          */
-        System.out.println("\tTest case #5");
+        this.console.println("\tTest case #5");
 
         //input values for test case 5
         staminaGiven = 50;
@@ -113,7 +118,7 @@ public class WoodControlTest {
          * ***************
          * Test case #6 ***************
          */
-        System.out.println("\tTest case #6");
+        this.console.println("\tTest case #6");
 
         //input values for test case 6
         staminaGiven = 50;
@@ -130,7 +135,7 @@ public class WoodControlTest {
          * ***************
          * Test case #7 ***************
          */
-        System.out.println("\tTest case #7");
+        this.console.println("\tTest case #7");
 
         //input values for test case 7
         staminaGiven = 50;
@@ -147,7 +152,7 @@ public class WoodControlTest {
          * ***************
          * Test case #8 ***************
          */
-        System.out.println("\tTest case #8");
+        this.console.println("\tTest case #8");
 
         //input values for test case 8
         staminaGiven = 50;
@@ -164,7 +169,7 @@ public class WoodControlTest {
          * ***************
          * Test case #9 ***************
          */
-        System.out.println("\tTest case #9");
+        this.console.println("\tTest case #9");
 
         //input values for test case 9
         staminaGiven = 50;
@@ -181,7 +186,7 @@ public class WoodControlTest {
          * ***************
          * Test case #10 ***************
          */
-        System.out.println("\tTest case #10");
+        this.console.println("\tTest case #10");
 
         //input values for test case 10
         staminaGiven = 50;
@@ -198,7 +203,7 @@ public class WoodControlTest {
          * ***************
          * Test case #11 ***************
          */
-        System.out.println("\tTest case #11");
+        this.console.println("\tTest case #11");
 
         //input values for test case 11
         staminaGiven = 1; // Low Boundry - Invalid (e_coin less than +1)
@@ -215,7 +220,7 @@ public class WoodControlTest {
          * ***************
          * Test case #12 ***************
          */
-        System.out.println("\tTest case #12");
+        this.console.println("\tTest case #12");
 
         //input values for test case 12
         staminaGiven = 100; // High Boundry (maximum coin earned)
@@ -232,7 +237,7 @@ public class WoodControlTest {
          * ***************
          * Test case #13 ***************
          */
-        System.out.println("\tTest case #13");
+        this.console.println("\tTest case #13");
 
         //input values for test case 13
         staminaGiven = 4; // Low Boundry (minimum of one coin earned with maximum actualStamina available)
@@ -249,7 +254,7 @@ public class WoodControlTest {
          * ***************
          * Test case #14 ***************
          */
-        System.out.println("\tTest case #14");
+        this.console.println("\tTest case #14");
 
         //input values for test case 14
         staminaGiven = 20; // Low Boundry (minimum of one coin earned when actualStamina eqauls givenStamina)
@@ -266,7 +271,7 @@ public class WoodControlTest {
          * ***************
          * Test case #15 ***************
          */
-//        System.out.println("\tTest case #15");
+//        this.console.println("\tTest case #15");
         //input values for test case 15
     }
 

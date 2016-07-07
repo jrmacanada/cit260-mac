@@ -6,10 +6,7 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.CombatControl;
-import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.exceptions.CombatControlException;
-import java.util.Scanner;
-import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -64,22 +61,22 @@ public class KhouseMenuView extends View {
             fight.damageGiven();
             double works = fight.damageGiven();
 
-            System.out.println("You fought bravely!");
+            this.console.println("You fought bravely!");
         } catch (CombatControlException cce) {
             System.out.println(cce.getMessage());
         }
     }
 
     private void hiddenFight() {
-        System.out.println("\n*** hiddenFight() function called ***");
+        this.console.println("\n*** hiddenFight() function called ***");
     }
 
     private void talkTo() {
-        System.out.println("\n*** talkTo() function called ***");
+        this.console.println("\n*** talkTo() function called ***");
     }
 
     private void tryHiddenDoor() {
-        System.out.println("\n*** tryHiddenDoor() function called ***");
+        this.console.println("\n*** tryHiddenDoor() function called ***");
     }
 
 }

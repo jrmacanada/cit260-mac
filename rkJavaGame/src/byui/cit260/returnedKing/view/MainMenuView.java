@@ -6,7 +6,6 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
-//import java.util.Scanner;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -68,11 +67,11 @@ public class MainMenuView extends View {
     }
 
     private void startExistingGame() {
-        System.out.println("*Calls the startExistingGame() function*");
+        this.console.println("*Calls the startExistingGame() function*");
     }
 
     private void saveGame() {
-        System.out.println("*Calls the saveGame() function*");
+        this.console.println("*Calls the saveGame() function*");
     }
 
     public void displayHelpMenu() {

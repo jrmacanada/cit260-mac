@@ -5,14 +5,19 @@
  */
 package byui.cit260.returnedKing.control;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import rkjavagame.RkJavaGame;
 
 /**
  *
  * @author Craig
  */
 public class CompetitionControlTest {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public CompetitionControlTest() {
     }
@@ -22,14 +27,14 @@ public class CompetitionControlTest {
      */
     @Test
     public void testCompetition() {
-        System.out.println("competition");
+        this.console.println("competition");
 
         /**
          * **************************
          * Test case #1
          ***************************
          */
-        System.out.println("\tTest case #1");
+        this.console.println("\tTest case #1");
 
         //input values for test case 1
         double minYard = 15.0;
@@ -57,7 +62,7 @@ public class CompetitionControlTest {
          * Test case #2
          ***************************
          */
-        System.out.println("\tTest case #2");
+        this.console.println("\tTest case #2");
 
         //input values for test case 2
         minYard = 15.0;
@@ -82,7 +87,7 @@ public class CompetitionControlTest {
          * Test case #3
          ***************************
          */
-        System.out.println("\tTest case #3");
+        this.console.println("\tTest case #3");
 
         //input values for test case 3
         minYard = 15.0;
@@ -107,7 +112,7 @@ public class CompetitionControlTest {
          * Test case #4
          ***************************
          */
-        System.out.println("\tTest case #4");
+        this.console.println("\tTest case #4");
 
         //input values for test case 4
         minYard = 15.0;
@@ -132,7 +137,7 @@ public class CompetitionControlTest {
          * Test case #5
          ***************************
          */
-        System.out.println("\tTest case #5");
+        this.console.println("\tTest case #5");
 
         //input values for test case 5
         minYard = 15.0;
@@ -157,7 +162,7 @@ public class CompetitionControlTest {
          * Test case #6
          ***************************
          */
-        System.out.println("\tTest case #6");
+        this.console.println("\tTest case #6");
 
         //input values for test case 6
         minYard = 15.0;
@@ -182,7 +187,7 @@ public class CompetitionControlTest {
          * Test case #7
          ***************************
          */
-        System.out.println("\tTest case #7");
+        this.console.println("\tTest case #7");
 
         //input values for test case 7
         minYard = 55.0;
@@ -207,7 +212,7 @@ public class CompetitionControlTest {
          * Test case #8
          ***************************
          */
-        System.out.println("\tTest case #8");
+        this.console.println("\tTest case #8");
 
         //input values for test case 8
         minYard = 55.0;
@@ -232,7 +237,7 @@ public class CompetitionControlTest {
          * Test case #9
          ***************************
          */
-        System.out.println("\tTest case #9");
+        this.console.println("\tTest case #9");
 
         //input values for test case 9
         minYard = 70.0;
@@ -257,7 +262,7 @@ public class CompetitionControlTest {
          * Test case #10
          ***************************
          */
-        System.out.println("\tTest case #10");
+        this.console.println("\tTest case #10");
 
         //input values for test case 10
         minYard = 55.0;

@@ -80,7 +80,7 @@ public class GateWestMenuView extends View{
     }
     
     private void tellMore() {
-        System.out.println(" The West gate is always locked."
+        this.console.println(" The West gate is always locked."
                 + "\n No guards are stationed at the enterance because a swamp "
                 + "\n filled with crocodiles and snakes prevent access."
                 + "\n Nobody has ever fought their way through.");
@@ -120,20 +120,20 @@ public class GateWestMenuView extends View{
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void fightAnimals() {
-        System.out.println("*** stub to fightAnimals() function ***");
+        this.console.println("*** stub to fightAnimals() function ***");
     }
 
     private void pickLock() {
-        System.out.println("*** stub to pickLock() function ***");
+        this.console.println("*** stub to pickLock() function ***");
     }
 
     private void scaleWall() {
-        System.out.println("*** stub to scaleWall() function ***");
+        this.console.println("*** stub to scaleWall() function ***");
     }
 
 }

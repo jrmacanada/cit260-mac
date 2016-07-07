@@ -8,7 +8,6 @@ package byui.cit260.returnedKing.view;
 import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Player;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -30,7 +29,7 @@ public final class StartProgramView extends View {
 
     public void displayBanner() {
 
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n**************************************************************"
                 + "\n*                     The Returned King                      *"
                 + "\n*                                                            *"
@@ -75,7 +74,7 @@ public final class StartProgramView extends View {
         boolean valid = false; // intialize to not valid
 
         while (!valid) { // loop while an invalid value is enter
-            System.out.println("\n" + this.promptMessage);
+            this.console.println("\n" + this.promptMessage);
 
             try {
                 value = keyboard.readLine(); // get next line typed on keboard
@@ -119,7 +118,7 @@ public final class StartProgramView extends View {
     private void displayNextView(Player player) {
 
         // display a custom welcome message
-        System.out.println("\n"
+        this.console.println("\n"
                 + "\n==========================================="
                 + "\n Welcome to the game " + player.getName()
                 + "\n We hope you have a lot of fun!"

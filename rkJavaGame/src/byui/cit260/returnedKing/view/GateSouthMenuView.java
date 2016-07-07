@@ -80,7 +80,7 @@ public class GateSouthMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The south gate is always locked."
+        this.console.println(" The south gate is always locked."
                 + "\n One guard protects the enterance."
                 + "\n A password is required to be allowed into the castle.");
     }
@@ -119,20 +119,20 @@ public class GateSouthMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkGatekeeper() {
-        System.out.println("*** stub to talkGatekeeper() function ***");
+        this.console.println("*** stub to talkGatekeeper() function ***");
     }
 
     private void offerPassword() {
-        System.out.println("*** stub to offerPassword() function ***");
+        this.console.println("*** stub to offerPassword() function ***");
     }
 
     private void scaleWall() {
-        System.out.println("*** stub to scaleWall() function ***");
+        this.console.println("*** stub to scaleWall() function ***");
     }
 
 }

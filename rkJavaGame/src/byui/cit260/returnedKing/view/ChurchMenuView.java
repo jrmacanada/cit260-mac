@@ -80,7 +80,7 @@ public class ChurchMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The church ??? ."
+        this.console.println(" The church ??? ."
                 + "\n ??? ."
                 + "\n ??? ");
     }
@@ -101,7 +101,7 @@ public class ChurchMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
 
@@ -119,20 +119,20 @@ public class ChurchMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkPriest() {
-        System.out.println("\nCalls the talkPriest() function");
+        this.console.println("\nCalls the talkPriest() function");
     }
      
     private void restStamina() {
-        System.out.println("\nCalls the restStamina() function");
+        this.console.println("\nCalls the restStamina() function");
     }
      
     private void prayAura() {
-        System.out.println("\nCalls the prayAura() function");
+        this.console.println("\nCalls the prayAura() function");
      }
       
 }

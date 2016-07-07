@@ -53,7 +53,7 @@ public class PlayerTypeMenuView extends View {
     }
 
     private void wizardType() {
-       System.out.println("\n This is where our code must..."
+       this.console.println("\n This is where our code must..."
                         + "\n allocate variables with wizard values to player,"
                         + "\n identify unique items the wizard possesses,"
                         + "\n and store player's start position at"
@@ -61,7 +61,7 @@ public class PlayerTypeMenuView extends View {
     }
 
     private void warriorType() {
-       System.out.println("\n This is where our code must..."
+       this.console.println("\n This is where our code must..."
                         + "\n allocate variables with warrior values to player,"
                         + "\n identify unique items the warrior possesses,"
                         + "\n and store player's start position at"
@@ -69,7 +69,7 @@ public class PlayerTypeMenuView extends View {
     }
     
     private void monkType() {
-       System.out.println("\n This is where our code must..."
+       this.console.println("\n This is where our code must..."
                         + "\n allocate variables with monk values to player,"
                         + "\n identify unique items the monk possesses,"
                         + "\n and store player's start position at"

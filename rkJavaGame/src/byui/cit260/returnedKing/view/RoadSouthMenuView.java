@@ -84,7 +84,7 @@ class RoadSouthMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" You cannot move forward in your present direction."
+        this.console.println(" You cannot move forward in your present direction."
                 + "\n You will be rerouted if you choose not to fight.");
     }
 
@@ -108,7 +108,7 @@ class RoadSouthMenuView extends View {
             fight.damageGiven();
             double works = fight.damageGiven();
 
-            System.out.println("You fought bravely!");
+            this.console.println("You fought bravely!");
         } catch (CombatControlException cce) {
             System.out.println(cce.getMessage());
         }
@@ -120,12 +120,12 @@ class RoadSouthMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
     
     private void noEntry() {
-        System.out.println(" You are confronted by an opponent."
+        this.console.println(" You are confronted by an opponent."
                 + "\n You cannot move normally.");
     }
 
@@ -143,7 +143,7 @@ class RoadSouthMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
 

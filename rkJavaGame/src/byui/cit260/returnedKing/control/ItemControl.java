@@ -6,7 +6,6 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.ItemControlException;
-import java.util.Scanner;
 
 /**
  *

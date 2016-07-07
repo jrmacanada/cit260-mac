@@ -81,7 +81,7 @@ public class GraveyardMenuView extends View {
     }
 
     private void tellMore() {
-        System.out.println(" Rest one day to gain 15 Stamina points."
+        this.console.println(" Rest one day to gain 15 Stamina points."
                 + "\n See if you can find some useful items."
                 + "\n Read the gravestones to learn more.");
     }
@@ -97,12 +97,12 @@ public class GraveyardMenuView extends View {
     }
 
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
 
     private void noEntry() {
-        System.out.println(" You may not return to the Monastery."
+        this.console.println(" You may not return to the Monastery."
                 + "\n Remember you walk with God and Christ.");
     }
 
@@ -120,20 +120,20 @@ public class GraveyardMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
 
     private void addStamina() {
-        System.out.println("*** stub to addsStamina() function ***");
+        this.console.println("*** stub to addsStamina() function ***");
     }
 
     private void findItems() {
-        System.out.println("*** stub to findsItems() function ***");
+        this.console.println("*** stub to findsItems() function ***");
     }
 
     private void readGraves() {
-        System.out.println("*** stub to readsGraves() function ***");
+        this.console.println("*** stub to readsGraves() function ***");
     }
 
 }

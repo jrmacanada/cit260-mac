@@ -31,7 +31,7 @@ public class WoodControl {
         double axe = 25;
         double strength = 50;
 
-        System.out.println("How much Stamina do you want to give up toward this woodcutting job?");
+        this.console.println("How much Stamina do you want to give up toward this woodcutting job?");
         try {
             playerInput = keyboard.readLine();
         } catch (IOException ex) {
@@ -62,7 +62,7 @@ public class WoodControl {
                 throw new WoodControlException("You cannot cut wood; the varibles involved produce less than one coin.");
             }
 
-            System.out.println("You earned " + (Math.round(e_coin)) + " coins.");
+            this.console.println("You earned " + (Math.round(e_coin)) + " coins.");
 
             return e_coin;
 

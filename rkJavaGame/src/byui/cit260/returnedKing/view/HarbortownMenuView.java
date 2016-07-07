@@ -81,7 +81,7 @@ class HarbortownMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The harbortown ??? ."
+        this.console.println(" The harbortown ??? ."
                 + "\n ??? ."
                 + "\n ??? ");
     }
@@ -102,7 +102,7 @@ class HarbortownMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
 
@@ -120,20 +120,20 @@ class HarbortownMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkVendor() {
-        System.out.println("*** stub to talkVendor() function ***");
+        this.console.println("*** stub to talkVendor() function ***");
     }
 
     private void workMarket() {
-        System.out.println("*** stub to workMarket() function ***");
+        this.console.println("*** stub to workMarket() function ***");
     }
 
     private void shopSupplies() {
-        System.out.println("*** stub to shopSupplies() function ***");
+        this.console.println("*** stub to shopSupplies() function ***");
     }
 
 }

@@ -8,6 +8,8 @@ package byui.cit260.returnedKing.view;
 import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -15,6 +17,9 @@ import rkjavagame.RkJavaGame;
  * @author michaelcavey
  */
 public class ItemListMenuView {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public void display() {
         StringBuilder line;
@@ -22,12 +27,12 @@ public class ItemListMenuView {
         Game game = RkJavaGame.getCurrentGame();
         Item[] items = game.getItems();
 
-        System.out.println("\n       LIST OF ITEMS");
+        this.console.println("\n       LIST OF ITEMS");
         line = new StringBuilder("                                        ");
         line.insert(0, "DESCRIPTION");
         line.insert(15, "QUANTITY");
         line.insert(25, "UNIT PRICE");
-        System.out.println(line.toString());
+        this.console.println(line.toString());
 
         for (Item item : items) {
             line = new StringBuilder("                                        ");
@@ -35,7 +40,7 @@ public class ItemListMenuView {
             line.insert(18, item.getQuantityInStock());
             line.insert(28, item.getUnitPrice());
 
-            System.out.println(line.toString());
+            this.console.println(line.toString());
         }
 
         GameControl totalPrice = new GameControl();
@@ -43,7 +48,7 @@ public class ItemListMenuView {
 
         int sumAllItems = totalPrice.buyOneEach();
 
-        System.out.println("\n The price to buy one of each item is " + sumAllItems + " coins");
+        this.console.println("\n The price to buy one of each item is " + sumAllItems + " coins");
 
     }
 

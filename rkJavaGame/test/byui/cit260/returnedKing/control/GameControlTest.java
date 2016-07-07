@@ -5,8 +5,10 @@
  */
 package byui.cit260.returnedKing.control;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import rkjavagame.RkJavaGame;
 
 /**
  * This file passes but does NOT test anything!!!!!!
@@ -14,6 +16,9 @@ import static org.junit.Assert.*;
  * @author michaelcavey
  */
 public class GameControlTest {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
     
     public GameControlTest() {
     }

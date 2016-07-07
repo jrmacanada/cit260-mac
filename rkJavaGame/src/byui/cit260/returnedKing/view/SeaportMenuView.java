@@ -82,7 +82,7 @@ public class SeaportMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The seaport is a dangerous place that plays by its own rules."
+        this.console.println(" The seaport is a dangerous place that plays by its own rules."
                 + "\n Foriegn travelers have never been subject to the King's rule."
                 + "\n Neither have they been rebelous. They only defend their iberty");
     }
@@ -98,7 +98,7 @@ public class SeaportMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You can go for a swim to relax, but you'll "
+        this.console.println(" You can go for a swim to relax, but you'll "
                 + "\n need a boat to continue in this direction.");
     }
 
@@ -116,20 +116,20 @@ public class SeaportMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkSailor() {
-        System.out.println("*** stub to talkSailor() function ***");
+        this.console.println("*** stub to talkSailor() function ***");
     }
 
     private void campBeach() {
-        System.out.println("*** stub to campBeach() function ***");
+        this.console.println("*** stub to campBeach() function ***");
     }
 
     private void enterAmerica() {
-        System.out.println("*** stub to enterAmerica() function ***");
+        this.console.println("*** stub to enterAmerica() function ***");
     }
 
 }

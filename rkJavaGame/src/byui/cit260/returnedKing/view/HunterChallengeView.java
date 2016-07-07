@@ -7,7 +7,6 @@ package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.CompetitionControl;
 import byui.cit260.returnedKing.exceptions.CompetitionControlException;
-import java.util.Scanner;
 
 /**
  *
@@ -64,7 +63,7 @@ public class HunterChallengeView extends View {
     }
 
     private void askForRules() {
-        System.out.println("\n*** Calls the askForRules()***");
+        this.console.println("\n*** Calls the askForRules()***");
     }
 
     

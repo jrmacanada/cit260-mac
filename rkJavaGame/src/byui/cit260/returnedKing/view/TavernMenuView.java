@@ -81,7 +81,7 @@ public class TavernMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The tavern ??? ."
+        this.console.println(" The tavern ??? ."
                 + "\n ??? ."
                 + "\n ??? ");
     }
@@ -97,12 +97,12 @@ public class TavernMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
     
     private void noEntry() {
-        System.out.println(" You may not return to the Warrior Village."
+        this.console.println(" You may not return to the Warrior Village."
                        + "\n Trust in your fighting skills.");
     }
 
@@ -120,20 +120,20 @@ public class TavernMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkToOwner() {
-        System.out.println("\nCalls the talkToOwner() function");
+        this.console.println("\nCalls the talkToOwner() function");
     }
      
     private void talkToDrunk() {
-        System.out.println("\nCalls the talkToDrunk() function");
+        this.console.println("\nCalls the talkToDrunk() function");
     }
      
     private void talkToShady() {
-        System.out.println("\nCalls the talkToShady() function");
+        this.console.println("\nCalls the talkToShady() function");
     }
     
 }

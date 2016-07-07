@@ -54,7 +54,7 @@ public class CutWoodMenuView extends View {
             job.calcWoodCutCoin();
             double works = job.calcWoodCutCoin();
 
-            System.out.println("That's enough for today.");
+            this.console.println("That's enough for today.");
         } catch (WoodControlException wce) {
             System.out.println(wce.getMessage());
 
@@ -62,7 +62,7 @@ public class CutWoodMenuView extends View {
     }
 
     private void aboutPay() {
-        System.out.println("\n You will be paid coin based on how much Stamina you give in the effort."
+        this.console.println("\n You will be paid coin based on how much Stamina you give in the effort."
                 + "\n Your earnings are also a factor of the type of axe you possess.");
     }
 

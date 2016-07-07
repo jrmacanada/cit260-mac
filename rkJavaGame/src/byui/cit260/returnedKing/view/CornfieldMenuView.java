@@ -82,7 +82,7 @@ public class CornfieldMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" Rest one day to gain 15 Stamina points."
+        this.console.println(" Rest one day to gain 15 Stamina points."
                        + "\n Glean from the fields to replenish food."
                        + "\n Work with the farmer to earn 10 coins.");
     }
@@ -98,12 +98,12 @@ public class CornfieldMenuView extends View {
     }
     
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                        + "\n you kill your uncle or die trying.");
     }
     
     private void noEntry() {
-        System.out.println(" You may not return to the Monastry."
+        this.console.println(" You may not return to the Monastry."
                        + "\n Remember you walk with God and Christ.");
     }
     
@@ -121,20 +121,20 @@ public class CornfieldMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                        + "\n Stamina, Strength, and Aura statistics.");
     }
 
     private void addStamina() {
-        System.out.println("*** stub to addsStamina() function ***");
+        this.console.println("*** stub to addsStamina() function ***");
     }
 
     private void getFood() {
-        System.out.println("*** stub to getsFood() function ***");
+        this.console.println("*** stub to getsFood() function ***");
     }
 
     private void getJob() {
-        System.out.println("*** stub to getsJob() function ***");
+        this.console.println("*** stub to getsJob() function ***");
     }
   
 }

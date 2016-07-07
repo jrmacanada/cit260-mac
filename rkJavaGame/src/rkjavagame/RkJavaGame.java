@@ -6,23 +6,12 @@
 package rkjavagame;
 
 import byui.cit260.returnedKing.model.Player;
-import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
-import byui.cit260.returnedKing.model.Item;
-import byui.cit260.returnedKing.model.Location;
-import byui.cit260.returnedKing.model.Map;
-import byui.cit260.returnedKing.model.Scene;
-import byui.cit260.returnedKing.model.Wood;
-import byui.cit260.returnedKing.model.Combat;
-import byui.cit260.returnedKing.model.Competition;
 import byui.cit260.returnedKing.view.StartProgramView;
-import byui.cit260.returnedKing.view.View;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.InputStreamReader;
 import java.io.PrintWriter;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 
 /**
  *
@@ -51,7 +40,7 @@ public class RkJavaGame {
                     = new BufferedReader(new InputStreamReader(System.in));
 
             RkJavaGame.outFile = new PrintWriter(System.out, true);
-            
+
             // open log file
             String filePath = "log.txt";
             RkJavaGame.logFile = new PrintWriter(filePath);
@@ -70,16 +59,18 @@ public class RkJavaGame {
 
         } finally {
             try {
-                if (RkJavaGame.inFile != null) 
+                if (RkJavaGame.inFile != null) {
                     RkJavaGame.inFile.close();
-                
-                if (RkJavaGame.outFile != null) 
+                }
+
+                if (RkJavaGame.outFile != null) {
                     RkJavaGame.outFile.close();
-                   
-                if (RkJavaGame.logFile != null)
+                }
+
+                if (RkJavaGame.logFile != null) {
                     RkJavaGame.logFile.close();
                 }
-             catch (IOException ex) {
+            } catch (IOException ex) {
                 System.out.println("Error closing files");
                 return;
             }
@@ -135,7 +126,5 @@ public class RkJavaGame {
     public static void setLogFile(PrintWriter logFile) {
         RkJavaGame.logFile = logFile;
     }
-
-    
 
 }

@@ -78,7 +78,7 @@ public class MonkStartView extends View {
     }
 
     private void tellMore() {
-        System.out.println(" This scene is the starting point for a Monk."
+        this.console.println(" This scene is the starting point for a Monk."
                 + "\n You'll be lucky if you ever return.");
     }
 
@@ -93,7 +93,7 @@ public class MonkStartView extends View {
     }
 
     private void notAvailable() {
-        System.out.println(" You may not leave the kingdom until"
+        this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
 
@@ -111,7 +111,7 @@ public class MonkStartView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
 

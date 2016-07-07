@@ -5,8 +5,10 @@
  */
 package byui.cit260.returnedKing.control;
 
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import org.junit.Test;
-import static org.junit.Assert.*;
+import rkjavagame.RkJavaGame;
 
 /**
  * may 28, 2016
@@ -15,6 +17,9 @@ import static org.junit.Assert.*;
  *
  */
 public class CombatControlTest {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public CombatControlTest() {
     }
@@ -24,14 +29,14 @@ public class CombatControlTest {
      */
     @Test
     public void testDamageGiven() {
-        System.out.println("damageGiven");
+        this.console.println("damageGiven");
 
         /**
          * *************************
          * Test case #01
          *************************
          */
-        System.out.println("Test case #01");
+        this.console.println("Test case #01");
 
         int playerStrength = 50;
         int playerIntelligence = 10;
@@ -51,7 +56,7 @@ public class CombatControlTest {
          * Test case #02
          *************************
          */
-        System.out.println("Test case #02");
+        this.console.println("Test case #02");
 
         playerStrength = 50;
         playerIntelligence = 10;
@@ -70,7 +75,7 @@ public class CombatControlTest {
          * Test case #03
          *************************
          */
-        System.out.println("Test case #03");
+        this.console.println("Test case #03");
 
         playerStrength = 50;
         playerIntelligence = 10;
@@ -89,7 +94,7 @@ public class CombatControlTest {
          * Test case #04
          *************************
          */
-        System.out.println("Test case #04");
+        this.console.println("Test case #04");
 
         playerStrength = 50;
         playerIntelligence = 10;

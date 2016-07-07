@@ -81,7 +81,7 @@ class TownshipMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The township brings back many fond childhood memories."
+        this.console.println(" The township brings back many fond childhood memories."
                 + "\n Your father would walk the streets with you without fear."
                 + "\n This is the place you escaped to when fleeing your murderous uncle.");
     }
@@ -120,20 +120,20 @@ class TownshipMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkTownsmen() {
-        System.out.println("*** stub to talkVillager() function ***");
+        this.console.println("*** stub to talkVillager() function ***");
     }
 
     private void restHotel() {
-        System.out.println("*** stub to workDelivery() function ***");
+        this.console.println("*** stub to workDelivery() function ***");
     }
 
     private void shopSupplies() {
-        System.out.println("*** stub to shopSupplies() function ***");
+        this.console.println("*** stub to shopSupplies() function ***");
     }
 
 }

@@ -83,7 +83,7 @@ public class GateNorthMenuView extends View {
     }
     
     private void tellMore() {
-        System.out.println(" The north gate is the main enterance to the castle."
+        this.console.println(" The north gate is the main enterance to the castle."
                 + "\n Twenty guards guard the enterance with hundreds more inside."
                 + "\n Villagers may pass only if they give up their arms.");
     }
@@ -122,20 +122,20 @@ public class GateNorthMenuView extends View {
     }
 
     private void myStats() {
-        System.out.println(" This function will display the player's"
+        this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
     }
     
     private void talkGuards() {
-        System.out.println("*** stub to talkGuards() function ***");
+        this.console.println("*** stub to talkGuards() function ***");
     }
 
     private void talkTravelers() {
-        System.out.println("*** stub to talkTravelers() function ***");
+        this.console.println("*** stub to talkTravelers() function ***");
     }
 
     private void begCoin() {
-        System.out.println("*** stub to begCoin() function ***");
+        this.console.println("*** stub to begCoin() function ***");
     }
 
 }
