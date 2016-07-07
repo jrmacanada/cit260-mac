@@ -41,7 +41,8 @@ public class CutWoodMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
@@ -56,7 +57,8 @@ public class CutWoodMenuView extends View {
 
             this.console.println("That's enough for today.");
         } catch (WoodControlException wce) {
-            System.out.println(wce.getMessage());
+            ErrorView.display(this.getClass().getName(),
+                    wce.getMessage());
 
         }
     }

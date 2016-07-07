@@ -41,7 +41,8 @@ public class HunterChallengeView extends View {
                 this.askForRules();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
@@ -57,7 +58,8 @@ public class HunterChallengeView extends View {
             
           
         } catch (CompetitionControlException cce) {
-            System.out.println(cce.getMessage());
+            ErrorView.display(this.getClass().getName(),
+                    cce.getMessage());
             
         }
     }

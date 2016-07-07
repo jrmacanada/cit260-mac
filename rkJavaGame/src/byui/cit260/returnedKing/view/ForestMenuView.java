@@ -43,7 +43,8 @@ public class ForestMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
@@ -55,7 +56,6 @@ public class ForestMenuView extends View {
         // display the forageFood menu 
         ForageFoodMenuView forageFoodMenuView = new ForageFoodMenuView();
         forageFoodMenuView.displayForageFoodMenuView();
-//        System.out.println("*Calls the forageFood() function*");
     }
 
     private void cutWood() {
@@ -64,7 +64,6 @@ public class ForestMenuView extends View {
         // display the cutWood menu 
         CutWoodMenuView cutWoodMenuView = new CutWoodMenuView();
         cutWoodMenuView.display();
-//        System.out.println("*Calls the cutWood() function*");
     }
 
     private void shelterRest() {
@@ -73,7 +72,6 @@ public class ForestMenuView extends View {
         // display the shelterRest menu 
         ShelterRestMenuView shelterRestMenuView = new ShelterRestMenuView();
         shelterRestMenuView.displayShelterRestMenuView();
-//        System.out.println("*Calls the shelterRest() function*");
     }
 
 }

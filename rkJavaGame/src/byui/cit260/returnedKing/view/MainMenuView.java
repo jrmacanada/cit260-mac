@@ -51,7 +51,8 @@ public class MainMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;

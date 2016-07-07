@@ -48,7 +48,8 @@ public class KhouseMenuView extends View {
                 this.tryHiddenDoor();
                 break;
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
@@ -63,7 +64,8 @@ public class KhouseMenuView extends View {
 
             this.console.println("You fought bravely!");
         } catch (CombatControlException cce) {
-            System.out.println(cce.getMessage());
+            ErrorView.display(this.getClass().getName(),
+                    cce.getMessage());
         }
     }
 

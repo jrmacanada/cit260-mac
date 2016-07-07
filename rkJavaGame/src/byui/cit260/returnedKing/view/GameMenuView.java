@@ -65,7 +65,8 @@ public class GameMenuView extends View {
                 break;
 
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
@@ -97,7 +98,7 @@ public class GameMenuView extends View {
         gameC.mStrength();
         int strength = gameC.mStrength();
 
-        System.out.println("\nThe highest character strength is " + strength);
+        this.console.println("\nThe highest character strength is " + strength);
     }
 
     private void enterHuntRes() {

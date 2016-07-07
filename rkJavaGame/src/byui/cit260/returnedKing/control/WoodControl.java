@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.WoodControlException;
+import byui.cit260.returnedKing.view.ErrorView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -59,7 +60,8 @@ public class WoodControl {
             double e_coin = (staminaGiven * (strength + axe) * (actualStamina / 100)) / 100;
 
             if (e_coin < 1) {
-                throw new WoodControlException("You cannot cut wood; the varibles involved produce less than one coin.");
+                throw new WoodControlException(" You cannot cut wood today; "
+                        + "\n the varibles involved produce less than one coin.");
             }
 
             this.console.println("You earned " + (Math.round(e_coin)) + " coins.");
@@ -70,7 +72,8 @@ public class WoodControl {
 
             int staminaGiven = pInput;
 
-            System.out.println("\n You must enter a valid number.");
+            ErrorView.display(this.getClass().getName(),
+                    "\n*** You must enter a valid number ***");
         }
         return pInput;
     }

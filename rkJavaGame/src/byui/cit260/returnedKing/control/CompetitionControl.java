@@ -1,6 +1,7 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.CompetitionControlException;
+import byui.cit260.returnedKing.view.ErrorView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
@@ -62,7 +63,8 @@ public class CompetitionControl {
             return distanceInYards;
         } catch (NumberFormatException nf) {
             int power = myPower;
-            System.out.println("\nYou must enter a valid number.");
+            ErrorView.display(this.getClass().getName(),
+                    "\n*** You must enter a valid number ***");
         }
         return myPower;
     }
