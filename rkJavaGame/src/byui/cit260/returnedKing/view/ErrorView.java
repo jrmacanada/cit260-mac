@@ -21,11 +21,11 @@ public class ErrorView {
         
         errorFile.println(
                 "----------------------------------------------------------------------"
-               +"\n- ERROR - " + errorMessage
+               +"\n " + errorMessage
                +"\n----------------------------------------------------------------------");
         
         // log error
-        logFile.println(className +" - " + errorMessage);
+        logFile.println(className + " - " + errorMessage);
     }
     
 }
