@@ -7,27 +7,33 @@ package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.WoodControlException;
 import byui.cit260.returnedKing.view.CutWoodMenuView;
+import byui.cit260.returnedKing.view.View;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author michaelcavey
  */
-public class WoodControl {
+public class WoodControl extends View {
 
     public double calcWoodCutCoin()
-            // IS (after implementing exceptions)
             throws WoodControlException {
 
-        String playerInput;
+        String playerInput = null;
         int pInput = 0;
         double actualStamina = 100;
         double axe = 25;
         double strength = 50;
 
-        Scanner keyboard = new Scanner(System.in);
         System.out.println("How much Stamina do you want to give up toward this woodcutting job?");
-        playerInput = keyboard.nextLine();
+        try {
+            playerInput = keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(WoodControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         try {
             pInput = Integer.parseInt(playerInput);
@@ -55,35 +61,6 @@ public class WoodControl {
 
             System.out.println("You earned " + (Math.round(e_coin)) + " coins.");
 
-//            CutWoodMenuView cutWoodMenuView = new CutWoodMenuView();
-//            cutWoodMenuView.display();
-// WAS (before implementing exceptions)
-//        if (staminaGiven < 1 || staminaGiven > actualStamina || actualStamina > 100) {
-//                return -1;
-//        }
-//        if (strength < 1 || strength > 100) {
-//                return -1;
-//        }
-//        if (axe != 25 && axe != 50 && axe != 75) {
-//                return -1;
-//        }
-//        if (p_coin < 0) {
-//                return -1;
-//        }
-//        
-//        // calculate the coin earned based on the Stamina sacrificed
-//        double e_coin = (staminaGiven * (strength + axe) * (actualStamina/100)) / 100;
-//        
-//        if (e_coin < 1) {
-//                return -1;
-//        }
-            // SAVE for REF ONLY (these calculations should be done after return to function call)
-            // add earned coin to players existing coin
-            // p_coin = p_coin + e_coin;
-            // subtract the Stamina used from the started Stamina 
-            // actualStamina = actualStamina - staminaGiven;
-            // return actualStamina;
-            // return p_coin;
             return e_coin;
 
         } catch (NumberFormatException nf) {
@@ -93,6 +70,11 @@ public class WoodControl {
             System.out.println("\n You must enter a valid number.");
         }
         return pInput;
+    }
+
+    @Override
+    public boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

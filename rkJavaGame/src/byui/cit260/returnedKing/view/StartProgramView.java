@@ -7,13 +7,16 @@ package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Player;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author michaelcavey
  */
-public final class StartProgramView {
+public final class StartProgramView extends View {
 
     private final String promptMessage = "\nPlease enter your name: ";
 
@@ -68,14 +71,17 @@ public final class StartProgramView {
 
     private String getPlayersName() {
 
-        Scanner keyboard = new Scanner(System.in); // get infile for keyboard
         String value = ""; // value to be returned
         boolean valid = false; // intialize to not valid
 
         while (!valid) { // loop while an invalid value is enter
             System.out.println("\n" + this.promptMessage);
 
-            value = keyboard.nextLine(); // get next line typed on keboard
+            try {
+                value = keyboard.readLine(); // get next line typed on keboard
+            } catch (IOException ex) {
+                Logger.getLogger(StartProgramView.class.getName()).log(Level.SEVERE, null, ex);
+            }
             value = value.trim(); // trim off leading and trailing blanks
 
             if (value.length() < 1) { // value is blank
@@ -89,13 +95,14 @@ public final class StartProgramView {
         return value; // return the value entered */
     }
 
-    private boolean doAction(String playersName) {
+    @Override
+    public boolean doAction(String playersName) {
         if (playersName.length() < 3) {
             System.out.println("\nInvalid player name: "
                     + "The name must be greater than two characters in length");
             return false;
         }
-// IS (after implementing exceptions)
+
         try {
             // call createPlayer() control function
             Player player = GameControl.createPlayer(playersName);
@@ -104,17 +111,6 @@ public final class StartProgramView {
             System.out.println(e.getMessage());
             return false;
         }
-// WAS (before implementing exceptions)
-        // call createPlayer() control function
-//        Player player = GameControl.createPlayer(playersName);
-//        
-//        if (player == null){ //if unsuccessful
-//            System.out.println("\nError creating the player.");
-//            return false;
-//        }
-//        
-//        //display next view
-//        this.displayNextView(player);
 
         return true; // success !
 

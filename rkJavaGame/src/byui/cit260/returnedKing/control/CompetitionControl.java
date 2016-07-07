@@ -1,18 +1,22 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.CompetitionControlException;
+import byui.cit260.returnedKing.view.View;
+import java.io.IOException;
 import java.util.Scanner;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
  * @author Craig
  */
-public class CompetitionControl {
+public class CompetitionControl extends View {
 
     public double competition()
             throws CompetitionControlException {
 
-        String pInput;
+        String pInput = null;
         int myPower = 0;
         double minYard = 100;
         double maxYard = 115;
@@ -22,10 +26,13 @@ public class CompetitionControl {
         double actualStamina = 78;
         double maximumStamina = 100;
 
-        Scanner keyboard = new Scanner(System.in);
         System.out.println("\nLets see if you can throw this stone between the 100 foot marker and the 115 foot one."
                 + "\nHow much Strength do you want to use?");
-        pInput = keyboard.nextLine();
+        try {
+            pInput = keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(CompetitionControl.class.getName()).log(Level.SEVERE, null, ex);
+        }
 
         try {
             myPower = Integer.parseInt(pInput);
@@ -55,4 +62,10 @@ public class CompetitionControl {
         }
         return myPower;
     }
+
+    @Override
+    public boolean doAction(String value) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
 }
