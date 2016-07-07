@@ -6,18 +6,21 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.WoodControlException;
-import byui.cit260.returnedKing.view.CutWoodMenuView;
-import byui.cit260.returnedKing.view.View;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import rkjavagame.RkJavaGame;
 
 /**
  *
  * @author michaelcavey
  */
-public class WoodControl extends View {
+public class WoodControl {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public double calcWoodCutCoin()
             throws WoodControlException {
@@ -70,11 +73,6 @@ public class WoodControl extends View {
             System.out.println("\n You must enter a valid number.");
         }
         return pInput;
-    }
-
-    @Override
-    public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }

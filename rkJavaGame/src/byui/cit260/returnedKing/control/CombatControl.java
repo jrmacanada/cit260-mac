@@ -6,7 +6,10 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.CombatControlException;
+import java.io.BufferedReader;
+import java.io.PrintWriter;
 import java.util.Scanner;
+import rkjavagame.RkJavaGame;
 
 /**
  * May 28, 2016
@@ -14,9 +17,22 @@ import java.util.Scanner;
  * @author thiago
  */
 public class CombatControl {
+    
+//    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+//    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public double damageGiven()
             throws CombatControlException {
+        
+// This whole function needs to be replaced with something that looks at the player's
+// Stamina, Strength, & Aura values, asks the player how much to commit to the fight,
+// and deducts 5% of that from Stamina and Strength for each round he engages in.
+// The Aura should be a multiplier in the equation to make the Player more effective.
+// Meanwhile the opponent's numbers, whose S-S-A values (bad actors have zero aura) 
+// as retrieved from the Actors Array, are deducted from in the amount of 5% of the 
+// total attack value. Because our 'good' player benefits from the Aura bonus, his 
+// values will diminish less that the opponent's numbers. There should be a cut-off
+// at 20% of starting values whereby the fight must stop. Player either wins or retreats.
 
         int myInt;
         int playerStrength = 100;
@@ -25,10 +41,11 @@ public class CombatControl {
         int opponentStrength = 50;
         int opponentStamina = 200;
         int opponentDefensePlace = 1;
-
+        
+// Can't get rid of this "System.in" because the ".nextInt" cannot be replaced with ".readInt"
         Scanner keyboard = new Scanner(System.in);
         System.out.println("How much Strength do you want to use?");
-        myInt = keyboard.nextInt();
+        myInt = keyboard.nextInt(); 
 
         int playerAttackPlace = myInt;
 

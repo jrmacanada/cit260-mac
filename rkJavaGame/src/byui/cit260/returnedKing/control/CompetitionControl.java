@@ -1,17 +1,21 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.CompetitionControlException;
-import byui.cit260.returnedKing.view.View;
+import java.io.BufferedReader;
 import java.io.IOException;
-import java.util.Scanner;
+import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import rkjavagame.RkJavaGame;
 
 /**
  *
  * @author Craig
  */
-public class CompetitionControl extends View {
+public class CompetitionControl {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public double competition()
             throws CompetitionControlException {
@@ -61,11 +65,6 @@ public class CompetitionControl extends View {
             System.out.println("\nYou must enter a valid number.");
         }
         return myPower;
-    }
-
-    @Override
-    public boolean doAction(String value) {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
 }
