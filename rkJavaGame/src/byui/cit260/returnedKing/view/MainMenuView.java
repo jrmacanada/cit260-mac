@@ -41,7 +41,7 @@ public class MainMenuView extends View {
                 this.startNewGame();
                 break;
             case "G": //Starts an existing game
-                this.startExistingGame();
+                this.startSavedGame();
                 break;
             case "H": //Displays help Menu
                 this.displayHelpMenu();
@@ -49,9 +49,9 @@ public class MainMenuView extends View {
             case "S": // Save Current Game
                 this.saveGame();
                 break;
-            case "Z": 
-                this.exitGame();
-                break;
+//            case "Z": 
+//                this.exitGame();
+//                break;
 
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -70,12 +70,38 @@ public class MainMenuView extends View {
         gameMenu.display();
     }
 
-    private void startExistingGame() {
-        this.console.println("*Calls the startExistingGame() function*");
+    private void startSavedGame() {
+        
+        // prompt for and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for file where the game "
+                            + "is saved.");
+        
+        String filePath = this.getInput();
+        
+        try {
+            // start a saved game
+            GameControl.getSavedGame(filePath);
+        } catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
+        
+        //display the game menu
+        GameMenuView gameMenu = new GameMenuView();
+        gameMenu.display();
     }
 
     private void saveGame() {
-        this.console.println("*Calls the saveGame() function*");
+        // prompt and get the name of the file to save the game in
+        this.console.println("\n\nEnter the file path for file where the game "
+                           + "is to be saved.");
+        String filePath = this.getInput();
+        
+        try {
+            //save the game to the specified file
+            GameControl.saveGame(RkJavaGame.getCurrentGame(), filePath);
+        }catch (Exception ex) {
+            ErrorView.display("MainMenuView", ex.getMessage());
+        }
     }
 
     public void displayHelpMenu() {
@@ -84,10 +110,10 @@ public class MainMenuView extends View {
         helpMenuView.display();
     }
     
-    private void exitGame() {
-        
-        System.exit(0);
-    }
+//    private void exitGame() {
+//        
+//        System.exit(0);
+//    }
         
     
 }
