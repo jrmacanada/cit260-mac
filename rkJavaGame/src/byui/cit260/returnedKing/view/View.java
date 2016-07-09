@@ -39,8 +39,6 @@ public abstract class View implements ViewInterface {
             String value = this.getInput();
             if (value.toUpperCase().equals("Q")) // user wants to quit
             {
-//              MainMenuView mainMenuView = new MainMenuView();
-//              mainMenuView.display();
                 return; // exit the game
             }
             // do the requested action and display the next view

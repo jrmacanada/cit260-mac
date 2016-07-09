@@ -27,6 +27,7 @@ public class MainMenuView extends View {
                 + "\n------------------------------------------"
                 + "\nQ - Quit without saving - End the game."
                 + "\n------------------------------------------"
+                + "\nM - Mike's Report"
         );
 
     }
@@ -37,13 +38,13 @@ public class MainMenuView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-            case "N": //Starts a new Game
+            case "N": // Starts a new Game
                 this.startNewGame();
                 break;
-            case "G": //Starts an existing game
+            case "G": // Starts an existing game
                 this.startSavedGame();
                 break;
-            case "H": //Displays help Menu
+            case "H": // Displays help Menu
                 this.displayHelpMenu();
                 break;
             case "S": // Save Current Game
@@ -52,6 +53,9 @@ public class MainMenuView extends View {
 //            case "Z": 
 //                this.exitGame();
 //                break;
+            case "M": // start Mike's Report
+                this.mikesReport();
+                break;
 
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -114,6 +118,11 @@ public class MainMenuView extends View {
 //        
 //        System.exit(0);
 //    }
-        
     
+    public void mikesReport() {
+        
+        ReportMenuView reportMenuView = new ReportMenuView();
+        reportMenuView.displayReportMenuView();
+    }
+        
 }
