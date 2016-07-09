@@ -25,6 +25,7 @@ public class RkJavaGame {
     private static Game currentGame = null;
     private static Player player = null;
     private static Game totalPrice = null;
+    private static Game currentReport = null;
 
     private static PrintWriter outFile = null;
     private static BufferedReader inFile = null;
@@ -126,5 +127,15 @@ public class RkJavaGame {
     public static void setLogFile(PrintWriter logFile) {
         RkJavaGame.logFile = logFile;
     }
+
+    public static Game getCurrentReport() {
+        return currentReport;
+    }
+
+    public static void setCurrentReport(Game currentReport) {
+        RkJavaGame.currentReport = currentReport;
+    }
+    
+    
 
 }

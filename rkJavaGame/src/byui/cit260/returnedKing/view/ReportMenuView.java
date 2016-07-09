@@ -25,14 +25,14 @@ public class ReportMenuView {
     protected final BufferedReader keyboard = RkJavaGame.getInFile();
     protected final PrintWriter console = RkJavaGame.getOutFile();
 
-    public void display() {
+    public void displayMikesReport() {
 //        String filePath = this.getInput();
         StringBuilder line;
 
         Game game = RkJavaGame.getCurrentGame();
         Item[] items = game.getItems();
 
-        this.console.println("\n       LIST OF ITEMS");
+        this.console.println("\n       LIST OF MIKE'S ITEMS");
         line = new StringBuilder("                                        ");
         line.insert(0, "DESCRIPTION");
         line.insert(15, "QUANTITY");
@@ -49,21 +49,13 @@ public class ReportMenuView {
         }
         
         // prompt and get the name of the file to save the game in
-        this.console.println("\n\nEnter the file path for file where the game "
-                           + "is to be saved.");
-        String filePath = this.getInput();
+        this.console.println("\n Would you like to print the LIST to a file?");
         
-        try {
-            //save the game to the specified file
-            GameControl.saveReport(RkJavaGame.getCurrentGame(), filePath);
-        }catch (Exception ex) {
-            ErrorView.display("ReportMenuView", ex.getMessage());
-        }
+        PrintMenuView printMenuView = new PrintMenuView() {};
+        printMenuView.display();
     }
-    
-    private String getInput() {
-       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
+        
+}
 
 
     
@@ -88,7 +80,7 @@ public class ReportMenuView {
 //                    }
 
 
-    }
+
         
     
         

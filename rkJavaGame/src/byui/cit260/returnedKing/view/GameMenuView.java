@@ -41,7 +41,7 @@ public class GameMenuView extends View {
                 + "\nQ - Quit to Main Menu"
                 + "\n-------------------------------"
                 + "\n L11 - Individual Assignments"
-                + "\nX - Mike's Report"
+                + "\nX - Display Mike's Report"
                 + "\nY - Craig's Report"
                 + "\nZ - Thiago's Report");
     }
@@ -314,7 +314,7 @@ public class GameMenuView extends View {
 public void mikesReport() {
         
         ReportMenuView reportMenuView = new ReportMenuView();
-        reportMenuView.display();
+        reportMenuView.displayMikesReport();
     }
     
 //    public void craigsReport() {
