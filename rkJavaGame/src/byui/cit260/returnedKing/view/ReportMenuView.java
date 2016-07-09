@@ -6,7 +6,11 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
+import byui.cit260.returnedKing.model.Actor;
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.io.PrintWriter;
 import rkjavagame.RkJavaGame;
 
@@ -43,5 +47,31 @@ class ReportMenuView {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
     
+//    public void actorPrintList(ArrayList<actor> act,
+//                                String outputLocation) {
+//        
+//        try (PrintWriter out = new PrintWriter(outputLocation)) {
+//            
+//            out.println("n\n       Actor List Report       ");
+//            out.printf("%n%-20s%10s%10s", "Description", "Strength");
+//            out.printf("%n%-20s%10s%10s", "-----------", "--------");
+//            
+//            for (Actor actor : act) {
+//                out.printf("%n%-20s%7d%13.2f", act.getDescription()
+//                                               act.getPlayerStrength());
+//            }
+//            
+//            }catch (IOException ex) {
+//                    System.out.println("I/O Error: " + ex.getMEssage());
+//                    }
+        
+    }
+        
     
-}
+        
+       
+    
+    
+    
+    
+

@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
+import byui.cit260.returnedKing.model.Actor;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -124,5 +125,7 @@ public class MainMenuView extends View {
         ReportMenuView reportMenuView = new ReportMenuView();
         reportMenuView.displayReportMenuView();
     }
+    
+    
         
 }

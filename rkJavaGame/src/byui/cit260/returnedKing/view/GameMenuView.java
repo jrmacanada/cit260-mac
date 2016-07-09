@@ -296,5 +296,19 @@ public class GameMenuView extends View {
         KhouseMenuView khouseMenuView = new KhouseMenuView();
         khouseMenuView.display();
     }
+    
+//    public void craigsReport() {
+//        
+//        this.console.println("\n\nEnter the file path for file where the report "
+//                           + "is to be saved.");
+//        String filePath = this.getInput();
+//        
+//        try {
+//          // GameControl.saveGame(RkJavaGame.getCurrentGame(), filePath);
+//            ReportMenuView.actorPrintList(, filePath);
+//        }catch (Exception ex) {
+//            ErrorView.display("MainMenuView", ex.getMessage());
+//        }
+//
 
 }
