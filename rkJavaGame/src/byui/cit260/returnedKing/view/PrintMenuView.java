@@ -39,8 +39,8 @@ public class PrintMenuView extends View {
                 saveReport();
                 break;
             case "N":
-                ReportMenuView reportMenuView = new ReportMenuView();
-                reportMenuView.displayMikesReport();
+                GameMenuView gameMenuView = new GameMenuView();
+                gameMenuView.display();
                 break;
 
             default:

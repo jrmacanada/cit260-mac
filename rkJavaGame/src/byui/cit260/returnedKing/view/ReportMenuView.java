@@ -14,6 +14,8 @@ import java.io.FileNotFoundException;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
+import javax.swing.Spring;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -26,7 +28,7 @@ public class ReportMenuView {
     protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public void displayMikesReport() {
-//        String filePath = this.getInput();
+
         StringBuilder line;
 
         Game game = RkJavaGame.getCurrentGame();
@@ -48,14 +50,13 @@ public class ReportMenuView {
             this.console.println(line.toString());
         }
         
-        // prompt and get the name of the file to save the game in
         this.console.println("\n Would you like to print the LIST to a file?");
         
         PrintMenuView printMenuView = new PrintMenuView() {};
         printMenuView.display();
     }
-        
-}
+}        
+
 
 
     
@@ -81,7 +82,36 @@ public class ReportMenuView {
 
 
 
-        
+
+
+// L11 Mike's Report (2nd attempt per the "Stream I/O" document)
+    
+//    public void printInventoryReport(ArrayList<Item> inventoryItems,
+//                                     Spring outputLocation) {
+//
+////        Game game = RkJavaGame.getCurrentGame();
+////        Item[] items = game.getItems();
+//
+//        // create BufferedReader object for input file
+//        try (PrintWriter out = new PrintWriter(outputLocation)) {
+//
+//            // print title and column headers
+//            out.println("\n\n            Inventory Report            ");
+//            out.printf("%n%-20s%10s%10s", "Description", "Quantity", "Price");
+//            out.printf("%n%-20s%10s%10s", "-----------", "--------", "-----");
+//
+//            // print the description, quantity, and price of each item
+//            for (Item item : inventoryItems) {
+//                out.printf("%n%-20s%7d%13.2s", item.getDescription()
+//                                            , item.getQuantityInStock()
+//                                            , item.getUnitPrice());
+//            }
+//        } catch (IOException ex) {
+//            System.out.println("I/O Error: " + ex.getMessage());
+//        }
+//    }
+    
+
     
         
        
