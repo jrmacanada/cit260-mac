@@ -28,7 +28,6 @@ public class MainMenuView extends View {
                 + "\n------------------------------------------"
                 + "\nQ - Quit without saving - End the game."
                 + "\n------------------------------------------"
-                + "\nM - Mike's Report"
         );
 
     }
@@ -50,12 +49,6 @@ public class MainMenuView extends View {
                 break;
             case "S": // Save Current Game
                 this.saveGame();
-                break;
-//            case "Z": 
-//                this.exitGame();
-//                break;
-            case "M": // start Mike's Report
-                this.mikesReport();
                 break;
 
             default:
@@ -114,18 +107,5 @@ public class MainMenuView extends View {
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
     }
-    
-//    private void exitGame() {
-//        
-//        System.exit(0);
-//    }
-    
-    public void mikesReport() {
-        
-        ReportMenuView reportMenuView = new ReportMenuView();
-        reportMenuView.displayReportMenuView();
-    }
-    
-    
-        
+          
 }

@@ -7,6 +7,8 @@ package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Actor;
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Item;
 import java.io.BufferedReader;
 import java.io.FileNotFoundException;
 import java.io.FileWriter;
@@ -18,13 +20,34 @@ import rkjavagame.RkJavaGame;
  *
  * @author michaelcavey
  */
-class ReportMenuView {
+public class ReportMenuView {
     
     protected final BufferedReader keyboard = RkJavaGame.getInFile();
     protected final PrintWriter console = RkJavaGame.getOutFile();
 
-    void displayReportMenuView() {
-        this.console.println("*Calls the enterCastle() function*");
+    public void display() {
+//        String filePath = this.getInput();
+        StringBuilder line;
+
+        Game game = RkJavaGame.getCurrentGame();
+        Item[] items = game.getItems();
+
+        this.console.println("\n       LIST OF ITEMS");
+        line = new StringBuilder("                                        ");
+        line.insert(0, "DESCRIPTION");
+        line.insert(15, "QUANTITY");
+        line.insert(25, "UNIT PRICE");
+        this.console.println(line.toString());
+
+        for (Item item : items) {
+            line = new StringBuilder("                                        ");
+            line.insert(0, item.getDescription());
+            line.insert(18, item.getQuantityInStock());
+            line.insert(28, item.getUnitPrice());
+
+            this.console.println(line.toString());
+        }
+        
         // prompt and get the name of the file to save the game in
         this.console.println("\n\nEnter the file path for file where the game "
                            + "is to be saved.");
@@ -32,20 +55,19 @@ class ReportMenuView {
         
         try {
             //save the game to the specified file
-            GameControl.saveGame(RkJavaGame.getCurrentGame(), filePath);
+            GameControl.saveReport(RkJavaGame.getCurrentGame(), filePath);
         }catch (Exception ex) {
-            ErrorView.display("MainMenuView", ex.getMessage());
+            ErrorView.display("ReportMenuView", ex.getMessage());
         }
     }
-
-//    @Override
-//    public boolean doAction(String value) {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-
+    
     private String getInput() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+       throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+
+    
+// L11 Craig's Report   
     
 //    public void actorPrintList(ArrayList<actor> act,
 //                                String outputLocation) {
@@ -64,7 +86,8 @@ class ReportMenuView {
 //            }catch (IOException ex) {
 //                    System.out.println("I/O Error: " + ex.getMEssage());
 //                    }
-        
+
+
     }
         
     

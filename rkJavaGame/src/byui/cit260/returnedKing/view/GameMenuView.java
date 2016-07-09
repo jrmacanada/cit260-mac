@@ -30,15 +30,20 @@ public class GameMenuView extends View {
                 + "\n|          Game Menu          |"
                 + "\n-------------------------------"
                 + "\nP - Player Type"
-                + "\nI - Item List"
+//                + "\nI - Item List"
                 + "\nM - Map Display"
                 + "\nV - Move to new location"
                 + "\nH - Move player to Hunter Reserve for CompetionControl test"
-                + "\n2 - Character with the maximum strength"
+//                + "\n2 - Character with the maximum strength"
                 + "\nC - Goes to King's House for CombatControl test"
                 + "\nF - Shortcut to Forest Scene"
+                + "\n-------------------------------"
                 + "\nQ - Quit to Main Menu"
-                + "\n-------------------------------");
+                + "\n-------------------------------"
+                + "\n L11 - Individual Assignments"
+                + "\nX - Mike's Report"
+                + "\nY - Craig's Report"
+                + "\nZ - Thiago's Report");
     }
 
     @Override
@@ -50,26 +55,29 @@ public class GameMenuView extends View {
             case "P":
                 this.playerType();
                 break;
-            case "I":
-                this.itemList();
-                break;
+//            case "I": // L09 Individual-Mike
+//                this.itemList();
+//                break;
             case "M":
                 this.mapView();
                 break;
             case "V":
                 this.movePlayer();
                 break;
-            case "H":
+            case "H": // L10 Individual-Craig
                 this.enterHuntRes();
                 break;
-            case "2":
-                this.maxStrength();
-                break;
-            case "C":
+//            case "2": // L09 Individual-Craig
+//                this.maxStrength();
+//                break;
+            case "C": // L10 Individual-Thiago
                 this.enterKingsHouse();
                 break;
-            case "F":
+            case "F": // L10 Individual-Mike
                 this.enterForest();
+                break;
+            case "X": // L11 Mike's Report
+                this.mikesReport();
                 break;
 
             default:
@@ -89,11 +97,12 @@ public class GameMenuView extends View {
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
     }
-
-    private void itemList() {
-        ItemListMenuView itemListMenuView = new ItemListMenuView();
-        itemListMenuView.display();
-    }
+    
+// L09 Individual-Mike
+//    private void itemList() {
+//        ItemListMenuView itemListMenuView = new ItemListMenuView();
+//        itemListMenuView.display();
+//    }
 
     private void movePlayer() {
 
@@ -273,6 +282,7 @@ public class GameMenuView extends View {
         return point;
     }
 
+// L09 Individual-Craig
     private void maxStrength() {
 
         GameControl gameC = new GameControl();
@@ -282,19 +292,29 @@ public class GameMenuView extends View {
         this.console.println("\nThe highest character strength is " + strength);
     }
 
+// L10 Individual-Craig
     private void enterHuntRes() {
         HuntReserveView huntReserveView = new HuntReserveView();
         huntReserveView.display();
     }
-
+    
+// L10 Individual-Mike
     private void enterForest() {
         ForestMenuView forestMenuView = new ForestMenuView();
         forestMenuView.display();
     }
-
+    
+// L10 Individual-Thiago
     private void enterKingsHouse() {
         KhouseMenuView khouseMenuView = new KhouseMenuView();
         khouseMenuView.display();
+    }
+    
+// L11 Individual-Mike   
+public void mikesReport() {
+        
+        ReportMenuView reportMenuView = new ReportMenuView();
+        reportMenuView.display();
     }
     
 //    public void craigsReport() {

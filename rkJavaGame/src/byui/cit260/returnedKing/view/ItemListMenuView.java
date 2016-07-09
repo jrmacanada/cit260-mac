@@ -24,8 +24,8 @@ public class ItemListMenuView {
     public void display() {
         StringBuilder line;
 
-        Game game = RkJavaGame.getCurrentGame();
-        Item[] items = game.getItems();
+        Game report = RkJavaGame.getCurrentGame();
+        Item[] items = report.getItems();
 
         this.console.println("\n       LIST OF ITEMS");
         line = new StringBuilder("                                        ");

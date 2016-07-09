@@ -90,6 +90,7 @@ public class GameControl {
         
             }
 
+// L09 Individual-Mike
     public int buyOneEach() {
 
         Game game = RkJavaGame.getCurrentGame();
@@ -143,6 +144,7 @@ public class GameControl {
         return items;
     }
 
+// L09 Individual-Craig
     public int mStrength() {
         int maxValue = 0;
         for (Actor act : Actor.values()) {
@@ -152,4 +154,16 @@ public class GameControl {
 
     }
 
+    public static void saveReport(Game report, String filepath)
+           throws GameControlException {
+        
+        try( FileOutputStream fops = new FileOutputStream(filepath)){
+            ObjectOutputStream output = new ObjectOutputStream(fops);
+            
+            output.writeObject(report); // write the report object to file
+            }
+        catch(Exception e) {
+            throw new GameControlException(e.getMessage());
+        }
+    }
 }
