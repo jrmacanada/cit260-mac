@@ -21,11 +21,11 @@ public class PrisonMenuView extends View {
                       + "\n1 - Talk to guard"
                       + "\n2 - Talk to prisoner"
                       + "\n3 - Apply for a prison job"   
-                      + "\n------------------------------------"
-                      + "\nN - Move North (not available)"
-                      + "\nS - Move South"
-                      + "\nE - Move East (not available)"
-                      + "\nW - Move West"
+//                      + "\n------------------------------------"
+//                      + "\nN - Move North (not available)"
+//                      + "\nS - Move South"
+//                      + "\nE - Move East (not available)"
+//                      + "\nW - Move West"
                       + "\n------------------------------------"
                       + "\n  At anytime you may use D-X-L-R"
                       + "\n------------------------------------"                   
@@ -48,18 +48,18 @@ public class PrisonMenuView extends View {
             case "3": 
                 this.getJob();
                 break;
-            case "N": 
-                this.notAvailable();
-                break;
-            case "S": 
-                this.enterForest();
-                break;
-            case "E": 
-                this.noEntry();
-                break;
-            case "W": 
-                this.enterNorthRoad();
-                break;
+//            case "N": 
+//                this.notAvailable();
+//                break;
+//            case "S": 
+//                this.enterForest();
+//                break;
+//            case "E": 
+//                this.noEntry();
+//                break;
+//            case "W": 
+//                this.enterNorthRoad();
+//                break;
             case "D": 
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ public class PrisonMenuView extends View {
                        + "\n Earn 20 coins for working a job as a guard.");
     }
 
-    private void enterForest() {
-        ForestMenuView forestMenuView = new ForestMenuView();
-        forestMenuView.display();
-    }
-
-    private void enterNorthRoad() {
-        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
-        roadNorthMenuView.display();
-    }
-    
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                       + "\n you kill your uncle or die trying.");
-    }
-    
-    private void noEntry() {
-        this.console.println(" You may not return to the Warrior Village."
-                       + "\n Trust in your fighting skills.");
-    }
+//    private void enterForest() {
+//        ForestMenuView forestMenuView = new ForestMenuView();
+//        forestMenuView.display();
+//    }
+//
+//    private void enterNorthRoad() {
+//        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
+//        roadNorthMenuView.display();
+//    }
+//    
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                       + "\n you kill your uncle or die trying.");
+//    }
+//    
+//    private void noEntry() {
+//        this.console.println(" You may not return to the Warrior Village."
+//                       + "\n Trust in your fighting skills.");
+//    }
     
     private void mapView() { 
         MapMenuView mapMenuView = new MapMenuView();

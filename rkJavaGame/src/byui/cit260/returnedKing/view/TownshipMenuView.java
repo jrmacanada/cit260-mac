@@ -21,11 +21,11 @@ class TownshipMenuView extends View {
                 + "\n1 - Talk to townsmen "
                 + "\n2 - Rest at hotel"
                 + "\n3 - Shop for supplies"
-                + "\n--------------------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -48,18 +48,18 @@ class TownshipMenuView extends View {
             case "3":
                 this.shopSupplies();
                 break;
-            case "N":
-                this.enterEastGate();
-                break;
-            case "S":
-                this.enterHabortown();
-                break;
-            case "E":
-                this.enterChurch();
-                break;
-            case "W":
-                this.enterSouthGate();
-                break;
+//            case "N":
+//                this.enterEastGate();
+//                break;
+//            case "S":
+//                this.enterHabortown();
+//                break;
+//            case "E":
+//                this.enterChurch();
+//                break;
+//            case "W":
+//                this.enterSouthGate();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ class TownshipMenuView extends View {
                 + "\n This is the place you escaped to when fleeing your murderous uncle.");
     }
 
-    private void enterEastGate() {
-        GateEastMenuView gateEastMenuView = new GateEastMenuView();
-        gateEastMenuView.display();
-    }
-    
-    private void enterHabortown() {
-        HarbortownMenuView harbortownMenuView = new HarbortownMenuView();
-        harbortownMenuView.display();
-    }
-    
-    private void enterChurch() {
-        ChurchMenuView churchMenuView = new ChurchMenuView();
-        churchMenuView.display();
-    }
-    
-    private void enterSouthGate() {
-        GateSouthMenuView gateSouthMenuView = new GateSouthMenuView();
-        gateSouthMenuView.display();
-    }
+//    private void enterEastGate() {
+//        GateEastMenuView gateEastMenuView = new GateEastMenuView();
+//        gateEastMenuView.display();
+//    }
+//    
+//    private void enterHabortown() {
+//        HarbortownMenuView harbortownMenuView = new HarbortownMenuView();
+//        harbortownMenuView.display();
+//    }
+//    
+//    private void enterChurch() {
+//        ChurchMenuView churchMenuView = new ChurchMenuView();
+//        churchMenuView.display();
+//    }
+//    
+//    private void enterSouthGate() {
+//        GateSouthMenuView gateSouthMenuView = new GateSouthMenuView();
+//        gateSouthMenuView.display();
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

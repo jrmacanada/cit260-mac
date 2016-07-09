@@ -14,17 +14,17 @@ public class GateEastMenuView extends View {
     public GateEastMenuView() {
         super("\n"
                 + "\n--------------------------------------------"
-                + "\n|                East Gate                |"
+                + "\n|                East Gate                 |"
                 + "\n--------------------------------------------"
                 + "\n Your options for this scene are:"
                 + "\n1 - Talk to the gatekeeper"
                 + "\n2 - Offer the bribe"
                 + "\n3 - Get in disguise"
-                + "\n--------------------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West (to enter the castle)"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West (to enter the castle)"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -47,18 +47,18 @@ public class GateEastMenuView extends View {
             case "3":
                 this.getDisguise();
                 break;
-            case "N":
-                this.enterForest();
-                break;
-            case "S":
-                this.enterTownship();
-                break;
-            case "E":
-                this.enterEastRoad();
-                break;
-            case "W":
-                this.enterCastle();
-                break;
+//            case "N":
+//                this.enterForest();
+//                break;
+//            case "S":
+//                this.enterTownship();
+//                break;
+//            case "E":
+//                this.enterEastRoad();
+//                break;
+//            case "W":
+//                this.enterCastle();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -86,25 +86,25 @@ public class GateEastMenuView extends View {
                 + "\n Postitutes from town and the tavern are allowed access.");
     }
     
-    public void enterCastle() {
-        CastleMenuView castleMenuView = new CastleMenuView();
-        castleMenuView.displayCastleMenuView();
-    }
-    
-    private void enterEastRoad() {
-        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
-        roadEastMenuView.display();
-    }
-    
-    private void enterTownship() {
-        TownshipMenuView townshipMenuView = new TownshipMenuView();
-        townshipMenuView.display();
-    }
-    
-    private void enterForest() {
-        ForestMenuView forestMenuView = new ForestMenuView();
-        forestMenuView.display();
-    }
+//    public void enterCastle() {
+//        CastleMenuView castleMenuView = new CastleMenuView();
+//        castleMenuView.displayCastleMenuView();
+//    }
+//    
+//    private void enterEastRoad() {
+//        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
+//        roadEastMenuView.display();
+//    }
+//    
+//    private void enterTownship() {
+//        TownshipMenuView townshipMenuView = new TownshipMenuView();
+//        townshipMenuView.display();
+//    }
+//    
+//    private void enterForest() {
+//        ForestMenuView forestMenuView = new ForestMenuView();
+//        forestMenuView.display();
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

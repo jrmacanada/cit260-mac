@@ -22,11 +22,11 @@ public class SeaportMenuView extends View {
                 + "\n1 - Talk to sailor"
                 + "\n2 - Camp on beach"
                 + "\n3 - Board ship to America"
-                + "\n--------------------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -49,18 +49,18 @@ public class SeaportMenuView extends View {
             case "3":
                 this.enterAmerica();
                 break;
-            case "N":
-                this.enterChurch();
-                break;
-            case "S":
-                this.notAvailable();
-                break;
-            case "E":
-                this.notAvailable();
-                break;
-            case "W":
-                this.enterHabortown();
-                break;
+//            case "N":
+//                this.enterChurch();
+//                break;
+//            case "S":
+//                this.notAvailable();
+//                break;
+//            case "E":
+//                this.notAvailable();
+//                break;
+//            case "W":
+//                this.enterHabortown();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -88,20 +88,20 @@ public class SeaportMenuView extends View {
                 + "\n Neither have they been rebelous. They only defend their iberty");
     }
 
-    private void enterChurch() {
-        ChurchMenuView churchMenuView = new ChurchMenuView();
-        churchMenuView.display();
-    }
-    
-    private void enterHabortown() {
-        HarbortownMenuView harbortownMenuView = new HarbortownMenuView();
-        harbortownMenuView.display();
-    }
-    
-    private void notAvailable() {
-        this.console.println(" You can go for a swim to relax, but you'll "
-                + "\n need a boat to continue in this direction.");
-    }
+//    private void enterChurch() {
+//        ChurchMenuView churchMenuView = new ChurchMenuView();
+//        churchMenuView.display();
+//    }
+//    
+//    private void enterHabortown() {
+//        HarbortownMenuView harbortownMenuView = new HarbortownMenuView();
+//        harbortownMenuView.display();
+//    }
+//    
+//    private void notAvailable() {
+//        this.console.println(" You can go for a swim to relax, but you'll "
+//                + "\n need a boat to continue in this direction.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

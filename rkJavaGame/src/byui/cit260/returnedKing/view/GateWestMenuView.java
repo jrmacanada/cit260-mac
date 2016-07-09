@@ -14,17 +14,17 @@ public class GateWestMenuView extends View{
     public GateWestMenuView() {
         super("\n"
                 + "\n--------------------------------------------"
-                + "\n|                West Gate                |"
+                + "\n|                West Gate                 |"
                 + "\n--------------------------------------------"
                 + "\n Your options for this scene are:"
                 + "\n1 - Talk to the gatekeeper"
                 + "\n2 - Offer the password"
                 + "\n3 - Scale the wall"
-                + "\n--------------------------------------------"
-                + "\nN - Move North (to enter the castle)"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North (to enter the castle)"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -47,18 +47,18 @@ public class GateWestMenuView extends View{
             case "3":
                 this.scaleWall();
                 break;
-            case "N":
-                this.enterFarmVillage();
-                break;
-            case "S":
-                this.enterHuntRes();
-                break;
-            case "E":
-                this.enterCastle();
-                break;
-            case "W":
-                this.enterWestRoad();
-                break;
+//            case "N":
+//                this.enterFarmVillage();
+//                break;
+//            case "S":
+//                this.enterHuntRes();
+//                break;
+//            case "E":
+//                this.enterCastle();
+//                break;
+//            case "W":
+//                this.enterWestRoad();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ public class GateWestMenuView extends View{
                 + "\n Nobody has ever fought their way through.");
     }
     
-    public void enterCastle() {
-        CastleMenuView castleMenuView = new CastleMenuView();
-        castleMenuView.displayCastleMenuView();
-    }
-    
-    private void enterWestRoad() {
-        RoadWestMenuView roadWestMenuView = new RoadWestMenuView();
-        roadWestMenuView.display();
-    }
-    
-    private void enterFarmVillage() {
-        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
-        farmVillageMenuView.display();
-    }
-    
-    private void enterHuntRes() {
-        HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.display();
-    }
+//    public void enterCastle() {
+//        CastleMenuView castleMenuView = new CastleMenuView();
+//        castleMenuView.displayCastleMenuView();
+//    }
+//    
+//    private void enterWestRoad() {
+//        RoadWestMenuView roadWestMenuView = new RoadWestMenuView();
+//        roadWestMenuView.display();
+//    }
+//    
+//    private void enterFarmVillage() {
+//        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
+//        farmVillageMenuView.display();
+//    }
+//    
+//    private void enterHuntRes() {
+//        HuntReserveView huntReserveView = new HuntReserveView();
+//        huntReserveView.display();
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

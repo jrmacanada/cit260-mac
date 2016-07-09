@@ -22,11 +22,11 @@ public class WizardStartView extends View {
                 + "\n  You are a Wizard on a quest"
                 + "\n  to retake your kingdom."
                 + "\n  Be wise on your journey."
-                + "\n----------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South (not available)"
-                + "\nE - Move East"
-                + "\nW - Move West  (not available)"
+//                + "\n----------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South (not available)"
+//                + "\nE - Move East"
+//                + "\nW - Move West  (not available)"
                 + "\n----------------------------------"
                 + "\n  At anytime you may..."
                 + "\nD - Display the map"
@@ -44,18 +44,18 @@ public class WizardStartView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-            case "N":
-                this.enterKingsHouse();
-                break;
-            case "S":
-                this.notAvailable();
-                break;
-            case "E":
-                this.enterSecretCave();
-                break;
-            case "W":
-                this.notAvailable();
-                break;
+//            case "N":
+//                this.enterKingsHouse();
+//                break;
+//            case "S":
+//                this.notAvailable();
+//                break;
+//            case "E":
+//                this.enterSecretCave();
+//                break;
+//            case "W":
+//                this.notAvailable();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -83,20 +83,20 @@ public class WizardStartView extends View {
                 + "\n You'll be lucky if you ever return.");
     }
 
-    private void enterKingsHouse() {
-        KhouseMenuView khouseMenuView = new KhouseMenuView();
-        khouseMenuView.display();
-    }
-
-    private void enterSecretCave() {
-        SecretCaveMenuView secretCaveMenuView = new SecretCaveMenuView();
-        secretCaveMenuView.display();
-    }
-
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
+//    private void enterKingsHouse() {
+//        KhouseMenuView khouseMenuView = new KhouseMenuView();
+//        khouseMenuView.display();
+//    }
+//
+//    private void enterSecretCave() {
+//        SecretCaveMenuView secretCaveMenuView = new SecretCaveMenuView();
+//        secretCaveMenuView.display();
+//    }
+//
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

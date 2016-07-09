@@ -25,8 +25,6 @@ public class Map implements Serializable {
     private int currentColumn = 0;
     private Scene[] scenes;
 
-//    public Map() {
-//    }
     public Map(int rowCount, int columnCount) {
 
         if (rowCount < 1 || columnCount < 1) {

@@ -21,11 +21,11 @@ class HarbortownMenuView extends View {
                 + "\n1 - Talk to vendor"
                 + "\n2 - Work at the fishmarket"
                 + "\n3 - Shop for supplies"
-                + "\n--------------------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South (not available)"
-                + "\nE - Move East"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South (not available)"
+//                + "\nE - Move East"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -48,18 +48,18 @@ class HarbortownMenuView extends View {
             case "3":
                 this.shopSupplies();
                 break;
-            case "N":
-                this.enterTownship();
-                break;
-            case "S":
-                this.notAvailable();
-                break;
-            case "E":
-                this.enterSeaport();
-                break;
-            case "W":
-                this.enterSouthRoad();
-                break;
+//            case "N":
+//                this.enterTownship();
+//                break;
+//            case "S":
+//                this.notAvailable();
+//                break;
+//            case "E":
+//                this.enterSeaport();
+//                break;
+//            case "W":
+//                this.enterSouthRoad();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ class HarbortownMenuView extends View {
                 + "\n ??? ");
     }
 
-    private void enterTownship() {
-        TownshipMenuView townshipMenuView = new TownshipMenuView();
-        townshipMenuView.display();
-    }
-    
-    private void enterSeaport() {
-        SeaportMenuView seaportMenuView = new SeaportMenuView();
-        seaportMenuView.display();
-    }
-    
-    private void enterSouthRoad() {
-        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
-        roadSouthMenuView.display();
-    }
-    
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
+//    private void enterTownship() {
+//        TownshipMenuView townshipMenuView = new TownshipMenuView();
+//        townshipMenuView.display();
+//    }
+//    
+//    private void enterSeaport() {
+//        SeaportMenuView seaportMenuView = new SeaportMenuView();
+//        seaportMenuView.display();
+//    }
+//    
+//    private void enterSouthRoad() {
+//        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
+//        roadSouthMenuView.display();
+//    }
+//    
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

@@ -22,11 +22,11 @@ public class MonkStartView extends View {
                 + "\n  You are a Monk on a mission"
                 + "\n  to retake your kingdom."
                 + "\n  Pray for a successful journey."
-                + "\n----------------------------------"
-                + "\nN - Move North (not available)"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West  (not available)"
+//                + "\n----------------------------------"
+//                + "\nN - Move North (not available)"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West  (not available)"
                 + "\n----------------------------------"
                 + "\n  At anytime you may..."
                 + "\nD - Display the map"
@@ -44,18 +44,18 @@ public class MonkStartView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-            case "N":
-                this.notAvailable();
-                break;
-            case "S":
-                this.enterCornfield();
-                break;
-            case "E":
-                this.enterGraveyard();
-                break;
-            case "W":
-                this.notAvailable();
-                break;
+//            case "N":
+//                this.notAvailable();
+//                break;
+//            case "S":
+//                this.enterCornfield();
+//                break;
+//            case "E":
+//                this.enterGraveyard();
+//                break;
+//            case "W":
+//                this.notAvailable();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -83,20 +83,20 @@ public class MonkStartView extends View {
                 + "\n You'll be lucky if you ever return.");
     }
 
-    private void enterCornfield() {
-        CornfieldMenuView cornfieldMenuView = new CornfieldMenuView();
-        cornfieldMenuView.display();
-    }
-
-    private void enterGraveyard() {
-        GraveyardMenuView graveyardMenuView = new GraveyardMenuView();
-        graveyardMenuView.display();
-    }
-
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
+//    private void enterCornfield() {
+//        CornfieldMenuView cornfieldMenuView = new CornfieldMenuView();
+//        cornfieldMenuView.display();
+//    }
+//
+//    private void enterGraveyard() {
+//        GraveyardMenuView graveyardMenuView = new GraveyardMenuView();
+//        graveyardMenuView.display();
+//    }
+//
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

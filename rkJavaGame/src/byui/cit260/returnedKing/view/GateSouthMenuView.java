@@ -20,11 +20,11 @@ public class GateSouthMenuView extends View {
                 + "\n1 - Talk to the gatekeeper"
                 + "\n2 - Offer the password"
                 + "\n3 - Scale the wall"
-                + "\n--------------------------------------------"
-                + "\nN - Move North (to enter the castle)"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North (to enter the castle)"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -47,18 +47,18 @@ public class GateSouthMenuView extends View {
             case "3":
                 this.scaleWall();
                 break;
-            case "N":
-                this.enterCastle();
-                break;
-            case "S":
-                this.enterSouthRoad();
-                break;
-            case "E":
-                this.enterTownship();
-                break;
-            case "W":
-                this.enterHuntRes();
-                break;
+//            case "N":
+//                this.enterCastle();
+//                break;
+//            case "S":
+//                this.enterSouthRoad();
+//                break;
+//            case "E":
+//                this.enterTownship();
+//                break;
+//            case "W":
+//                this.enterHuntRes();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -86,25 +86,25 @@ public class GateSouthMenuView extends View {
                 + "\n A password is required to be allowed into the castle.");
     }
     
-    public void enterCastle() {
-        CastleMenuView castleMenuView = new CastleMenuView();
-        castleMenuView.displayCastleMenuView();
-    }
-    
-    private void enterSouthRoad() {
-        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
-        roadSouthMenuView.display();
-    }
-    
-    private void enterTownship() {
-        TownshipMenuView townshipMenuView = new TownshipMenuView();
-        townshipMenuView.display();
-    }
-    
-    private void enterHuntRes() {
-        HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.display();
-    }
+//    public void enterCastle() {
+//        CastleMenuView castleMenuView = new CastleMenuView();
+//        castleMenuView.displayCastleMenuView();
+//    }
+//    
+//    private void enterSouthRoad() {
+//        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
+//        roadSouthMenuView.display();
+//    }
+//    
+//    private void enterTownship() {
+//        TownshipMenuView townshipMenuView = new TownshipMenuView();
+//        townshipMenuView.display();
+//    }
+//    
+//    private void enterHuntRes() {
+//        HuntReserveView huntReserveView = new HuntReserveView();
+//        huntReserveView.display();
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

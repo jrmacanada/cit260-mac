@@ -20,11 +20,11 @@ public class ChurchMenuView extends View {
                 + "\n1 - Talk to priest"
                 + "\n2 - Rest to increase stamina"
                 + "\n3 - Pray to increase aura"
-                + "\n--------------------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South"
-                + "\nE - Move East (not available)"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South"
+//                + "\nE - Move East (not available)"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -47,18 +47,18 @@ public class ChurchMenuView extends View {
             case "3":
                 this.prayAura();
                 break;
-            case "N":
-                this.enterEastRoad();
-                break;
-            case "S":
-                this.enterSeaport();
-                break;
-            case "E":
-                this.notAvailable();
-                break;
-            case "W":
-                this.enterTownship();
-                break;
+//            case "N":
+//                this.enterEastRoad();
+//                break;
+//            case "S":
+//                this.enterSeaport();
+//                break;
+//            case "E":
+//                this.notAvailable();
+//                break;
+//            case "W":
+//                this.enterTownship();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -86,25 +86,25 @@ public class ChurchMenuView extends View {
                 + "\n ??? ");
     }
 
-    private void enterTownship() {
-        TownshipMenuView townshipMenuView = new TownshipMenuView();
-        townshipMenuView.display();
-    }
-    
-    private void enterSeaport() {
-        SeaportMenuView seaportMenuView = new SeaportMenuView();
-        seaportMenuView.display();
-    }
-    
-    private void enterEastRoad() {
-        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
-        roadEastMenuView.display();
-    }
-    
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
+//    private void enterTownship() {
+//        TownshipMenuView townshipMenuView = new TownshipMenuView();
+//        townshipMenuView.display();
+//    }
+//    
+//    private void enterSeaport() {
+//        SeaportMenuView seaportMenuView = new SeaportMenuView();
+//        seaportMenuView.display();
+//    }
+//    
+//    private void enterEastRoad() {
+//        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
+//        roadEastMenuView.display();
+//    }
+//    
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

@@ -21,11 +21,11 @@ public class TavernMenuView extends View {
                 + "\n1 - Talk to owner"
                 + "\n2 - Talk to drunk"
                 + "\n3 - Talk to shady character"
-                + "\n--------------------------------------------"
-                + "\nN - Move North (not available)"
-                + "\nS - Move South"
-                + "\nE - Move East (not available)"
-                + "\nW - Move West"
+//                + "\n--------------------------------------------"
+//                + "\nN - Move North (not available)"
+//                + "\nS - Move South"
+//                + "\nE - Move East (not available)"
+//                + "\nW - Move West"
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n--------------------------------------------"
@@ -48,18 +48,18 @@ public class TavernMenuView extends View {
             case "3":
                 this.talkToShady();
                 break;
-            case "N":
-                this.noEntry();
-                break;
-            case "S":
-                this.enterEastRoad();
-                break;
-            case "E":
-                this.notAvailable();
-                break;
-            case "W":
-                this.enterForest();
-                break;
+//            case "N":
+//                this.noEntry();
+//                break;
+//            case "S":
+//                this.enterEastRoad();
+//                break;
+//            case "E":
+//                this.notAvailable();
+//                break;
+//            case "W":
+//                this.enterForest();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ public class TavernMenuView extends View {
                 + "\n ??? ");
     }
 
-    private void enterForest() {
-        ForestMenuView forestMenuView = new ForestMenuView();
-        forestMenuView.display();
-    }
-    
-    private void enterEastRoad() {
-        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
-        roadEastMenuView.display();
-    }
-    
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
-    
-    private void noEntry() {
-        this.console.println(" You may not return to the Warrior Village."
-                       + "\n Trust in your fighting skills.");
-    }
+//    private void enterForest() {
+//        ForestMenuView forestMenuView = new ForestMenuView();
+//        forestMenuView.display();
+//    }
+//    
+//    private void enterEastRoad() {
+//        RoadEastMenuView roadEastMenuView = new RoadEastMenuView();
+//        roadEastMenuView.display();
+//    }
+//    
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
+//    
+//    private void noEntry() {
+//        this.console.println(" You may not return to the Warrior Village."
+//                       + "\n Trust in your fighting skills.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

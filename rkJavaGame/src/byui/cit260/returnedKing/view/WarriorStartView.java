@@ -22,11 +22,11 @@ public class WarriorStartView extends View {
                 + "\n  You are a Warrior in a battle"
                 + "\n  to retake your kingdom."
                 + "\n  Be strong on your journey."
-                + "\n----------------------------------"
-                + "\nN - Move North (not available)"
-                + "\nS - Move South"
-                + "\nE - Move East  (not available)"
-                + "\nW - Move West"
+//                + "\n----------------------------------"
+//                + "\nN - Move North (not available)"
+//                + "\nS - Move South"
+//                + "\nE - Move East  (not available)"
+//                + "\nW - Move West"
                 + "\n----------------------------------"
                 + "\n  At anytime you may..."
                 + "\nD - Display the map"
@@ -44,18 +44,18 @@ public class WarriorStartView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-            case "N":
-                this.notAvailable();
-                break;
-            case "S":
-                this.enterTavern();
-                break;
-            case "E":
-                this.notAvailable();
-                break;
-            case "W":
-                this.enterPrison();
-                break;
+//            case "N":
+//                this.notAvailable();
+//                break;
+//            case "S":
+//                this.enterTavern();
+//                break;
+//            case "E":
+//                this.notAvailable();
+//                break;
+//            case "W":
+//                this.enterPrison();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -83,20 +83,20 @@ public class WarriorStartView extends View {
                 + "\n You'll be lucky if you ever return.");
     }
 
-    private void enterTavern() {
-        TavernMenuView tavernMenuView = new TavernMenuView();
-        tavernMenuView.display();
-    }
-
-    private void enterPrison() {
-        PrisonMenuView prisonMenuView = new PrisonMenuView();
-        prisonMenuView.display();
-    }
-
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
+//    private void enterTavern() {
+//        TavernMenuView tavernMenuView = new TavernMenuView();
+//        tavernMenuView.display();
+//    }
+//
+//    private void enterPrison() {
+//        PrisonMenuView prisonMenuView = new PrisonMenuView();
+//        prisonMenuView.display();
+//    }
+//
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

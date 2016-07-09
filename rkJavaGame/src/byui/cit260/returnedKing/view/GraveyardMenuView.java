@@ -20,11 +20,11 @@ public class GraveyardMenuView extends View {
                 + "\n1 - Rest to rebuild Stamina"
                 + "\n2 - Forage for items in graveyard"
                 + "\n3 - Read the tombstones"
-                + "\n------------------------------------"
-                + "\nN - Move North (not available)"
-                + "\nS - Move South"
-                + "\nE - Move East"
-                + "\nW - Move West (not available)"
+//                + "\n------------------------------------"
+//                + "\nN - Move North (not available)"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West (not available)"
                 + "\n------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n------------------------------------"
@@ -47,18 +47,18 @@ public class GraveyardMenuView extends View {
             case "3":
                 this.readGraves();
                 break;
-            case "N":
-                this.notAvailable();
-                break;
-            case "S":
-                this.enterFarmVillage();
-                break;
-            case "E":
-                this.enterNorthRoad();
-                break;
-            case "W":
-                this.noEntry();
-                break;
+//            case "N":
+//                this.notAvailable();
+//                break;
+//            case "S":
+//                this.enterFarmVillage();
+//                break;
+//            case "E":
+//                this.enterNorthRoad();
+//                break;
+//            case "W":
+//                this.noEntry();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ public class GraveyardMenuView extends View {
                 + "\n Read the gravestones to learn more.");
     }
 
-    private void enterFarmVillage() {
-        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
-        farmVillageMenuView.display();
-    }
-
-    private void enterNorthRoad() {
-        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
-        roadNorthMenuView.display();
-    }
-
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
-
-    private void noEntry() {
-        this.console.println(" You may not return to the Monastery."
-                + "\n Remember you walk with God and Christ.");
-    }
+//    private void enterFarmVillage() {
+//        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
+//        farmVillageMenuView.display();
+//    }
+//
+//    private void enterNorthRoad() {
+//        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
+//        roadNorthMenuView.display();
+//    }
+//
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
+//
+//    private void noEntry() {
+//        this.console.println(" You may not return to the Monastery."
+//                + "\n Remember you walk with God and Christ.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

@@ -21,11 +21,11 @@ public class CornfieldMenuView extends View {
                       + "\n1 - Rest to rebuild Stamina"
                       + "\n2 - Forage for food"
                       + "\n3 - Work with farmer"   
-                      + "\n------------------------------------"
-                      + "\nN - Move North  (not available)"
-                      + "\nS - Move South"
-                      + "\nE - Move East"
-                      + "\nW - Move West (not available)"
+//                      + "\n------------------------------------"
+//                      + "\nN - Move North  (not available)"
+//                      + "\nS - Move South"
+//                      + "\nE - Move East"
+//                      + "\nW - Move West (not available)"
                       + "\n------------------------------------"
                       + "\n  At anytime you may use D-X-L-R"
                       + "\n------------------------------------"                   
@@ -48,18 +48,18 @@ public class CornfieldMenuView extends View {
             case "3": 
                 this.getJob();
                 break;
-            case "N": 
-                this.noEntry();
-                break;
-            case "S": 
-                this.enterWestRoad();
-                break;
-            case "E": 
-                this.enterFarmVillage();
-                break;
-            case "W": 
-                this.notAvailable();
-                break;
+//            case "N": 
+//                this.noEntry();
+//                break;
+//            case "S": 
+//                this.enterWestRoad();
+//                break;
+//            case "E": 
+//                this.enterFarmVillage();
+//                break;
+//            case "W": 
+//                this.notAvailable();
+//                break;
             case "D": 
                 this.mapView();
                 break;
@@ -88,25 +88,25 @@ public class CornfieldMenuView extends View {
                        + "\n Work with the farmer to earn 10 coins.");
     }
 
-    private void enterWestRoad() {
-        RoadWestMenuView roadWestMenuView = new RoadWestMenuView();
-        roadWestMenuView.display();
-    }
-
-    private void enterFarmVillage() {
-        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
-        farmVillageMenuView.display();
-    }
-    
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                       + "\n you kill your uncle or die trying.");
-    }
-    
-    private void noEntry() {
-        this.console.println(" You may not return to the Monastry."
-                       + "\n Remember you walk with God and Christ.");
-    }
+//    private void enterWestRoad() {
+//        RoadWestMenuView roadWestMenuView = new RoadWestMenuView();
+//        roadWestMenuView.display();
+//    }
+//
+//    private void enterFarmVillage() {
+//        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
+//        farmVillageMenuView.display();
+//    }
+//    
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                       + "\n you kill your uncle or die trying.");
+//    }
+//    
+//    private void noEntry() {
+//        this.console.println(" You may not return to the Monastry."
+//                       + "\n Remember you walk with God and Christ.");
+//    }
     
     private void mapView() { 
         MapMenuView mapMenuView = new MapMenuView();

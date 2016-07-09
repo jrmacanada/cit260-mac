@@ -21,10 +21,7 @@ public final class StartProgramView extends View {
 
     public StartProgramView() {
 
-        // this.promptMessage = "\nPlease enter your name: ";
-        // display the banner when view is created
         this.displayBanner();
-
     }
 
     public void displayBanner() {

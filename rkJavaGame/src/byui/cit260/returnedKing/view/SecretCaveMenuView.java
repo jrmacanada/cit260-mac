@@ -20,11 +20,11 @@ public class SecretCaveMenuView extends View {
                 + "\n1 - Rest to rebuild Stamina"
                 + "\n2 - Forage for items in cave"
                 + "\n3 - Read the wall markings"
-                + "\n------------------------------------"
-                + "\nN - Move North"
-                + "\nS - Move South (not available)"
-                + "\nE - Move East"
-                + "\nW - Move West (not available)"
+//                + "\n------------------------------------"
+//                + "\nN - Move North"
+//                + "\nS - Move South (not available)"
+//                + "\nE - Move East"
+//                + "\nW - Move West (not available)"
                 + "\n------------------------------------"
                 + "\n  At anytime you may use D-X-L-R"
                 + "\n------------------------------------"
@@ -47,18 +47,18 @@ public class SecretCaveMenuView extends View {
             case "3":
                 this.readWall();
                 break;
-            case "N":
-                this.enterHuntReserve();
-                break;
-            case "S":
-                this.notAvailable();
-                break;
-            case "E":
-                this.enterSouthRoad();
-                break;
-            case "W":
-                this.noEntry();
-                break;
+//            case "N":
+//                this.enterHuntReserve();
+//                break;
+//            case "S":
+//                this.notAvailable();
+//                break;
+//            case "E":
+//                this.enterSouthRoad();
+//                break;
+//            case "W":
+//                this.noEntry();
+//                break;
             case "D":
                 this.mapView();
                 break;
@@ -87,25 +87,25 @@ public class SecretCaveMenuView extends View {
                 + "\n The skeletons should tell you something.");
     }
 
-    private void enterHuntReserve() {
-        HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.display();
-    }
-
-    private void enterSouthRoad() {
-        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
-        roadSouthMenuView.display();
-    }
-
-    private void notAvailable() {
-        this.console.println(" You may not leave the kingdom until"
-                + "\n you kill your uncle or die trying.");
-    }
-
-    private void noEntry() {
-        this.console.println(" You may not return to the Wizard Hamlet."
-                + "\n Have faith in your powers.");
-    }
+//    private void enterHuntReserve() {
+//        HuntReserveView huntReserveView = new HuntReserveView();
+//        huntReserveView.display();
+//    }
+//
+//    private void enterSouthRoad() {
+//        RoadSouthMenuView roadSouthMenuView = new RoadSouthMenuView();
+//        roadSouthMenuView.display();
+//    }
+//
+//    private void notAvailable() {
+//        this.console.println(" You may not leave the kingdom until"
+//                + "\n you kill your uncle or die trying.");
+//    }
+//
+//    private void noEntry() {
+//        this.console.println(" You may not return to the Wizard Hamlet."
+//                + "\n Have faith in your powers.");
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
