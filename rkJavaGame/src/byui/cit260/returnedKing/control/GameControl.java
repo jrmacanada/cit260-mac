@@ -154,16 +154,16 @@ public class GameControl {
 
     }
 
-    public static void saveReport(Game report, String filepath)
-           throws GameControlException {
-        
-        try( FileOutputStream fops = new FileOutputStream(filepath)){
-            ObjectOutputStream output = new ObjectOutputStream(fops);
-            
-            output.writeObject(report); // write the report object to file
-            }
-        catch(Exception e) {
-            throw new GameControlException(e.getMessage());
-        }
-    }
+//    public static void saveReport(String filepath)
+//           throws GameControlException {
+//        
+//        try( FileOutputStream fops = new FileOutputStream(filepath)){
+//            ObjectOutputStream output = new ObjectOutputStream(fops);
+//            
+//            output.writeObject(report); // write the report object to file
+//            }
+//        catch(Exception e) {
+//            throw new GameControlException(e.getMessage());
+//        }
+//    }
 }

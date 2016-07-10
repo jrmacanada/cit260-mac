@@ -30,15 +30,17 @@ public class ReportMenuView {
     public void displayMikesReport() {
 
         StringBuilder line;
+        String fullReport = "";
 
         Game game = RkJavaGame.getCurrentGame();
         Item[] items = game.getItems();
-
-        this.console.println("\n       LIST OF MIKE'S ITEMS");
+        fullReport = "\n\r       LIST OF MIKE'S ITEMS \n\r";
+        this.console.print(fullReport);
         line = new StringBuilder("                                        ");
         line.insert(0, "DESCRIPTION");
         line.insert(15, "QUANTITY");
         line.insert(25, "UNIT PRICE");
+        fullReport += line.toString() + "\n\r";
         this.console.println(line.toString());
 
         for (Item item : items) {
@@ -46,13 +48,13 @@ public class ReportMenuView {
             line.insert(0, item.getDescription());
             line.insert(18, item.getQuantityInStock());
             line.insert(28, item.getUnitPrice());
-
+            fullReport += line.toString() + "\n";
             this.console.println(line.toString());
         }
         
         this.console.println("\n Would you like to print the LIST to a file?");
         
-        PrintMenuView printMenuView = new PrintMenuView() {};
+        PrintMenuView printMenuView = new PrintMenuView(fullReport);
         printMenuView.display();
     }
 }        

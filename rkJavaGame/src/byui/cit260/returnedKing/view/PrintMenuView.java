@@ -6,6 +6,10 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -16,8 +20,9 @@ public class PrintMenuView extends View {
 
 //    protected final BufferedReader keyboard = RkJavaGame.getInFile();
 //    protected final PrintWriter console = RkJavaGame.getOutFile();
+    private String report;
     
-    public PrintMenuView() {
+    public PrintMenuView(String rpt) {
         super("\n"
                 + "\n------------------------------------"
                 + "\n|           Print Report           |"
@@ -27,6 +32,7 @@ public class PrintMenuView extends View {
                 + "\n------------------------------------"
                 + "\nQ - Quit this menu"
                 + "\n------------------------------------");
+        report = rpt;
     }
 
     @Override
@@ -55,13 +61,19 @@ public class PrintMenuView extends View {
         // prompt and get the name of the file to save the game in
         this.console.println("\n\nEnter the file path for file where the report "
                            + "is to be saved.");
-        String filePath = this.getInput();
-        
+        String filePath = "";
         try {
+            filePath = keyboard.readLine();
+        } catch (IOException ex) {
+            Logger.getLogger(PrintMenuView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        
+        try (PrintWriter out = new PrintWriter(filePath)){
             //save the report to the specified file
-            GameControl.saveReport(RkJavaGame.getCurrentGame(), filePath);
-        }catch (Exception ex) {
-            ErrorView.display("PrintMenuView", ex.getMessage());
+            out.printf(report);
+            this.console.println("Your report was saved successfully");
+        }catch (IOException ex) {
+            ErrorView.display("I/O Error", ex.getMessage());
         }
     }
 
