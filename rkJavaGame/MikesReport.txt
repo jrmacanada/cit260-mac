@@ -1,0 +1,7 @@
+
+       LIST OF MIKE'S ITEMS 
+DESCRIPTION    QUANTITY  UNIT PRICE                                  
+Food              100       3                   
+Sword             1         15                  
+Shield            1         10                   
+Orb               1         20                
