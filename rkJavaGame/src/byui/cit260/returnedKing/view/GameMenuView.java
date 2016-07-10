@@ -79,6 +79,9 @@ public class GameMenuView extends View {
             case "X": // L11 Mike's Report
                 this.mikesReport();
                 break;
+            case "Y":
+                this.craigsReport();
+                break;
 
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -317,18 +320,12 @@ public void mikesReport() {
         reportMenuView.displayMikesReport();
     }
     
-//    public void craigsReport() {
-//        
-//        this.console.println("\n\nEnter the file path for file where the report "
-//                           + "is to be saved.");
-//        String filePath = this.getInput();
-//        
-//        try {
-//          // GameControl.saveGame(RkJavaGame.getCurrentGame(), filePath);
-//            ReportMenuView.actorPrintList(, filePath);
-//        }catch (Exception ex) {
-//            ErrorView.display("MainMenuView", ex.getMessage());
-//        }
-//
-
+    public void craigsReport() {
+        
+       TestView testView = new TestView();
+       testView.displayCraigsReport();
+    }
 }
+       
+
+

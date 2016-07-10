@@ -14,18 +14,20 @@ import java.io.Serializable;
  */
 public enum Actor implements Serializable {
 
-    Guard("Guards the gates", 90),
-    Bandit("Attacks on the road", 60),
-    RogueWarrior("Attacks on the road", 70),
-    DrunkenSailor("He's a drunk sailor", 20),
-    PrisonGuard("Guards the prison", 95),
-    TavernOwner("Owns the Tavern", 200),
-    DrunkFarmer("HE's a drunk farmer", 10),
-    ShadyMan("Shady guy in the corner", 60),
-    Nun("A Nun", 10),
+    Guard("Guard", 90),
+    Bandit("Bandit", 60),
+    RogueWarrior("Rogue Warrior", 70),
+    DrunkenSailor("Drunken Sailor", 20),
+    PrisonGuard("Prison Gaurd", 95),
+    TavernOwner("Tavern Owner", 200),
+    DrunkFarmer("Drunk Farmer", 10),
+    ShadyMan("Shady Man", 60),
+    Nun("Nun", 10),
     Priest1("First Priest", 20),
     Priest2("Second Priest", 20),
-    FalseKing("Your Uncle", 100);
+    FalseKing("False King", 100);
+    
+    
 
     private final String description;
     public final int playerStrength;
