@@ -30,13 +30,9 @@ public class GameMenuView extends View {
                 + "\n|          Game Menu          |"
                 + "\n-------------------------------"
                 + "\nP - Player Type"
-//                + "\nI - Item List"
+//                + "\nI - Items List"
                 + "\nM - Map Display"
                 + "\nV - Move to new location"
-                + "\nH - Move player to Hunter Reserve for CompetionControl test"
-//                + "\n2 - Character with the maximum strength"
-                + "\nC - Goes to King's House for CombatControl test"
-                + "\nF - Shortcut to Forest Scene"
                 + "\n-------------------------------"
                 + "\nQ - Quit to Main Menu"
                 + "\n-------------------------------"
@@ -55,7 +51,7 @@ public class GameMenuView extends View {
             case "P":
                 this.playerType();
                 break;
-//            case "I": // L09 Individual-Mike
+//            case "I":
 //                this.itemList();
 //                break;
             case "M":
@@ -63,18 +59,6 @@ public class GameMenuView extends View {
                 break;
             case "V":
                 this.movePlayer();
-                break;
-            case "H": // L10 Individual-Craig
-                this.enterHuntRes();
-                break;
-//            case "2": // L09 Individual-Craig
-//                this.maxStrength();
-//                break;
-            case "C": // L10 Individual-Thiago
-                this.enterKingsHouse();
-                break;
-            case "F": // L10 Individual-Mike
-                this.enterForest();
                 break;
             case "X": // L11 Mike's Report
                 this.mikesReport();
@@ -98,7 +82,6 @@ public class GameMenuView extends View {
         mapMenuView.display();
     }
     
-// L09 Individual-Mike
 //    private void itemList() {
 //        ItemListMenuView itemListMenuView = new ItemListMenuView();
 //        itemListMenuView.display();
@@ -124,7 +107,6 @@ public class GameMenuView extends View {
         } catch (IOException ex) {
             Logger.getLogger(GameMenuView.class.getName()).log(Level.SEVERE, null, ex);
         }
-
     }
 
     private void doLocationAction(String locationSymbol) {
@@ -290,24 +272,6 @@ public class GameMenuView extends View {
         int strength = gameC.mStrength();
 
         this.console.println("\nThe highest character strength is " + strength);
-    }
-
-// L10 Individual-Craig
-    private void enterHuntRes() {
-        HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.display();
-    }
-    
-// L10 Individual-Mike
-    private void enterForest() {
-        ForestMenuView forestMenuView = new ForestMenuView();
-        forestMenuView.display();
-    }
-    
-// L10 Individual-Thiago
-    private void enterKingsHouse() {
-        KhouseMenuView khouseMenuView = new KhouseMenuView();
-        khouseMenuView.display();
     }
     
 // L11 Individual-Mike   

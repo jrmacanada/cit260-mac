@@ -56,39 +56,35 @@ public class GameControl {
 
         // move actors to starting position in the map
         MapControl.movePlayerToStartingLocation(map);
+    }
 
-    }
-    
     public static void saveGame(Game game, String filepath)
-           throws GameControlException {
-        
-        try( FileOutputStream fops = new FileOutputStream(filepath)){
+            throws GameControlException {
+
+        try (FileOutputStream fops = new FileOutputStream(filepath)) {
             ObjectOutputStream output = new ObjectOutputStream(fops);
-            
+
             output.writeObject(game); // write the game object to file
-            }
-        catch(Exception e) {
+        } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
     }
-    
+
     public static void getSavedGame(String filepath)
-                        throws GameControlException {
+            throws GameControlException {
         Game game = null;
-        
-        try( FileInputStream fips = new FileInputStream(filepath)) {
+
+        try (FileInputStream fips = new FileInputStream(filepath)) {
             ObjectInputStream input = new ObjectInputStream(fips);
-            
+
             game = (Game) input.readObject(); // read the game object from file
-        }
-        catch(Exception e) {
+        } catch (Exception e) {
             throw new GameControlException(e.getMessage());
         }
-        
+
         // close the output file
         RkJavaGame.setCurrentGame(game);
-        
-            }
+    }
 
 // L09 Individual-Mike
     public int buyOneEach() {
@@ -151,19 +147,6 @@ public class GameControl {
             maxValue = Math.max(act.playerStrength, maxValue);
         }
         return maxValue;
-
     }
 
-//    public static void saveReport(String filepath)
-//           throws GameControlException {
-//        
-//        try( FileOutputStream fops = new FileOutputStream(filepath)){
-//            ObjectOutputStream output = new ObjectOutputStream(fops);
-//            
-//            output.writeObject(report); // write the report object to file
-//            }
-//        catch(Exception e) {
-//            throw new GameControlException(e.getMessage());
-//        }
-//    }
 }
