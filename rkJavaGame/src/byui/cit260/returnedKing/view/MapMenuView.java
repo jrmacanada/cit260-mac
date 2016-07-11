@@ -18,17 +18,17 @@ public class MapMenuView extends View {
 
     public MapMenuView() {
         super("\n"
-                + "\n--------------------------------"
-                + "\n|           Map Menu           |"
-                + "\n--------------------------------"
+                + "\n---------------------------------"
+                + "\n|           Map Menu            |"
+                + "\n---------------------------------"
                 + "\nD - Display Map"
                 + "\n"
                 + "\n   To explore the different"
                 + "\n   game scenes, enter the two"
-                + "\n   digit code shown on map"
+                + "\n   digit code shown on the map"
                 + "\n"
                 + "\nQ - Quit to Game Menu"
-                + "\n--------------------------------");
+                + "\n---------------------------------");
     }
 
     @Override

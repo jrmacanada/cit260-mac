@@ -25,6 +25,7 @@ class RoadEastMenuView extends View {
                 + "\n2 - Confront "
                 + "\n3 - Move to East Gate "
 //                + "\n--------------------------------------------"
+//                + "\n    To navigate, enter N-S-E-W"
 //                + "\nN - Move North"
 //                + "\nS - Move South"
 //                + "\nE - Move East (not available)"

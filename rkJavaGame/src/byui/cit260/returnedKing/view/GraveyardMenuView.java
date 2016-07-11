@@ -5,6 +5,11 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Location;
+import byui.cit260.returnedKing.model.Map;
+import rkjavagame.RkJavaGame;
+
 /**
  *
  * @author michaelcavey
@@ -83,9 +88,10 @@ public class GraveyardMenuView extends View {
     }
 
     private void tellMore() {
-        this.console.println(" Rest one day to gain 15 Stamina points."
-                + "\n See if you can find some useful items."
-                + "\n Read the gravestones to learn more.");
+        Game game = RkJavaGame.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+//        Location[][] locations = map.getLocations(); // retreive the locations from map
+        this.console.print(map.locations[0][1].getScene().getDescription());
     }
 
     private void enterFarmVillage() {

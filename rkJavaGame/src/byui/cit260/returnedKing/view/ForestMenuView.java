@@ -17,12 +17,22 @@ public class ForestMenuView extends View {
     public ForestMenuView() {
         super("\n"
                 + "\n------------------------------------"
-                + "\n|           Forest Menu            |"
+                + "\n|              Forest              |"
                 + "\n------------------------------------"
-                + "\nF - Forage for food"
-                + "\nC - Chat with a forest dweller"
-                + "\nS - Shelter and rest"
-                + "\nQ - Quit"
+                + "\n Your options for this scene are:"
+                + "\n1 - Forage for food"
+                + "\n2 - Chat with a forest dweller"
+                + "\n3 - Shelter and rest"
+                + "\n------------------------------------"
+                + "\n    To navigate, enter N-S-E-W"
+//                + "\nN - Move North (not available)"
+//                + "\nS - Move South"
+//                + "\nE - Move East"
+//                + "\nW - Move West (not available)"
+                + "\n------------------------------------"
+                + "\n  At anytime you may use D-X-L-R"
+                + "\n------------------------------------"
+                + "\nQ - Quit to Game Menu"
                 + "\n------------------------------------");
     }
 
@@ -32,13 +42,13 @@ public class ForestMenuView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-            case "F":
+            case "1":
                 this.forageFood();
                 break;
-            case "C":
+            case "2":
                 this.cutWood();
                 break;
-            case "S":
+            case "3":
                 this.shelterRest();
                 break;
 
