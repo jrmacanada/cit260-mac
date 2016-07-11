@@ -1,2 +1,8 @@
+byui.cit260.returnedKing.view.KhouseMenuView - You missed!
 byui.cit260.returnedKing.view.GameMenuView - 
 *** Invalid Selection *** Try again
+byui.cit260.returnedKing.view.HunterChallengeView - You threw it to far
+byui.cit260.returnedKing.view.HunterChallengeView - You threw it to far
+byui.cit260.returnedKing.view.HunterChallengeView - You threw it to far
+byui.cit260.returnedKing.view.HunterChallengeView - YOU DID IT!
+byui.cit260.returnedKing.view.HunterChallengeView - You didn't throw it hard enough
