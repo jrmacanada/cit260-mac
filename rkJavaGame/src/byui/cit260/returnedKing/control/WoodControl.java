@@ -28,9 +28,9 @@ public class WoodControl {
 
         String playerInput = null;
         int pInput = 0;
-        double actualStamina = 100;
+        double actualStamina = PlayerControl.actualStamina;
         double axe = 25;
-        double strength = 50;
+        double strength = PlayerControl.strength;
 
         this.console.println("How much Stamina do you want to give up toward this woodcutting job?");
         try {
@@ -38,10 +38,11 @@ public class WoodControl {
         } catch (IOException ex) {
             Logger.getLogger(WoodControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-
+        System.out.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtractedcraig
         try {
             pInput = Integer.parseInt(playerInput);
             int staminaGiven = pInput;
+            
 
             if (staminaGiven < 1 || staminaGiven > actualStamina || actualStamina > 100) {
                 throw new WoodControlException(" The stamina you gave is outside acceptable boundries."
@@ -55,6 +56,9 @@ public class WoodControl {
                 throw new WoodControlException(" Ax type values must be 25, 50, or 75."
                         + "\n Check the file system or database values");
             }
+            
+            PlayerControl.actualStamina = PlayerControl.actualStamina - pInput;
+            System.out.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtracted
 
             // calculate the coin earned based on the Stamina sacrificed
             double e_coin = (staminaGiven * (strength + axe) * (actualStamina / 100)) / 100;

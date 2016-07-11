@@ -11,25 +11,25 @@ package byui.cit260.returnedKing.control;
  */
 public class PlayerControl {
     
-    static double strength = 50;
-    static double actualStamina = 100;
-    static double stamina = 100;
-    static double intellegence;
+    static double strength = 100;
+    static double actualStamina = 80;
+    static double stamina = 80;
+    static double intellegence = 60;
     static double offence;
     static double defence;
     
-    public static class startWizard {
-
-        public startWizard() {
-            
-            strength = 50;
-            actualStamina = 80;
-            stamina = 80;
-            intellegence = 100;
-            //offence
-            //defence
-            
-        }
-    }
+//    public static class startWizard {
+//
+//        public startWizard() {
+//            
+//            strength = 50;
+//            actualStamina = 80;
+//            stamina = 80;
+//            intellegence = 100;
+//            //offence
+//            //defence
+//            
+//        }
+//    }
     
 }

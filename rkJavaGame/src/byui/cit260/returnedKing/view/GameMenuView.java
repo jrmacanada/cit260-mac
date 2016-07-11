@@ -39,7 +39,10 @@ public class GameMenuView extends View {
                 + "\n L11 - Individual Assignments"
                 + "\nX - Display Mike's Report"
                 + "\nY - Craig's Report"
-                + "\nZ - Thiago's Report");
+                + "\nZ - Thiago's Report"
+                + "\n1 - Test WoodControl"
+                + "\n2 - Test CompetitionControl"
+                + "\n3 - Test ComabtControl");
     }
 
     @Override
@@ -66,6 +69,14 @@ public class GameMenuView extends View {
             case "Y": // L11 Craig's Report
                 this.craigsReport();
                 break;
+            case "1": //remove after tests
+                this.testWood();
+                break;
+            case "2": //remove after tests
+                this.testComp();
+                break;
+            case "3": //remove after tests
+                this.testCombat();
 
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -293,4 +304,22 @@ public class GameMenuView extends View {
     void getLocation() {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+
+public void testWood() { //delete after testing
+        
+       ForestMenuView forestMemuView = new ForestMenuView();
+       forestMemuView.display();
+    }
+
+public void testComp() { //delete after testing
+    
+    HuntReserveView huntReserveView = new HuntReserveView();
+    huntReserveView.display();
+}
+
+public void testCombat() {
+    
+    KhouseMenuView kHouseMenuView = new KhouseMenuView();
+    kHouseMenuView.display();
+}
 }
