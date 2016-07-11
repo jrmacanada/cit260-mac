@@ -1,0 +1,3 @@
+byui.cit260.returnedKing.view.GateWestMenuView - 
+*** Invalid Selection *** Try again
+byui.cit260.returnedKing.view.HunterChallengeView - You need to enter a value between 1 and 50.0

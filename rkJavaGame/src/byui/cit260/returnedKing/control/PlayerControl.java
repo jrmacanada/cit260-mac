@@ -10,15 +10,24 @@ package byui.cit260.returnedKing.control;
  * @author michaelcavey
  */
 public class PlayerControl {
-
+    
+    static double strength = 50;
+    static double actualStamina = 100;
+    static double stamina = 100;
+    static double intellegence;
+    static double offence;
+    static double defence;
+    
     public static class startWizard {
 
         public startWizard() {
             
-            // assign values for Stamina, Strenght, and Aura (25, 50, and 75)
-            
-            // assign items unique to the wizard 
-            
+            strength = 50;
+            actualStamina = 80;
+            stamina = 80;
+            intellegence = 100;
+            //offence
+            //defence
             
         }
     }
