@@ -25,11 +25,11 @@ public class CompetitionControl {
         int myPower = 0;
         double minYard = 100;
         double maxYard = 115;
-        double strength = 100;
+        double strength = PlayerControl.strength;
 
         double windResistance = 8;
-        double actualStamina = 78;
-        double maximumStamina = 100;
+        double actualStamina = PlayerControl.actualStamina;
+        double maximumStamina = PlayerControl.stamina;
 
         this.console.println("\nLets see if you can throw this stone between the 100 foot marker and the 115 foot one."
                 + "\nHow much Strength do you want to use?");
@@ -44,7 +44,7 @@ public class CompetitionControl {
             int power = myPower;
 
             if (power <= 0 || power > strength) {
-                throw new CompetitionControlException("You need to enter a value between 1 and 100");
+                throw new CompetitionControlException("You need to enter a value between 1 and " + PlayerControl.strength);
             }
             double distanceInYards = (power + strength - windResistance) * (actualStamina / maximumStamina);
 
