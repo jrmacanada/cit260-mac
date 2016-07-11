@@ -21,7 +21,8 @@ class FarmVillageMenuView extends View {
                 + "\n1 - Talk to villager"
                 + "\n2 - Work delivery"
                 + "\n3 - Shop for supplies"
-//                + "\n------------------------------------"
+                + "\n------------------------------------"
+                + "\n    To navigate, enter N-S-E-W"
 //                + "\nN - Move North"
 //                + "\nS - Move South"
 //                + "\nE - Move East"
@@ -48,18 +49,18 @@ class FarmVillageMenuView extends View {
             case "3":
                 this.shopSupplies();
                 break;
-//            case "N":
-//                this.enterGraveyard();
-//                break;
-//            case "S":
-//                this.enterWestGate();
-//                break;
-//            case "E":
-//                this.enterNorthGate();
-//                break;
-//            case "W":
-//                this.enterCornfield();
-//                break;
+            case "N":
+                this.enterGraveyard();
+                break;
+            case "S":
+                this.enterWestGate();
+                break;
+            case "E":
+                this.enterNorthGate();
+                break;
+            case "W":
+                this.enterCornfield();
+                break;
             case "D":
                 this.mapView();
                 break;
@@ -88,25 +89,25 @@ class FarmVillageMenuView extends View {
                 + "\n The villagers are friendly, but skeptical of strangers.");
     }
 
-//    private void enterGraveyard() {
-//        GraveyardMenuView graveyardMenuView = new GraveyardMenuView();
-//        graveyardMenuView.display();
-//    }
-//
-//    private void enterWestGate() {
-//        GateWestMenuView gateWestMenuView = new GateWestMenuView();
-//        gateWestMenuView.display();
-//    }
-//
-//    private void enterNorthGate() {
-//        GateNorthMenuView gateNorthMenuView = new GateNorthMenuView();
-//        gateNorthMenuView.display();
-//    }
-//
-//    private void enterCornfield() {
-//        CornfieldMenuView cornfieldMenuView = new CornfieldMenuView();
-//        cornfieldMenuView.display();
-//    }
+    private void enterGraveyard() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
+
+    private void enterWestGate() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
+
+    private void enterNorthGate() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
+
+    private void enterCornfield() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

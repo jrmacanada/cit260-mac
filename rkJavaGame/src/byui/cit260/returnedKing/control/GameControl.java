@@ -86,20 +86,6 @@ public class GameControl {
         RkJavaGame.setCurrentGame(game);
     }
 
-// L09 Individual-Mike
-    public int buyOneEach() {
-
-        Game game = RkJavaGame.getCurrentGame();
-        Item[] items = game.getItems();
-
-        int totalPrice = 0;
-
-        for (Item item : items) {
-            totalPrice += item.getUnitPrice();
-        }
-        return totalPrice;
-    }
-
     public enum Index {
 
         food,
@@ -149,4 +135,17 @@ public class GameControl {
         return maxValue;
     }
 
+// L09 Individual-Mike
+    public int buyOneEach() {
+
+        Game game = RkJavaGame.getCurrentGame();
+        Item[] items = game.getItems();
+
+        int totalPrice = 0;
+
+        for (Item item : items) {
+            totalPrice += item.getUnitPrice();
+        }
+        return totalPrice;
+    }
 }

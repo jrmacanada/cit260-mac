@@ -63,7 +63,7 @@ public class GameMenuView extends View {
             case "X": // L11 Mike's Report
                 this.mikesReport();
                 break;
-            case "Y":
+            case "Y": // L11 Craig's Report
                 this.craigsReport();
                 break;
 
@@ -84,13 +84,13 @@ public class GameMenuView extends View {
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
     }
-    
+
 //    private void itemList() {
 //        ItemListMenuView itemListMenuView = new ItemListMenuView();
 //        itemListMenuView.display();
 //    }
-
-    private void movePlayer() {
+    
+    public void movePlayer() {
 
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.displayMap();
@@ -276,20 +276,21 @@ public class GameMenuView extends View {
 
         this.console.println("\nThe highest character strength is " + strength);
     }
-    
-// L11 Individual-Mike   
-public void mikesReport() {
-        
+
+// L11 Individual Assignment   
+    public void mikesReport() {
+
         ReportMenuView reportMenuView = new ReportMenuView();
         reportMenuView.displayMikesReport();
     }
-    
+
     public void craigsReport() {
-        
-       TestView testView = new TestView();
-       testView.displayCraigsReport();
+
+        TestView testView = new TestView();
+        testView.displayCraigsReport();
+    }
+
+    void getLocation() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 }
-       
-
-

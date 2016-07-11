@@ -23,7 +23,8 @@ public class GateNorthMenuView extends View {
                 + "\n1 - Talk to the guards"
                 + "\n2 - Talk to the travelers"
                 + "\n3 - Beg for coin"
-//                + "\n--------------------------------------------"
+                + "\n--------------------------------------------"
+                + "\n    To navigate, enter N-S-E-W"
 //                + "\nN - Move North"
 //                + "\nS - Move South (to enter the castle)"
 //                + "\nE - Move East"
@@ -50,18 +51,18 @@ public class GateNorthMenuView extends View {
             case "3":
                 this.begCoin();
                 break;
-//            case "N":
-//                this.enterNorthRoad();
-//                break;
-//            case "S":
-//                this.enterCastle();
-//                break;
-//            case "E":
-//                this.enterForest();
-//                break;
-//            case "W":
-//                this.enterFarmVillage();
-//                break;
+            case "N":
+                this.enterNorthRoad();
+                break;
+            case "S":
+                this.enterCastle();
+                break;
+            case "E":
+                this.enterForest();
+                break;
+            case "W":
+                this.enterFarmVillage();
+                break;
             case "D":
                 this.mapView();
                 break;
@@ -89,25 +90,26 @@ public class GateNorthMenuView extends View {
                 + "\n Villagers may pass only if they give up their arms.");
     }
     
-//    private void enterNorthRoad() {
-//        RoadNorthMenuView roadNorthMenuView = new RoadNorthMenuView();
-//        roadNorthMenuView.display();
-//    }
-//
-//    public void enterCastle() {
-//        CastleMenuView castleMenuView = new CastleMenuView();
-//        castleMenuView.displayCastleMenuView();
-//    }
-//    
-//    private void enterForest() {
-//        ForestMenuView forestMenuView = new ForestMenuView();
-//        forestMenuView.display();
-//    }
-//    
-//    private void enterFarmVillage() {
-//        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
-//        farmVillageMenuView.display();
-//    }
+    private void enterNorthRoad() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
+
+    public void enterCastle() {
+        this.console.println(" You have entered the castle with no weapons.");
+        CastleMenuView castleMenuView = new CastleMenuView();
+        castleMenuView.displayCastleMenuView();
+    }
+    
+    private void enterForest() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
+    
+    private void enterFarmVillage() {
+        GameMenuView gameMenuView = new GameMenuView();
+        gameMenuView.movePlayer();
+    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();

@@ -24,7 +24,8 @@ public class RoadNorthMenuView extends View {
                 + "\n1 - Retreat"
                 + "\n2 - Confront"
                 + "\n3 - Move to North Gate"
-//                + "\n--------------------------------------------"
+                + "\n--------------------------------------------"
+                + "\n    To navigate, enter N-S-E-W"
 //                + "\nN - Move North (not available)"
 //                + "\nS - Move South"
 //                + "\nE - Move East"
@@ -51,18 +52,18 @@ public class RoadNorthMenuView extends View {
             case "3":
                 this.enterNorthGate();
                 break;
-//            case "N":
-//                this.notAvailable();
-//                break;
-//            case "S":
-//                this.noEntry();
-//                break;
-//            case "E":
-//                this.noEntry();
-//                break;
-//            case "W":
-//                this.noEntry();
-//                break;
+            case "N":
+                this.notAvailable();
+                break;
+            case "S":
+                this.noEntry();
+                break;
+            case "E":
+                this.noEntry();
+                break;
+            case "W":
+                this.noEntry();
+                break;
             case "D":
                 this.mapView();
                 break;
@@ -120,17 +121,17 @@ public class RoadNorthMenuView extends View {
         GateNorthMenuView gateNorthMenuView = new GateNorthMenuView();
         gateNorthMenuView.display();
     }
-//    
-//    private void notAvailable() {
-//        this.console.println(" You may not leave the kingdom until"
-//                + "\n you kill your uncle or die trying.");
-//    }
-//    
-//    private void noEntry() {
-//        this.console.println(" You are confronted by an opponent."
-//                + "\n You cannot move normally.");
-//    }
-//
+    
+    private void notAvailable() {
+        this.console.println(" You may not leave the kingdom until"
+                + "\n you kill your uncle or die trying.");
+    }
+    
+    private void noEntry() {
+        this.console.println(" You are confronted by an opponent."
+                + "\n You cannot move normally.");
+    }
+
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.display();
