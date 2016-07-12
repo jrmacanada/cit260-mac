@@ -57,16 +57,19 @@ public class KhouseMenuView extends View {
     }
 
     private void fight() {
-        try {
-            CombatControl fight = new CombatControl();
-            fight.damageGiven();
-            double works = fight.damageGiven();
-
-            this.console.println("You fought bravely!");
-        } catch (CombatControlException cce) {
-            ErrorView.display(this.getClass().getName(),
-                    cce.getMessage());
-        }
+        KhouseCombatView khouseMenuView = new KhouseCombatView();
+        khouseMenuView.display();
+//        try {
+//            CombatControl fight = new CombatControl();
+//            fight.damageGiven();
+//            double works = fight.damageGiven();
+//
+//            this.console.println("You fought bravely!");
+//        } catch (CombatControlException cce) {
+//            ErrorView.display(this.getClass().getName(),
+//                    cce.getMessage());
+//        }
+        
     }
 
     private void hiddenFight() {

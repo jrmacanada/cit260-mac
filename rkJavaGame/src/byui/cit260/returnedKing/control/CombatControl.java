@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.CombatControlException;
+import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.view.ErrorView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -21,13 +22,13 @@ import rkjavagame.RkJavaGame;
  * @author thiago
  */
 public class CombatControl {
-    
+
     protected final BufferedReader keyboard = RkJavaGame.getInFile();
     protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public double damageGiven()
             throws CombatControlException {
-        
+
 // This whole function needs to be replaced with something that looks at the player's
 // Stamina, Strength, & Aura values, asks the player how much to commit to the fight,
 // and deducts 5% of that from Stamina and Strength for each round he engages in.
@@ -37,50 +38,43 @@ public class CombatControl {
 // total attack value. Because our 'good' player benefits from the Aura bonus, his 
 // values will diminish less that the opponent's numbers. There should be a cut-off
 // at 20% of starting values whereby the fight must stop. Player either wins or retreats.
-
+        
         String pInput = null;
         int myInt = 0;
-        int playerStrength = 100;
-        int playerIntelligence = 10;
-        int playerAttackItem = 5;
-        int opponentStrength = 50;
-        int opponentStamina = 200;
-        int opponentDefensePlace = 1;
-        
-// Can't get rid of this "System.in" because the ".nextInt" cannot be replaced with ".readInt"
-        //Scanner keyboard = new Scanner(System.in);
+        double playerStrength = PlayerControl.strength;
+        double playerIntelligence = PlayerControl.intellegence;
+        double playerStamina = PlayerControl.actualStamina;
+        double playerAttackItem = 5;
+        double opponentStrength = Actor.Guard.actorStrength;
+        double opponentStamina = Actor.Guard.actorStamina;
+        double opponentDefensePlace = 1;
+
         this.console.println("How much Strength do you want to use?");
-        try { 
+        try {
             pInput = keyboard.readLine();
         } catch (IOException ex) {
             Logger.getLogger(CombatControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        
-        
-        
 
-        /*(int playerStrength, int playerIntelligence, 
-         int playerAttackItem, int opponentStrength, int opponentStamina, 
-         int playerAttackPlace, int opponentDefensePlace)*/
         try {
             myInt = Integer.parseInt(pInput);
             int playerAttackPlace = myInt;
-        
-        if (playerAttackPlace < 1 || playerAttackPlace > 3) {
-            throw new CombatControlException("You missed!");
-        }
-        if (playerAttackPlace == opponentDefensePlace) {
-            throw new CombatControlException("Blocked!");
-        }
 
-        double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
-        if (damageReceived < 0) {
-            return 0;
-        }
-        return damageReceived;
-        }catch (NumberFormatException nf) {
-         int playerAttackPlace = myInt;
-         ErrorView.display(this.getClass().getName(),
+            if (playerAttackPlace < 1 || playerAttackPlace > 3) {
+                throw new CombatControlException("??");
+            }
+            if (playerAttackPlace == opponentDefensePlace) {
+                throw new CombatControlException("??");
+            }
+
+            double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
+            if (damageReceived < 0) {
+                return 0;
+            }
+            return damageReceived;
+        } catch (NumberFormatException nf) {
+            int playerAttackPlace = myInt;
+            ErrorView.display(this.getClass().getName(),
                     "\n*** You must enter a valid number ***");
         }
         return myInt;

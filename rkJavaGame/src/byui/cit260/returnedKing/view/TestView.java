@@ -48,7 +48,7 @@ public class TestView {
         for (Actor actor : aList) {
             line = new StringBuilder("                                        ");
             line.insert(0, actor.getDescription());
-            line.insert(18, actor.getPlayerStrength());
+            line.insert(18, actor.getActorStrength());
             //line.insert(28, item.getUnitPrice());
             fullReport += line.toString() + "\n";
             this.console.println(line.toString());

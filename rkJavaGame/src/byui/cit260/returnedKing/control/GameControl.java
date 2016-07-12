@@ -130,7 +130,7 @@ public class GameControl {
     public int mStrength() {
         int maxValue = 0;
         for (Actor act : Actor.values()) {
-            maxValue = Math.max(act.playerStrength, maxValue);
+            maxValue = Math.max(act.actorStrength, maxValue);
         }
         return maxValue;
     }
