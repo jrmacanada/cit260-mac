@@ -28,6 +28,8 @@ public class MainMenuView extends View {
                 + "\n------------------------------------------"
                 + "\nQ - Quit without saving - End the game."
                 + "\n------------------------------------------"
+                + "\nB - Goodbye! - Leave the game."
+                + "\n------------------------------------------"
         );
 
     }
@@ -49,6 +51,9 @@ public class MainMenuView extends View {
                 break;
             case "S": // Save Current Game
                 this.saveGame();
+                break;
+            case "B": // Leave Game
+                this.goodBye();
                 break;
 
             default:
@@ -106,6 +111,11 @@ public class MainMenuView extends View {
 
         HelpMenuView helpMenuView = new HelpMenuView();
         helpMenuView.display();
+    }
+    
+    public void goodBye() {
+
+        System.exit(0); 
     }
           
 }

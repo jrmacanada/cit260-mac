@@ -101,8 +101,8 @@ public class GameMenuView extends View {
 //        itemListMenuView.display();
 //    }
     
-    public void movePlayer() {
-
+public void movePlayer() {
+// <editor-fold defaultstate="collapsed" desc="Navigation. Click on the + sign to OPEN.">
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.displayMap();
 
@@ -126,7 +126,7 @@ public class GameMenuView extends View {
     private void doLocationAction(String locationSymbol) {
 
         locationSymbol = locationSymbol.toUpperCase(); //convert value to uppercase
-
+// <editor-fold defaultstate="collapsed" desc="25 Switch Options. Click on the + sign to OPEN.">
         switch (locationSymbol) {
             case "MM":
                 MonkStartView monkStartView = new MonkStartView();
@@ -228,7 +228,7 @@ public class GameMenuView extends View {
                 SeaportMenuView seaportMenuView = new SeaportMenuView();
                 seaportMenuView.display();
                 break;
-
+// </editor-fold>
             default:
                 this.console.println("There's nothing to do here.");
                 break;
@@ -276,7 +276,7 @@ public class GameMenuView extends View {
                 return null;
         }
         return point;
-    }
+    }// </editor-fold>
 
 // L09 Individual-Craig
     private void maxStrength() {

@@ -27,7 +27,7 @@ public class MapMenuView extends View {
                 + "\n   game scenes, enter the two"
                 + "\n   digit code shown on the map"
                 + "\n"
-                + "\nQ - Quit to Game Menu"
+                + "\nQ - Return to active scene"
                 + "\n---------------------------------");
     }
 
@@ -43,6 +43,7 @@ public class MapMenuView extends View {
             case "D":
                 this.displayMap();
                 break;
+// <editor-fold defaultstate="collapsed" desc="25 Switch Options. Click on the + sign to OPEN.">                
             case "MM":
                 this.console.print(map.locations[0][0].getScene().getDescription());
                 break;
@@ -118,7 +119,7 @@ public class MapMenuView extends View {
             case "SP":
                 this.console.print(map.locations[4][4].getScene().getDescription());
                 break;
-
+// </editor-fold>
             default:
                 this.console.println("\n*** Invalid Selection *** Try again");
                 break;
