@@ -283,7 +283,7 @@ public void movePlayer() {
 
         GameControl gameC = new GameControl();
         gameC.mStrength();
-        int strength = gameC.mStrength();
+        double strength = gameC.mStrength();
 
         this.console.println("\nThe highest character strength is " + strength);
     }

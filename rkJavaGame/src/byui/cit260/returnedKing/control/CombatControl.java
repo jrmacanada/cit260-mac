@@ -38,7 +38,6 @@ public class CombatControl {
 // total attack value. Because our 'good' player benefits from the Aura bonus, his 
 // values will diminish less that the opponent's numbers. There should be a cut-off
 // at 20% of starting values whereby the fight must stop. Player either wins or retreats.
-        
         String pInput = null;
         int myInt = 0;
         double playerStrength = PlayerControl.strength;
@@ -49,34 +48,49 @@ public class CombatControl {
         double opponentStamina = Actor.Guard.actorStamina;
         double opponentDefensePlace = 1;
 
-        this.console.println("How much Strength do you want to use?");
+//        this.console.println("How much Strength do you want to use?");
         try {
-            pInput = keyboard.readLine();
-        } catch (IOException ex) {
-            Logger.getLogger(CombatControl.class.getName()).log(Level.SEVERE, null, ex);
-        }
+//            pInput = keyboard.readLine();
+//        } catch (IOException ex) {
+//            Logger.getLogger(CombatControl.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+//
+//        try {
+//            myInt = Integer.parseInt(pInput);
+//            int playerAttackPlace = myInt;
 
-        try {
-            myInt = Integer.parseInt(pInput);
-            int playerAttackPlace = myInt;
-
-            if (playerAttackPlace < 1 || playerAttackPlace > 3) {
-                throw new CombatControlException("??");
-            }
-            if (playerAttackPlace == opponentDefensePlace) {
-                throw new CombatControlException("??");
-            }
-
+//            if (playerAttackPlace < 1 || playerAttackPlace > 3) {
+//                throw new CombatControlException("??");
+//            }
+//            if (playerAttackPlace == opponentDefensePlace) {
+//                throw new CombatControlException("??");
+//            }
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
-            if (damageReceived < 0) {
-                return 0;
+            Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
+            
+
+            while (Actor.Guard.actorActStam > 0) {
+                throw new CombatControlException("You hit for " + damageReceived);
             }
-            return damageReceived;
+            
+            if (Actor.Guard.actorActStam < 0) {
+                throw new CombatControlException("You have defeated your enemy!");
+                
+               
+            }
+            
+            
+            
+             //return damageReceived;
         } catch (NumberFormatException nf) {
             int playerAttackPlace = myInt;
             ErrorView.display(this.getClass().getName(),
                     "\n*** You must enter a valid number ***");
+        
         }
+        
         return myInt;
+    
     }
+    
 }

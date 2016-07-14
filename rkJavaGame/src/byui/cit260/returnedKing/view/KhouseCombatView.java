@@ -5,7 +5,9 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.CombatControl;
 import byui.cit260.returnedKing.control.PlayerControl;
+import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Actor;
 
 /**
@@ -13,9 +15,9 @@ import byui.cit260.returnedKing.model.Actor;
  * @author craig
  */
 public class KhouseCombatView extends View {
-    Actor[] aList = Actor.values();
-    int enemyStrength = Actor.Guard.actorStrength;
-    int enemyStamina = Actor.Guard.actorStamina;
+//    Actor[] aList = Actor.values();
+//    double enemyStrength = Actor.Guard.actorStrength;
+//    double enemyStamina = Actor.Guard.actorStamina;
     
     public KhouseCombatView() {
         super("\n Battle Begins!!"
@@ -46,7 +48,18 @@ public class KhouseCombatView extends View {
         }
     
     private void attack() {
-        System.out.println("test");
+        try {
+            CombatControl combatC = new CombatControl();
+            combatC.damageGiven();
+            double combat = combatC.damageGiven();
+            
+            
+          
+        } catch (CombatControlException cce) {
+            ErrorView.display(this.getClass().getName(),
+                    cce.getMessage());
+            
+        }
         
     }
 
