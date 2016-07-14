@@ -127,8 +127,8 @@ public class GameControl {
     }
 
 // L09 Individual-Craig
-    public int mStrength() {
-        int maxValue = 0;
+    public double mStrength() {
+        double maxValue = 0;
         for (Actor act : Actor.values()) {
             maxValue = Math.max(act.actorStrength, maxValue);
         }
