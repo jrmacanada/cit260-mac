@@ -137,12 +137,18 @@ public class MapControl {
         scenes[SceneType.northGate.ordinal()] = northGateScene;
 
         Scene forestScene = new Scene();
-        forestScene.setDescription("ADD DESCRIPTION OF forest LATER");
+        forestScene.setDescription(" Forest:"
+                + "\n The forest offers the opertunity to restock food supplies,"
+                + "\n work to cut wood to earn coin, "
+                + "\n or to rest for increased stamina.");
         forestScene.setMapSymbol("FF");
         scenes[SceneType.forest.ordinal()] = forestScene;
 
         Scene tavernScene = new Scene();
-        tavernScene.setDescription("ADD DESCRIPTION OF tavern LATER");
+        tavernScene.setDescription("Tavern:"
+                + "\n The tavern can be a dangerous place if you're not careful."
+                + "\n feel free to talk to the friendly owner, but watch out for "
+                + "\n the drunk or that shady character at the corner table.");
         tavernScene.setMapSymbol("TT");
         scenes[SceneType.tavern.ordinal()] = tavernScene;
 
@@ -185,12 +191,18 @@ public class MapControl {
         scenes[SceneType.eastRoad.ordinal()] = eastRoadScene;
 
         Scene kingsHouseScene = new Scene();
-        kingsHouseScene.setDescription("ADD DESCRIPTION OF kingsHouse LATER");
+        kingsHouseScene.setDescription(" King's Country House:"
+                + "\n Your father's private retreat is guarded by your uncle's best."
+                + "\n If you don't want to fight the guard, try sneaking around the back."
+                + "\n Or you can explore the other unguarded building on the site.");
         kingsHouseScene.setMapSymbol("KH");
         scenes[SceneType.kingsHouse.ordinal()] = kingsHouseScene;
 
         Scene huntingReserveScene = new Scene();
-        huntingReserveScene.setDescription("ADD DESCRIPTION OF huntingReserve LATER");
+        huntingReserveScene.setDescription(" Hunting Reserve:"
+                + "\n Restock your food supply by hunting for wild game."
+                + "\n Talk to the hunters and see what they do for fun."
+                + "\n Or use this time to rest and build up your stamina.");
         huntingReserveScene.setMapSymbol("HR");
         scenes[SceneType.huntingReserve.ordinal()] = huntingReserveScene;
 
@@ -211,7 +223,10 @@ public class MapControl {
         scenes[SceneType.township.ordinal()] = townshipScene;
 
         Scene churchScene = new Scene();
-        churchScene.setDescription("ADD DESCRIPTION OF church LATER");
+        churchScene.setDescription(" Church:"
+                + "\n The Church can provide you a place to rest and build up your stamina."
+                + "\n Feel free to pray if you need a spiritual uplift in your aura points."
+                + "\n Or talk to the priest and get some advice on recapturing your kingdom.");
         churchScene.setMapSymbol("CC");
         scenes[SceneType.church.ordinal()] = churchScene;
 
@@ -239,7 +254,10 @@ public class MapControl {
         scenes[SceneType.southRoad.ordinal()] = southRoadScene;
 
         Scene harborTownScene = new Scene();
-        harborTownScene.setDescription("ADD DESCRIPTION OF harborTown LATER");
+        harborTownScene.setDescription(" Harbortown:"
+                + "\n The harbortown is a a perfect place shop for supplies."
+                + "\n You can find work easily and earn coin if you need money."
+                + "\n Talk to the townspeople to get information that might help.");
         harborTownScene.setMapSymbol("HT");
         scenes[SceneType.harborTown.ordinal()] = harborTownScene;
 
@@ -247,7 +265,7 @@ public class MapControl {
         seaportScene.setDescription(" Seaport:"
                 + "\n The seaport is a dangerous place that plays by its own rules."
                 + "\n Foriegn travelers have never been subject to the King's rule."
-                + "\n Neither have they been rebelous. They only defend their iberty");
+                + "\n Neither have they been rebelous. They only defend their liberty.");
         seaportScene.setMapSymbol("SP");
         scenes[SceneType.seaport.ordinal()] = seaportScene;
 
