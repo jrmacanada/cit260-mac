@@ -67,20 +67,49 @@ public class CombatControl {
 //            }
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
             Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
-            
-
-            while (Actor.Guard.actorActStam > 0) {
+            double playerDamageReceived = (opponentStrength - playerStrength);
+            PlayerControl.actualStamina = PlayerControl.actualStamina - playerDamageReceived;
+            /*
+            if (Actor.Guard.actorActStam < 0) {
+                throw new CombatControlException("You have defeated your enemy!");
+            } else {
+                if (PlayerControl.actualStamina < 0) {
+                    throw new CombatControlException("Your lost the battle!");
+                } else {
+                    
+                }
+            }
+            */
+            while (Actor.Guard.actorActStam > 0 && PlayerControl.actualStamina > 0) {
+                throw new CombatControlException("You hit for " + damageReceived +
+                "You have received a hit for " + playerDamageReceived);
+                
+            }
+            if (Actor.Guard.actorActStam <= 0) {
+                throw new CombatControlException("You won!");
+            } else {
+                throw new CombatControlException("You Lost");
+            }
+            /*while (Actor.Guard.actorActStam > 0) {
                 throw new CombatControlException("You hit for " + damageReceived);
+            }
+            
+            while (PlayerControl.actualStamina > 0) {
+                throw new CombatControlException("You have received a hit by " + playerDamageReceived);
             }
             
             if (Actor.Guard.actorActStam < 0) {
                 throw new CombatControlException("You have defeated your enemy!");
-                
-               
+  
             }
             
             
             
+            if (PlayerControl.actualStamina < 0) {
+                throw new CombatControlException("You loose the Battle");
+            }
+            
+            */
              //return damageReceived;
         } catch (NumberFormatException nf) {
             int playerAttackPlace = myInt;

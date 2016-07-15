@@ -14,7 +14,7 @@ import java.io.Serializable;
  */
 public enum Actor implements Serializable {
 
-    Guard("Guard", 80, 100, 100 ),
+    Guard("Guard", 110, 100, 100 ),
     Bandit("Bandit", 60, 40, 40),
     RogueWarrior("Rogue Warrior", 40, 40, 40),
     DrunkenSailor("Drunken Sailor", 1, 1, 1),

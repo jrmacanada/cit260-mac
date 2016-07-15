@@ -1,0 +1,11 @@
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
+byui.cit260.returnedKing.view.KhouseCombatView - You Lost
+byui.cit260.returnedKing.view.KhouseCombatView - You Lost
+byui.cit260.returnedKing.view.GameMenuView - 
+*** Invalid Selection *** Try again
