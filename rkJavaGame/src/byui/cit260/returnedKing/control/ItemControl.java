@@ -6,6 +6,8 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.ItemControlException;
+import byui.cit260.returnedKing.model.Item;
+import java.util.ArrayList;
 
 /**
  *
@@ -13,22 +15,25 @@ import byui.cit260.returnedKing.exceptions.ItemControlException;
  */
 public class ItemControl {
 
-    public double calcUsableVolumeOfWagon(double length, double width, double depth)
-            throws ItemControlException {
-
-        if (length < 0 || length > 10) {
-            throw new ItemControlException("You need to enter a value between 1 and 10");
-        }
-        if (width < 0 || width > 4) {
-            throw new ItemControlException("You need to enter a value between 1 and 4");
-        }
-        if (depth < 0 || depth > 3) {
-            throw new ItemControlException("You need to enter a value between 1 and 3");
-        }
-        double usableVolume = (length * width * depth) / 1.25;
-
-        return usableVolume;
-
-    }
-
+public ArrayList<Item> addInventoryItems() {
+    ArrayList<Item> inventory = new ArrayList<>();
+    
+    Item coin = new Item();
+    inventory.add(coin);
+    
+    Item sword = new Item();
+    inventory.add(sword);
+    
+    Item food = new Item();
+    inventory.add(food);
+    
+    Item shield = new Item();
+    inventory.add(shield);
+    
+    return inventory;
+    
+      
+    
+}
+    
 }

@@ -91,13 +91,14 @@ public class GameControl {
         food,
         sword,
         shield,
-        orb;
+        orb,
+        coin;
     }
 
     public static Item[] createItemsList() {
 
         // create array(list) of available items
-        Item[] items = new Item[4];
+        Item[] items = new Item[5];
 
         Item food = new Item();
         food.setDescription("Food");
@@ -122,6 +123,12 @@ public class GameControl {
         orb.setQuantityInStock(1);
         orb.setUnitPrice(20);
         items[Index.orb.ordinal()] = orb;
+        
+        Item coin = new Item();
+        coin.setDescription("Coin");
+        coin.setQuantityInStock(10);
+        coin.setUnitPrice(0);
+        items[Index.coin.ordinal()] = coin;
 
         return items;
     }
