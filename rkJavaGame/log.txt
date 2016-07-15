@@ -1,11 +1,16 @@
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You hit for 5.0You have received a hit for 10.0
-byui.cit260.returnedKing.view.KhouseCombatView - You Lost
-byui.cit260.returnedKing.view.KhouseCombatView - You Lost
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 30.0 You have received a hit for 21.0
+Your current health is 59.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 24.0 You have received a hit for 14.0
+Your current health is 45.0
+byui.cit260.returnedKing.view.KhouseCombatView - You hit for 39.0 You have received a hit for 16.0
+Your current health is 29.0
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
+byui.cit260.returnedKing.view.KhouseCombatView - You won!
 byui.cit260.returnedKing.view.GameMenuView - 
 *** Invalid Selection *** Try again

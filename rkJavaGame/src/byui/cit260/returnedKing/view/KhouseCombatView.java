@@ -25,7 +25,7 @@ public class KhouseCombatView extends View {
             + "\nA - Attack"
             + "\nQ - RUN AWAY"
             + "\n----------------");
-        System.out.println("\nYour current health is " + PlayerControl.actualStamina);
+        //System.out.println("\nYour current health is " + PlayerControl.actualStamina);
     }
     
 

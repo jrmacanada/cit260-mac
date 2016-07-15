@@ -123,7 +123,7 @@ public class ChurchMenuView extends View {
     }
     
     private void talkPriest() {
-        this.console.println("\nCalls the talkPriest() function");
+        this.console.println("\n");
     }
      
     private void restStamina() {

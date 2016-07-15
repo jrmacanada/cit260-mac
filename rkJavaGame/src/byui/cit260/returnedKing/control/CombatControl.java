@@ -8,9 +8,11 @@ package byui.cit260.returnedKing.control;
 import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.view.ErrorView;
+import byui.cit260.returnedKing.view.MainMenuView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.Random;
 import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -43,10 +45,16 @@ public class CombatControl {
         double playerStrength = PlayerControl.strength;
         double playerIntelligence = PlayerControl.intellegence;
         double playerStamina = PlayerControl.actualStamina;
-        double playerAttackItem = 5;
+        Random r = new Random();
+        int low = 10;
+        int high = 40;
+        int playerAttackItem = r.nextInt(high - low) + low;
+        int olow = 1;
+        int ohigh = 15;
+        int opponentAttack = r.nextInt(ohigh - olow) + olow;
         double opponentStrength = Actor.Guard.actorStrength;
         double opponentStamina = Actor.Guard.actorStamina;
-        double opponentDefensePlace = 1;
+        //double opponentDefensePlace = 1;
 
 //        this.console.println("How much Strength do you want to use?");
         try {
@@ -67,7 +75,7 @@ public class CombatControl {
 //            }
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
             Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
-            double playerDamageReceived = (opponentStrength - playerStrength);
+            double playerDamageReceived = (opponentStrength - playerStrength + opponentAttack );
             PlayerControl.actualStamina = PlayerControl.actualStamina - playerDamageReceived;
             /*
             if (Actor.Guard.actorActStam < 0) {
@@ -82,14 +90,23 @@ public class CombatControl {
             */
             while (Actor.Guard.actorActStam > 0 && PlayerControl.actualStamina > 0) {
                 throw new CombatControlException("You hit for " + damageReceived +
-                "You have received a hit for " + playerDamageReceived);
+                " You have received a hit for " + playerDamageReceived +
+                "\nYour current health is " + PlayerControl.actualStamina);
                 
             }
             if (Actor.Guard.actorActStam <= 0) {
                 throw new CombatControlException("You won!");
-            } else {
-                throw new CombatControlException("You Lost");
-            }
+            } //else {
+            if (PlayerControl.actualStamina <= 0) {
+                System.out.println("You have died.");
+//               MainMenuView mainM = new MainMenuView();
+//               mainM.display();
+                  System.exit(0);
+                //throw new CombatControlException("You Lost");
+                
+                
+                }
+            
             /*while (Actor.Guard.actorActStam > 0) {
                 throw new CombatControlException("You hit for " + damageReceived);
             }
