@@ -92,13 +92,20 @@ public class GameControl {
         sword,
         shield,
         orb,
-        coin;
+        coin,
+        woodAxe,
+        hatchet,
+        battleAxe,
+        fathersSword,
+        bodyArmor,
+        birthCert,
+        huntBow;        
     }
 
     public static Item[] createItemsList() {
 
         // create array(list) of available items
-        Item[] items = new Item[5];
+        Item[] items = new Item[12];
 
         Item food = new Item();
         food.setDescription("Food");
@@ -129,6 +136,48 @@ public class GameControl {
         coin.setQuantityInStock(10);
         coin.setUnitPrice(0);
         items[Index.coin.ordinal()] = coin;
+        
+        Item woodAxe = new Item();
+        woodAxe.setDescription("Wood cutting axe");
+        woodAxe.setQuantityInStock(10);
+        woodAxe.setUnitPrice(0);
+        items[Index.woodAxe.ordinal()] = woodAxe;
+        
+        Item hatchet = new Item();
+        hatchet.setDescription("Hatchet");
+        hatchet.setQuantityInStock(10);
+        hatchet.setUnitPrice(0);
+        items[Index.hatchet.ordinal()] = hatchet;
+        
+        Item battleAxe = new Item();
+        battleAxe.setDescription("Battle Axe");
+        battleAxe.setQuantityInStock(10);
+        battleAxe.setUnitPrice(0);
+        items[Index.battleAxe.ordinal()] = battleAxe;
+        
+        Item fathersSword = new Item();
+        fathersSword.setDescription("Father's Sword");
+        fathersSword.setQuantityInStock(100);
+        fathersSword.setUnitPrice(3);
+        items[Index.fathersSword.ordinal()] = fathersSword;
+        
+        Item bodyArmor = new Item();
+        bodyArmor.setDescription("Body Armor");
+        bodyArmor.setQuantityInStock(100);
+        bodyArmor.setUnitPrice(3);
+        items[Index.bodyArmor.ordinal()] = bodyArmor;
+        
+        Item birthCert = new Item();
+        birthCert.setDescription("Birth Certificate");
+        birthCert.setQuantityInStock(100);
+        birthCert.setUnitPrice(3);
+        items[Index.birthCert.ordinal()] = birthCert;
+        
+        Item huntBow = new Item();
+        huntBow.setDescription("Hunting Bow");
+        huntBow.setQuantityInStock(100);
+        huntBow.setUnitPrice(3);
+        items[Index.huntBow.ordinal()] = huntBow;
 
         return items;
     }
