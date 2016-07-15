@@ -5,9 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.CombatControl;
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -21,7 +19,7 @@ import rkjavagame.RkJavaGame;
  *
  * @author michaelcavey
  */
-class RoadEastMenuView extends View {
+public class RoadEastMenuView extends View {
     
     public RoadEastMenuView() {
         super("\n"
@@ -38,8 +36,9 @@ class RoadEastMenuView extends View {
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use M-X-L-R"
                 + "\n--------------------------------------------"
-                + "\nQ - Quit to Game Menu"
-                + "\n--------------------------------------------");
+//                + "\nQ - Quit to Game Menu"
+//                + "\n--------------------------------------------"
+        );
     }
 
     @Override
@@ -99,39 +98,13 @@ class RoadEastMenuView extends View {
 
     private void retreat() {
         
-        // IF player is coming from location [3][4] (Church)
-    //    TownshipMenuView townshipMenuView = new TownshipMenuView();
-    //    townshipMenuView.displayTownshipMenuView();
-        
-        // IF player is coming from location [1][4] (Tavern)
-    //    ForestMenuView forestMenuView = new ForestMenuView();
-    //    forestMenuView.display();
-    
-        // IF player is coming from location [2][3] (East Gate)
-    //    TavernMenuView tavernMenuView = new TavernMenuView();
-    //    tavernMenuView.display();       
     }
 
     private void confront() {
-        KhouseCombatView khouseMenuView = new KhouseCombatView();
-        khouseMenuView.display();
-//        try {
-//            CombatControl fight = new CombatControl();
-//            fight.damageGiven();
-//            double works = fight.damageGiven();
-//
-//            this.console.println("You fought bravely!");
-//        } catch (CombatControlException cce) {
-//            ErrorView.display(this.getClass().getName(),
-//                    cce.getMessage());
-//        }
+        RoadEastCombatView roadEastCombatView = new RoadEastCombatView();
+        roadEastCombatView.display();
     }
 
-    private void enterEastGate() {
-        GateEastMenuView gateEastMenuView = new GateEastMenuView();
-        gateEastMenuView.display();
-    }
-    
     private void notAvailable() {
         this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");

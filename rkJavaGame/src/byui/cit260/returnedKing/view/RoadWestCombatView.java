@@ -6,33 +6,27 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.CombatControl;
-import byui.cit260.returnedKing.control.PlayerControl;
 import byui.cit260.returnedKing.exceptions.CombatControlException;
-import byui.cit260.returnedKing.model.Actor;
 
 /**
  *
- * @author craig
+ * @author michaelcavey
  */
-public class KhouseCombatView extends View {
-//    Actor[] aList = Actor.values();
-//    double enemyStrength = Actor.Guard.actorStrength;
-//    double enemyStamina = Actor.Guard.actorStamina;
-
-    public KhouseCombatView() {
+public class RoadWestCombatView extends View {
+    
+    public RoadWestCombatView() {
         super("\n  Battle Begins!!"
-                + "\n--------------------"
-                + "\nA - Attack"
-                + "\nQ - Quit the fight"
-                + "\n--------------------");
-        //System.out.println("\nYour current health is " + PlayerControl.actualStamina);
+            + "\n--------------------"
+            + "\nA - Attack"
+            + "\nQ - Quit the fight"
+            + "\n--------------------");
     }
 
     @Override
     public boolean doAction(String value) {
-
+        
         value = value.toUpperCase();
-
+        
         switch (value) {
             case "A":
                 this.attack();
@@ -41,22 +35,20 @@ public class KhouseCombatView extends View {
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try again");
                 break;
-        }
-        return false;
-
+                }
+        return false;           
     }
-
+    
     private void attack() {
         try {
-            CombatControl combatC = new CombatControl();
-            combatC.damageGiven();
-            double combat = combatC.damageGiven();
-
+            CombatControl combatW = new CombatControl();
+            combatW.fightRogueWarrior();
+            double combat = combatW.fightRogueWarrior();     
+          
         } catch (CombatControlException cce) {
             ErrorView.display(this.getClass().getName(),
-                    cce.getMessage());
-        }
-
+                    cce.getMessage());            
+        }        
     }
 
 }

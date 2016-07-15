@@ -94,7 +94,8 @@ public class MapControl {
         northRoadScene.setDescription(" North Road:"
                 + "\n Prison guard blocks forward movement."
                 + "\n You cannot move forward in your present direction."
-                + "\n You will be rerouted if you choose not to fight.");
+                + "\n You will be rerouted if you choose not to fight."
+                + "\n Clear the road and you can move normally.");
         northRoadScene.setMapSymbol("NR");
         scenes[SceneType.northRoad.ordinal()] = northRoadScene;
 
@@ -156,7 +157,8 @@ public class MapControl {
         westRoadScene.setDescription(" West Road:"
                 + "\n Rogue warrior blocks forward movement."
                 + "\n You cannot move forward in your present direction."
-                + "\n You will be rerouted if you choose not to fight.");
+                + "\n You will be rerouted if you choose not to fight."
+                + "\n Clear the road and you can move normally.");
         westRoadScene.setMapSymbol("WR");
         scenes[SceneType.westRoad.ordinal()] = westRoadScene;
 
@@ -186,7 +188,8 @@ public class MapControl {
         eastRoadScene.setDescription(" East Road:"
                 + "\n Bandit blocks forward movement."
                 + "\n You cannot move forward in your present direction."
-                + "\n You will be rerouted if you choose not to fight.");
+                + "\n You will be rerouted if you choose not to fight."
+                + "\n Clear the road and you can move normally.");
         eastRoadScene.setMapSymbol("ER");
         scenes[SceneType.eastRoad.ordinal()] = eastRoadScene;
 
@@ -249,7 +252,8 @@ public class MapControl {
         southRoadScene.setDescription(" South Road:"
                 + "\n Drucken sailor blocks forward movement."
                 + "\n You cannot move forward in your present direction."
-                + "\n You will be rerouted if you choose not to fight.");
+                + "\n You will be rerouted if you choose not to fight."
+                + "\n Clear the road and you can move normally.");
         southRoadScene.setMapSymbol("SR");
         scenes[SceneType.southRoad.ordinal()] = southRoadScene;
 

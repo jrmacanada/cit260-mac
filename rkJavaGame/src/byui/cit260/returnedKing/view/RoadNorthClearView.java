@@ -19,27 +19,23 @@ import rkjavagame.RkJavaGame;
  *
  * @author michaelcavey
  */
+public class RoadNorthClearView extends View {
 
-class TownshipMenuView extends View {
-
-    public TownshipMenuView() {
+    public RoadNorthClearView() {
         super("\n"
-                + "\n------------------------------------"
-                + "\n|             Township             |"
-                + "\n------------------------------------"
-                + "\n Your options for this scene are:"
-                + "\n1 - Talk to townsmen "
-                + "\n2 - Rest at hotel"
-                + "\n3 - Shop for supplies"
-                + "\n------------------------------------"
+                + "\n----------------------------------------"
+                + "\n|              North Road              |"
+                + "\n----------------------------------------"
+                + "\n    You have cleared road of enemy."
+                + "\n    You are free to move as normal."
+                + "\n----------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
-                + "\n------------------------------------"
-                + "\n  At anytime you may use M-X-L-R"
-//                + "\n------------------------------------"
-//                + "\nQ - Quit to Game Menu"
-                + "\n------------------------------------"
+                + "\n----------------------------------------"
+                + "\n    At anytime you may use M-X-L-R"
+                + "\n----------------------------------------"
                 + "\nZ - Exit game from this scene"
-                + "\n------------------------------------");
+                + "\n----------------------------------------"
+        );
     }
 
     @Override
@@ -48,17 +44,9 @@ class TownshipMenuView extends View {
         value = value.toUpperCase(); //convert choice to uppercase
 
         switch (value) {
-            case "1":
-                this.talkTownsmen();
-                break;
-            case "2":
-                this.restHotel();
-                break;
-            case "3":
-                this.shopSupplies();
-                break;
+
             case "N":
-                this.movePlayer();
+                this.notAvailable();
                 break;
             case "S":
                 this.movePlayer();
@@ -84,7 +72,7 @@ class TownshipMenuView extends View {
             case "Z":
                 this.exitGame();
                 break;
-    
+
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try again");
@@ -92,12 +80,17 @@ class TownshipMenuView extends View {
         }
         return false;
     }
-    
+
     private void tellMore() {
         Game game = RkJavaGame.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
-//        Location[][] locations = map.getLocations(); // retreive the locations from map
+
         this.console.print(map.getCurrentLocation().getScene().getDescription());
+    }
+
+    private void notAvailable() {
+        this.console.println(" You may not leave the kingdom until"
+                + "\n you kill your uncle or die trying.");
     }
 
     private void mapView() {
@@ -116,18 +109,6 @@ class TownshipMenuView extends View {
     private void myStats() {
         this.console.println(" This function will display the player's"
                 + "\n Stamina, Strength, and Aura statistics.");
-    }
-    
-    private void talkTownsmen() {
-        this.console.println("*** stub to talkVillager() function ***");
-    }
-
-    private void restHotel() {
-        this.console.println("*** stub to workDelivery() function ***");
-    }
-
-    private void shopSupplies() {
-        this.console.println("*** stub to shopSupplies() function ***");
     }
 
     public void movePlayer() {

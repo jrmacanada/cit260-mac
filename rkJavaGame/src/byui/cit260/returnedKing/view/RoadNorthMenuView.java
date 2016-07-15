@@ -5,9 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.CombatControl;
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -38,8 +36,9 @@ public class RoadNorthMenuView extends View {
                 + "\n--------------------------------------------"
                 + "\n  At anytime you may use M-X-L-R"
                 + "\n--------------------------------------------"
-                + "\nQ - Quit to Game Menu"
-                + "\n--------------------------------------------");
+//                + "\nQ - Quit to Game Menu"
+//                + "\n--------------------------------------------"
+        );
     }
 
     @Override
@@ -81,7 +80,7 @@ public class RoadNorthMenuView extends View {
             case "R":
                 this.myStats();
                 break;
-                
+
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try again");
@@ -89,55 +88,28 @@ public class RoadNorthMenuView extends View {
         }
         return false;
     }
-    
+
     private void tellMore() {
         Game game = RkJavaGame.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
-//        Location[][] locations = map.getLocations(); // retreive the locations from map
+
         this.console.print(map.getCurrentLocation().getScene().getDescription());
     }
 
     private void retreat() {
-        
-        // IF player is coming from location [0][1] (Graveyard)
-//        FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
-//        farmVillageMenuView.display();
-        
-        // IF player is coming from location [0][3] (Prison)
-//        ForestMenuView forestMenuView = new ForestMenuView();
-//        forestMenuView.display();
-    
-        // IF player is coming from location [1][2] (North Gate)
-//        GraveyardMenuView graveyardMenuView = new GraveyardMenuView();
-//        graveyardMenuView.display();       
+      
     }
 
     private void confront() {
-        
-        KhouseCombatView khouseMenuView = new KhouseCombatView();
-        khouseMenuView.display();
-//        try {
-//            CombatControl fight = new CombatControl();
-//            fight.damageGiven();
-//            double works = fight.damageGiven();
-//
-//            this.console.println("You fought bravely!");
-//        } catch (CombatControlException cce) {
-//            ErrorView.display(this.getClass().getName(),
-//                    cce.getMessage());
-//        }
+        RoadNorthCombatView roadNorthCombatView = new RoadNorthCombatView();
+        roadNorthCombatView.display();
     }
 
-    private void enterNorthGate() {
-        GateNorthMenuView gateNorthMenuView = new GateNorthMenuView();
-        gateNorthMenuView.display();
-    }
-    
     private void notAvailable() {
         this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
     }
-    
+
     private void noEntry() {
         this.console.println(" You are confronted by an opponent."
                 + "\n You cannot move normally.");
@@ -337,5 +309,6 @@ public class RoadNorthMenuView extends View {
         }
         return point;
     }// </editor-fold>
+    
     
 }

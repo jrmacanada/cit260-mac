@@ -5,9 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.CombatControl;
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -100,38 +98,13 @@ public class RoadWestMenuView extends View {
 
     private void retreat() {
         
-//        return false;
-        // IF player is coming from location [1][0] (Cornfield)
-    //    FarmVillageMenuView farmVillageMenuView = new FarmVillageMenuView();
-    //    farmVillageMenuView.display();
-        
-        // IF player is coming from location [3][0] (King's House)
-    //    HuntReserveView huntReserveView = new HuntReserveView();
-    //    huntReserveView.display();
-    
-        // IF player is coming from location [2][1] (West Gate)
-    //    KhouseMenuView khouseMenuView = new KhouseMenuView();
-    //    khouseMenuView.display();
     }
 
     private void confront() {
-        try {
-            CombatControl fight = new CombatControl();
-            fight.damageGiven();
-            double works = fight.damageGiven();
-
-            this.console.println("You fought bravely!");
-        } catch (CombatControlException cce) {
-            ErrorView.display(this.getClass().getName(),
-                    cce.getMessage());
-        }
+        RoadWestCombatView roadWestCombatView = new RoadWestCombatView();
+        roadWestCombatView.display();
     }
 
-    private void enterWestGate() {
-        GateWestMenuView gateWestMenuView = new GateWestMenuView();
-        gateWestMenuView.display();
-    }
-    
     private void notAvailable() {
         this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");

@@ -5,9 +5,7 @@
  + */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.CombatControl;
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -36,8 +34,8 @@ public class KhouseMenuView extends View {
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
                 + "\n  At anytime you may use M-X-L-R"
-                + "\n------------------------------------"
-                + "\nQ - Quit to Game Menu"
+//                + "\n------------------------------------"
+//                + "\nQ - Quit to Game Menu"
                 + "\n------------------------------------"
                 + "\nZ - Exit game from this scene"
                 + "\n------------------------------------");
@@ -52,10 +50,10 @@ public class KhouseMenuView extends View {
             case "1": // fight the guard
                 this.fightGuard();
                 break;
-            case "2": // sneak in the back
+            case "2": // sneak around to the back door
                 this.sneakIn();
                 break;
-            case "3": // exploreSite
+            case "3": // explore other building on site
                 this.exploreSite();
                 break;
             case "N":
@@ -108,8 +106,8 @@ public class KhouseMenuView extends View {
     }
 
     private void noEntry() {
-        this.console.println(" You may not return to the Monastery."
-                + "\n Remember you walk with God and Christ.");
+        this.console.println(" You may not return to the Wizard Hamlet."
+                + "\n Have faith in your powers.");
     }
 
     private void mapView() {

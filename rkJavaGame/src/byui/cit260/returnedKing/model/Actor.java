@@ -15,10 +15,10 @@ import java.io.Serializable;
 public enum Actor implements Serializable {
 
     Guard("Guard", 110, 100, 100 ),
-    Bandit("Bandit", 60, 40, 40),
+    Bandit("Bandit", 60, 60, 60),
     RogueWarrior("Rogue Warrior", 40, 40, 40),
-    DrunkenSailor("Drunken Sailor", 1, 1, 1),
-    PrisonGuard("Prison Gaurd", 95, 90, 90),
+    DrunkSailor("Drunken Sailor", 20, 20, 20),
+    PrisonGuard("Prison Gaurd", 90, 90, 90),
     //TavernOwner("Tavern Owner", 1, 1),
     //DrunkFarmer("Drunk Farmer", 1, 1),
     //ShadyMan("Shady Man", 1, 1),

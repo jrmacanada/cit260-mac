@@ -43,8 +43,8 @@ public class RkJavaGame {
             RkJavaGame.outFile = new PrintWriter(System.out, true);
 
             // open log file
-//            String filePath = "log.txt";
-//            RkJavaGame.logFile = new PrintWriter(filePath);
+            String filePath = "log.txt";
+            RkJavaGame.logFile = new PrintWriter(filePath);
 
             // create StartProgramView and start the program
             StartProgramView startProgramView = new StartProgramView();

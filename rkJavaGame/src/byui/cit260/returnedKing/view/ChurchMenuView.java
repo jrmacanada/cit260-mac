@@ -34,8 +34,8 @@ public class ChurchMenuView extends View {
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
                 + "\n  At anytime you may use M-X-L-R"
-                + "\n------------------------------------"
-                + "\nQ - Quit to Game Menu"
+//                + "\n------------------------------------"
+//                + "\nQ - Quit to Game Menu"
                 + "\n------------------------------------"
                 + "\nZ - Exit game from this scene"
                 + "\n------------------------------------");

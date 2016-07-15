@@ -5,9 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.CombatControl;
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -21,13 +19,13 @@ import rkjavagame.RkJavaGame;
  *
  * @author michaelcavey
  */
-class RoadSouthMenuView extends View {
+public class RoadSouthMenuView extends View {
 
     public RoadSouthMenuView() {
         super("\n"
                 + "\n--------------------------------------------"
                 + "\n|                South Road                |"
-                + "\n|  Drucken sailor blocks forward movement  |"
+                + "\n|  Drunken sailor blocks forward movement  |"
                 + "\n--------------------------------------------"
                 + "\n Your options for this scene are:"
                 + "\nQ - Retreat to previous scene "
@@ -100,37 +98,13 @@ class RoadSouthMenuView extends View {
 
     private void retreat() {
         
-        // IF player is coming from location [4][1] (Secret Cave)
-    //    HuntReserveView huntReserveView = new HuntReserveView();
-    //    huntReserveView.display();
-        
-        // IF player is coming from location [4][3] (Harbortown)
-    //    TownshipMenuView townshipMenuView = new TownshipMenuView();
-    //    townshipMenuView.displayTownshipMenuView();
-    
-        // IF player is coming from location [3][2] (South Gate)
-    //    HarbortownMenuView harbortownMenuView = new HarbortownMenuView();
-    //    harbortownMenuView.displayHarbortownMenuView();
     }
 
     private void confront() {
-        try {
-            CombatControl fight = new CombatControl();
-            fight.damageGiven();
-            double works = fight.damageGiven();
-
-            this.console.println("You fought bravely!");
-        } catch (CombatControlException cce) {
-            ErrorView.display(this.getClass().getName(),
-                    cce.getMessage());
-        }
+        RoadSouthCombatView roadSouthCombatView = new RoadSouthCombatView();
+        roadSouthCombatView.display();
     }
 
-    private void enterSouthGate() {
-        GateSouthMenuView gateSouthMenuView = new GateSouthMenuView();
-        gateSouthMenuView.display();
-    }
-    
     private void notAvailable() {
         this.console.println(" You may not leave the kingdom until"
                 + "\n you kill your uncle or die trying.");
