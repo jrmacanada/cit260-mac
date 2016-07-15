@@ -38,7 +38,7 @@ public class WoodControl {
         } catch (IOException ex) {
             Logger.getLogger(WoodControl.class.getName()).log(Level.SEVERE, null, ex);
         }
-        System.out.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtractedcraig
+        this.console.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtractedcraig
         try {
             pInput = Integer.parseInt(playerInput);
             int staminaGiven = pInput;
@@ -58,7 +58,7 @@ public class WoodControl {
             }
             
             PlayerControl.actualStamina = PlayerControl.actualStamina - pInput;
-            System.out.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtracted
+            this.console.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtracted
 
             // calculate the coin earned based on the Stamina sacrificed
             double e_coin = (staminaGiven * (strength + axe) * (actualStamina / 100)) / 100;

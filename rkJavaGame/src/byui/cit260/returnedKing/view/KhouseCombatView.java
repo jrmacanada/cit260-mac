@@ -25,7 +25,7 @@ public class KhouseCombatView extends View {
                 + "\nA - Attack"
                 + "\nQ - Quit the fight"
                 + "\n--------------------");
-        //System.out.println("\nYour current health is " + PlayerControl.actualStamina);
+//        this.console.println("\nYour current health is " + PlayerControl.actualStamina);
     }
 
     @Override

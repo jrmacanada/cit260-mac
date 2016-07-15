@@ -30,7 +30,6 @@ public class MapControl {
     }
 
     public static void movePlayerToStartingLocation(Map map) {
-//        movePlayer(map, 2, 2); TEST <visited>
         movePlayer(map, 0, 0);
     }
 

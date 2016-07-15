@@ -79,7 +79,7 @@ public class ReportMenuView {
 //            }
 //            
 //            }catch (IOException ex) {
-//                    System.out.println("I/O Error: " + ex.getMEssage());
+//                    this.console.println("I/O Error: " + ex.getMEssage());
 //                    }
 
 
@@ -109,7 +109,7 @@ public class ReportMenuView {
 //                                            , item.getUnitPrice());
 //            }
 //        } catch (IOException ex) {
-//            System.out.println("I/O Error: " + ex.getMessage());
+//            this.console.println("I/O Error: " + ex.getMessage());
 //        }
 //    }
     

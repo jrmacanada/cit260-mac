@@ -10,53 +10,50 @@ package byui.cit260.returnedKing.view;
  * @author thiag
  */
 public class CombatControlMenuView extends View {
-    
+
     public CombatControlMenuView() {
-                    super ("\n"
-                          +  "\n-------------------------------"
-                      + "\n|          Fight          |"
-                      + "\n-------------------------------"
-                      + "\nA - Attack"
-                      + "\nR - Rest (recover Stamina)"
-                      + "\nL - Leave the Battle");
-        
+        super("\n"
+                + "\n-----------------------------"
+                + "\n|           Fight           |"
+                + "\n-----------------------------"
+                + "\nA - Attack"
+                + "\nR - Rest (recover Stamina)"
+                + "\nL - Leave the Battle"
+        );
     }
-    
+
     @Override
     public boolean doAction(String value) {
-        
+
         value = value.toUpperCase(); //convert value to uppercase
-        
+
         switch (value) {
-            case "A": 
+            case "A":
                 this.attack();
                 break;
-            case "R": 
+            case "R":
                 this.rest();
                 break;
-            case "L": 
+            case "L":
                 this.leave();
                 break;
-                    
+
             default:
-                System.out.println("\n*** Invalid Selection *** Try again");
+                this.console.println("\n*** Invalid Selection *** Try again");
                 break;
         }
         return false;
-}
-    
+    }
+
     private void attack() {
-    
-    
-}
+
+    }
+
     private void rest() {
-        
-        
+
     }
-    
-    private void leave(){
-        
-        
-        
+
+    private void leave() {
+
     }
-    }
+}

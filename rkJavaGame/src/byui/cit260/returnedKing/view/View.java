@@ -38,6 +38,7 @@ public abstract class View implements ViewInterface {
             // prompt for and get player name
             String value = this.getInput();
             if (value.toUpperCase().equals("Q")) // user wants to quit
+// TODO Add code to relocate current map position to current MenuView ***            
             {
                 return; // exit the game
             }

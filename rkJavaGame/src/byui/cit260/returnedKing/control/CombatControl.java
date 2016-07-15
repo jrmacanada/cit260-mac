@@ -87,7 +87,7 @@ public class CombatControl {
                 throw new CombatControlException("You won!");
             } //else {
             if (PlayerControl.actualStamina <= 0) {
-                System.out.println("You have died.");
+                this.console.println("You have died.");
 //               MainMenuView mainM = new MainMenuView();
 //               mainM.display();
                 System.exit(0);

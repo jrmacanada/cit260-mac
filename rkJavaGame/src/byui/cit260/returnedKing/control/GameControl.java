@@ -139,44 +139,44 @@ public class GameControl {
         
         Item woodAxe = new Item();
         woodAxe.setDescription("Wood cutting axe");
-        woodAxe.setQuantityInStock(10);
-        woodAxe.setUnitPrice(0);
+        woodAxe.setQuantityInStock(1);
+        woodAxe.setUnitPrice(10);
         items[Index.woodAxe.ordinal()] = woodAxe;
         
         Item hatchet = new Item();
         hatchet.setDescription("Hatchet");
-        hatchet.setQuantityInStock(10);
-        hatchet.setUnitPrice(0);
+        hatchet.setQuantityInStock(1);
+        hatchet.setUnitPrice(5);
         items[Index.hatchet.ordinal()] = hatchet;
         
         Item battleAxe = new Item();
         battleAxe.setDescription("Battle Axe");
-        battleAxe.setQuantityInStock(10);
-        battleAxe.setUnitPrice(0);
+        battleAxe.setQuantityInStock(1);
+        battleAxe.setUnitPrice(15);
         items[Index.battleAxe.ordinal()] = battleAxe;
         
         Item fathersSword = new Item();
         fathersSword.setDescription("Father's Sword");
-        fathersSword.setQuantityInStock(100);
-        fathersSword.setUnitPrice(3);
+        fathersSword.setQuantityInStock(1);
+        fathersSword.setUnitPrice(0);
         items[Index.fathersSword.ordinal()] = fathersSword;
         
         Item bodyArmor = new Item();
         bodyArmor.setDescription("Body Armor");
-        bodyArmor.setQuantityInStock(100);
-        bodyArmor.setUnitPrice(3);
+        bodyArmor.setQuantityInStock(1);
+        bodyArmor.setUnitPrice(20);
         items[Index.bodyArmor.ordinal()] = bodyArmor;
         
         Item birthCert = new Item();
         birthCert.setDescription("Birth Certificate");
-        birthCert.setQuantityInStock(100);
-        birthCert.setUnitPrice(3);
+        birthCert.setQuantityInStock(1);
+        birthCert.setUnitPrice(0);
         items[Index.birthCert.ordinal()] = birthCert;
         
         Item huntBow = new Item();
         huntBow.setDescription("Hunting Bow");
-        huntBow.setQuantityInStock(100);
-        huntBow.setUnitPrice(3);
+        huntBow.setQuantityInStock(1);
+        huntBow.setUnitPrice(10);
         items[Index.huntBow.ordinal()] = huntBow;
 
         return items;

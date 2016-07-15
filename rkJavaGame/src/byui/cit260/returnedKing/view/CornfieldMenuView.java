@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.MapControl;
+import byui.cit260.returnedKing.control.PlayerControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -21,6 +22,7 @@ import rkjavagame.RkJavaGame;
  */
 
 public class CornfieldMenuView extends View {
+    private Map map;
 
     public CornfieldMenuView() {
         super("\n"
@@ -40,6 +42,17 @@ public class CornfieldMenuView extends View {
                 + "\n------------------------------------"
                 + "\nZ - Exit game from this scene"
                 + "\n------------------------------------");
+
+// TODO Position player to this map location when menu is activated ***
+//        Map map = MapControl.createMap(); // create and intialize new map
+//        game.setMap(map); // save map in game
+
+        // move actors to starting position in the map
+//        MapControl.movePlayerToStartingLocation(map);
+        
+//        Map map = null;
+        // reset player to retreat position in the map
+//        Map map = MapControl.movePlayerToCornfield(map);
     }
     
     @Override
@@ -323,4 +336,16 @@ public class CornfieldMenuView extends View {
         mainMenuView.display();
     }
     
+//    public void movePlayerToStartingLocation(Map map) {
+//        resetPlayer(map, 1, 0);
+//    }
+//
+//    public void resetPlayer(Map map, int row, int column) {
+//        map.setCurrentLocation(map.getLocations()[row][column]);
+//        map.getCurrentLocation().setVisited(true);
+//
+//        map.setCurrentRow(row);
+//        map.setCurrentColumn(column);
+//    }
+
 }

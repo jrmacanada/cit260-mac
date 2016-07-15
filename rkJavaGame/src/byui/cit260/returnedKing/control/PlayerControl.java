@@ -5,6 +5,8 @@
  */
 package byui.cit260.returnedKing.control;
 
+import byui.cit260.returnedKing.model.Map;
+
 /**
  *
  * @author michaelcavey
@@ -31,5 +33,19 @@ public class PlayerControl {
 //            
 //        }
 //    }
+
+// TODO activate call to this function to relocate map/player to specified position ***
+    public static void movePlayerToCornfield(Map map) {
+        resetPlayer(map, 1, 0);
+    }
+
+    public static void resetPlayer(Map map, int row, int column) {
+        map.setCurrentLocation(map.getLocations()[row][column]);
+        map.getCurrentLocation().setVisited(true);
+
+        map.setCurrentRow(row);
+        map.setCurrentColumn(column);
+    }
+    
     
 }
