@@ -31,7 +31,7 @@ public class CombatControl {
 
     public double damageGiven()
             throws CombatControlException {
-        Game game = RkJavaGame.getCurrentGame(); 
+        Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
 
         String pInput = null;
@@ -48,16 +48,13 @@ public class CombatControl {
         int opponentAttack = r.nextInt(ohigh - olow) + olow;
         double opponentStrength = Actor.Guard.actorStrength;
         double opponentStamina = Actor.Guard.actorStamina;
-        //double opponentDefensePlace = 1;
 
-//        this.console.println("How much Strength do you want to use?");
         try {
-//            
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
             Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
             double playerDamageReceived = (opponentStrength - playerStrength + opponentAttack);
             player.setActualStamina((int) (player.getActualStamina() - playerDamageReceived));
-            
+
             while (Actor.Guard.actorActStam > 0 && player.getActualStamina() > 0) {
                 throw new CombatControlException("You hit for " + damageReceived
                         + " You have received a hit for " + playerDamageReceived
@@ -65,51 +62,24 @@ public class CombatControl {
             }
             if (Actor.Guard.actorActStam <= 0) {
                 throw new CombatControlException("You won!");
-            } //else {
+            }
             if (player.getActualStamina() <= 0) {
                 this.console.println("You have died.");
-//               MainMenuView mainM = new MainMenuView();
-//               mainM.display();
-                System.exit(0);
-                //throw new CombatControlException("You Lost");
 
+                System.exit(0);
             }
 
-            /*while (Actor.Guard.actorActStam > 0) {
-             throw new CombatControlException("You hit for " + damageReceived);
-             }
-            
-             while (PlayerControl.actualStamina > 0) {
-             throw new CombatControlException("You have received a hit by " + playerDamageReceived);
-             }
-            
-             if (Actor.Guard.actorActStam < 0) {
-             throw new CombatControlException("You have defeated your enemy!");
-  
-             }
-            
-            
-            
-             if (PlayerControl.actualStamina < 0) {
-             throw new CombatControlException("You loose the Battle");
-             }
-            
-             */
-            //return damageReceived;
         } catch (NumberFormatException nf) {
             int playerAttackPlace = myInt;
             ErrorView.display(this.getClass().getName(),
                     "\n*** You must enter a valid number ***");
-
         }
-
         return myInt;
-
     }
 
     public double fightBandit()
             throws CombatControlException {
-        Game game = RkJavaGame.getCurrentGame(); 
+        Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
 // <editor-fold defaultstate="collapsed" desc="East Road Battle. Click on the + sign to OPEN.">
         String pInput = null;
@@ -129,11 +99,11 @@ public class CombatControl {
 
         try {
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
-            Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
+            Actor.Bandit.actorActStam = Actor.Bandit.actorActStam - damageReceived;
             double playerDamageReceived = (opponentStrength - playerStrength + opponentAttack);
             player.setActualStamina((int) (player.getActualStamina() - playerDamageReceived));
-            
-            while (Actor.Guard.actorActStam > 0 && player.getActualStamina() > 0) {
+
+            while (Actor.Bandit.actorActStam > 0 && player.getActualStamina() > 0) {
                 throw new CombatControlException("You hit for " + damageReceived
                         + " You have received a hit for " + playerDamageReceived
                         + "\nYour current health is " + player.getActualStamina());
@@ -160,7 +130,7 @@ public class CombatControl {
 
     public double fightPrisonGuard()
             throws CombatControlException {
-        Game game = RkJavaGame.getCurrentGame(); 
+        Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
 // <editor-fold defaultstate="collapsed" desc="North Road Battle. Click on the + sign to OPEN.">
         String pInput = null;
@@ -180,20 +150,20 @@ public class CombatControl {
 
         try {
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
-            Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
+            Actor.PrisonGuard.actorActStam = Actor.PrisonGuard.actorActStam - damageReceived;
             double playerDamageReceived = (opponentStrength - playerStrength + opponentAttack);
             player.setActualStamina((int) (player.getActualStamina() - playerDamageReceived));
-            
-            while (Actor.Guard.actorActStam > 0 && player.getActualStamina() > 0) {
+
+            while (Actor.PrisonGuard.actorActStam > 0 && player.getActualStamina() > 0) {
                 throw new CombatControlException("You hit for " + damageReceived
                         + " You have received a hit for " + playerDamageReceived
                         + "\nYour current health is " + player.getActualStamina());
             }
-            if (Actor.Bandit.actorActStam <= 0) {
+            if (Actor.PrisonGuard.actorActStam <= 0) {
                 this.console.println("You won!");
 
-                RoadEastClearView roadEastClearView = new RoadEastClearView();
-                roadEastClearView.display();
+                RoadNorthClearView roadNorthClearView = new RoadNorthClearView();
+                roadNorthClearView.display();
             }
             if (player.getActualStamina() <= 0) {
                 this.console.println("You have died. Your quest and the game is ended.");
@@ -211,7 +181,7 @@ public class CombatControl {
 
     public double fightDrunkSailor()
             throws CombatControlException {
-        Game game = RkJavaGame.getCurrentGame(); 
+        Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
 // <editor-fold defaultstate="collapsed" desc="South Road Battle. Click on the + sign to OPEN.">
         String pInput = null;
@@ -231,20 +201,20 @@ public class CombatControl {
 
         try {
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
-            Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
+            Actor.DrunkSailor.actorActStam = Actor.DrunkSailor.actorActStam - damageReceived;
             double playerDamageReceived = (opponentStrength - playerStrength + opponentAttack);
             player.setActualStamina((int) (player.getActualStamina() - playerDamageReceived));
-            
-            while (Actor.Guard.actorActStam > 0 && player.getActualStamina() > 0) {
+
+            while (Actor.DrunkSailor.actorActStam > 0 && player.getActualStamina() > 0) {
                 throw new CombatControlException("You hit for " + damageReceived
                         + " You have received a hit for " + playerDamageReceived
                         + "\nYour current health is " + player.getActualStamina());
             }
-            if (Actor.Bandit.actorActStam <= 0) {
+            if (Actor.DrunkSailor.actorActStam <= 0) {
                 this.console.println("You won!");
 
-                RoadEastClearView roadEastClearView = new RoadEastClearView();
-                roadEastClearView.display();
+                RoadSouthClearView roadSouthClearView = new RoadSouthClearView();
+                roadSouthClearView.display();
             }
             if (player.getActualStamina() <= 0) {
                 this.console.println("You have died. Your quest and the game is ended.");
@@ -262,7 +232,7 @@ public class CombatControl {
 
     public double fightRogueWarrior()
             throws CombatControlException {
-        Game game = RkJavaGame.getCurrentGame(); 
+        Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
 // <editor-fold defaultstate="collapsed" desc="West Road Battle. Click on the + sign to OPEN.">
         String pInput = null;
@@ -282,20 +252,20 @@ public class CombatControl {
 
         try {
             double damageReceived = (playerStrength + playerIntelligence + playerAttackItem - opponentStrength);
-            Actor.Guard.actorActStam = Actor.Guard.actorActStam - damageReceived;
+            Actor.RogueWarrior.actorActStam = Actor.RogueWarrior.actorActStam - damageReceived;
             double playerDamageReceived = (opponentStrength - playerStrength + opponentAttack);
             player.setActualStamina((int) (player.getActualStamina() - playerDamageReceived));
-            
-            while (Actor.Guard.actorActStam > 0 && player.getActualStamina() > 0) {
+
+            while (Actor.RogueWarrior.actorActStam > 0 && player.getActualStamina() > 0) {
                 throw new CombatControlException("You hit for " + damageReceived
                         + " You have received a hit for " + playerDamageReceived
                         + "\nYour current health is " + player.getActualStamina());
             }
-            if (Actor.Bandit.actorActStam <= 0) {
+            if (Actor.RogueWarrior.actorActStam <= 0) {
                 this.console.println("You won!");
 
-                RoadEastClearView roadEastClearView = new RoadEastClearView();
-                roadEastClearView.display();
+                RoadWestClearView roadWestClearView = new RoadWestClearView();
+                roadWestClearView.display();
             }
             if (player.getActualStamina() <= 0) {
                 this.console.println("You have died. Your quest and the game is ended.");

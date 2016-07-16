@@ -16,8 +16,8 @@ public enum Actor implements Serializable {
 
     Guard("Guard", 110, 100, 100 ),
     Bandit("Bandit", 60, 60, 60),
-    RogueWarrior("Rogue Warrior", 40, 40, 40),
-    DrunkSailor("Drunken Sailor", 20, 20, 20),
+    RogueWarrior("Rogue Warrior", 75, 75, 75),
+    DrunkSailor("Drunken Sailor", 30, 30, 30),
     PrisonGuard("Prison Gaurd", 90, 90, 90),
     //TavernOwner("Tavern Owner", 1, 1),
     //DrunkFarmer("Drunk Farmer", 1, 1),
@@ -25,7 +25,7 @@ public enum Actor implements Serializable {
     //Nun("Nun", 1, 1),
     //Priest1("First Priest", 1, 1),
     //Priest2("Second Priest", 1, 1),
-    FalseKing("False King", 100, 120, 120);
+    FalseKing("False King", 150, 120, 100);
     
     
 

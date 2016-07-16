@@ -1,0 +1,11 @@
+
+       LIST OF ACTOR DESCRIPTION AND STRENGTH 
+
+DESCRIPTION   
+STRENGTH                                        
+Guard             110.0                           
+Bandit            60.0                            
+Rogue Warrior     40.0                                   
+Drunken Sailor    20.0                                    
+Prison Gaurd      90.0                                  
+False King        100.0                                
