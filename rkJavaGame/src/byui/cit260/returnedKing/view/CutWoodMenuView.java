@@ -5,7 +5,6 @@
  */
 package byui.cit260.returnedKing.view;
 
-//import java.util.Scanner;
 import byui.cit260.returnedKing.control.ItemControl;
 import byui.cit260.returnedKing.control.WoodControl;
 import byui.cit260.returnedKing.exceptions.WoodControlException;

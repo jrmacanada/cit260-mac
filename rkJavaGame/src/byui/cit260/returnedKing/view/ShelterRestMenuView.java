@@ -5,8 +5,6 @@
  */
 package byui.cit260.returnedKing.view;
 
-//import java.util.Scanner;
-
 import java.io.BufferedReader;
 import java.io.PrintWriter;
 import rkjavagame.RkJavaGame;

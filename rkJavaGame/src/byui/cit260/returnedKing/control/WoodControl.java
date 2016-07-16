@@ -8,7 +8,6 @@ package byui.cit260.returnedKing.control;
 import byui.cit260.returnedKing.exceptions.WoodControlException;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Player;
-import byui.cit260.returnedKing.view.ErrorView;
 import java.io.BufferedReader;
 import java.io.IOException;
 import java.io.PrintWriter;

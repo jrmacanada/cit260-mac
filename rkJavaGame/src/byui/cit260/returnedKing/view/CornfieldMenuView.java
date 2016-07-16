@@ -6,7 +6,6 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.control.PlayerControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;

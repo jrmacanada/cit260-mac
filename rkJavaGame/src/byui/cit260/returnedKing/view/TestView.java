@@ -5,18 +5,10 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
-import byui.cit260.returnedKing.model.Item;
 import java.io.BufferedReader;
-import java.io.FileNotFoundException;
-import java.io.FileWriter;
-import java.io.IOException;
 import java.io.PrintWriter;
-import java.util.ArrayList;
-import java.util.Arrays;
-import javax.swing.Spring;
 import rkjavagame.RkJavaGame;
 
 /**

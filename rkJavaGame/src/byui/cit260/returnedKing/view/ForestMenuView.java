@@ -6,13 +6,11 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.MapControl;
-import byui.cit260.returnedKing.control.WoodControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
 import java.awt.Point;
 import java.io.IOException;
-import java.util.Scanner;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import rkjavagame.RkJavaGame;

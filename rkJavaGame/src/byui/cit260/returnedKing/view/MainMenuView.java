@@ -6,7 +6,6 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.GameControl;
-import byui.cit260.returnedKing.model.Actor;
 import rkjavagame.RkJavaGame;
 
 /**

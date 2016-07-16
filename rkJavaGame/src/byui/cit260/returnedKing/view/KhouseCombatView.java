@@ -6,9 +6,7 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.CombatControl;
-import byui.cit260.returnedKing.control.PlayerControl;
 import byui.cit260.returnedKing.exceptions.CombatControlException;
-import byui.cit260.returnedKing.model.Actor;
 
 /**
  *
