@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  *
@@ -21,7 +22,6 @@ public class Wood implements Serializable {
     private int actualStamina;
     private int maxStamina;
     private int axeBonus;
-
     private Game[] game;
 
     public Wood() {
@@ -94,26 +94,24 @@ public class Wood implements Serializable {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 79 * hash + this.charStamina;
-        hash = 79 * hash + this.charStrength;
-        hash = 79 * hash + (int) (Double.doubleToLongBits(this.reward) ^ (Double.doubleToLongBits(this.reward) >>> 32));
-        hash = 79 * hash + this.playerInput;
-        hash = 79 * hash + this.actualStamina;
-        hash = 79 * hash + this.maxStamina;
-        hash = 79 * hash + this.axeBonus;
+        hash = 83 * hash + this.charStamina;
+        hash = 83 * hash + this.charStrength;
+        hash = 83 * hash + (int) (Double.doubleToLongBits(this.reward) ^ (Double.doubleToLongBits(this.reward) >>> 32));
+        hash = 83 * hash + this.playerInput;
+        hash = 83 * hash + this.actualStamina;
+        hash = 83 * hash + this.maxStamina;
+        hash = 83 * hash + this.axeBonus;
+        hash = 83 * hash + Arrays.deepHashCode(this.game);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Wood{" + "charStamina=" + charStamina + ", charStrength=" + charStrength + ", reward=" + reward + ", playerInput=" + playerInput + ", actualStamina=" + actualStamina + ", maxStamina=" + maxStamina + ", axeBonus=" + axeBonus + '}';
+        return "Wood{" + "charStamina=" + charStamina + ", charStrength=" + charStrength + ", reward=" + reward + ", playerInput=" + playerInput + ", actualStamina=" + actualStamina + ", maxStamina=" + maxStamina + ", axeBonus=" + axeBonus + ", game=" + game + '}';
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -140,6 +138,9 @@ public class Wood implements Serializable {
             return false;
         }
         if (this.axeBonus != other.axeBonus) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.game, other.game)) {
             return false;
         }
         return true;

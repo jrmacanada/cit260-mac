@@ -7,6 +7,8 @@ package byui.cit260.returnedKing.model;
 
 import byui.cit260.returnedKing.view.ErrorView;
 import java.io.Serializable;
+import java.util.Arrays;
+import java.util.Objects;
 
 /**
  *
@@ -17,13 +19,15 @@ public class Map implements Serializable {
     // class instance variables
     private int rowCount;
     private int columnCount;
-
     private Game[] game;
     public Location[][] locations;
     private Location currentLocation;
     private int currentRow = 0;
     private int currentColumn = 0;
     private Scene[] scenes;
+
+    public Map() {
+    }
 
     public Map(int rowCount, int columnCount) {
 
@@ -120,14 +124,20 @@ public class Map implements Serializable {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 71 * hash + this.rowCount;
-        hash = 71 * hash + this.columnCount;
+        hash = 37 * hash + this.rowCount;
+        hash = 37 * hash + this.columnCount;
+        hash = 37 * hash + Arrays.deepHashCode(this.game);
+        hash = 37 * hash + Arrays.deepHashCode(this.locations);
+        hash = 37 * hash + Objects.hashCode(this.currentLocation);
+        hash = 37 * hash + this.currentRow;
+        hash = 37 * hash + this.currentColumn;
+        hash = 37 * hash + Arrays.deepHashCode(this.scenes);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + '}';
+        return "Map{" + "rowCount=" + rowCount + ", columnCount=" + columnCount + ", game=" + game + ", locations=" + locations + ", currentLocation=" + currentLocation + ", currentRow=" + currentRow + ", currentColumn=" + currentColumn + ", scenes=" + scenes + '}';
     }
 
     @Override
@@ -143,6 +153,24 @@ public class Map implements Serializable {
             return false;
         }
         if (this.columnCount != other.columnCount) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.game, other.game)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.locations, other.locations)) {
+            return false;
+        }
+        if (!Objects.equals(this.currentLocation, other.currentLocation)) {
+            return false;
+        }
+        if (this.currentRow != other.currentRow) {
+            return false;
+        }
+        if (this.currentColumn != other.currentColumn) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.scenes, other.scenes)) {
             return false;
         }
         return true;

@@ -14,7 +14,7 @@ import java.io.Serializable;
  */
 public enum Actor implements Serializable {
 
-    Guard("Guard", 110, 100, 100 ),
+    Guard("Guard", 110, 100, 100),
     Bandit("Bandit", 60, 60, 60),
     RogueWarrior("Rogue Warrior", 75, 75, 75),
     DrunkSailor("Drunken Sailor", 30, 30, 30),
@@ -26,24 +26,13 @@ public enum Actor implements Serializable {
     //Priest1("First Priest", 1, 1),
     //Priest2("Second Priest", 1, 1),
     FalseKing("False King", 150, 120, 100);
-    
-    
 
     private final String description;
     public final double actorStrength;
     public final double actorStamina;
-    public  double actorActStam;
+    public double actorActStam;
     private final Point coordinates;
-
     private Scene scene;
-
-    public Scene getScene() {
-        return scene;
-    }
-
-    public void setScene(Scene scene) {
-        this.scene = scene;
-    }
 
     Actor(String description, int actorStrength, int actorStamina, int actorActStam) {
         this.description = description;
@@ -53,6 +42,22 @@ public enum Actor implements Serializable {
         coordinates = new Point(1, 1);
     }
 
+    public double getActorActStam() {
+        return actorActStam;
+    }
+
+    public void setActorActStam(double actorActStam) {
+        this.actorActStam = actorActStam;
+    }
+
+    public Scene getScene() {
+        return scene;
+    }
+
+    public void setScene(Scene scene) {
+        this.scene = scene;
+    }
+
     public String getDescription() {
         return description;
     }
@@ -60,17 +65,18 @@ public enum Actor implements Serializable {
     public double getActorStrength() {
         return actorStrength;
     }
-    
+
     public double getActorStamina() {
         return actorStamina;
-    }
-    
-    public double getActorActStam() {
-        return actorActStam;
     }
 
     public Point getCoordinates() {
         return coordinates;
+    }
+
+    @Override
+    public String toString() {
+        return "Actor{" + "description=" + description + ", actorStrength=" + actorStrength + ", actorStamina=" + actorStamina + ", actorActStam=" + actorActStam + ", coordinates=" + coordinates + ", scene=" + scene + '}';
     }
 
 }

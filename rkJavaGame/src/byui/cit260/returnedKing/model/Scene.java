@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -28,12 +29,11 @@ public class Scene implements Serializable {
     private String actorType;
     private String actorSpecialSkill;
     private String mapSymbol;
-
     private Actor[] actor;
 
     public Scene() {
     }
-
+    
     public String getDescription() {
         return description;
     }
@@ -138,34 +138,41 @@ public class Scene implements Serializable {
         this.actor = actor;
     }
 
+    public void setMapSymbol(String mm) {
+        this.mapSymbol = mm;
+    }
+
+    public String getMapSymbol() {
+        return mapSymbol;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 53 * hash + Objects.hashCode(this.description);
-        hash = 53 * hash + Objects.hashCode(this.blockedLocation);
-        hash = 53 * hash + Objects.hashCode(this.publicInfo);
-        hash = 53 * hash + Objects.hashCode(this.privateInfo);
-        hash = 53 * hash + Objects.hashCode(this.activityType);
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.activityScore) ^ (Double.doubleToLongBits(this.activityScore) >>> 32));
-        hash = 53 * hash + Objects.hashCode(this.enemyType);
-        hash = 53 * hash + Objects.hashCode(this.enemySpecialSkill);
-        hash = 53 * hash + Objects.hashCode(this.finalCombat);
-        hash = 53 * hash + Objects.hashCode(this.finalRevelation);
-        hash = 53 * hash + Objects.hashCode(this.actorType);
-        hash = 53 * hash + Objects.hashCode(this.actorSpecialSkill);
+        int hash = 7;
+        hash = 17 * hash + Objects.hashCode(this.description);
+        hash = 17 * hash + Objects.hashCode(this.blockedLocation);
+        hash = 17 * hash + Objects.hashCode(this.publicInfo);
+        hash = 17 * hash + Objects.hashCode(this.privateInfo);
+        hash = 17 * hash + Objects.hashCode(this.activityType);
+        hash = 17 * hash + (int) (Double.doubleToLongBits(this.activityScore) ^ (Double.doubleToLongBits(this.activityScore) >>> 32));
+        hash = 17 * hash + Objects.hashCode(this.enemyType);
+        hash = 17 * hash + Objects.hashCode(this.enemySpecialSkill);
+        hash = 17 * hash + Objects.hashCode(this.finalCombat);
+        hash = 17 * hash + Objects.hashCode(this.finalRevelation);
+        hash = 17 * hash + Objects.hashCode(this.actorType);
+        hash = 17 * hash + Objects.hashCode(this.actorSpecialSkill);
+        hash = 17 * hash + Objects.hashCode(this.mapSymbol);
+        hash = 17 * hash + Arrays.deepHashCode(this.actor);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Scene{" + "description=" + description + ", blockedLocation=" + blockedLocation + ", publicInfo=" + publicInfo + ", privateInfo=" + privateInfo + ", activityType=" + activityType + ", activityScore=" + activityScore + ", enemyType=" + enemyType + ", enemySpecialSkill=" + enemySpecialSkill + ", finalCombat=" + finalCombat + ", finalRevelation=" + finalRevelation + ", actorType=" + actorType + ", actorSpecialSkill=" + actorSpecialSkill + '}';
+        return "Scene{" + "description=" + description + ", blockedLocation=" + blockedLocation + ", publicInfo=" + publicInfo + ", privateInfo=" + privateInfo + ", activityType=" + activityType + ", activityScore=" + activityScore + ", enemyType=" + enemyType + ", enemySpecialSkill=" + enemySpecialSkill + ", finalCombat=" + finalCombat + ", finalRevelation=" + finalRevelation + ", actorType=" + actorType + ", actorSpecialSkill=" + actorSpecialSkill + ", mapSymbol=" + mapSymbol + ", actor=" + actor + '}';
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -173,9 +180,6 @@ public class Scene implements Serializable {
             return false;
         }
         final Scene other = (Scene) obj;
-        if (Double.doubleToLongBits(this.activityScore) != Double.doubleToLongBits(other.activityScore)) {
-            return false;
-        }
         if (!Objects.equals(this.description, other.description)) {
             return false;
         }
@@ -189,6 +193,9 @@ public class Scene implements Serializable {
             return false;
         }
         if (!Objects.equals(this.activityType, other.activityType)) {
+            return false;
+        }
+        if (Double.doubleToLongBits(this.activityScore) != Double.doubleToLongBits(other.activityScore)) {
             return false;
         }
         if (!Objects.equals(this.enemyType, other.enemyType)) {
@@ -209,15 +216,13 @@ public class Scene implements Serializable {
         if (!Objects.equals(this.actorSpecialSkill, other.actorSpecialSkill)) {
             return false;
         }
+        if (!Objects.equals(this.mapSymbol, other.mapSymbol)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.actor, other.actor)) {
+            return false;
+        }
         return true;
-    }
-
-    public void setMapSymbol(String mm) {
-        this.mapSymbol = mm;
-    }
-
-    public String getMapSymbol() {
-        return mapSymbol;
     }
 
 }

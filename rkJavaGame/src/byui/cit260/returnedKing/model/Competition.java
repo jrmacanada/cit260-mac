@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  *
@@ -18,7 +19,6 @@ public class Competition implements Serializable {
     private int charStrength;
     private int actualStamina;
     private int maxStamina;
-
     private Game[] game;
 
     public Competition() {
@@ -67,23 +67,21 @@ public class Competition implements Serializable {
     @Override
     public int hashCode() {
         int hash = 5;
-        hash = 73 * hash + this.playerInput;
-        hash = 73 * hash + this.charStrength;
-        hash = 73 * hash + this.actualStamina;
-        hash = 73 * hash + this.maxStamina;
+        hash = 37 * hash + this.playerInput;
+        hash = 37 * hash + this.charStrength;
+        hash = 37 * hash + this.actualStamina;
+        hash = 37 * hash + this.maxStamina;
+        hash = 37 * hash + Arrays.deepHashCode(this.game);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Competition{" + "playerInput=" + playerInput + ", charStrength=" + charStrength + ", actualStamina=" + actualStamina + ", maxStamina=" + maxStamina + '}';
+        return "Competition{" + "playerInput=" + playerInput + ", charStrength=" + charStrength + ", actualStamina=" + actualStamina + ", maxStamina=" + maxStamina + ", game=" + game + '}';
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -101,6 +99,9 @@ public class Competition implements Serializable {
             return false;
         }
         if (this.maxStamina != other.maxStamina) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.game, other.game)) {
             return false;
         }
         return true;

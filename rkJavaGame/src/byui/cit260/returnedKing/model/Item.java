@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -20,25 +21,23 @@ public class Item implements Serializable {
     private int quantityInStock;
     private int unitPrice;
     private double calcUsableVolumeOfWagon;
-
     private Location[] location;
 
     public Item() {
     }
-    
+
     public Item(String type, String description, int quantityInStock, int unitPrice) {
         this.inventoryType = type;
         this.description = description;
         this.quantityInStock = quantityInStock;
         this.unitPrice = unitPrice;
     }
-    
+
     public Item(Item item) {
         this.inventoryType = item.inventoryType;
         this.description = item.description;
         this.quantityInStock = item.quantityInStock;
         this.unitPrice = item.unitPrice;
-        
     }
 
     public String getInventoryType() {
@@ -91,16 +90,19 @@ public class Item implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 3;
-        hash = 37 * hash + Objects.hashCode(this.inventoryType);
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.quantityInStock) ^ (Double.doubleToLongBits(this.quantityInStock) >>> 32));
-        hash = 37 * hash + (int) (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) ^ (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) >>> 32));
+        int hash = 5;
+        hash = 41 * hash + Objects.hashCode(this.inventoryType);
+        hash = 41 * hash + Objects.hashCode(this.description);
+        hash = 41 * hash + this.quantityInStock;
+        hash = 41 * hash + this.unitPrice;
+        hash = 41 * hash + (int) (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) ^ (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) >>> 32));
+        hash = 41 * hash + Arrays.deepHashCode(this.location);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Items{" + "inventoryType=" + inventoryType + ", quantityInStock=" + quantityInStock + ", calcUsableVolumeOfWagon=" + calcUsableVolumeOfWagon + '}';
+        return "Item{" + "inventoryType=" + inventoryType + ", description=" + description + ", quantityInStock=" + quantityInStock + ", unitPrice=" + unitPrice + ", calcUsableVolumeOfWagon=" + calcUsableVolumeOfWagon + ", location=" + location + '}';
     }
 
     @Override
@@ -115,10 +117,19 @@ public class Item implements Serializable {
         if (!Objects.equals(this.inventoryType, other.inventoryType)) {
             return false;
         }
-        if (Double.doubleToLongBits(this.quantityInStock) != Double.doubleToLongBits(other.quantityInStock)) {
+        if (!Objects.equals(this.description, other.description)) {
+            return false;
+        }
+        if (this.quantityInStock != other.quantityInStock) {
+            return false;
+        }
+        if (this.unitPrice != other.unitPrice) {
             return false;
         }
         if (Double.doubleToLongBits(this.calcUsableVolumeOfWagon) != Double.doubleToLongBits(other.calcUsableVolumeOfWagon)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.location, other.location)) {
             return false;
         }
         return true;

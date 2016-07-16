@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.Arrays;
 
 /**
  *
@@ -21,7 +22,6 @@ public class Combat implements Serializable {
     private int attackItems;
     private int defenceItems;
     private int playerInput;
-
     private Game[] game;
 
     public Combat() {
@@ -81,7 +81,6 @@ public class Combat implements Serializable {
 
     public void setPlayerInput(int playerInput) {
         this.playerInput = playerInput;
-
     }
 
     public Game[] getGame() {
@@ -94,27 +93,25 @@ public class Combat implements Serializable {
 
     @Override
     public int hashCode() {
-        int hash = 5;
-        hash = 41 * hash + this.damageGiven;
-        hash = 41 * hash + this.damageReceived;
-        hash = 41 * hash + this.playerStrength;
-        hash = 41 * hash + this.playerInteligence;
-        hash = 41 * hash + this.attackItems;
-        hash = 41 * hash + this.defenceItems;
-        hash = 41 * hash + this.playerInput;
+        int hash = 3;
+        hash = 71 * hash + this.damageGiven;
+        hash = 71 * hash + this.damageReceived;
+        hash = 71 * hash + this.playerStrength;
+        hash = 71 * hash + this.playerInteligence;
+        hash = 71 * hash + this.attackItems;
+        hash = 71 * hash + this.defenceItems;
+        hash = 71 * hash + this.playerInput;
+        hash = 71 * hash + Arrays.deepHashCode(this.game);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Combat{" + "damageGiven=" + damageGiven + ", damageReceived=" + damageReceived + ", playerStrength=" + playerStrength + ", playerInteligence=" + playerInteligence + ", attackItems=" + attackItems + ", defenceItems=" + defenceItems + ", playerInput=" + playerInput + '}';
+        return "Combat{" + "damageGiven=" + damageGiven + ", damageReceived=" + damageReceived + ", playerStrength=" + playerStrength + ", playerInteligence=" + playerInteligence + ", attackItems=" + attackItems + ", defenceItems=" + defenceItems + ", playerInput=" + playerInput + ", game=" + game + '}';
     }
 
     @Override
     public boolean equals(Object obj) {
-        if (this == obj) {
-            return true;
-        }
         if (obj == null) {
             return false;
         }
@@ -141,6 +138,9 @@ public class Combat implements Serializable {
             return false;
         }
         if (this.playerInput != other.playerInput) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.game, other.game)) {
             return false;
         }
         return true;

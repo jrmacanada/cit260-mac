@@ -7,6 +7,7 @@ package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Objects;
 
 /**
  *
@@ -20,8 +21,7 @@ public class Location implements Serializable {
     private boolean visited;
     private Item items;
     private Scene scene;
-    private ArrayList<Actor> actor; // might need to be "actors"
-    // What about the ENUM we made?     
+    private ArrayList<Actor> actor; // might need to be "actors"    
 
     public Location() {
     }
@@ -58,17 +58,33 @@ public class Location implements Serializable {
         this.scene = scene;
     }
 
+    public void setActor(ArrayList<Actor> actor) {
+        this.actor = actor;
+    }
+
+    public boolean isVisited() {
+        return visited;
+    }
+
+    public void setVisited(boolean visited) {
+        this.visited = visited;
+    }
+
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 79 * hash + this.row;
-        hash = 79 * hash + this.column;
+        int hash = 3;
+        hash = 17 * hash + this.row;
+        hash = 17 * hash + this.column;
+        hash = 17 * hash + (this.visited ? 1 : 0);
+        hash = 17 * hash + Objects.hashCode(this.items);
+        hash = 17 * hash + Objects.hashCode(this.scene);
+        hash = 17 * hash + Objects.hashCode(this.actor);
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Location{" + "row=" + row + ", column=" + column + '}';
+        return "Location{" + "row=" + row + ", column=" + column + ", visited=" + visited + ", items=" + items + ", scene=" + scene + ", actor=" + actor + '}';
     }
 
     @Override
@@ -86,19 +102,19 @@ public class Location implements Serializable {
         if (this.column != other.column) {
             return false;
         }
+        if (this.visited != other.visited) {
+            return false;
+        }
+        if (!Objects.equals(this.items, other.items)) {
+            return false;
+        }
+        if (!Objects.equals(this.scene, other.scene)) {
+            return false;
+        }
+        if (!Objects.equals(this.actor, other.actor)) {
+            return false;
+        }
         return true;
-    }
-
-    public void setVisited(boolean b) {
-        this.visited = b;
-    }
-
-    public boolean isVisited() {
-        return visited;
-    }
-
-    public ArrayList<Actor> getActor() {
-        return actor;
     }
 
 }

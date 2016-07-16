@@ -7,6 +7,7 @@ package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.Objects;
 
 /**
@@ -18,14 +19,12 @@ public class Player implements Serializable {
     // class instance variables
     private String name;
     private double bestScore;
+    private Game[] game;
     private ArrayList<Item> inventory;
     private int maxStamina;
     private int strength;
     private int actualStamina;
-    
     private int intellegence;
-
-    private Game[] game;
 
     public Player() {
         this.maxStamina = 80;
@@ -98,23 +97,23 @@ public class Player implements Serializable {
         this.intellegence = intellegence;
     }
 
-    
-    
-    
-    
-    
-
     @Override
     public int hashCode() {
-        int hash = 7;
-        hash = 53 * hash + Objects.hashCode(this.name);
-        hash = 53 * hash + (int) (Double.doubleToLongBits(this.bestScore) ^ (Double.doubleToLongBits(this.bestScore) >>> 32));
+        int hash = 5;
+        hash = 59 * hash + Objects.hashCode(this.name);
+        hash = 59 * hash + (int) (Double.doubleToLongBits(this.bestScore) ^ (Double.doubleToLongBits(this.bestScore) >>> 32));
+        hash = 59 * hash + Arrays.deepHashCode(this.game);
+        hash = 59 * hash + Objects.hashCode(this.inventory);
+        hash = 59 * hash + this.maxStamina;
+        hash = 59 * hash + this.strength;
+        hash = 59 * hash + this.actualStamina;
+        hash = 59 * hash + this.intellegence;
         return hash;
     }
 
     @Override
     public String toString() {
-        return "Player{" + "name=" + name + ", bestScore=" + bestScore + '}';
+        return "Player{" + "name=" + name + ", bestScore=" + bestScore + ", inventory=" + inventory + ", maxStamina=" + maxStamina + ", strength=" + strength + ", actualStamina=" + actualStamina + ", intellegence=" + intellegence + ", game=" + game + '}';
     }
 
     @Override
@@ -130,6 +129,24 @@ public class Player implements Serializable {
             return false;
         }
         if (Double.doubleToLongBits(this.bestScore) != Double.doubleToLongBits(other.bestScore)) {
+            return false;
+        }
+        if (!Arrays.deepEquals(this.game, other.game)) {
+            return false;
+        }
+        if (!Objects.equals(this.inventory, other.inventory)) {
+            return false;
+        }
+        if (this.maxStamina != other.maxStamina) {
+            return false;
+        }
+        if (this.strength != other.strength) {
+            return false;
+        }
+        if (this.actualStamina != other.actualStamina) {
+            return false;
+        }
+        if (this.intellegence != other.intellegence) {
             return false;
         }
         return true;

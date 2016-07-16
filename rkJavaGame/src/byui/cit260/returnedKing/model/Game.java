@@ -18,15 +18,12 @@ public class Game implements Serializable {
     // class instance variables
     private String start;
     private double numCode;
-
     private Player player;
     private Map map;
     private Combat combat;
     private Wood wood;
     private Competition competition;
-
     private Item[] items;
-
     private Actor actor;
     private int totalPrice;
 
