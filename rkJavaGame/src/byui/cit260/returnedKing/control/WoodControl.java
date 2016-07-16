@@ -6,6 +6,8 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.WoodControlException;
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Player;
 import byui.cit260.returnedKing.view.ErrorView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,25 +22,30 @@ import rkjavagame.RkJavaGame;
  */
 public class WoodControl {
     
+    
     protected final BufferedReader keyboard = RkJavaGame.getInFile();
     protected final PrintWriter console = RkJavaGame.getOutFile();
 
-    public double calcWoodCutCoin()
+    public int calcWoodCutCoin()
             throws WoodControlException {
+        Game game = RkJavaGame.getCurrentGame(); 
+        Player player = game.getPlayer();
 
         String playerInput = null;
         int pInput = 0;
-        double actualStamina = PlayerControl.actualStamina;
+        double actualStamina = player.getActualStamina();
         double axe = 25;
-        double strength = PlayerControl.strength;
+        double strength = player.getStrength();
 
         this.console.println("How much Stamina do you want to give up toward this woodcutting job?");
         try {
             playerInput = keyboard.readLine();
         } catch (IOException ex) {
             Logger.getLogger(WoodControl.class.getName()).log(Level.SEVERE, null, ex);
+            throw new WoodControlException(" You cannot cut wood today; "
+                        + "\n the varibles involved produce less than one coin.");
         }
-        this.console.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtractedcraig
+        this.console.println("\nCurrent Stamina test " +player.getActualStamina()); //testing to see if stamina is being subtractedcraig
         try {
             pInput = Integer.parseInt(playerInput);
             int staminaGiven = pInput;
@@ -57,8 +64,8 @@ public class WoodControl {
                         + "\n Check the file system or database values");
             }
             
-            PlayerControl.actualStamina = PlayerControl.actualStamina - pInput;
-            this.console.println("\nCurrent Stamina test " +PlayerControl.actualStamina); //testing to see if stamina is being subtracted
+            player.setActualStamina( player.getActualStamina() - pInput);
+            this.console.println("\nCurrent Stamina test " + player.getActualStamina()); //testing to see if stamina is being subtracted
 
             // calculate the coin earned based on the Stamina sacrificed
             double e_coin = (staminaGiven * (strength + axe) * (actualStamina / 100)) / 100;
@@ -70,16 +77,16 @@ public class WoodControl {
 
             this.console.println("You earned " + (Math.round(e_coin)) + " coins.");
 
-            return e_coin;
+            return (int)Math.round(e_coin);
 
         } catch (NumberFormatException nf) {
 
             int staminaGiven = pInput;
 
-            ErrorView.display(this.getClass().getName(),
-                    "\n*** You must enter a valid number ***");
+            
+             throw new WoodControlException("\n*** You must enter a valid number ***");
         }
-        return pInput;
+        
     }
 
 }

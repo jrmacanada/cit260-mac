@@ -1,6 +1,8 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.CompetitionControlException;
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Player;
 import byui.cit260.returnedKing.view.ErrorView;
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -20,16 +22,18 @@ public class CompetitionControl {
 
     public double competition()
             throws CompetitionControlException {
+        Game game = RkJavaGame.getCurrentGame(); 
+        Player player = game.getPlayer();
 
         String pInput = null;
         int myPower = 0;
         double minYard = 100;
         double maxYard = 115;
-        double strength = PlayerControl.strength;
+        double strength = player.getStrength();
 
         double windResistance = 8;
-        double actualStamina = PlayerControl.actualStamina;
-        double maximumStamina = PlayerControl.stamina;
+        double actualStamina = player.getActualStamina();
+        double maximumStamina = player.getMaxStamina();
 
         this.console.println("\nLets see if you can throw this stone between the 100 foot marker and the 115 foot one."
                 + "\nHow much Strength do you want to use?");
@@ -44,7 +48,7 @@ public class CompetitionControl {
             int power = myPower;
 
             if (power <= 0 || power > strength) {
-                throw new CompetitionControlException("You need to enter a value between 1 and " + PlayerControl.strength);
+                throw new CompetitionControlException("You need to enter a value between 1 and " + player.getStrength());
             }
             double distanceInYards = (power + strength - windResistance) * (actualStamina / maximumStamina);
 

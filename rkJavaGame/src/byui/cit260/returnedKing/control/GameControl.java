@@ -50,6 +50,8 @@ public class GameControl {
         // create the Item list and save in the game
         Item[] itemList = GameControl.createItemsList();
         game.setItems(itemList);
+        
+        player.setInventory(ItemControl.InitializeInventoryItems());
 
         Map map = MapControl.createMap(); // create and intialize new map
         game.setMap(map); // save map in game

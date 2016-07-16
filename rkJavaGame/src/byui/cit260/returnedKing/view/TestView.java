@@ -36,13 +36,13 @@ public class TestView {
         Game game = RkJavaGame.getCurrentGame();
         //Actor<Actor> actor = Arrays.asList(Actor.values());
         Actor[] aList = Actor.values();
-        fullReport = "\n\r       LIST OF ACTOR DESCRIPTION AND STRENGTH \n\r";
+        fullReport = "\r\n       LIST OF ACTOR DESCRIPTION AND STRENGTH \r\n";
         this.console.print(fullReport);
         line = new StringBuilder("                                           ");
         line.insert(0, "\nDESCRIPTION");
         line.insert(15, "\nSTRENGTH");
         //line.insert(25, "UNIT PRICE");
-        fullReport += line.toString() + "\n\r";
+        fullReport += line.toString() + "\r\n";
         this.console.println(line.toString());
 
         for (Actor actor : aList) {

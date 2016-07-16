@@ -25,6 +25,21 @@ public class Item implements Serializable {
 
     public Item() {
     }
+    
+    public Item(String type, String description, int quantityInStock, int unitPrice) {
+        this.inventoryType = type;
+        this.description = description;
+        this.quantityInStock = quantityInStock;
+        this.unitPrice = unitPrice;
+    }
+    
+    public Item(Item item) {
+        this.inventoryType = item.inventoryType;
+        this.description = item.description;
+        this.quantityInStock = item.quantityInStock;
+        this.unitPrice = item.unitPrice;
+        
+    }
 
     public String getInventoryType() {
         return inventoryType;

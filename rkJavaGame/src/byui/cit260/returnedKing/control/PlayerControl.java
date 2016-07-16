@@ -13,12 +13,7 @@ import byui.cit260.returnedKing.model.Map;
  */
 public class PlayerControl {
     
-    public static double strength = 100;
-    public static double actualStamina = 80;
-    public static double stamina = 80;
-    public static double intellegence = 10;
-    public static double offence;
-    public static double defence;
+    
     
 //    public static class startWizard {
 //

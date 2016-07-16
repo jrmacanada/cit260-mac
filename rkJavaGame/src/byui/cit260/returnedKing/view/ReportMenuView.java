@@ -34,13 +34,13 @@ public class ReportMenuView {
 
         Game game = RkJavaGame.getCurrentGame();
         Item[] items = game.getItems();
-        fullReport = "\n\r       LIST OF MIKE'S ITEMS \n\r";
+        fullReport = "\r\n       LIST OF MIKE'S ITEMS \r\n";
         this.console.print(fullReport);
         line = new StringBuilder("                                        ");
         line.insert(0, "DESCRIPTION");
         line.insert(15, "QUANTITY");
         line.insert(25, "UNIT PRICE");
-        fullReport += line.toString() + "\n\r";
+        fullReport += line.toString() + "\r\n";
         this.console.println(line.toString());
 
         for (Item item : items) {

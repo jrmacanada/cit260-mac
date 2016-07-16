@@ -6,8 +6,14 @@
 package byui.cit260.returnedKing.view;
 
 //import java.util.Scanner;
+import byui.cit260.returnedKing.control.ItemControl;
 import byui.cit260.returnedKing.control.WoodControl;
 import byui.cit260.returnedKing.exceptions.WoodControlException;
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Item;
+import byui.cit260.returnedKing.model.Player;
+import java.util.ArrayList;
+import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -51,11 +57,18 @@ public class CutWoodMenuView extends View {
 
     private void startJob() {
         try {
+            Game game = RkJavaGame.getCurrentGame(); 
+            Player player = game.getPlayer();
+            ArrayList<Item> inventory = player.getInventory();
             WoodControl job = new WoodControl();
-            job.calcWoodCutCoin();
-            double works = job.calcWoodCutCoin();
-
-            this.console.println("That's enough for today.");
+            
+            int coins = job.calcWoodCutCoin();
+            int currentTotal = ItemControl.addQuantityToInventoryItem("Coin", coins);
+            if(currentTotal != -99999) 
+                this.console.println("Total coins = " + currentTotal);
+            else 
+                this.console.println("Could not find any coins");
+            
         } catch (WoodControlException wce) {
             ErrorView.display(this.getClass().getName(),
                     wce.getMessage());

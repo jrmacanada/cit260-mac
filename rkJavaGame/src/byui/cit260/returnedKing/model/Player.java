@@ -6,6 +6,7 @@
 package byui.cit260.returnedKing.model;
 
 import java.io.Serializable;
+import java.util.ArrayList;
 import java.util.Objects;
 
 /**
@@ -17,10 +18,20 @@ public class Player implements Serializable {
     // class instance variables
     private String name;
     private double bestScore;
+    private ArrayList<Item> inventory;
+    private int maxStamina;
+    private int strength;
+    private int actualStamina;
+    
+    private int intellegence;
 
     private Game[] game;
 
     public Player() {
+        this.maxStamina = 80;
+        this.strength = 100;
+        this.actualStamina = 80;
+        this.intellegence = 100;
     }
 
     public String getName() {
@@ -46,6 +57,52 @@ public class Player implements Serializable {
     public void setGame(Game[] game) {
         this.game = game;
     }
+
+    public ArrayList<Item> getInventory() {
+        return inventory;
+    }
+
+    public void setInventory(ArrayList<Item> inventory) {
+        this.inventory = inventory;
+    }
+
+    public int getMaxStamina() {
+        return maxStamina;
+    }
+
+    public void setMaxStamina(int maxStamina) {
+        this.maxStamina = maxStamina;
+    }
+
+    public int getStrength() {
+        return strength;
+    }
+
+    public void setStrength(int strength) {
+        this.strength = strength;
+    }
+
+    public int getActualStamina() {
+        return actualStamina;
+    }
+
+    public void setActualStamina(int actualStamina) {
+        this.actualStamina = actualStamina;
+    }
+
+    public int getIntellegence() {
+        return intellegence;
+    }
+
+    public void setIntellegence(int intellegence) {
+        this.intellegence = intellegence;
+    }
+
+    
+    
+    
+    
+    
 
     @Override
     public int hashCode() {

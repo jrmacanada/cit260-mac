@@ -6,8 +6,11 @@
 package byui.cit260.returnedKing.control;
 
 import byui.cit260.returnedKing.exceptions.ItemControlException;
+import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
+import byui.cit260.returnedKing.model.Player;
 import java.util.ArrayList;
+import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -15,25 +18,40 @@ import java.util.ArrayList;
  */
 public class ItemControl {
 
-public ArrayList<Item> addInventoryItems() {
-    ArrayList<Item> inventory = new ArrayList<>();
-    
-    Item coin = new Item();
-    inventory.add(coin);
-    
-    Item sword = new Item();
-    inventory.add(sword);
-    
-    Item food = new Item();
-    inventory.add(food);
-    
-    Item shield = new Item();
-    inventory.add(shield);
-    
-    return inventory;
-    
-      
-    
-}
-    
+    public static ArrayList<Item> InitializeInventoryItems() {
+        Game game = RkJavaGame.getCurrentGame();
+        Item[] itemList = game.getItems();
+        ArrayList<Item> inventory = new ArrayList<>();
+
+        Item coin = new Item(itemList[GameControl.Index.coin.ordinal()]);
+        coin.setQuantityInStock(10);
+        inventory.add(coin);
+
+        Item sword = new Item(itemList[GameControl.Index.sword.ordinal()]);
+        inventory.add(sword);
+
+        Item food = new Item(itemList[GameControl.Index.food.ordinal()]);
+        inventory.add(food);
+
+        Item shield = new Item(itemList[GameControl.Index.shield.ordinal()]);
+        inventory.add(shield);
+
+        return inventory;
+
+    }
+
+    public static int addQuantityToInventoryItem(String itemName, int quantity) {
+        Game game = RkJavaGame.getCurrentGame();
+        Player player = game.getPlayer();
+        ArrayList<Item> inventory = player.getInventory();
+        for (Item item : inventory) {
+            if (item.getDescription() == itemName) {
+                item.setQuantityInStock(item.getQuantityInStock() + quantity);
+                return item.getQuantityInStock();
+            }
+
+        }
+        return -99999;
+
+    }
 }
