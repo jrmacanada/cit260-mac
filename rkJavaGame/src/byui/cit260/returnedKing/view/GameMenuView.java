@@ -30,7 +30,7 @@ public class GameMenuView extends View {
                 + "\n|          Game Menu          |"
                 + "\n-------------------------------"
                 + "\nP - Player Type"
-//                + "\nI - Items List"
+                + "\nI - Items List"
                 + "\nM - Map Display"
                 + "\nV - Move to new location"
                 + "\n-------------------------------"
@@ -54,9 +54,9 @@ public class GameMenuView extends View {
             case "P":
                 this.playerType();
                 break;
-//            case "I":
-//                this.itemList();
-//                break;
+            case "I":
+                this.itemList();
+                break;
             case "M":
                 this.mapView();
                 break;
@@ -96,12 +96,12 @@ public class GameMenuView extends View {
         mapMenuView.display();
     }
 
-//    private void itemList() {
-//        ItemListMenuView itemListMenuView = new ItemListMenuView();
-//        itemListMenuView.display();
-//    }
-    
-public void movePlayer() {
+    private void itemList() {
+        ItemListMenuView itemListMenuView = new ItemListMenuView();
+        itemListMenuView.display();
+    }
+
+    public void movePlayer() {
 // <editor-fold defaultstate="collapsed" desc="Navigation. Click on the + sign to OPEN.">
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.displayMap();
@@ -111,7 +111,7 @@ public void movePlayer() {
             String pInput = keyboard.readLine().toUpperCase();
             Point pt = getLocation(pInput);
             if (pt == null) {
-                this.console.println("Cannot move " + pInput);
+                this.console.println("Cannot move in " + pInput + " direction.");
             } else {
                 Map map = RkJavaGame.getCurrentGame().getMap();
                 MapControl.movePlayer(map, pt.x, pt.y);
@@ -301,25 +301,26 @@ public void movePlayer() {
         testView.displayCraigsReport();
     }
 
-    void getLocation() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    void getLocation() {
+//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+//    }
+
+    public void testWood() { //delete after testing
+
+        ForestMenuView forestMemuView = new ForestMenuView();
+        forestMemuView.display();
     }
 
-public void testWood() { //delete after testing
-        
-       ForestMenuView forestMemuView = new ForestMenuView();
-       forestMemuView.display();
+    public void testComp() { //delete after testing
+
+        HuntReserveView huntReserveView = new HuntReserveView();
+        huntReserveView.display();
     }
 
-public void testComp() { //delete after testing
-    
-    HuntReserveView huntReserveView = new HuntReserveView();
-    huntReserveView.display();
-}
+    public void testCombat() {
 
-public void testCombat() {
+        KhouseMenuView kHouseMenuView = new KhouseMenuView();
+        kHouseMenuView.display();
+    }
     
-    KhouseMenuView kHouseMenuView = new KhouseMenuView();
-    kHouseMenuView.display();
-}
 }
