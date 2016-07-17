@@ -8,12 +8,11 @@ package byui.cit260.returnedKing.view;
 //import java.util.Scanner;
 
 import byui.cit260.returnedKing.control.MapControl;
+import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
 import java.awt.Point;
-import java.io.BufferedReader;
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import rkjavagame.RkJavaGame;
@@ -22,16 +21,113 @@ import rkjavagame.RkJavaGame;
  *
  * @author michaelcavey
  */
-public class CastleMenuView {
+public class CastleMenuView extends View {
     
-    protected final BufferedReader keyboard = RkJavaGame.getInFile();
-    protected final PrintWriter console = RkJavaGame.getOutFile();
+//    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+//    protected final PrintWriter console = RkJavaGame.getOutFile();
 
-    void displayCastleMenuView() {
-        this.console.println("*Calls the enterCastle() function*");
+    public CastleMenuView() {
+        super("\n"
+                + "\n------------------------------------"
+                + "\n|              CASTLE              |"
+                + "\n------------------------------------"
+                + "\n Your options for this scene are:"
+                + "\n1 - Fight for your Kingdom"
+//                + "\n2 - Rest to increase stamina"
+//                + "\n3 - Pray to increase aura"
+                + "\n------------------------------------"
+                + "\n    To navigate, enter N-S-E-W"
+                + "\n------------------------------------"
+                + "\n  At anytime you may use M-X-L-R"
+//                + "\n------------------------------------"
+//                + "\nQ - Quit to Game Menu"
+                + "\n------------------------------------"
+                + "\nZ - Exit game from this scene"
+                + "\n------------------------------------");
+    }
+
+    @Override
+    public boolean doAction(String value) {
+
+        value = value.toUpperCase(); //convert choice to uppercase
+
+        switch (value) {
+            case "1":
+                this.fightKing();
+                break;
+//            case "2":
+//                this.restStamina();
+//                break;
+//            case "3":
+//                this.prayAura();
+//                break;
+            case "N":
+                this.movePlayer();
+                break;
+            case "S":
+                this.movePlayer();
+                break;
+            case "E":
+                this.movePlayer();
+                break;
+            case "W":
+                this.movePlayer();
+                break;
+            case "M":
+                this.mapView();
+                break;
+            case "X":
+                this.tellMore();
+                break;
+            case "L":
+                this.mySupplies();
+                break;
+            case "R":
+                this.myStats();
+                break;
+            case "Z":
+                this.exitGame();
+                break;
+                
+            default:
+                ErrorView.display(this.getClass().getName(),
+                        "\n*** Invalid Selection *** Try again");
+                break;
+        }
+        return false;
     }
     
-public void movePlayer() {
+    private void tellMore() {
+        Game game = RkJavaGame.getCurrentGame(); // retreive the game
+        Map map = game.getMap(); // retreive the map from game
+//        Location[][] locations = map.getLocations(); // retreive the locations from map
+        this.console.print(map.getCurrentLocation().getScene().getDescription());
+    }
+
+    private void mapView() {
+        MapMenuView mapMenuView = new MapMenuView();
+        mapMenuView.display();
+    }
+
+    private void mySupplies() {
+        // This function should list the player's supplies 
+        // (food, coin, weapons, artifacts) stored in his wagon.
+        // For now it redirects to the Items List of all available items.
+        ItemListMenuView itemListMenuView = new ItemListMenuView();
+        itemListMenuView.display();
+    }
+
+    private void myStats() {
+        PlayerStatsView stats = new PlayerStatsView();
+        stats.StatDisplay();
+    }
+    
+    private void fightKing() {
+        CastleCombatView castleCombatView = new CastleCombatView();
+        castleCombatView.display();
+    }
+    
+    public void movePlayer() {
 // <editor-fold defaultstate="collapsed" desc="Navigation. Click on the + sign to OPEN.">
         MapMenuView mapMenuView = new MapMenuView();
         mapMenuView.displayMap();
@@ -108,7 +204,7 @@ public void movePlayer() {
                 break;
             case "XX":
                 CastleMenuView castleMenuView = new CastleMenuView();
-                castleMenuView.displayCastleMenuView();
+                castleMenuView.display();
                 break;
             case "EG":
                 GateEastMenuView gateEastMenuView = new GateEastMenuView();
@@ -208,4 +304,10 @@ public void movePlayer() {
         return point;
     }// </editor-fold>
     
+    private void exitGame() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
+    
 }
+
