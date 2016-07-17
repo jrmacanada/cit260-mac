@@ -149,7 +149,8 @@ public class CornfieldMenuView extends View {
     }
 
     private void getFood() {
-        this.console.println(" You can glean from the harvest to restock your food supplies.");
+        GameControl gameC = new GameControl();
+        gameC.findFood();
     }
 
     private void getJob() {

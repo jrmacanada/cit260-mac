@@ -15,6 +15,7 @@ import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.util.ArrayList;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -195,8 +196,26 @@ public class GameControl {
         Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
         
-        player.setActualStamina(player.getActualStamina() + 5);
-        System.out.println("You rest and increase your stamina by 5. Your current stamina is " + player.getActualStamina());
+        player.setActualStamina(player.getActualStamina() + 10);
+        System.out.println("You rest and increase your stamina by 10. Your current stamina is " + player.getActualStamina());
+    }
+    
+    public void findFood() {
+        Game game = RkJavaGame.getCurrentGame(); 
+        Player player = game.getPlayer();
+        ArrayList<Item> inventory = player.getInventory();
+        
+        int food = 0;
+       
+            food = food  + 5;
+        
+        int currentTotal = ItemControl.addQuantityToInventoryItem("Food", food);
+        if(currentTotal != -99999) 
+                System.out.println("Total food = " + currentTotal);
+            else 
+                System.out.println("Could not find any food");
+            
+           
     }
 
 // L09 Individual-Craig
