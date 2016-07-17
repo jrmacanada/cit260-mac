@@ -128,7 +128,10 @@ class TownshipMenuView extends View {
     }
 
     private void shopSupplies() {
-        this.console.println("*** stub to shopSupplies() function ***");
+        this.console.println(" Here are the items available at this location.");
+        
+        StoreListMenuView storeListMenuView = new StoreListMenuView();
+        storeListMenuView.display();
     }
 
     public void movePlayer() {

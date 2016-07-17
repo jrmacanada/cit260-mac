@@ -130,7 +130,7 @@ class FarmVillageMenuView extends View {
     }
 
     private void shopSupplies() {
-        this.console.println(" Here are the items available at this store.");
+        this.console.println(" Here are the items available at this location.");
         
         StoreListMenuView storeListMenuView = new StoreListMenuView();
         storeListMenuView.display();
