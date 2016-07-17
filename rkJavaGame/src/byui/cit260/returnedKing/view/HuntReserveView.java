@@ -28,9 +28,9 @@ public class HuntReserveView extends View {
                 + "\n|         Hunting Reserve          |"
                 + "\n------------------------------------"
                 + "\n Your options for this scene are:"
-                + "\n1 - Hunt for wild game"
-                + "\n2 - Talk to the hunters"
-                + "\n3 - Rest to rebuild Stamina"
+               //+ "\n1 - Hunt for wild game"
+                + "\n1 - Talk to the hunters"
+                + "\n2 - Rest to rebuild Stamina"
                 + "\n------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
@@ -48,13 +48,13 @@ public class HuntReserveView extends View {
         value = value.toUpperCase(); //convert choice to uppercase
 
         switch (value) {
+//            case "1":
+//                this.huntForGame();
+//                break;
             case "1":
-                this.huntForGame();
-                break;
-            case "2":
                 this.talkToHunters();
                 break;
-            case "3":
+            case "2":
                 this.addStamina();
                 break;
             case "N":
@@ -119,9 +119,9 @@ public class HuntReserveView extends View {
         stats.StatDisplay();
     }
 
-    private void huntForGame() {
-        this.console.println("\n If you have a bow, you can hunt for game.");
-    }
+//    private void huntForGame() {
+//        this.console.println("\n If you have a bow, you can hunt for game.");
+//    }
 
     private void talkToHunters() {
         HunterChallengeView hunterChallengeView = new HunterChallengeView();

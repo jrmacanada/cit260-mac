@@ -29,8 +29,8 @@ public class GraveyardMenuView extends View {
                 + "\n------------------------------------"
                 + "\n Your options for this scene are:"
                 + "\n1 - Rest to rebuild Stamina"
-                + "\n2 - Forage for items in graveyard"
-                + "\n3 - Read the tombstones"
+//                + "\n2 - Forage for items in graveyard"
+                + "\n2 - Read the tombstones"
                 + "\n------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
@@ -51,10 +51,10 @@ public class GraveyardMenuView extends View {
             case "1":
                 this.addStamina();
                 break;
+//            case "2":
+//                this.findItems();
+//                break;
             case "2":
-                this.findItems();
-                break;
-            case "3":
                 this.readGraves();
                 break;
             case "N":
@@ -135,9 +135,9 @@ public class GraveyardMenuView extends View {
         rest.restStamina();   
     }
 
-    private void findItems() {
-        this.console.println("*** stub to findsItems() function ***");
-    }
+//    private void findItems() {
+//        this.console.println("*** stub to findsItems() function ***");
+//    }
 
     private void readGraves() {
         this.console.println(" Here lies the old king."

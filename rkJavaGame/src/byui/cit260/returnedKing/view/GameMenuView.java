@@ -29,20 +29,14 @@ public class GameMenuView extends View {
                 + "\n-------------------------------"
                 + "\n|          Game Menu          |"
                 + "\n-------------------------------"
-                + "\nP - Player Type"
+                //+ "\nP - Player Type"
                 + "\nI - Items List"
                 + "\nM - Map Display"
                 + "\nV - Move to new location"
                 + "\n-------------------------------"
                 + "\nQ - Quit to Main Menu"
-                + "\n-------------------------------"
-                + "\n L11 - Individual Assignments"
-                + "\nX - Display Mike's Report"
-                + "\nY - Craig's Report"
-                + "\nZ - Thiago's Report"
-                + "\n1 - Test WoodControl"
-                + "\n2 - Test CompetitionControl"
-                + "\n3 - Test ComabtControl");
+                + "\n-------------------------------");
+                
     }
 
     @Override
@@ -51,9 +45,9 @@ public class GameMenuView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-            case "P":
-                this.playerType();
-                break;
+//            case "P":
+//                this.playerType();
+//                break;
             case "I":
                 this.storeList();
                 break;
@@ -63,20 +57,7 @@ public class GameMenuView extends View {
             case "V":
                 this.movePlayer();
                 break;
-            case "X": // L11 Mike's Report
-                this.mikesReport();
-                break;
-            case "Y": // L11 Craig's Report
-                this.craigsReport();
-                break;
-            case "1": //remove after tests
-                this.testWood();
-                break;
-            case "2": //remove after tests
-                this.testComp();
-                break;
-            case "3": //remove after tests
-                this.testCombat();
+            
 
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -86,10 +67,10 @@ public class GameMenuView extends View {
         return false;
     }
 
-    private void playerType() {
-        PlayerTypeMenuView playerTypeMenuView = new PlayerTypeMenuView();
-        playerTypeMenuView.display();
-    }
+//    private void playerType() {
+//        PlayerTypeMenuView playerTypeMenuView = new PlayerTypeMenuView();
+//        playerTypeMenuView.display();
+//    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
@@ -97,10 +78,8 @@ public class GameMenuView extends View {
     }
 
     private void storeList() {
-        this.console.println(" Here is a list of all the items available in the game.");
-        
-        StoreListMenuView storeListMenuView = new StoreListMenuView();
-        storeListMenuView.display();
+        ItemListMenuView itemListMenuView = new ItemListMenuView();
+        itemListMenuView.display();
     }
 
     public void movePlayer() {
@@ -280,49 +259,6 @@ public class GameMenuView extends View {
         return point;
     }// </editor-fold>
 
-// L09 Individual-Craig
-    private void maxStrength() {
 
-        GameControl gameC = new GameControl();
-        gameC.mStrength();
-        double strength = gameC.mStrength();
-
-        this.console.println("\nThe highest character strength is " + strength);
-    }
-
-// L11 Individual Assignment   
-    public void mikesReport() {
-
-        ReportMenuView reportMenuView = new ReportMenuView();
-        reportMenuView.displayMikesReport();
-    }
-
-    public void craigsReport() {
-
-        TestView testView = new TestView();
-        testView.displayCraigsReport();
-    }
-
-//    void getLocation() {
-//        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-//    }
-
-    public void testWood() { //delete after testing
-
-        ForestMenuView forestMemuView = new ForestMenuView();
-        forestMemuView.display();
-    }
-
-    public void testComp() { //delete after testing
-
-        HuntReserveView huntReserveView = new HuntReserveView();
-        huntReserveView.display();
-    }
-
-    public void testCombat() {
-
-        KhouseMenuView kHouseMenuView = new KhouseMenuView();
-        kHouseMenuView.display();
-    }
     
 }

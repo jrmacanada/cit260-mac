@@ -30,7 +30,7 @@ public class ChurchMenuView extends View {
                 + "\n Your options for this scene are:"
                 + "\n1 - Talk to priest"
                 + "\n2 - Rest to increase stamina"
-                + "\n3 - Pray to increase aura"
+                //+ "\n3 - Pray to increase aura"
                 + "\n------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
@@ -54,9 +54,9 @@ public class ChurchMenuView extends View {
             case "2":
                 this.restStamina();
                 break;
-            case "3":
-                this.prayAura();
-                break;
+//            case "3":
+//                this.prayAura();
+//                break;
             case "N":
                 this.movePlayer();
                 break;
@@ -136,9 +136,9 @@ public class ChurchMenuView extends View {
         rest.restStamina();    
     }
      
-    private void prayAura() {
-        this.console.println("\nCalls the prayAura() function");
-     }
+//    private void prayAura() {
+//        this.console.println("\nCalls the prayAura() function");
+//     }
 
     public void movePlayer() {
 // <editor-fold defaultstate="collapsed" desc="Navigation. Click on the + sign to OPEN.">

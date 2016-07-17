@@ -119,11 +119,8 @@ public class ForestMenuView extends View {
     }
 
     private void forageFood() {
-        // opens the forageFood scene
-
-        // display the forageFood menu 
-        ForageFoodMenuView forageFoodMenuView = new ForageFoodMenuView();
-        forageFoodMenuView.displayForageFoodMenuView();
+        GameControl gameC = new GameControl();
+        gameC.findFood();
     }
 
     private void cutWood() {

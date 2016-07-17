@@ -29,8 +29,8 @@ class FarmVillageMenuView extends View {
                 + "\n------------------------------------"
                 + "\n Your options for this scene are:"
                 + "\n1 - Talk to villager"
-                + "\n2 - Work delivery"
-                + "\n3 - Shop for supplies"
+//                + "\n2 - Work delivery"
+                + "\n2 - Shop for supplies"
                 + "\n------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
@@ -51,10 +51,10 @@ class FarmVillageMenuView extends View {
             case "1":
                 this.talkVillager();
                 break;
+//            case "2":
+//                this.workDelivery();
+//                break;
             case "2":
-                this.workDelivery();
-                break;
-            case "3":
                 this.shopSupplies();
                 break;
             case "N":
@@ -123,11 +123,11 @@ class FarmVillageMenuView extends View {
         this.console.println(" If you want to earn coin, go work in the cornfield.");
     }
 
-    private void workDelivery() {
-        this.console.println(" You have been hired by Samuel's Delivery Service."
-                + "You will be delivering food wagons to the castle."
-                + "You can earn 15 coins per day with this job.");
-    }
+//    private void workDelivery() {
+//        this.console.println(" You have been hired by Samuel's Delivery Service."
+//                + "You will be delivering food wagons to the castle."
+//                + "You can earn 15 coins per day with this job.");
+//    }
 
     private void shopSupplies() {
         this.console.println(" Here are the items available at this location.");

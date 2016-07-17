@@ -29,8 +29,8 @@ class HarbortownMenuView extends View {
                 + "\n------------------------------------"
                 + "\n Your options for this scene are:"
                 + "\n1 - Talk to vendor"
-                + "\n2 - Work at the fishmarket"
-                + "\n3 - Shop for supplies"
+//                + "\n2 - Work at the fishmarket"
+                + "\n2 - Shop for supplies"
                 + "\n------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
@@ -51,10 +51,10 @@ class HarbortownMenuView extends View {
             case "1":
                 this.talkVendor();
                 break;
+//            case "2":
+//                this.workMarket();
+//                break;
             case "2":
-                this.workMarket();
-                break;
-            case "3":
                 this.shopSupplies();
                 break;
             case "N":
@@ -129,12 +129,15 @@ class HarbortownMenuView extends View {
                 + "\n If you were him, I would tell everybody here right now.");
     }
 
-    private void workMarket() {
-        this.console.println("*** stub to workMarket() function ***");
-    }
+//    private void workMarket() {
+//        this.console.println("*** stub to workMarket() function ***");
+//    }
 
     private void shopSupplies() {
-        this.console.println("*** stub to shopSupplies() function ***");
+        this.console.println(" Here are the items available at this location.");
+        
+        StoreListMenuView storeListMenuView = new StoreListMenuView();
+        storeListMenuView.display();
     }
 
     public void movePlayer() {

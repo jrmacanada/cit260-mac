@@ -79,7 +79,7 @@ public class HunterChallengeView extends View {
     }
 
     private void askForRules() {
-        this.console.println("\n*** Calls the askForRules()***");
+        this.console.println("I want to see if you can throw this rock between 100 and 115 foot markers.");
     }
 
     

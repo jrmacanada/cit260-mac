@@ -32,7 +32,7 @@ public class CornfieldMenuView extends View {
                 + "\n Your options for this scene are:"
                 + "\n1 - Rest to rebuild Stamina"
                 + "\n2 - Forage for food"
-                + "\n3 - Work with farmer"
+               // + "\n3 - Work with farmer"
                 + "\n------------------------------------"
                 + "\n    To navigate, enter N-S-E-W"
                 + "\n------------------------------------"
@@ -67,9 +67,9 @@ public class CornfieldMenuView extends View {
             case "2": 
                 this.getFood();
                 break;
-            case "3": 
-                this.getJob();
-                break;
+//            case "3": 
+//                this.getJob();
+//                break;
             case "N": 
                 this.noEntry();
                 break;
@@ -153,9 +153,9 @@ public class CornfieldMenuView extends View {
         gameC.findFood();
     }
 
-    private void getJob() {
-        this.console.println(" You can work ing the fields for 10 coins per day.");
-    }
+//    private void getJob() {
+//        this.console.println(" You can work ing the fields for 10 coins per day.");
+//    }
   
     public void movePlayer() {
 // <editor-fold defaultstate="collapsed" desc="Navigation. Click on the + sign to OPEN.">

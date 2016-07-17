@@ -7,6 +7,7 @@ package byui.cit260.returnedKing.view;
 
 //import java.util.Scanner;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
@@ -131,13 +132,16 @@ public class SeaportMenuView extends View {
     }
 
     private void campBeach() {
-        this.console.println("*** stub to campBeach() function ***");
+        this.console.println("You camp on the beach and rebuild your stamina by 10 points.");
+        GameControl rest = new GameControl();
+        rest.restStamina();
     }
 
     private void enterAmerica() {
         this.console.println(" So, do you want to go to America."
                 + "\n Let's go. Enter in the boat and forget this kingdom."
                 + "\n End game.");
+        System.exit(0);
     }
 
     public void movePlayer() {
