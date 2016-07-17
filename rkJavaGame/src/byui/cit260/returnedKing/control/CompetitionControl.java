@@ -51,7 +51,7 @@ public class CompetitionControl {
             if (power <= 0 || power > strength) {
                 throw new CompetitionControlException("You need to enter a value between 1 and " + player.getStrength());
             }
-            double distanceInYards = (power + strength - windResistance) * (actualStamina / maximumStamina);
+            double distanceInYards = (power + strength - windResistance) * (maximumStamina / maximumStamina);
 
             if (distanceInYards < minYard) {
                 throw new CompetitionControlException("You didn't throw it hard enough");
