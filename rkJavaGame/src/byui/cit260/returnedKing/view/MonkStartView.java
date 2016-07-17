@@ -26,8 +26,8 @@ public class MonkStartView extends View {
                 + "\n----------------------------------"
                 + "\n|           Monastery            |"
                 + "\n----------------------------------"
-//                + "\n  You are a Monk on a mission"
-//                + "\n  to retake your kingdom."
+                + "\n  You are a Monk on a mission"
+                + "\n  to retake your kingdom."
                 + "\n  Pray for a successful journey."
                 + "\n----------------------------------"
                 + "\n  To navigate, enter N-S-E-W"
@@ -37,9 +37,12 @@ public class MonkStartView extends View {
                 + "\nX - Explore this scene further"
                 + "\nL - List your supplies"
                 + "\nR - Report your stats"
+//                + "\n----------------------------------"
+//                + "\nQ - Quit to Game Menu"
                 + "\n----------------------------------"
-                + "\nQ - Quit to Game Menu"
-                + "\n----------------------------------");
+                + "\nZ - Exit game from this scene"
+                + "\n------------------------------------"
+        );
     }
 
     @Override
@@ -72,6 +75,9 @@ public class MonkStartView extends View {
             case "R":
                 this.myStats();
                 break;
+            case "Z":
+                this.exitGame();
+                break;
 
             default:
                 ErrorView.display(this.getClass().getName(),
@@ -85,7 +91,6 @@ public class MonkStartView extends View {
     private void tellMore() {
         Game game = RkJavaGame.getCurrentGame(); // retreive the game
         Map map = game.getMap(); // retreive the map from game
-//        Location[][] locations = map.getLocations(); // retreive the locations from map
         this.console.print(map.getCurrentLocation().getScene().getDescription());
     }
 
@@ -111,10 +116,6 @@ public class MonkStartView extends View {
         PlayerStatsView stats = new PlayerStatsView();
         stats.StatDisplay();
     }
-
-//    public static void movePlayerToStartingLocation(Map map) {
-//        movePlayer(map, 0, 0); // starting journey from Monastery
-//    }
 
     public void movePlayer() {
 // <editor-fold defaultstate="collapsed" desc="Navigation. Click on the + sign to OPEN.">
@@ -292,5 +293,10 @@ public class MonkStartView extends View {
         }
         return point;
     }// </editor-fold>
+    
+    private void exitGame() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
     
 }

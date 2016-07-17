@@ -5,7 +5,6 @@
  */
 package byui.cit260.returnedKing.view;
 
-import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Location;
 import byui.cit260.returnedKing.model.Map;
@@ -22,17 +21,15 @@ import rkjavagame.RkJavaGame;
  */
 public class GameMenuView extends View {
 
-    private int getInput;
-
     public GameMenuView() {
         super("\n"
                 + "\n-------------------------------"
                 + "\n|          Game Menu          |"
                 + "\n-------------------------------"
-                //+ "\nP - Player Type"
+                + "\nP - Player Type"
                 + "\nI - Items List"
                 + "\nM - Map Display"
-                + "\nV - Move to new location"
+                + "\nV - Move from *last* location"
                 + "\n-------------------------------"
                 + "\nQ - Quit to Main Menu"
                 + "\n-------------------------------");
@@ -45,9 +42,9 @@ public class GameMenuView extends View {
         value = value.toUpperCase(); //convert value to uppercase
 
         switch (value) {
-//            case "P":
-//                this.playerType();
-//                break;
+            case "P":
+                this.playerType();
+                break;
             case "I":
                 this.storeList();
                 break;
@@ -58,7 +55,6 @@ public class GameMenuView extends View {
                 this.movePlayer();
                 break;
             
-
             default:
                 ErrorView.display(this.getClass().getName(),
                         "\n*** Invalid Selection *** Try again");
@@ -67,10 +63,10 @@ public class GameMenuView extends View {
         return false;
     }
 
-//    private void playerType() {
-//        PlayerTypeMenuView playerTypeMenuView = new PlayerTypeMenuView();
-//        playerTypeMenuView.display();
-//    }
+    private void playerType() {
+        PlayerTypeMenuView playerTypeMenuView = new PlayerTypeMenuView();
+        playerTypeMenuView.display();
+    }
 
     private void mapView() {
         MapMenuView mapMenuView = new MapMenuView();
@@ -258,7 +254,5 @@ public class GameMenuView extends View {
         }
         return point;
     }// </editor-fold>
-
-
-    
+ 
 }

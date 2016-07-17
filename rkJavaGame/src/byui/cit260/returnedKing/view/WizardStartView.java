@@ -26,8 +26,8 @@ public class WizardStartView extends View {
                 + "\n----------------------------------"
                 + "\n|         Wizard Hamlet          |"
                 + "\n----------------------------------"
-//                + "\n  You are a Wizard on a quest"
-//                + "\n  to retake your kingdom."
+                + "\n  You are a Wizard on a quest"
+                + "\n  to retake your kingdom."
                 + "\n  Be wise on your journey."
                 + "\n----------------------------------"
                 + "\n  To navigate, enter N-S-E-W"
@@ -37,9 +37,12 @@ public class WizardStartView extends View {
                 + "\nX - Explore this scene further"
                 + "\nL - List your supplies"
                 + "\nR - Report your stats"
+//                + "\n----------------------------------"
+//                + "\nQ - Quit to Game Menu"
                 + "\n----------------------------------"
-                + "\nQ - Quit to Game Menu"
-                + "\n----------------------------------");
+                + "\nZ - Exit game from this scene"
+                + "\n------------------------------------"
+        );
     }
 
     @Override
@@ -71,6 +74,9 @@ public class WizardStartView extends View {
                 break;
             case "R":
                 this.myStats();
+                break;
+            case "Z":
+                this.exitGame();
                 break;
 
             default:
@@ -292,5 +298,10 @@ public class WizardStartView extends View {
         }
         return point;
     }// </editor-fold>
+    
+    private void exitGame() {
+        MainMenuView mainMenuView = new MainMenuView();
+        mainMenuView.display();
+    }
     
 }

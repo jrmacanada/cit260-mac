@@ -25,14 +25,14 @@ public class MapControl {
         // assigns the different scences to locations in the map
         assignScenesToLocations(map, scenes);
 
-        movePlayerToStartingLocation(map);
+        movePlayerToStartLocation(map);
         return map;
     }
 
-    public static void movePlayerToStartingLocation(Map map) {
-        movePlayer(map, 0, 0);
+    public static void movePlayerToStartLocation(Map map) {
+        movePlayer(map, 2, 2);
     }
-
+    
     public static void movePlayer(Map map, int row, int column) {
         map.setCurrentLocation(map.getLocations()[row][column]);
         map.getCurrentLocation().setVisited(true);

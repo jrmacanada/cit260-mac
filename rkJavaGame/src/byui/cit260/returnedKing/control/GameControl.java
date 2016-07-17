@@ -11,10 +11,12 @@ import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
 import byui.cit260.returnedKing.model.Map;
 import byui.cit260.returnedKing.model.Player;
+import java.io.BufferedReader;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import rkjavagame.RkJavaGame;
 
@@ -23,6 +25,9 @@ import rkjavagame.RkJavaGame;
  * @author michaelcavey
  */
 public class GameControl {
+    
+    protected final BufferedReader keyboard = RkJavaGame.getInFile();
+    protected final PrintWriter console = RkJavaGame.getOutFile();
 
     public static Player createPlayer(String name)
             throws GameControlException {
@@ -57,8 +62,8 @@ public class GameControl {
         Map map = MapControl.createMap(); // create and intialize new map
         game.setMap(map); // save map in game
 
-        // move actors to starting position in the map
-        MapControl.movePlayerToStartingLocation(map);
+        // moves actor to starting position in the map
+        MapControl.movePlayerToStartLocation(map);
     }
 
     public static void saveGame(Game game, String filepath)
@@ -197,7 +202,7 @@ public class GameControl {
         Player player = game.getPlayer();
         
         player.setActualStamina(player.getActualStamina() + 10);
-        System.out.println("You rest and increase your stamina by 10. Your current stamina is " + player.getActualStamina());
+        this.console.println("You rest and increase your stamina by 10. Your current stamina is " + player.getActualStamina());
     }
     
     public void findFood() {
@@ -211,10 +216,10 @@ public class GameControl {
         
         int currentTotal = ItemControl.addQuantityToInventoryItem("Food", food);
         if(currentTotal != -99999) {
-                System.out.println("\nYou find 5 ears of corn");
-                System.out.println("\nTotal food = " + currentTotal);
-        }else 
-                System.out.println("Could not find any food");
+                this.console.println("\nYou find 5 ears of corn");
+                this.console.println("\nTotal food = " + currentTotal);
+        } else 
+                this.console.println("Could not find any food");
             
            
     }

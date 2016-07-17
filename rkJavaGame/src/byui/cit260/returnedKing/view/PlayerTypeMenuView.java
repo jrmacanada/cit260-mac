@@ -5,6 +5,12 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.MapControl;
+import static byui.cit260.returnedKing.control.MapControl.movePlayer;
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Map;
+import rkjavagame.RkJavaGame;
+
 /**
  *
  * @author michaelcavey
@@ -54,27 +60,57 @@ public class PlayerTypeMenuView extends View {
     }
 
     private void wizardType() {
-       this.console.println("\n This is where our code must..."
-                        + "\n allocate variables with wizard values to player,"
-                        + "\n identify unique items the wizard possesses,"
-                        + "\n and store player's start position at"
-                        + "\n Wizard Hamlet location on map.");
+        Game game = RkJavaGame.getCurrentGame();
+
+        Map map = MapControl.createMap(); // create and intialize new map
+        game.setMap(map); // save map in game
+
+        // moves actor to Wizard Halmet position on the map
+        movePlayerToWizardLocation(map);
+        
+        WizardStartView wizardStartView = new WizardStartView();
+                wizardStartView.display();
+
     }
 
     private void warriorType() {
-       this.console.println("\n This is where our code must..."
-                        + "\n allocate variables with warrior values to player,"
-                        + "\n identify unique items the warrior possesses,"
-                        + "\n and store player's start position at"
-                        + "\n Warrior Village location on map.");
+        Game game = RkJavaGame.getCurrentGame();
+
+        Map map = MapControl.createMap(); // create and intialize new map
+        game.setMap(map); // save map in game
+
+        // moves actor to Wizard Halmet position on the map
+        movePlayerToWarriorLocation(map);
+        
+        WarriorStartView warriorStartView = new WarriorStartView();
+                warriorStartView.display();
+
     }
     
     private void monkType() {
-       this.console.println("\n This is where our code must..."
-                        + "\n allocate variables with monk values to player,"
-                        + "\n identify unique items the monk possesses,"
-                        + "\n and store player's start position at"
-                        + "\n Monastery location on map.");
+        Game game = RkJavaGame.getCurrentGame();
+
+        Map map = MapControl.createMap(); // create and intialize new map
+        game.setMap(map); // save map in game
+
+        // moves actor to Wizard Halmet position on the map
+        movePlayerToMonkLocation(map);
+
+        MonkStartView monkStartView = new MonkStartView();
+                monkStartView.display();
+
+    }
+
+    private void movePlayerToWizardLocation(Map map) {
+        movePlayer(map, 4, 0);
+    }
+    
+    private void movePlayerToWarriorLocation(Map map) {
+        movePlayer(map, 0, 4);
+    }
+    
+    private void movePlayerToMonkLocation(Map map) {
+        movePlayer(map, 0, 0);
     }
     
 }
