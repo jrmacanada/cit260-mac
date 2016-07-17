@@ -131,9 +131,9 @@ public class ChurchMenuView extends View {
     }
      
     private void restStamina() {
+        this.console.println(" Rest in the church and rebuild your stamina by 10 points.");
         GameControl rest = new GameControl();
-        rest.restStamina();
-        
+        rest.restStamina();    
     }
      
     private void prayAura() {

@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
@@ -134,11 +135,9 @@ public class ForestMenuView extends View {
     }
 
     private void shelterRest() {
-        // opens the shelterRest scene
-
-        // display the shelterRest menu 
-        ShelterRestMenuView shelterRestMenuView = new ShelterRestMenuView();
-        shelterRestMenuView.displayShelterRestMenuView();
+        this.console.println(" Rest in the forest and rebuild your stamina by 10 points.");
+        GameControl rest = new GameControl();
+        rest.restStamina();   
     }
 
     public void movePlayer() {

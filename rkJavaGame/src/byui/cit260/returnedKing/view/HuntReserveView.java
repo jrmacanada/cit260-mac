@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
@@ -128,7 +129,9 @@ public class HuntReserveView extends View {
     }
     
     private void addStamina() {
-        this.console.println(" Resting here will give you 15 stamina points.");
+        this.console.println(" Rest in the hunt reserve and rebuild your stamina by 10 points.");
+        GameControl rest = new GameControl();
+        rest.restStamina();   
     }
   
     public void movePlayer() {

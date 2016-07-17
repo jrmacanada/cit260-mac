@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
@@ -129,7 +130,9 @@ public class SecretCaveMenuView extends View {
     }
 
     private void addStamina() {
-        this.console.println("*** stub to addsStamina() function ***");
+        this.console.println(" Rest in the secret cave and rebuild your stamina by 10 points.");
+        GameControl rest = new GameControl();
+        rest.restStamina();   
     }
 
     private void findItems() {

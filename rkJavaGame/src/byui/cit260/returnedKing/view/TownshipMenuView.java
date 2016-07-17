@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
@@ -124,7 +125,9 @@ class TownshipMenuView extends View {
     }
 
     private void restHotel() {
-        this.console.println("*** stub to workDelivery() function ***");
+        this.console.println(" Rest in the hotel and rebuild your stamina by 10 points.");
+        GameControl rest = new GameControl();
+        rest.restStamina();   
     }
 
     private void shopSupplies() {
