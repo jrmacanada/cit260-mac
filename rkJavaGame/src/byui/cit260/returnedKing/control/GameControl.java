@@ -210,9 +210,10 @@ public class GameControl {
             food = food  + 5;
         
         int currentTotal = ItemControl.addQuantityToInventoryItem("Food", food);
-        if(currentTotal != -99999) 
-                System.out.println("Total food = " + currentTotal);
-            else 
+        if(currentTotal != -99999) {
+                System.out.println("\nYou find 5 ears of corn");
+                System.out.println("\nTotal food = " + currentTotal);
+        }else 
                 System.out.println("Could not find any food");
             
            
