@@ -129,15 +129,18 @@ public class TavernMenuView extends View {
     }
     
     private void talkToOwner() {
-        this.console.println("\nCalls the talkToOwner() function");
+        this.console.println("\nIf you will not drink beer, please, get out here!");
     }
      
     private void talkToDrunk() {
-        this.console.println("\nCalls the talkToDrunk() function");
+        this.console.println("\nBeer is the best thing in the world.\"\n" +
+"                + \" Better than women. Because beer make us forget our women\"\n" +
+"                + \". And I love women. Excuse me, I will drink another beer.");
     }
      
     private void talkToShady() {
-        this.console.println("\nCalls the talkToShady() function");
+        this.console.println("\nYou can enter in the castle joining the "
+                + "caravan that takes food to the castle.");
     }
 
     public void movePlayer() {

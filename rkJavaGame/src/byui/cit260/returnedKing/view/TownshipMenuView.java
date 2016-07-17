@@ -119,7 +119,8 @@ class TownshipMenuView extends View {
     }
     
     private void talkTownsmen() {
-        this.console.println("*** stub to talkVillager() function ***");
+        this.console.println("We can't say it everywhere, but we all liked "
+                + "the old king most than the actual king.");
     }
 
     private void restHotel() {

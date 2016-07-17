@@ -130,15 +130,18 @@ public class PrisonMenuView extends View {
     }
 
     private void guardTalk() {
-        this.console.println("*** stub to guardTalks() function ***");
+        this.console.println("You should join the guard of the king. You are strong.");
     }
 
     private void prisonerTalk() {
-        this.console.println("*** stub to prisonerTalks() function ***");
+        this.console.println("Why am I here?"
+                + " Because I tried to tell everyone the truth."
+                + " That the actual king murdered our beloved king 20 years ago."
+                + " I saw. And his son is alive.");
     }
 
     private void getJob() {
-        this.console.println("*** stub to getsJob() function ***");
+        this.console.println("Sorry, we are not hiring now. Come back later.");
     }
 
     public void movePlayer() {

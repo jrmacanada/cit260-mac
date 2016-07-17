@@ -133,11 +133,12 @@ public class SecretCaveMenuView extends View {
     }
 
     private void findItems() {
-        this.console.println("*** stub to findsItems() function ***");
+        this.console.println("You could not find anything useful");
     }
 
     private void readWall() {
-        this.console.println("*** stub to readsWall() function ***");
+        this.console.println("Anyone who claims he has a password will be "
+                + "allowed to enter into the castle.");
     }
 
     public void movePlayer() {

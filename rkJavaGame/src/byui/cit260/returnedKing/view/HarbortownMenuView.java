@@ -124,7 +124,9 @@ class HarbortownMenuView extends View {
     }
     
     private void talkVendor() {
-        this.console.println("*** stub to talkVendor() function ***");
+        this.console.println("The son of the old king is alive."
+                + " I know it. I can recognize him."
+                + " If you were him, I would tell everybory here right now.");
     }
 
     private void workMarket() {
