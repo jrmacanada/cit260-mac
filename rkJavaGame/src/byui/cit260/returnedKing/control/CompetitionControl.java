@@ -30,6 +30,7 @@ public class CompetitionControl {
         double minYard = 100;
         double maxYard = 115;
         double strength = player.getStrength();
+        double coins = 0;
 
         double windResistance = 8;
         double actualStamina = player.getActualStamina();
@@ -61,16 +62,20 @@ public class CompetitionControl {
             }
 
             if (distanceInYards >= minYard || distanceInYards <= maxYard) {
-                throw new CompetitionControlException("YOU DID IT!");
-                //return 1;
+              coins = distanceInYards / 4;
+               this.console.println("YOU DID IT!!! You earned " + (Math.round(coins)) + " coins.");
+            
+                
+                
             }
-            return distanceInYards;
+            
+            return (int)Math.round(coins);
+            
         } catch (NumberFormatException nf) {
             int power = myPower;
-            ErrorView.display(this.getClass().getName(),
-                    "\n*** You must enter a valid number ***");
+            throw new CompetitionControlException("\n*** You must enter a valid number ***");
         }
-        return myPower;
+        
     }
 
 }

@@ -6,7 +6,13 @@
 package byui.cit260.returnedKing.view;
 
 import byui.cit260.returnedKing.control.CompetitionControl;
+import byui.cit260.returnedKing.control.ItemControl;
 import byui.cit260.returnedKing.exceptions.CompetitionControlException;
+import byui.cit260.returnedKing.model.Game;
+import byui.cit260.returnedKing.model.Item;
+import byui.cit260.returnedKing.model.Player;
+import java.util.ArrayList;
+import rkjavagame.RkJavaGame;
 
 /**
  *
@@ -51,9 +57,17 @@ public class HunterChallengeView extends View {
     
     private void acceptChallenge() {
         try {
+            Game game = RkJavaGame.getCurrentGame(); 
+            Player player = game.getPlayer();
+            ArrayList<Item> inventory = player.getInventory();
             CompetitionControl compC = new CompetitionControl();
-            compC.competition();
-            double chall = compC.competition();
+            
+            int coins = (int) compC.competition();
+            int currentTotal = ItemControl.addQuantityToInventoryItem("Coin", coins);
+            if(currentTotal != -99999) 
+                this.console.println("Total coins = " + currentTotal);
+            else 
+                this.console.println("Could not find any coins");
             
             
           

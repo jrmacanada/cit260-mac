@@ -27,12 +27,15 @@ public class ItemControl {
         inventory.add(coin);
 
         Item sword = new Item(itemList[GameControl.Index.sword.ordinal()]);
+        sword.setQuantityInStock(1);
         inventory.add(sword);
 
         Item food = new Item(itemList[GameControl.Index.food.ordinal()]);
+        food.setQuantityInStock(10);
         inventory.add(food);
 
         Item shield = new Item(itemList[GameControl.Index.shield.ordinal()]);
+        shield.setQuantityInStock(1);
         inventory.add(shield);
 
         return inventory;

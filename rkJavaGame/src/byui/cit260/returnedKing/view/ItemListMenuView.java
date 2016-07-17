@@ -8,8 +8,10 @@ package byui.cit260.returnedKing.view;
 import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Item;
+import byui.cit260.returnedKing.model.Player;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -24,31 +26,32 @@ public class ItemListMenuView {
     public void display() {
         StringBuilder line;
 
-        Game report = RkJavaGame.getCurrentGame();
-        Item[] items = report.getItems();
+        Game game = RkJavaGame.getCurrentGame();
+        Player player = game.getPlayer();
+        ArrayList<Item> inventory = player.getInventory();
 
-        this.console.println("\n       LIST OF ITEMS");
+        this.console.println("\n   PLAYER INVENTORY");
         line = new StringBuilder("                                        ");
         line.insert(0, "DESCRIPTION");
         line.insert(15, "QUANTITY");
-        line.insert(25, "UNIT PRICE");
+        //line.insert(25, "UNIT PRICE");
         this.console.println(line.toString());
 
-        for (Item item : items) {
+        for (Item item : inventory) {
             line = new StringBuilder("                                        ");
             line.insert(0, item.getDescription());
             line.insert(18, item.getQuantityInStock());
-            line.insert(28, item.getUnitPrice());
+            //line.insert(28, item.getUnitPrice());
 
             this.console.println(line.toString());
         }
 
-        GameControl totalPrice = new GameControl();
-        totalPrice.buyOneEach();
-
-        int sumAllItems = totalPrice.buyOneEach();
-
-        this.console.println("\n The price to buy one of each item is " + sumAllItems + " coins");
+//        GameControl totalPrice = new GameControl();
+//        totalPrice.buyOneEach();
+//
+//        int sumAllItems = totalPrice.buyOneEach();
+//
+//        this.console.println("\n The price to buy one of each item is " + sumAllItems + " coins");
 
     }
 
