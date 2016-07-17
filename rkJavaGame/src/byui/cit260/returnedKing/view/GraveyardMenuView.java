@@ -137,9 +137,9 @@ public class GraveyardMenuView extends View {
     }
 
     private void readGraves() {
-        this.console.println("Here is the old king."
-                + " This tumb is a gift from his brother, the king,"
-                + " to remember everyone that nobody can live forever.");
+        this.console.println(" Here lies the old king."
+                + "\n This tumb is a gift from his brother, the king,"
+                + "\n to remind everyone that nobody can live forever.");
     }
 
     public void movePlayer() {

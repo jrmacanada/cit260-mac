@@ -123,10 +123,10 @@ public class ChurchMenuView extends View {
     }
     
     private void talkPriest() {
-        this.console.println("\nThe former King was a good man. But once he \"\n" +
-"                + \"conffessed me he was unfar with his brother once. \"\n" +
-"                + \"I am sorry, I can tell you more. In fact, \"\n" +
-"                + \"I should not even say what I said");
+        this.console.println("\n The former King was a good man. But once he"
+                + "\n confessed to me that he was unfair with his"
+                + "\n brother. I am sorry, I cannot tell you more."
+                + "\n In fact, I should not have told you what I did.");
     }
      
     private void restStamina() {

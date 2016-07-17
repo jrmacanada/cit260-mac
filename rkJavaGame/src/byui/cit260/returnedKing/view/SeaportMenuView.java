@@ -126,8 +126,8 @@ public class SeaportMenuView extends View {
     }
     
     private void talkSailor() {
-        this.console.println("This world is big enough to keep looking "
-                + "for revenge. Join us.");
+        this.console.println(" This world is big enough to keep looking"
+                + "\n for revenge. Join us.");
     }
 
     private void campBeach() {
@@ -135,9 +135,9 @@ public class SeaportMenuView extends View {
     }
 
     private void enterAmerica() {
-        this.console.println("So, do you want to go to America. "
-                + "Let's go. Enter in the boat and forget this kingdom. "
-                + "End game.");
+        this.console.println(" So, do you want to go to America."
+                + "\n Let's go. Enter in the boat and forget this kingdom."
+                + "\n End game.");
     }
 
     public void movePlayer() {

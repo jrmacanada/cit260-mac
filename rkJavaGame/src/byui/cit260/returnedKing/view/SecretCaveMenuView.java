@@ -133,12 +133,12 @@ public class SecretCaveMenuView extends View {
     }
 
     private void findItems() {
-        this.console.println("You could not find anything useful");
+        this.console.println(" You could not find anything useful.");
     }
 
     private void readWall() {
-        this.console.println("Anyone who claims he has a password will be "
-                + "allowed to enter into the castle.");
+        this.console.println(" Anyone who claims he has a password will be"
+                + "\n allowed to enter into the castle.");
     }
 
     public void movePlayer() {

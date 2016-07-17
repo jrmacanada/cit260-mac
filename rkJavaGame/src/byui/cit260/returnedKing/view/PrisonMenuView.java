@@ -130,18 +130,18 @@ public class PrisonMenuView extends View {
     }
 
     private void guardTalk() {
-        this.console.println("You should join the guard of the king. You are strong.");
+        this.console.println(" You should join the guard of the king. You are strong.");
     }
 
     private void prisonerTalk() {
         this.console.println("Why am I here?"
-                + " Because I tried to tell everyone the truth."
-                + " That the actual king murdered our beloved king 20 years ago."
-                + " I saw. And his son is alive.");
+                + "\n Because I tried to tell everyone the truth."
+                + "\n That the actual king murdered our beloved king 20 years ago."
+                + "\n I saw it happen. And I know his son is still alive.");
     }
 
     private void getJob() {
-        this.console.println("Sorry, we are not hiring now. Come back later.");
+        this.console.println(" Sorry, we are not hiring now. Come back later.");
     }
 
     public void movePlayer() {
