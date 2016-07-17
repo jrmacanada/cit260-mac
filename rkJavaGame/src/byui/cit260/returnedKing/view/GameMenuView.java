@@ -92,7 +92,7 @@ public class GameMenuView extends View {
             String pInput = keyboard.readLine().toUpperCase();
             Point pt = getLocation(pInput);
             if (pt == null) {
-                this.console.println("Cannot move in " + pInput + " direction.");
+                this.console.println("Cannot move " + pInput);
             } else {
                 Map map = RkJavaGame.getCurrentGame().getMap();
                 MapControl.movePlayer(map, pt.x, pt.y);
@@ -159,7 +159,7 @@ public class GameMenuView extends View {
                 break;
             case "XX":
                 CastleMenuView castleMenuView = new CastleMenuView();
-                castleMenuView.displayCastleMenuView();
+                castleMenuView.display();
                 break;
             case "EG":
                 GateEastMenuView gateEastMenuView = new GateEastMenuView();

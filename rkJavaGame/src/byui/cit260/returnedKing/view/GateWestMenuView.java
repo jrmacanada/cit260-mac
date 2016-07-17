@@ -102,7 +102,7 @@ public class GateWestMenuView extends View{
     public void enterCastle() {
         this.console.println(" You have entered the castle by picking the lock.");
         CastleMenuView castleMenuView = new CastleMenuView();
-        castleMenuView.displayCastleMenuView();
+        castleMenuView.display();
     }
     
     private void mapView() {
@@ -213,7 +213,7 @@ public class GateWestMenuView extends View{
                 break;
             case "XX":
                 CastleMenuView castleMenuView = new CastleMenuView();
-                castleMenuView.displayCastleMenuView();
+                castleMenuView.display();
                 break;
             case "EG":
                 GateEastMenuView gateEastMenuView = new GateEastMenuView();

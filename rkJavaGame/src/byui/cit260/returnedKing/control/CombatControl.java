@@ -9,6 +9,7 @@ import byui.cit260.returnedKing.exceptions.CombatControlException;
 import byui.cit260.returnedKing.model.Actor;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Player;
+import byui.cit260.returnedKing.view.EndGameView;
 import byui.cit260.returnedKing.view.ErrorView;
 import byui.cit260.returnedKing.view.RoadEastClearView;
 import byui.cit260.returnedKing.view.RoadNorthClearView;
@@ -313,10 +314,10 @@ public class CombatControl {
                         + "\nYour current health is " + player.getActualStamina());
             }
             if (Actor.FalseKing.actorActStam <= 0) {
-                this.console.println("You won! the Kingdom is yours.");
+                this.console.println("You won! Your uncle is dead.");
 
-                RoadEastClearView roadEastClearView = new RoadEastClearView();
-                roadEastClearView.display();
+                EndGameView endGameView = new EndGameView();
+                endGameView.displayBanner();
             }
             if (player.getActualStamina() <= 0) {
                 this.console.println("You have died. Your quest and the game is ended.");

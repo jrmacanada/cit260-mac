@@ -101,7 +101,7 @@ public class GateEastMenuView extends View {
     
     public void enterCastle() {
         CastleMenuView castleMenuView = new CastleMenuView();
-        castleMenuView.displayCastleMenuView();
+        castleMenuView.display();
     }
 
     private void mapView() {
@@ -211,7 +211,7 @@ public class GateEastMenuView extends View {
                 break;
             case "XX":
                 CastleMenuView castleMenuView = new CastleMenuView();
-                castleMenuView.displayCastleMenuView();
+                castleMenuView.display();
                 break;
             case "EG":
                 GateEastMenuView gateEastMenuView = new GateEastMenuView();

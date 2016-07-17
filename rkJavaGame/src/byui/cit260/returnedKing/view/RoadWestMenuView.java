@@ -210,7 +210,7 @@ public class RoadWestMenuView extends View {
                 break;
             case "XX":
                 CastleMenuView castleMenuView = new CastleMenuView();
-                castleMenuView.displayCastleMenuView();
+                castleMenuView.display();
                 break;
             case "EG":
                 GateEastMenuView gateEastMenuView = new GateEastMenuView();
