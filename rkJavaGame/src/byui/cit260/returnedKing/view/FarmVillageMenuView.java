@@ -120,11 +120,13 @@ class FarmVillageMenuView extends View {
     }
 
     private void talkVillager() {
-        this.console.println("*** stub to talkVillager() function ***");
+        this.console.println(" If you want to earn coin, go work in the cornfield.");
     }
 
     private void workDelivery() {
-        this.console.println("*** stub to workDelivery() function ***");
+        this.console.println(" You have been hired by Samuel's Delivery Service."
+                + "You will be delivering food wagons to the castle."
+                + "You can earn 15 coins per day with this job.");
     }
 
     private void shopSupplies() {

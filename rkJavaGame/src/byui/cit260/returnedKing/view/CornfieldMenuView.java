@@ -142,15 +142,15 @@ public class CornfieldMenuView extends View {
     }
 
     private void addStamina() {
-        this.console.println("*** stub to addsStamina() function ***");
+        this.console.println(" Rest in the cornfield and rebuild your stamina by 10 points.");
     }
 
     private void getFood() {
-        this.console.println("*** stub to getsFood() function ***");
+        this.console.println(" You can glean from the harvest to restock your food supplies.");
     }
 
     private void getJob() {
-        this.console.println("*** stub to getsJob() function ***");
+        this.console.println(" You can work ing the fields for 10 coins per day.");
     }
   
     public void movePlayer() {

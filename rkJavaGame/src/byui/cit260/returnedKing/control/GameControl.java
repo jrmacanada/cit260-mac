@@ -108,7 +108,7 @@ public class GameControl {
     public static Item[] createItemsList() {
 
         // create array(list) of available items
-        Item[] items = new Item[12];
+        Item[] items = new Item[13];
 
         Item food = new Item();
         food.setDescription("Food");
