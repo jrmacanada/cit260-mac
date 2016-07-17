@@ -119,7 +119,7 @@ public class HuntReserveView extends View {
     }
 
     private void huntForGame() {
-        this.console.println("\nCalls the huntForGame()");
+        this.console.println("\n If you have a bow, you can hunt for game.");
     }
 
     private void talkToHunters() {
@@ -128,7 +128,7 @@ public class HuntReserveView extends View {
     }
     
     private void addStamina() {
-        this.console.println("*** stub to addsStamina() function ***");
+        this.console.println(" Resting here will give you 15 stamina points.");
     }
   
     public void movePlayer() {

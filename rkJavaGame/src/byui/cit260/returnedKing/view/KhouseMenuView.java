@@ -145,11 +145,11 @@ public class KhouseMenuView extends View {
     }
 
     private void sneakIn() {
-        this.console.println("\n*** sneakIn() function called ***");
+        this.console.println("\n The guard hasn't seen you yet; try the backdoor.");
     }
 
     private void exploreSite() {
-        this.console.println("\n*** exploreSite() function called ***");
+        this.console.println("\n There are other unguarded building on site to explore.");
     }
 
     public void movePlayer() {

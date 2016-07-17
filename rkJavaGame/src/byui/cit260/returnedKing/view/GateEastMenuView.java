@@ -123,15 +123,15 @@ public class GateEastMenuView extends View {
     }
     
     private void talkGatekeeper() {
-        this.console.println("*** stub to talkGatekeeper() function ***");
+        this.console.println(" I'll let you pass, no questions asked, for 100 coins.");
     }
 
     private void offerBribe() {
-        this.console.println("*** stub to offerBribe() function ***");
+        this.console.println(" Pay the 100 coin bribe to enter the castle.");
     }
 
     private void getDisguise() {
-        this.console.println("*** stub to getDisguise() function ***");
+        this.console.println(" Dress up as a prostitute to get past the guard.");
     }
 
     public void movePlayer() {

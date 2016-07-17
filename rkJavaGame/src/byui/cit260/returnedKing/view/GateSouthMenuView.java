@@ -123,15 +123,16 @@ public class GateSouthMenuView extends View {
     }
     
     private void talkGatekeeper() {
-        this.console.println("*** stub to talkGatekeeper() function ***");
+        this.console.println(" You cannot enter without the correct password.");
     }
 
     private void offerPassword() {
-        this.console.println("*** stub to offerPassword() function ***");
+        this.console.println(" The password is one of the three words attached"
+                + "\n to the skeletons in the secret cave.");
     }
 
     private void scaleWall() {
-        this.console.println("*** stub to scaleWall() function ***");
+        this.console.println(" Wait for nightfall and try climbing the wall with your rope.");
     }
 
     public void movePlayer() {

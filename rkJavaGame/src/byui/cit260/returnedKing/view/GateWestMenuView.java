@@ -124,15 +124,16 @@ public class GateWestMenuView extends View{
     }
     
     private void fightAnimals() {
-        this.console.println("*** stub to fightAnimals() function ***");
+        this.console.println(" Only the Wizard with an orb in his inventory should attempt this.");
     }
 
     private void pickLock() {
-        this.console.println("*** stub to pickLock() function ***");
+        this.console.println(" None of your keys work; try entering the three digit combination.");
     }
 
     private void scaleWall() {
-        this.console.println("*** stub to scaleWall() function ***");
+        this.console.println(" Try climbing through the ivy growing from"
+                + "\n the swamp that covers the castle wall. ");
     }
     
     public void movePlayer() {

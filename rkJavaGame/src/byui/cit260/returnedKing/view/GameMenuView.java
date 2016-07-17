@@ -55,7 +55,7 @@ public class GameMenuView extends View {
                 this.playerType();
                 break;
             case "I":
-                this.itemList();
+                this.storeList();
                 break;
             case "M":
                 this.mapView();
@@ -96,9 +96,11 @@ public class GameMenuView extends View {
         mapMenuView.display();
     }
 
-    private void itemList() {
-        ItemListMenuView itemListMenuView = new ItemListMenuView();
-        itemListMenuView.display();
+    private void storeList() {
+        this.console.println(" Here is a list of all the items available in the game.");
+        
+        StoreListMenuView storeListMenuView = new StoreListMenuView();
+        storeListMenuView.display();
     }
 
     public void movePlayer() {

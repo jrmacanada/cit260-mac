@@ -101,6 +101,7 @@ public class GameControl {
         fathersSword,
         bodyArmor,
         birthCert,
+        rope,
         huntBow;        
     }
 
@@ -174,6 +175,12 @@ public class GameControl {
         birthCert.setQuantityInStock(1);
         birthCert.setUnitPrice(0);
         items[Index.birthCert.ordinal()] = birthCert;
+        
+        Item rope = new Item();
+        rope.setDescription("Rope");
+        rope.setQuantityInStock(3);
+        rope.setUnitPrice(5);
+        items[Index.rope.ordinal()] = rope;
         
         Item huntBow = new Item();
         huntBow.setDescription("Hunting Bow");

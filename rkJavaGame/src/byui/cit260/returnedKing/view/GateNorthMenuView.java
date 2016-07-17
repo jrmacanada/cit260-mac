@@ -124,15 +124,16 @@ public class GateNorthMenuView extends View {
     }
     
     private void talkGuards() {
-        this.console.println("*** stub to talkGuards() function ***");
+        this.console.println(" You cannot enter without leaving your weapons with the guard.");
     }
 
     private void talkTravelers() {
-        this.console.println("*** stub to talkTravelers() function ***");
+        this.console.println(" If you work for Samuel's delivery, the"
+                + "\n guards don't check you or your wagon load.");
     }
 
     private void begCoin() {
-        this.console.println("*** stub to begCoin() function ***");
+        this.console.println(" You can beg at the gate and get 5 coins per day.");
     }
 
     public void movePlayer() {
