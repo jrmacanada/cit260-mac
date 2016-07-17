@@ -124,8 +124,8 @@ public class KhouseMenuView extends View {
     }
 
     private void myStats() {
-        this.console.println(" This function will display the player's"
-                + "\n Stamina, Strength, and Aura statistics.");
+        PlayerStatsView stats = new PlayerStatsView();
+        stats.StatDisplay();
     }
 
     private void fightGuard() {
