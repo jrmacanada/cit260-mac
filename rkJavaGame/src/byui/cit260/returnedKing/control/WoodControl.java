@@ -50,9 +50,8 @@ public class WoodControl {
             int staminaGiven = pInput;
             
 
-            if (staminaGiven < 1 || staminaGiven > actualStamina || actualStamina > 100) {
-                throw new WoodControlException(" The stamina you gave is outside acceptable boundries."
-                        + "\n Enter a value between 1 & 100 and less than your available Stamina.");
+            if (staminaGiven < 1 || staminaGiven > actualStamina) {
+                throw new WoodControlException(" The stamina you gave is outside acceptable boundries.");
             }
             if (strength < 1 || strength > 100) {
                 throw new WoodControlException(" The strength is outside acceptable boundries."

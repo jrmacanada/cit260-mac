@@ -4,13 +4,11 @@
  * and open the template in the editor.
  */
 package byui.cit260.returnedKing.view;
-import byui.cit260.returnedKing.control.GameControl;
+
 import byui.cit260.returnedKing.model.Game;
-import byui.cit260.returnedKing.model.Item;
 import byui.cit260.returnedKing.model.Player;
 import java.io.BufferedReader;
 import java.io.PrintWriter;
-import java.util.ArrayList;
 import rkjavagame.RkJavaGame;
 
 /**
@@ -27,7 +25,7 @@ public class PlayerStatsView {
         Game game = RkJavaGame.getCurrentGame();
         Player player = game.getPlayer();
 
-        this.console.println("\nPlayer Stats"
+        this.console.println("\nPLAYER STATS"
                             +"\nStrength = " + player.getStrength()
                             +"\nStamina = " + player.getActualStamina()
                             +"\nIntelligence = " + player.getIntellegence());

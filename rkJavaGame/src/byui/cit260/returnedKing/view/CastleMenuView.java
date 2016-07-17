@@ -31,7 +31,7 @@ public class CastleMenuView extends View {
                 + "\n------------------------------------"
                 + "\n|              CASTLE              |"
                 + "\n------------------------------------"
-                + "\n Your options for this scene are:"
+                + "\n  Your only option in the castle:"
                 + "\n1 - Fight for your Kingdom"
 //                + "\n2 - Rest to increase stamina"
 //                + "\n3 - Pray to increase aura"

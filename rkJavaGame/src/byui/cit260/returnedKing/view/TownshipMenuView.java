@@ -121,7 +121,7 @@ class TownshipMenuView extends View {
     
     private void talkTownsmen() {
         this.console.println(" We can't say it everywhere, but we all liked"
-                + "\n the old king most than the actual king.");
+                + "\n the old king more than the actual king.");
     }
 
     private void restHotel() {

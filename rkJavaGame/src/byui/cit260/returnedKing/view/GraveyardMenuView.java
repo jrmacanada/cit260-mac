@@ -141,7 +141,7 @@ public class GraveyardMenuView extends View {
 
     private void readGraves() {
         this.console.println(" Here lies the old king."
-                + "\n This tumb is a gift from his brother, the king,"
+                + "\n This tomb is a gift from his brother, the king,"
                 + "\n to remind everyone that nobody can live forever.");
     }
 
