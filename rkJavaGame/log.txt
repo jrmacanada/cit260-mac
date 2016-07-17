@@ -1,0 +1,8 @@
+byui.cit260.returnedKing.view.GraveyardMenuView - 
+*** Invalid Selection *** Try again
+byui.cit260.returnedKing.view.PrisonMenuView - 
+*** Invalid Selection *** Try again
+byui.cit260.returnedKing.view.TavernMenuView - 
+*** Invalid Selection *** Try again
+byui.cit260.returnedKing.view.WarriorStartView - 
+*** Invalid Selection *** Try again

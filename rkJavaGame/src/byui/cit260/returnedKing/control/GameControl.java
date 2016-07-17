@@ -190,6 +190,14 @@ public class GameControl {
 
         return items;
     }
+    
+    public void restStamina() {
+        Game game = RkJavaGame.getCurrentGame();
+        Player player = game.getPlayer();
+        
+        player.setActualStamina(player.getActualStamina() + 5);
+        System.out.println("You rest and increase your stamina by 5. Your current stamina is " + player.getActualStamina());
+    }
 
 // L09 Individual-Craig
     public double mStrength() {

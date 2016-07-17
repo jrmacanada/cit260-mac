@@ -5,6 +5,7 @@
  */
 package byui.cit260.returnedKing.view;
 
+import byui.cit260.returnedKing.control.GameControl;
 import byui.cit260.returnedKing.control.MapControl;
 import byui.cit260.returnedKing.model.Game;
 import byui.cit260.returnedKing.model.Location;
@@ -118,8 +119,8 @@ public class ChurchMenuView extends View {
     }
 
     private void myStats() {
-        this.console.println(" This function will display the player's"
-                + "\n Stamina, Strength, and Aura statistics.");
+        PlayerStatsView stats = new PlayerStatsView();
+        stats.StatDisplay();
     }
     
     private void talkPriest() {
@@ -130,7 +131,9 @@ public class ChurchMenuView extends View {
     }
      
     private void restStamina() {
-        this.console.println("\nCalls the restStamina() function");
+        GameControl rest = new GameControl();
+        rest.restStamina();
+        
     }
      
     private void prayAura() {
