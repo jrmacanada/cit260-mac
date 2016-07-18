@@ -21,10 +21,10 @@ public class Player implements Serializable {
     private double bestScore;
     private Game[] game;
     private ArrayList<Item> inventory;
-    private int maxStamina;
-    private int strength;
+    static private int maxStamina;
+    static private int strength;
     private int actualStamina;
-    private int intellegence;
+    static private int intellegence;
 
     public Player() {
         this.maxStamina = 80;
