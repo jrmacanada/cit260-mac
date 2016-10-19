@@ -25,6 +25,7 @@ public class Map implements Serializable {
     private int currentRow = 0;
     private int currentColumn = 0;
     private Scene[] scenes;
+    private Map currentMap;
 
     public Map() {
     }
@@ -121,6 +122,16 @@ public class Map implements Serializable {
         this.scenes = scenes;
     }
 
+    public Map getCurrentMap() {
+        return currentMap;
+    }
+
+    public void setCurrentMap(Map currentMap) {
+        this.currentMap = currentMap;
+    }
+
+    
+    
     @Override
     public int hashCode() {
         int hash = 5;

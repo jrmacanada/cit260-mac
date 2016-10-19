@@ -39,6 +39,8 @@ public class MapControl {
 
         map.setCurrentRow(row);
         map.setCurrentColumn(column);
+        
+        map.setCurrentMap(map);
     }
 
     public enum SceneType {

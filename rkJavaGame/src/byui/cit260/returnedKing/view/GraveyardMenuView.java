@@ -44,6 +44,14 @@ public class GraveyardMenuView extends View {
     
     @Override
     public boolean doAction(String value) {
+        
+//        Game game = RkJavaGame.getCurrentGame();
+//
+//        Map map = map.getCurrentMap();
+////        game.setMap(map); // save map in game
+//
+//        // moves player to Graveyard position on the map
+//        MapControl.movePlayer(map, 0, 1);
 
         value = value.toUpperCase(); //convert value to uppercase
 

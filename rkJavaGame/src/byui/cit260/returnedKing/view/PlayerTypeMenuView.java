@@ -65,7 +65,7 @@ public class PlayerTypeMenuView extends View {
         Map map = MapControl.createMap(); // create and intialize new map
         game.setMap(map); // save map in game
 
-        // moves actor to Wizard Halmet position on the map
+        // moves player to Wizard Hamlet position on the map
         movePlayerToWizardLocation(map);
         
         WizardStartView wizardStartView = new WizardStartView();
@@ -79,7 +79,7 @@ public class PlayerTypeMenuView extends View {
         Map map = MapControl.createMap(); // create and intialize new map
         game.setMap(map); // save map in game
 
-        // moves actor to Wizard Halmet position on the map
+        // moves player to Warrior Village position on the map
         movePlayerToWarriorLocation(map);
         
         WarriorStartView warriorStartView = new WarriorStartView();
@@ -93,7 +93,7 @@ public class PlayerTypeMenuView extends View {
         Map map = MapControl.createMap(); // create and intialize new map
         game.setMap(map); // save map in game
 
-        // moves actor to Wizard Halmet position on the map
+        // moves player to Monastery position on the map
         movePlayerToMonkLocation(map);
 
         MonkStartView monkStartView = new MonkStartView();
